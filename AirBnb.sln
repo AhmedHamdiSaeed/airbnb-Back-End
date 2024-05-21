@@ -1,0 +1,37 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.9.34616.47
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AirBnb.API", "AirBnb.API\AirBnb.API.csproj", "{7CE570E2-B109-4D6B-AD0D-D7A2D365AA9F}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AirBnb.DAL", "AirBnb.DAL\AirBnb.DAL.csproj", "{4D4E1A9C-8C50-485A-85A4-3EA8CB0C29C0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AirBnb.BL", "AirBnb.BL\AirBnb.BL.csproj", "{DA886AC8-7BDA-438E-AE62-5BAA30A7B6DF}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{7CE570E2-B109-4D6B-AD0D-D7A2D365AA9F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7CE570E2-B109-4D6B-AD0D-D7A2D365AA9F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7CE570E2-B109-4D6B-AD0D-D7A2D365AA9F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7CE570E2-B109-4D6B-AD0D-D7A2D365AA9F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4D4E1A9C-8C50-485A-85A4-3EA8CB0C29C0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4D4E1A9C-8C50-485A-85A4-3EA8CB0C29C0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4D4E1A9C-8C50-485A-85A4-3EA8CB0C29C0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4D4E1A9C-8C50-485A-85A4-3EA8CB0C29C0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DA886AC8-7BDA-438E-AE62-5BAA30A7B6DF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DA886AC8-7BDA-438E-AE62-5BAA30A7B6DF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DA886AC8-7BDA-438E-AE62-5BAA30A7B6DF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DA886AC8-7BDA-438E-AE62-5BAA30A7B6DF}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {F22FE80D-0AA6-41B6-A3D1-60C9EE4FF4E9}
+	EndGlobalSection
+EndGlobal
