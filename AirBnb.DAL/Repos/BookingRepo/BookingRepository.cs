@@ -18,14 +18,31 @@ namespace AirBnb.DAL.Repos.BookingRepo
 			_context = context;
 		}
 
+		public async Task<IEnumerable<Booking>> GetAllBookingForProperty(int propertyId)
+		{
+			return await _context.Set<Booking>().AsNoTracking().Where(x => x.PropertyId == propertyId).ToListAsync();
+		}
+
 		public async Task<IEnumerable<Booking>> GetAllUserBooking(string userid)
 		{
 			return await _context.Set<Booking>().AsNoTracking().Where(x=>x.UserId==userid).ToListAsync();
 		}
 
-		public async Task<Booking> GetUserBookingetails(string userid)
+		public async Task<Booking> GetPropertyBookingDetails(int propertyId)
 		{
-			return await _context.Set<Booking>().Include(x=>x.Property).FirstOrDefaultAsync(x=>x.UserId==userid);
+			return await _context.Set<Booking>().Include(x=>x.User).Include(x=>x.Property).FirstOrDefaultAsync(x=>x.PropertyId==propertyId);
+		}
+
+		public async Task<Booking> GetUserBookingetails(int bookingid)
+		{
+			return await _context.Set<Booking>().Include(x=>x.Property).FirstOrDefaultAsync(x=>x.Id == bookingid);
+		}
+
+		
+
+		public void UpdateBooking(Booking booking)
+		{
+			_context.Set<Booking>().Update(booking);
 		}
 	}
 }

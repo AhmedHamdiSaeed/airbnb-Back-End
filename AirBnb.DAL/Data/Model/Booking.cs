@@ -25,7 +25,6 @@ namespace AirBnb.DAL.Data.Model
 		public AppUser User {  get; set; }
 		public DateTime CheckInDate { get; set; }
 		public DateTime CheckOutDate { get; set;}
-		public int NumberOfGuest {  get; set; }
 		public int TotalPrice { get; set; }
 		public Status BookingStatus { get; set; }
 		

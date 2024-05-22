@@ -35,14 +35,18 @@ namespace AirBnb.API.Extentions
 
 			services.AddAuthorization(options =>
 			{
-				options.AddPolicy("ForGuest", policy =>
+				options.AddPolicy("ForUser", policy =>
 				{
-					policy.RequireClaim(ClaimTypes.Role, "Guest");
+					policy.RequireClaim(ClaimTypes.Role, "User");
 				});
 
 				options.AddPolicy("ForHost", policy =>
 				{
 					policy.RequireClaim(ClaimTypes.Role, "Host");
+				});
+				options.AddPolicy("ForAdmin", policy =>
+				{
+					policy.RequireClaim(ClaimTypes.Role, "Admin");
 				});
 			});
 

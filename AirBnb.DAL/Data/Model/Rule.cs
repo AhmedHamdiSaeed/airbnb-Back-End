@@ -8,9 +8,9 @@ namespace AirBnb.DAL.Data.Model
 {
 	public class Rule:BaseEntity<int>
 	{
-		public string Name { get; set; }=string.Empty;
-		public int CheckIn { get; set; }
-		public int CheckOut { get; set; }
+
+		public TimeOnly CheckIn { get; set; }
+		public TimeOnly CheckOut { get; set; }
 		public int NumberOfGuest { get; set; }
 		public bool Pets { get; set; }
 		public bool TakePhotos { get; set; }

@@ -9,8 +9,9 @@ namespace AirBnb.DAL.Data.Model
 {
 	public enum Role
 	{
-		Guest=0,
-		Host=0
+		User=0,
+		Host=1,
+		Admin=2
 	}
 	public class AppUser:IdentityUser
 	{

@@ -12,23 +12,6 @@ namespace AirBnb.DAL.Migrations
         protected override void Up(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.CreateTable(
-                name: "AppointmentsAvailable",
-                columns: table => new
-                {
-                    Id = table.Column<int>(type: "int", nullable: false)
-                        .Annotation("SqlServer:Identity", "1, 1"),
-                    PropertyId = table.Column<int>(type: "int", nullable: false),
-                    From = table.Column<DateTime>(type: "datetime2", nullable: false),
-                    To = table.Column<DateTime>(type: "datetime2", nullable: false),
-                    PricePerNight = table.Column<decimal>(type: "decimal(18,2)", nullable: false),
-                    IsAvailable = table.Column<bool>(type: "bit", nullable: false)
-                },
-                constraints: table =>
-                {
-                    table.PrimaryKey("PK_AppointmentsAvailable", x => x.Id);
-                });
-
-            migrationBuilder.CreateTable(
                 name: "AspNetRoles",
                 columns: table => new
                 {
@@ -239,7 +222,8 @@ namespace AirBnb.DAL.Migrations
                     Beds = table.Column<int>(type: "int", nullable: false),
                     UserId = table.Column<string>(type: "nvarchar(450)", nullable: true),
                     CategoryId = table.Column<int>(type: "int", nullable: false),
-                    CityId = table.Column<int>(type: "int", nullable: false)
+                    CityId = table.Column<int>(type: "int", nullable: false),
+                    Status = table.Column<int>(type: "int", nullable: false)
                 },
                 constraints: table =>
                 {
@@ -285,6 +269,29 @@ namespace AirBnb.DAL.Migrations
                 });
 
             migrationBuilder.CreateTable(
+                name: "AppointmentsAvailable",
+                columns: table => new
+                {
+                    Id = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    PropertyId = table.Column<int>(type: "int", nullable: false),
+                    From = table.Column<DateTime>(type: "datetime2", nullable: false),
+                    To = table.Column<DateTime>(type: "datetime2", nullable: false),
+                    PricePerNight = table.Column<decimal>(type: "decimal(18,2)", nullable: false),
+                    IsAvailable = table.Column<bool>(type: "bit", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_AppointmentsAvailable", x => x.Id);
+                    table.ForeignKey(
+                        name: "FK_AppointmentsAvailable_Properties_PropertyId",
+                        column: x => x.PropertyId,
+                        principalTable: "Properties",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Cascade);
+                });
+
+            migrationBuilder.CreateTable(
                 name: "Bookings",
                 columns: table => new
                 {
@@ -294,7 +301,6 @@ namespace AirBnb.DAL.Migrations
                     UserId = table.Column<string>(type: "nvarchar(450)", nullable: true),
                     CheckInDate = table.Column<DateTime>(type: "datetime2", nullable: false),
                     CheckOutDate = table.Column<DateTime>(type: "datetime2", nullable: false),
-                    NumberOfGuest = table.Column<int>(type: "int", nullable: false),
                     TotalPrice = table.Column<int>(type: "int", nullable: false),
                     BookingStatus = table.Column<int>(type: "int", nullable: false)
                 },
@@ -341,9 +347,8 @@ namespace AirBnb.DAL.Migrations
                 {
                     Id = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
-                    Name = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    CheckIn = table.Column<int>(type: "int", nullable: false),
-                    CheckOut = table.Column<int>(type: "int", nullable: false),
+                    CheckIn = table.Column<TimeOnly>(type: "time", nullable: false),
+                    CheckOut = table.Column<TimeOnly>(type: "time", nullable: false),
                     NumberOfGuest = table.Column<int>(type: "int", nullable: false),
                     Pets = table.Column<bool>(type: "bit", nullable: false),
                     TakePhotos = table.Column<bool>(type: "bit", nullable: false),
@@ -391,6 +396,11 @@ namespace AirBnb.DAL.Migrations
                 name: "IX_Amenities_propertyId",
                 table: "Amenities",
                 column: "propertyId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_AppointmentsAvailable_PropertyId",
+                table: "AppointmentsAvailable",
+                column: "PropertyId");
 
             migrationBuilder.CreateIndex(
                 name: "IX_AspNetRoleClaims_RoleId",

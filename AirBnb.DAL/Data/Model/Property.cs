@@ -23,6 +23,7 @@ namespace AirBnb.DAL.Data.Model
 		[ForeignKey(nameof(City))]
 		public int CityId { get; set; }
 		public City City { get; set; }
+		public Status Status { get; set; }
 		public IEnumerable<Rule> Rule { get; set; } = new HashSet<Rule>();
 		public IEnumerable<Amenity> Amenity { get; set; } = new HashSet<Amenity>();
 		public IEnumerable<PropertyImage> PropertyImages { get; set; } = new HashSet<PropertyImage>();

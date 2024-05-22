@@ -1,20 +1,19 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace AirBnb.DAL.Data.Model
+namespace AirBnb.BL.Dtos.AmentityDtos
 {
-	public class AppointmentsAvailable:BaseEntity<int>
+	public class AmentityGetDto
 	{
-		[ForeignKey(nameof(Property))]
+		public int Id { get; set; }
 		public int PropertyId { get; set; }
-		public Property Property { get; set; }
 		public DateTime From { get; set; }
 		public DateTime To { get; set; }
-		public decimal PricePerNight { get; set; }
+		public int PricePerNight { get; set; }
+		public int TotalProice { get; set; }
 		public bool IsAvailable { get; set; }
 	}
 }

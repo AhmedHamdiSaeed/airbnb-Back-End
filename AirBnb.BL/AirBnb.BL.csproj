@@ -10,8 +10,4 @@
     <ProjectReference Include="..\AirBnb.DAL\AirBnb.DAL.csproj" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="Managers\" />
-  </ItemGroup>
-
 </Project>

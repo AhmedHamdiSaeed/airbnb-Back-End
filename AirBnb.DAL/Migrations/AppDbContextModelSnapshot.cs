@@ -151,6 +151,8 @@ namespace AirBnb.DAL.Migrations
 
                     b.HasKey("Id");
 
+                    b.HasIndex("PropertyId");
+
                     b.ToTable("AppointmentsAvailable");
                 });
 
@@ -170,9 +172,6 @@ namespace AirBnb.DAL.Migrations
 
                     b.Property<DateTime>("CheckOutDate")
                         .HasColumnType("datetime2");
-
-                    b.Property<int>("NumberOfGuest")
-                        .HasColumnType("int");
 
                     b.Property<int>("PropertyId")
                         .HasColumnType("int");
@@ -280,6 +279,9 @@ namespace AirBnb.DAL.Migrations
                     b.Property<int>("NumberOfBedrooms")
                         .HasColumnType("int");
 
+                    b.Property<int>("Status")
+                        .HasColumnType("int");
+
                     b.Property<string>("UserId")
                         .HasColumnType("nvarchar(450)");
 
@@ -355,14 +357,11 @@ namespace AirBnb.DAL.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
-                    b.Property<int>("CheckIn")
-                        .HasColumnType("int");
+                    b.Property<TimeOnly>("CheckIn")
+                        .HasColumnType("time");
 
-                    b.Property<int>("CheckOut")
-                        .HasColumnType("int");
-
-                    b.Property<string>("Name")
-                        .HasColumnType("nvarchar(max)");
+                    b.Property<TimeOnly>("CheckOut")
+                        .HasColumnType("time");
 
                     b.Property<int>("NumberOfGuest")
                         .HasColumnType("int");
@@ -523,6 +522,17 @@ namespace AirBnb.DAL.Migrations
                         .HasForeignKey("propertyId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
+                });
+
+            modelBuilder.Entity("AirBnb.DAL.Data.Model.AppointmentsAvailable", b =>
+                {
+                    b.HasOne("AirBnb.DAL.Data.Model.Property", "Property")
+                        .WithMany()
+                        .HasForeignKey("PropertyId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Property");
                 });
 
             modelBuilder.Entity("AirBnb.DAL.Data.Model.Booking", b =>
