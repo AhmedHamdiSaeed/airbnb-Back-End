@@ -28,5 +28,6 @@ namespace AirBnb.DAL.Data.Model
 		public int NumberOfGuest {  get; set; }
 		public int TotalPrice { get; set; }
 		public Status BookingStatus { get; set; }
+		
 	}
 }

@@ -4005,11 +4005,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\ITI 2023\\0- Final Project\\AirBnb\\AirBnb.DAL\\AirBnb.DAL.csproj",
+      "projectUniqueName": "D:\\ITI 2023\\0- Final Project\\airbnb-Back-End\\AirBnb.DAL\\AirBnb.DAL.csproj",
       "projectName": "AirBnb.DAL",
-      "projectPath": "D:\\ITI 2023\\0- Final Project\\AirBnb\\AirBnb.DAL\\AirBnb.DAL.csproj",
+      "projectPath": "D:\\ITI 2023\\0- Final Project\\airbnb-Back-End\\AirBnb.DAL\\AirBnb.DAL.csproj",
       "packagesPath": "C:\\Users\\Oppa\\.nuget\\packages\\",
-      "outputPath": "D:\\ITI 2023\\0- Final Project\\AirBnb\\AirBnb.DAL\\obj\\",
+      "outputPath": "D:\\ITI 2023\\0- Final Project\\airbnb-Back-End\\AirBnb.DAL\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Oppa\\AppData\\Roaming\\NuGet\\NuGet.Config",

@@ -1,4 +1,10 @@
 ﻿using AirBnb.DAL.Data.context;
+using AirBnb.DAL.Data.Model;
+using AirBnb.DAL.Repos.AmentityRepo;
+using AirBnb.DAL.Repos.BookingRepo;
+using AirBnb.DAL.Repos.ReviewRepo;
+using AirBnb.DAL.Unit;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
@@ -15,7 +21,15 @@ namespace AirBnb.DAL
 		public static void AddDALService(this IServiceCollection service, IConfiguration config)
 		{
 			var connectionString = config.GetConnectionString("cs");
-			service.AddDbContext<AppDbContext>(option => option.UseSqlServer(connectionString));
+			service.AddDbContext<AppDbContext>(option=>option.UseSqlServer(connectionString));
+
+
+			service.AddScoped<IReviewRepository, ReviewRepository>();
+			service.AddScoped<IBookingRepository, BookingRepository>();
+			service.AddScoped<IAmentityRepository, AmentityRepository>();
+			service.AddScoped<IUnitOfWork, UnitOfWork>();
+			service.AddIdentity<AppUser, IdentityRole>().AddEntityFrameworkStores<AppDbContext>();
+
 		}
 	}
 }

@@ -9,7 +9,11 @@ namespace AirBnb.DAL.Data.Model
 	public class Rule:BaseEntity<int>
 	{
 		public string Name { get; set; }=string.Empty;
-		public string Description { get; set; }
-		public IEnumerable<PropertyRule> PropertyRule { get; set;} =new HashSet<PropertyRule>();	
+		public int CheckIn { get; set; }
+		public int CheckOut { get; set; }
+		public int NumberOfGuest { get; set; }
+		public bool Pets { get; set; }
+		public bool TakePhotos { get; set; }
+		public int PropertyId { get; set; }
 	}
 }

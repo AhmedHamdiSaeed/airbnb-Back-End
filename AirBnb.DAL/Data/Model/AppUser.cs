@@ -14,7 +14,8 @@ namespace AirBnb.DAL.Data.Model
 	}
 	public class AppUser:IdentityUser
 	{
-		public string DisplayName { get; set; } = string.Empty;
+		public string FirstName { get; set; } = string.Empty;
+		public string LastName { get; set; } = string.Empty;
 		public string Image {  get; set; }=string.Empty;
 		public int Age { get; set; }
 		public Role Role { get; set; }

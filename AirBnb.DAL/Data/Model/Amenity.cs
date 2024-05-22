@@ -11,7 +11,8 @@ namespace AirBnb.DAL.Data.Model
 
 		public string Name { get; set; } = string.Empty;
 		public string Description { get; set; } = string.Empty;
-		public IEnumerable<PropertyAmentity> PropertyAmentity { get; set; } = new HashSet<PropertyAmentity>();
+		public int propertyId { get; set; }
+		
 
 	}
 }
