@@ -1,4 +1,5 @@
 ﻿using AirBnb.BL.Managers.BookingManagers;
+using AirBnb.BL.Managers.Reviews;
 using Microsoft.Extensions.DependencyInjection;
 using System;
 using System.Collections.Generic;
@@ -13,6 +14,7 @@ namespace AirBnb.BL
 		public static void AddBLServices(this IServiceCollection services)
 		{
 			services.AddScoped<IBookingManager, BookingManager>();
+			services.AddScoped<IReviewManager, ReviewManager>();
 		}
 	}
 }

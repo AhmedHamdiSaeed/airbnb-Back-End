@@ -24,8 +24,8 @@ namespace AirBnb.API.Controllers
 		}
 
 		#region GetAllBookingForProperty
-		[HttpPost("GetAllBookingForProperty/{id}")]
-		[Authorize(Policy = "Host")]
+		[HttpGet("GetAllBookingForProperty/{id}")]
+		[Authorize(Policy = "ForHost")]
 		[AuthorizeCurrentUser]
 		public async Task<IActionResult> GetAllBookingForProperty(int id)
 		{
@@ -39,8 +39,8 @@ namespace AirBnb.API.Controllers
 
 
 		#region GetPropertyBookingDetails
-		[HttpPost("GetPropertyBookingDetails/{id}")]
-		[Authorize(Policy = "Host")]
+		[HttpGet("GetPropertyBookingDetails/{id}")]
+		[Authorize(Policy = "ForHost")]
 		[AuthorizeCurrentUser]
 		public async Task<IActionResult> GetPropertyBookingDetails(int id)
 		{
@@ -53,13 +53,14 @@ namespace AirBnb.API.Controllers
 		#endregion
 
 		#region UpdateBooking
-		[HttpPost("UpdateBooking/{id}/{obj}")]
+		[HttpPut("UpdateBooking/{id}/{obj}")]
 		[Authorize]
 		[AuthorizeCurrentUser]
 		public async Task<IActionResult> UpdateBooking(int id, BookingUpdateDto obj)
 		{
 			if(ModelState.IsValid)
 			{
+				
 				var result = await _bookingManager.UpdateBooking(id, obj);
 				if(result is false)
 					return BadRequest("Update Feild");
@@ -72,8 +73,9 @@ namespace AirBnb.API.Controllers
 
 
 		#region GetAllUserBooking
-		[HttpPost("GetAllUserBooking")]
-		[Authorize(Policy = "User")]
+		[HttpGet("GetAllUserBooking")]
+		[Authorize(Policy = "ForUser")]
+		
 		[AuthorizeCurrentUser]
 		public async Task<IActionResult> GetAllUserBooking()
 		{
@@ -89,8 +91,8 @@ namespace AirBnb.API.Controllers
 		#endregion
 
 		#region GetUserBookingetails
-		[HttpPost("GetUserBookingetails/{id}")]
-		[Authorize(Policy = "User")]
+		[HttpGet("GetUserBookingetails/{id}")]
+		[Authorize(Policy = "ForUser")]
 		[AuthorizeCurrentUser]
 		public async Task<IActionResult> GetUserBookingetails(int bookingid)
 		{
@@ -107,7 +109,7 @@ namespace AirBnb.API.Controllers
 
 		#region AddBooking
 		[HttpPost("AddBooking/{obj}")]
-		[Authorize(Policy = "User")]
+		[Authorize(Policy = "ForUser")]
 		[AuthorizeCurrentUser]
 		public async Task<IActionResult> AddBooking(AmentityGetDto amentity)
 		{

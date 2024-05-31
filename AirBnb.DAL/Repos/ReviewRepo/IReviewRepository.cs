@@ -11,7 +11,8 @@ namespace AirBnb.DAL.Repos.ReviewRepo
 	public interface IReviewRepository:IGenericRepository<Review>
 	{
 		Task<IEnumerable<Review>> GetAllUserReviews(string userid);
-		Task<Review> GetUserReviewDetails(string userid);
+		Task<IEnumerable<Review>> GetAllBookingReviews(int bookingid);
+		Task<Review> GetUserReviewDetails(int reviewId);
 
 	}
 }

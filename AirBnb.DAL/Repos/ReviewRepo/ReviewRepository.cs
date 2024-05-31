@@ -23,10 +23,14 @@ namespace AirBnb.DAL.Repos.ReviewRepo
 		{
 			return await _context.Set<Review>().AsNoTracking().Where(x=>x.UserId==userid).ToListAsync();
 		}
-
-		public async Task<Review> GetUserReviewDetails(string userid)
+		public async Task<IEnumerable<Review>> GetAllBookingReviews(int bookingid)
 		{
-			return await _context.Set<Review>().Include(x=>x.Booking).FirstOrDefaultAsync(x=>x.UserId==userid);
+			return await _context.Set<Review>().AsNoTracking().Where(x => x.BookingId == bookingid).ToListAsync();
+		}
+
+		public async Task<Review> GetUserReviewDetails(int reviewId)
+		{
+			return await _context.Set<Review>().Include(x=>x.Booking).FirstOrDefaultAsync(x=>x.Id== reviewId);
 		}
 	}
 }

@@ -110,7 +110,9 @@ namespace AirBnb.BL.Managers.BookingManagers
 		public  async Task<bool> UpdateBooking(int bookingid, BookingUpdateDto booking)
 		{
 			Booking getbooking =await _unitOfWork.BookingRepository.GetByIdAsync(bookingid);
+
 			if(getbooking is null) return false;
+			if(getbooking.BookingStatus == Status.Canceled) return false;
 			getbooking.BookingStatus = booking.BookingStatus;
 			_unitOfWork.BookingRepository.UpdateBooking(getbooking);
 			return _unitOfWork.SaveChanges()>0;

@@ -24,7 +24,7 @@
     "ContainingType": "AirBnb.API.Controllers.BookingController",
     "Method": "GetAllBookingForProperty",
     "RelativePath": "api/Booking/GetAllBookingForProperty/{id}",
-    "HttpMethod": "POST",
+    "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
     "Parameters": [
@@ -40,7 +40,7 @@
     "ContainingType": "AirBnb.API.Controllers.BookingController",
     "Method": "GetAllUserBooking",
     "RelativePath": "api/Booking/GetAllUserBooking",
-    "HttpMethod": "POST",
+    "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
     "Parameters": [],
@@ -50,7 +50,7 @@
     "ContainingType": "AirBnb.API.Controllers.BookingController",
     "Method": "GetPropertyBookingDetails",
     "RelativePath": "api/Booking/GetPropertyBookingDetails/{id}",
-    "HttpMethod": "POST",
+    "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
     "Parameters": [
@@ -66,7 +66,7 @@
     "ContainingType": "AirBnb.API.Controllers.BookingController",
     "Method": "GetUserBookingetails",
     "RelativePath": "api/Booking/GetUserBookingetails/{id}",
-    "HttpMethod": "POST",
+    "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
     "Parameters": [
@@ -87,7 +87,7 @@
     "ContainingType": "AirBnb.API.Controllers.BookingController",
     "Method": "UpdateBooking",
     "RelativePath": "api/Booking/UpdateBooking/{id}/{obj}",
-    "HttpMethod": "POST",
+    "HttpMethod": "PUT",
     "IsController": true,
     "Order": 0,
     "Parameters": [
@@ -99,6 +99,111 @@
       {
         "Name": "obj",
         "Type": "AirBnb.BL.Dtos.BookingDtos.BookingUpdateDto",
+        "IsRequired": true
+      },
+      {
+        "Name": "obj",
+        "Type": "",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "AirBnb.API.Controllers.ReviewController",
+    "Method": "AddReview",
+    "RelativePath": "api/Review/AddReview",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "review",
+        "Type": "AirBnb.BL.Dtos.ReviewsDtos.ReviewsAddDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "AirBnb.API.Controllers.ReviewController",
+    "Method": "DeleteReview",
+    "RelativePath": "api/Review/DeleteReview/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "AirBnb.API.Controllers.ReviewController",
+    "Method": "GetAllBookingReviews",
+    "RelativePath": "api/Review/GetAllBookingReviews/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "bookingid",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "id",
+        "Type": "",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "AirBnb.API.Controllers.ReviewController",
+    "Method": "GetAllUserReviews",
+    "RelativePath": "api/Review/GetAllUserReviews",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "AirBnb.API.Controllers.ReviewController",
+    "Method": "GetReviewDetails",
+    "RelativePath": "api/Review/GetReviewDetails/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "AirBnb.API.Controllers.ReviewController",
+    "Method": "UpdateReview",
+    "RelativePath": "api/Review/UpdateReview/{id}/{obj}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "obj",
+        "Type": "AirBnb.BL.Dtos.ReviewsDtos.ReviewsUpdateDto",
         "IsRequired": true
       },
       {
