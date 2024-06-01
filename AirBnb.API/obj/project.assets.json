@@ -4454,19 +4454,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Oppa\\.nuget\\packages\\": {}
+    "C:\\Users\\dell\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\ITI 2023\\0- Final Project\\airbnb-Back-End\\AirBnb.API\\AirBnb.API.csproj",
+      "projectUniqueName": "F:\\NewITI\\final-project\\airbnb-Back-End\\AirBnb.API\\AirBnb.API.csproj",
       "projectName": "AirBnb.API",
-      "projectPath": "D:\\ITI 2023\\0- Final Project\\airbnb-Back-End\\AirBnb.API\\AirBnb.API.csproj",
-      "packagesPath": "C:\\Users\\Oppa\\.nuget\\packages\\",
-      "outputPath": "D:\\ITI 2023\\0- Final Project\\airbnb-Back-End\\AirBnb.API\\obj\\",
+      "projectPath": "F:\\NewITI\\final-project\\airbnb-Back-End\\AirBnb.API\\AirBnb.API.csproj",
+      "packagesPath": "C:\\Users\\dell\\.nuget\\packages\\",
+      "outputPath": "F:\\NewITI\\final-project\\airbnb-Back-End\\AirBnb.API\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\Oppa\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\dell\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -4480,8 +4480,8 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "projectReferences": {
-            "D:\\ITI 2023\\0- Final Project\\airbnb-Back-End\\AirBnb.BL\\AirBnb.BL.csproj": {
-              "projectPath": "D:\\ITI 2023\\0- Final Project\\airbnb-Back-End\\AirBnb.BL\\AirBnb.BL.csproj"
+            "F:\\NewITI\\final-project\\airbnb-Back-End\\AirBnb.BL\\AirBnb.BL.csproj": {
+              "projectPath": "F:\\NewITI\\final-project\\airbnb-Back-End\\AirBnb.BL\\AirBnb.BL.csproj"
             }
           }
         }
@@ -4537,7 +4537,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.200/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.204/PortableRuntimeIdentifierGraph.json"
       }
     }
   }

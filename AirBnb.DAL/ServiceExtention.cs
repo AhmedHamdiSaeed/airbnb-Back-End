@@ -1,6 +1,7 @@
 ﻿using AirBnb.DAL.Data.context;
 using AirBnb.DAL.Data.Model;
 using AirBnb.DAL.Repos.AmentityRepo;
+using AirBnb.DAL.Repos.AppointmentAvailableRepo;
 using AirBnb.DAL.Repos.BookingRepo;
 using AirBnb.DAL.Repos.ReviewRepo;
 using AirBnb.DAL.Unit;
@@ -27,6 +28,7 @@ namespace AirBnb.DAL
 			service.AddScoped<IReviewRepository, ReviewRepository>();
 			service.AddScoped<IBookingRepository, BookingRepository>();
 			service.AddScoped<IAmentityRepository, AmentityRepository>();
+			service.AddScoped<IApptAvailableRepository, ApptAvailableRepository>();
 			service.AddScoped<IUnitOfWork, UnitOfWork>();
 			service.AddIdentity<AppUser, IdentityRole>().AddEntityFrameworkStores<AppDbContext>();
 

@@ -14,3 +14,19 @@ D:\ITI 2023\0- Final Project\airbnb-Back-End\AirBnb.BL\obj\Debug\net8.0\AirBnb.B
 D:\ITI 2023\0- Final Project\airbnb-Back-End\AirBnb.BL\obj\Debug\net8.0\refint\AirBnb.BL.dll
 D:\ITI 2023\0- Final Project\airbnb-Back-End\AirBnb.BL\obj\Debug\net8.0\AirBnb.BL.pdb
 D:\ITI 2023\0- Final Project\airbnb-Back-End\AirBnb.BL\obj\Debug\net8.0\ref\AirBnb.BL.dll
+F:\NewITI\final-project\airbnb-Back-End\AirBnb.BL\bin\Debug\net8.0\AirBnb.BL.deps.json
+F:\NewITI\final-project\airbnb-Back-End\AirBnb.BL\bin\Debug\net8.0\AirBnb.BL.dll
+F:\NewITI\final-project\airbnb-Back-End\AirBnb.BL\bin\Debug\net8.0\AirBnb.BL.pdb
+F:\NewITI\final-project\airbnb-Back-End\AirBnb.BL\bin\Debug\net8.0\AirBnb.DAL.dll
+F:\NewITI\final-project\airbnb-Back-End\AirBnb.BL\bin\Debug\net8.0\AirBnb.DAL.pdb
+F:\NewITI\final-project\airbnb-Back-End\AirBnb.BL\obj\Debug\net8.0\AirBnb.BL.csproj.AssemblyReference.cache
+F:\NewITI\final-project\airbnb-Back-End\AirBnb.BL\obj\Debug\net8.0\AirBnb.BL.GeneratedMSBuildEditorConfig.editorconfig
+F:\NewITI\final-project\airbnb-Back-End\AirBnb.BL\obj\Debug\net8.0\AirBnb.BL.AssemblyInfoInputs.cache
+F:\NewITI\final-project\airbnb-Back-End\AirBnb.BL\obj\Debug\net8.0\AirBnb.BL.AssemblyInfo.cs
+F:\NewITI\final-project\airbnb-Back-End\AirBnb.BL\obj\Debug\net8.0\AirBnb.BL.csproj.CoreCompileInputs.cache
+F:\NewITI\final-project\airbnb-Back-End\AirBnb.BL\obj\Debug\net8.0\AirBnb.BL.sourcelink.json
+F:\NewITI\final-project\airbnb-Back-End\AirBnb.BL\obj\Debug\net8.0\AirBnb.BL.csproj.Up2Date
+F:\NewITI\final-project\airbnb-Back-End\AirBnb.BL\obj\Debug\net8.0\AirBnb.BL.dll
+F:\NewITI\final-project\airbnb-Back-End\AirBnb.BL\obj\Debug\net8.0\refint\AirBnb.BL.dll
+F:\NewITI\final-project\airbnb-Back-End\AirBnb.BL\obj\Debug\net8.0\AirBnb.BL.pdb
+F:\NewITI\final-project\airbnb-Back-End\AirBnb.BL\obj\Debug\net8.0\ref\AirBnb.BL.dll

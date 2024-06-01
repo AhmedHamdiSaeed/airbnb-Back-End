@@ -1,5 +1,6 @@
 ﻿using AirBnb.DAL.Data.context;
 using AirBnb.DAL.Repos.AmentityRepo;
+using AirBnb.DAL.Repos.AppointmentAvailableRepo;
 using AirBnb.DAL.Repos.BookingRepo;
 using AirBnb.DAL.Repos.ReviewRepo;
 using System;
@@ -19,13 +20,15 @@ namespace AirBnb.DAL.Unit
 
 		public IBookingRepository BookingRepository { get; }
 
+        public IApptAvailableRepository ApptAvailableRepository { get; }
 
-        public UnitOfWork(AppDbContext context, IBookingRepository bookingRepository, IReviewRepository reviewRepository, IAmentityRepository amentityRepository)
+        public UnitOfWork(AppDbContext context, IBookingRepository bookingRepository, IReviewRepository reviewRepository, IAmentityRepository amentityRepository, IApptAvailableRepository apptAvailableRepository)
         {
             _context = context;
 			BookingRepository = bookingRepository;
 			ReviewRepository = reviewRepository;
 			AmentityRepository = amentityRepository;
+			ApptAvailableRepository = apptAvailableRepository;
 
         }
         public int SaveChanges()

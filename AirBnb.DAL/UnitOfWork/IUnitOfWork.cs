@@ -1,4 +1,5 @@
 ﻿using AirBnb.DAL.Repos.AmentityRepo;
+using AirBnb.DAL.Repos.AppointmentAvailableRepo;
 using AirBnb.DAL.Repos.BookingRepo;
 using AirBnb.DAL.Repos.ReviewRepo;
 using System;
@@ -14,6 +15,7 @@ namespace AirBnb.DAL.Unit
 		IAmentityRepository AmentityRepository { get; }
 		IReviewRepository ReviewRepository { get; }
 		IBookingRepository BookingRepository { get; }
+		IApptAvailableRepository ApptAvailableRepository { get; }
 		
 
 
