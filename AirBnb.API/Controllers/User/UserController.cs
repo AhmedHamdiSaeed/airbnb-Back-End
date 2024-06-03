@@ -35,6 +35,7 @@ namespace AirBnb.API.Controllers.User
 					LastName = user.lastName,
 					UserName = $"{user.firstName}_{user.lastName}",
 					Email = user.email,
+					Role = (Role)user.role
 				};
 
 				IdentityResult reslut = await _userManager.CreateAsync(newUser, user.password);
@@ -89,6 +90,7 @@ namespace AirBnb.API.Controllers.User
 			{
 				token = new JwtSecurityTokenHandler().WriteToken(token),
 				Role = result.Role.ToString(),
+				userName = $"{result.FirstName} {result.LastName}",
 				expiration = token.ValidTo
 			};
 

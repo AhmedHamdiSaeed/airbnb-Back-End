@@ -20,6 +20,8 @@ namespace AirBnb.BL.Dtos.DtoUser
 		[Required]
 
 		public string lastName { get; set; }
+		[Required]
+		public int role {  get; set; }
 
 	}
 
