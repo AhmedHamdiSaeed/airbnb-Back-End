@@ -75,7 +75,6 @@ namespace AirBnb.API.Controllers
 		#region GetAllUserBooking
 		[HttpGet("GetAllUserBooking")]
 		[Authorize(Policy = "ForUser")]
-		
 		[AuthorizeCurrentUser]
 		public async Task<IActionResult> GetAllUserBooking()
 		{
