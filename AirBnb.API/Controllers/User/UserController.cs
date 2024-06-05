@@ -32,11 +32,14 @@ namespace AirBnb.API.Controllers.User
 		{
 			if (ModelState.IsValid)
 			{
+
+				
+				
 				AppUser newUser = new AppUser()
 				{
 					FirstName = user.firstName,
 					LastName = user.lastName,
-					UserName = $"{user.firstName}_{user.lastName}",
+					UserName = $"{Guid.NewGuid()}",
 					Email = user.email,
 					Role = (Role)user.role
 				};
@@ -48,6 +51,8 @@ namespace AirBnb.API.Controllers.User
 					return BadRequest(reslut.Errors);
 				}
 				return Ok("Successed");
+
+
 			}
 			return BadRequest();
 		}

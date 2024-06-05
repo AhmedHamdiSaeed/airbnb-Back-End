@@ -295,6 +295,84 @@
     "ReturnTypes": []
   },
   {
+    "ContainingType": "AirBnb.API.Controllers.Property.PropertyController",
+    "Method": "AddProperty",
+    "RelativePath": "api/Property/AddNewProperty",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "addProperty",
+        "Type": "AirBnb.BL.Dtos.PropertyDtos.AddPropertyDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "AirBnb.API.Controllers.Property.PropertyController",
+    "Method": "DeleteProperty",
+    "RelativePath": "api/Property/DeletePropertyById/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "AirBnb.API.Controllers.Property.PropertyController",
+    "Method": "getAll",
+    "RelativePath": "api/Property/GetAllProperty",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[AirBnb.BL.Dtos.PropertyDtos.DisplayAllPropertyDto, AirBnb.BL, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "AirBnb.API.Controllers.Property.PropertyController",
+    "Method": "getById",
+    "RelativePath": "api/Property/GetPropertyById/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "AirBnb.BL.Dtos.PropertyDtos.GetPropertyDetailsDto",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
     "ContainingType": "AirBnb.API.Controllers.ReviewController",
     "Method": "AddReview",
     "RelativePath": "api/Review/AddReview",

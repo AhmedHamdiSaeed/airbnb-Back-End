@@ -4,17 +4,17 @@ namespace AirBnb.DAL.Data.Model
 {
 	public class Property:BaseEntity<int>
 	{
-		public string Name { get; set; }=string.Empty;
+		public string Name { get; set; } = string.Empty;
 		public string Description { get; set; } = string.Empty;
 		public string Adress { get; set; } = string.Empty;
 		//public decimal PricePerNight { get; set; }
 		public int NumberOfBedrooms { get; set; }
 		public int NumberOfBathrooms { get; set; }
-		public int Beds {  get; set; }
+		public int Beds { get; set; }
 
 		[ForeignKey(nameof(User))]
 		public string UserId { get; set; }
-		public AppUser User {  get; set; }
+		public AppUser User { get; set; }
 
 		[ForeignKey(nameof(Category))]
 
@@ -28,6 +28,8 @@ namespace AirBnb.DAL.Data.Model
 		public IEnumerable<Amenity> Amenity { get; set; } = new HashSet<Amenity>();
 		public IEnumerable<PropertyImage> PropertyImages { get; set; } = new HashSet<PropertyImage>();
 		public IEnumerable<Booking> PropertyBokking { get; set; } = new HashSet<Booking>();
+		public IEnumerable<AppointmentsAvailable> AppointmentsAvailable { get; set; } = new HashSet<AppointmentsAvailable>();
+
 
 
 	}
