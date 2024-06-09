@@ -5,6 +5,8 @@ using AirBnb.DAL.Repos.AppointmentAvailableRepo;
 using AirBnb.DAL.Repos.BookingRepo;
 using AirBnb.DAL.Repos.CategoryRepo;
 using AirBnb.DAL.Repos.cityRepo;
+using AirBnb.DAL.Repos.CountryRepo;
+using AirBnb.DAL.Repos.PropertyImagesRepo;
 using AirBnb.DAL.Repos.PropertyRepo;
 using AirBnb.DAL.Repos.ReviewRepo;
 using AirBnb.DAL.Repos.UserRepo;
@@ -35,8 +37,10 @@ namespace AirBnb.DAL
 			service.AddScoped<IApptAvailableRepository, ApptAvailableRepository>();
 			service.AddScoped<ICategoryRepository , CategoryRepository>();	
 			service.AddScoped<ICityPrpository, CityPrpository>();	
+			service.AddScoped<ICountryRepository, CountryRepository>();
 			service.AddScoped<IPropertyRepository, PropertyRepository>();
 			service.AddScoped<IUserRepository, UserRepository>();
+			service.AddScoped<IPropertyImagesRepository, PropertyImagesRepository>();
 			service.AddScoped<IUnitOfWork, UnitOfWork>();
 			service.AddIdentity<AppUser, IdentityRole>().AddEntityFrameworkStores<AppDbContext>();
 

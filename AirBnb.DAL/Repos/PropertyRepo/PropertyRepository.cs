@@ -26,19 +26,54 @@ namespace AirBnb.DAL.Repos.PropertyRepo
 			_context.SaveChanges();
 		}
 
-		public async Task<IEnumerable<Property>> GetAllPropertyAsync()
+		public async Task<PaggenationReslut> GetAllPropertyForAdmin(int pageSize, int pageNumber, int? cityId = null, int? cateId = null)
 		{
-			return await _context.Set<Property>()
-				.Include(p => p.City)
-				.AsNoTracking().ToListAsync();
+
+			var query = _context.Set<Property>().AsNoTracking().AsQueryable();
+
+			if (cityId.HasValue)
+			{
+				query = query.Where(p => p.CityId == cityId.Value);
+			}
+			if (cateId.HasValue)
+			{
+				query = query.Where(p => p.CategoryId == cateId.Value);
+			}
+			int quantity = await query.CountAsync();
+			;
+			query = query.Skip((pageNumber - 1) * pageSize).Take(pageSize);
+			return new PaggenationReslut { Quantity = quantity, Properties = query };
 		}
 
-		public async Task<Property> GetProperty(int id)
+		public async Task<PaggenationReslut> GetAllPropertyForAllUsers(int pageNumber, int pageSize, int? cityId = null, int? cateId = null)
 		{
-			return await _context.Set<Property>()
-				.Include(p => p.User)
-				.Include(p => p.City).ThenInclude(c => c.Country)
-				.FirstOrDefaultAsync(p => p.Id == id);
+			
+			var query = _context.Set<Property>().Where(x=>x.Status==Status.Confirmed).AsNoTracking().AsQueryable();
+
+			if (cityId.HasValue)
+			{
+				query = query.Where(p => p.CityId == cityId.Value);
+			}
+			if (cateId.HasValue)
+			{
+				query = query.Where(p => p.CategoryId == cateId.Value);
+			}
+			int quantity=await query.CountAsync();
+			;
+			query = query.Skip((pageNumber - 1) * pageSize).Take(pageSize);
+			return new PaggenationReslut {Quantity= quantity,Properties=query };
+		}
+
+		
+
+		public async Task<IEnumerable<Property>> GetHosterProperties(string hosterId)
+		{
+			return await _context.Set<Property>().AsNoTracking().Where(x=>x.UserId==hosterId).ToListAsync();
+		}
+
+		public async Task<Property> GetPropertyDetailsById(int propId)
+		{
+			return await _context.Set<Property>().Include(x=>x.City).Include(x=>x.Category).Include(x => x.PropertyImages).Include(x=>x.User).Include(x => x.Amenity).Include(x => x.AppointmentsAvailable).FirstOrDefaultAsync(p => p.Id == propId);
 		}
 
 		public async Task<Property> GetPropertyToDeleteById(int id)

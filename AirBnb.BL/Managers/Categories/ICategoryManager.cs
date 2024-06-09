@@ -9,10 +9,10 @@ namespace AirBnb.BL.Managers.Categories
 {
 	public interface ICategoryManager
 	{
-		Task<IEnumerable<CategoryDtos>> GetAllCategories();
-		Task<CategoryDtos> GetCategoryById(int id);
-		Task AddCategory(CategoryDtos categoryDto); //return void 
-		Task<bool> UpdateCategory(EditCategoryDtos categoryDto);
+		Task<IEnumerable<CategoryGetDtos>> GetAllCategories();
+		Task<CategoryGetDtos> GetCategoryById(int id);
+		Task<bool> AddCategory(CategoryAddDto categoryDto); //return void 
+		Task<bool> UpdateCategory(int cateId ,CategoryEditDto categoryDto);
 		Task<bool> DeleteCategory(int id);
 	}
 }

@@ -18,70 +18,128 @@ namespace AirBnb.BL.Managers.Properties
 
 		}
 
-		public async Task<bool> AddProperty(AddPropertyDto addProperty)
+		public async Task<bool> AddProperty(PropertyAddDto addProperty, string userId)
 		{
-			Property property = new Property
+			Property newProp = new Property()
 			{
-				UserId = addProperty.UserId,
 				Name = addProperty.Name,
-				NumberOfBedrooms = addProperty.NumberOfBedrooms,
+				Description = addProperty.Description,
+				Adress = addProperty.Adress,
 				NumberOfBathrooms = addProperty.NumberOfBathrooms,
+				NumberOfBedrooms = addProperty.NumberOfBedrooms,
+				DisplayedImage = addProperty.DisplayedImage,
 				Beds = addProperty.Beds,
+				UserId = userId,
 				CategoryId = addProperty.CategoryId,
 				CityId = addProperty.CityId,
-				Adress = addProperty.Adress,
-				Description = addProperty.Description,
-				Status = addProperty.Status,
-				AppointmentsAvailable = addProperty.AppointmentsAvailable.Select(a => new AppointmentsAvailable
+				Status = Status.Pending,
+				CheckIn = new TimeOnly(addProperty.CheckIn),
+				CheckOut = new TimeOnly(addProperty.CheckOut),
+				NumberOfGuest = addProperty.NumberOfGuest,
+				Pets = addProperty.Pets,
+				TakePhotos = addProperty.TakePhotos,
+
+			};
+			await _unitOfWork.PropertyRepository.AddAsync(newProp);
+			return  _unitOfWork.SaveChanges() > 0;
+			
+		}
+
+		public async Task<PaggenationsResultDto> GetAllPropertyForAdmin(int pageNumber, int pageSize, int? cityId = null, int? cateId = null)
+		{
+			PaggenationReslut AllProperty = await _unitOfWork.PropertyRepository.GetAllPropertyForAllUsers(pageNumber, pageSize, cityId, cateId);
+			if (AllProperty is null)
+				return null;
+
+			var result = new PaggenationsResultDto
+			{
+				Quantity = AllProperty.Quantity,
+				Properties = AllProperty.Properties.Select(p => new PropertyGetDto
 				{
-					From = a.StartTime,
-					To = a.EndTime,
-					PricePerNight = a.PricePerNight,
-					IsAvailable = true
-				}).ToList()
-
+					Id = p.Id,
+					Name = p.Name,
+					DisplayedImage = p.DisplayedImage
+				})
 			};
-			await _unitOfWork.PropertyRepository.AddAsync(property);
-			return _unitOfWork.SaveChanges() > 0;
-
+			return result;
 		}
 
-		public async Task<IEnumerable<DisplayAllPropertyDto>> GetAllProperty()
+		public async Task<PaggenationsResultDto> GetAllPropertyForAllUsers(int pageNumber, int pageSize, int? cityId = null, int? cateId = null)
 		{
-			var properties = await _unitOfWork.PropertyRepository.GetAllPropertyAsync();
-			if (properties == null) { return null; }
+			PaggenationReslut AllProperty = await _unitOfWork.PropertyRepository.GetAllPropertyForAllUsers( pageNumber,  pageSize, cityId, cateId);
+			if (AllProperty is null)
+				return null;
 
-			var res = properties.Select(p => new DisplayAllPropertyDto
+			var result = new PaggenationsResultDto
 			{
-				Id = p.Id,
-				Name = p.Name,
-				City = p.City.Name,
+				Quantity = AllProperty.Quantity,
+				Properties = AllProperty.Properties.Select(p => new PropertyGetDto
+				{
+					Id = p.Id,
+					Name = p.Name,
+					DisplayedImage = p.DisplayedImage
+				})
+			};
+			return result;
+		}
+
+		public async Task<IEnumerable<PropertyGetDto>> GetHosterProperties(string hosterId)
+		{
+			IEnumerable<Property> allProp =await _unitOfWork.PropertyRepository.GetHosterProperties(hosterId);
+
+			if(allProp is null) return null;
+
+			var result = allProp.Select(pro => new PropertyGetDto
+			{
+				Id = pro.Id,
+				Name = pro.Name,
+				DisplayedImage = pro.DisplayedImage,
+
 			});
-			return res;
+			return result;
 		}
 
-		public async Task<GetPropertyDetailsDto> GetPropertyDetailsById(int propertyId)
+		public async Task<PropertyDetailsGetDto> GetPropertyDetailsById(int propId)
 		{
-			var property = await _unitOfWork.PropertyRepository.GetByIdAsync(propertyId);
-			var user = await _unitOfWork.UserRepository.GetUserByIdAsync(property.UserId);
-			var cityInfo = await _unitOfWork.CityPrpository.GetcountrywithCities(property.CityId);
-
-			if (property == null) { return null; };
-
-
-			return new GetPropertyDetailsDto
+			Property singleProp =await _unitOfWork.PropertyRepository.GetPropertyDetailsById(propId);
+			PropertyDetailsGetDto result = new PropertyDetailsGetDto();
+			result.Name = singleProp.Name;
+			result.Description = singleProp.Description;
+			result.Adress = singleProp.Adress;
+			result.NumberOfBathrooms = singleProp.NumberOfBathrooms;
+			result.NumberOfBedrooms = singleProp.NumberOfBedrooms;
+			result.DisplayedImage = singleProp.DisplayedImage;
+			result.Beds= singleProp.Beds;
+			result.UserName=singleProp.User.FirstName;
+			result.CategoryName = singleProp.Category.Name;
+			result.CityName = singleProp.City.Name;
+			result.CheckIn = singleProp.CheckIn;
+			result.CheckOut = singleProp.CheckOut;
+			result.NumberOfGuest=singleProp.NumberOfGuest;
+			result.Pets=singleProp.Pets;
+			result.TakePhotos=singleProp.TakePhotos;
+			result.ImageUrl = singleProp.PropertyImages.Select(img => new Dtos.PropertyImagesDtos.PropertyImagesGet
 			{
-				Name = property.Name,
-				Description = property.Description,
-				Adress = property.Adress,
-				NumberOfBathrooms = property.NumberOfBathrooms,
-				NumberOfBedrooms = property.NumberOfBedrooms,
-				Beds = property.Beds,
-				Username = user != null ? $"{user.FirstName} {user.LastName}" : "N/A",
-				UserImage = user?.Image,
-				CityName = cityInfo.Name,
-				CountryNmae = cityInfo.Country.Name
-			};
+				Id = img.Id,
+				ImageUrl = img.ImageUrl,
+				PropertyId = img.PropertyId,
+			}).ToList();
+			result.Amentities = singleProp.Amenity.Select(am => new PropAmentity
+			{
+				Id=am.Id,
+				Name = am.Name,
+				Description = am.Description
+			}).ToList();
+			result.AppoinmentAvaiable = singleProp.AppointmentsAvailable.Select(app=> new PropAppoinmentAvailable
+			{
+				Id=app.Id,
+				From = app.From,
+				To = app.To,
+				PricePerNight=app.PricePerNight,
+				IsAvailable=app.IsAvailable,
+			}).ToList();
+
+			return result;
 		}
 
 		public async Task<bool> RemoveProperty(int propertyId)

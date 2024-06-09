@@ -1,6 +1,8 @@
-﻿using AirBnb.BL.Dtos.CategoryDtos;
+﻿using AirBnb.API.CustomAuth;
+using AirBnb.BL.Dtos.CategoryDtos;
 using AirBnb.BL.Managers.Categories;
 using AirBnb.DAL.Data.Model;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 
@@ -19,70 +21,72 @@ namespace AirBnb.API.Controllers.Category
 			_userManager = userManager;
 		}
 
+		#region AddCategory
+		[HttpPost("AddCategory")]
+		[Authorize(Policy = "ForAdmin")]
+		[AuthorizeCurrentUser]
+		public async Task<IActionResult> AddCategory([FromBody]CategoryAddDto newCate) {
+			if(ModelState.IsValid)
+			{
+				var result =await _categoryManager.AddCategory(newCate);
+				if (result is false)
+					return BadRequest("Feild Added Category");
+				return Ok(result);
+			}
+			return BadRequest("Data Not Valid");
+		}
+		#endregion
+		#region DeleteCategory
+		[HttpDelete("DeleteCategory/{id}")]
+		[Authorize(Policy = "ForAdmin")]
+		[AuthorizeCurrentUser]
+		public async Task<IActionResult> DeleteCategory(int categoryId)
+		{
+			var result =await _categoryManager.DeleteCategory(categoryId);
+			if (result is false)
+				return BadRequest("Feild In Deleting Data");
+			return Ok(result);
+		}
+		#endregion
+
+		#region GetAllCategories
 		[HttpGet("GetAllCategories")]
 		public async Task<IActionResult> GetAllCategories()
 		{
-			var categories = await _categoryManager.GetAllCategories();
-			if (categories is null)
-			{
-				return NotFound(new { message = $"Categories Is Not Found." });
-			}
-			return Ok(categories);
+			var result =await _categoryManager.GetAllCategories();
+			if (result is null)
+				return Ok("Data Empty");
+			return Ok(result);	
 		}
-
-
-		[HttpGet("GetCategoryDetails/{id}")]
+		#endregion
+		#region GetCategoryById
+		[HttpGet("GetCategoryById/{id}")]
 		public async Task<IActionResult> GetCategoryById(int id)
 		{
-			var category = await _categoryManager.GetCategoryById(id);
-			if (category == null)
-			{
-				return NotFound(new { message = $"Category with ID {id} not found." });
-			}
-			return Ok(category);
+			var result =await _categoryManager.GetCategoryById(id);
+			if (result is null)
+				return Ok("Data Empty");
+			return Ok(result);
 		}
+		#endregion
 
-		[HttpPost("AddCategory")] //admin
-		public async Task<IActionResult> AddCategory(CategoryDtos categoryDto)
+		#region UpdateCategory
+		[HttpPut("UpdateCategory/{id}")]
+		[Authorize(Policy = "ForAdmin")]
+		[AuthorizeCurrentUser]
+		public async Task<IActionResult> UpdateCategory(int id,[FromBody] CategoryEditDto categoryDto)
 		{
-			await _categoryManager.AddCategory(categoryDto);
-			return Ok("Category Added Successfully!");
-		}
-
-
-		[HttpPut("UpdateCategory/{id}")]  //admin
-		public async Task<IActionResult> UpdateCategory(int id, EditCategoryDtos categoryDto)
-		{
-			if (id != categoryDto.Id)
+			if(ModelState.IsValid)
 			{
-				return BadRequest("Category ID mismatch");
+				var result = await _categoryManager.UpdateCategory(id, categoryDto);
+				if (result is false)
+					return BadRequest("Delet Data Feild");
+				return Ok(result);
 			}
-
-			if (ModelState.IsValid)
-			{
-				var result = await _categoryManager.UpdateCategory(categoryDto);
-				if (!result)
-				{
-					return NotFound("Update failed, category not found");
-				}
-
-				return Ok("Category Updated Successfully!");
-			}
-
-			return BadRequest("Invalid data");
+			return BadRequest("Data Not Valid");
 		}
+		#endregion
 
 
-		[HttpDelete("DeleteCategory/{id}")] //admin
-		public async Task<IActionResult> DeleteCategory(int id)
-		{
-			var result = await _categoryManager.DeleteCategory(id);
-			if (!result)
-			{
-				return BadRequest("Deleted Fail");
-			}
-
-			return Ok("Category Deleted Successfully !");
-		}
 	}
 }

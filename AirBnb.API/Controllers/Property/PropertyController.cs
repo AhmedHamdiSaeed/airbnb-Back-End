@@ -1,7 +1,11 @@
 ﻿using AirBnb.API.CustomAuth;
 using AirBnb.BL.Dtos.PropertyDtos;
 using AirBnb.BL.Managers.Properties;
+using AirBnb.DAL.Data.Model;
+using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
+using System.Xml;
 
 namespace AirBnb.API.Controllers.Property
 {
@@ -10,37 +14,88 @@ namespace AirBnb.API.Controllers.Property
 	public class PropertyController : ControllerBase
 	{
 		private readonly IPropertyManager _propertyManager;
-
-		public PropertyController(IPropertyManager propertyManager)
+		private readonly UserManager<AppUser> _userManager;
+		public PropertyController(IPropertyManager propertyManager, UserManager<AppUser> userManager)
 		{
 			_propertyManager = propertyManager;
+			_userManager = userManager;
 		}
 
-		[HttpGet("GetAllProperty")]
-		public async Task<ActionResult<IEnumerable<DisplayAllPropertyDto>>> getAll()
+		#region GetAllPropertyForAllUsers
+		[HttpGet("GetAllPropertyForAllUsers")]
+		public async Task<IActionResult> GetAllPropertyForAllUsers(int pageNumber , int pageSize , int? cityId = null, int? cateId = null)
 		{
-			var properties = await _propertyManager.GetAllProperty();
-			if (properties == null) { return NotFound(); }
-			return Ok(properties);
-		}
+			if (pageNumber < 1 ) pageNumber = 1;
+			if (pageSize < 5) pageSize = 5;
 
-		[HttpGet("GetPropertyById/{id}")]
+			var result = await _propertyManager.GetAllPropertyForAllUsers(pageNumber, pageSize, cityId, cateId);
+			if (result == null) return NotFound("Data Is Empty");
+			return Ok(result);
+		}
+		#endregion
+
+
+		#region GetAllPropertyForAdmin
+		[HttpGet("GetAllPropertyForAdmin")]
+
+		[Authorize(Policy = "ForAdmin")]
 		[AuthorizeCurrentUser]
-		public async Task<ActionResult<GetPropertyDetailsDto>> getById(int id)
+		public async Task<IActionResult> GetAllPropertyForAdmin(int pageNumber, int pageSize, int? cityId = null, int? cateId = null)
 		{
-			var property = await _propertyManager.GetPropertyDetailsById(id);
-			if (property == null) { return NotFound(new { message = "Property not found." }); }
-			return Ok(property);
+			var result = await _propertyManager.GetAllPropertyForAdmin(pageNumber, pageSize, cityId, cateId);
+			if (result == null) return NotFound("Data Is Empty");
+			return Ok(result);
 		}
-		[HttpPost("AddNewProperty")]
-		public async Task<ActionResult> AddProperty(AddPropertyDto addProperty)
+		#endregion
+		#region GetPropertyDetailsById
+		[HttpGet("GetPropertyDetailsById/{id}")]
+		public async Task<IActionResult> GetPropertyDetailsById(int id)
 		{
-			var res = await _propertyManager.AddProperty(addProperty);
-			if (res)
+			var result = await _propertyManager.GetPropertyDetailsById(id);
+			if (result == null) return NotFound($"Property With Id {id} Not Exist");
+			return Ok(result);
+		}
+		#endregion
+
+		#region GetHosterProperties
+		[HttpGet("GetHosterProperties")]
+		[Authorize]
+		[AuthorizeCurrentUser]
+		public async Task<IActionResult> GetHosterProperties()
+		{
+			AppUser CurrentUser = await _userManager.GetUserAsync(User);
+			var result = await _propertyManager.GetHosterProperties(CurrentUser.Id);
+			if (result is null)
 			{
-				return Ok("Property Is Added Sucssefully.");
+				return NotFound("You Dont Have Any Property Yet");
 			}
-			return BadRequest("Could not add property.");
+			return Ok(result);
+		}
+
+		#endregion
+		[HttpPost("AddNewProperty")]
+		public async Task<ActionResult> AddProperty(PropertyAddDto addProperty)
+		{
+			// Check if _propertyManager is null
+			if (_propertyManager == null)
+			{
+				return BadRequest("Internal server error: Property manager not available.");
+			}
+
+			AppUser CurrentUser = await _userManager.GetUserAsync(User);
+
+			if (ModelState.IsValid)
+			{
+				var result = await _propertyManager.AddProperty(addProperty, CurrentUser.Id);
+				if (result is false)
+				{
+					return BadRequest("Add Field");
+				}
+
+				return Ok(result);
+			}
+			return BadRequest("Data Not Valid");
+
 		}
 
 		[HttpDelete("DeletePropertyById/{id}")]

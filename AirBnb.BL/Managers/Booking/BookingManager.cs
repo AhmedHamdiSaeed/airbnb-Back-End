@@ -23,13 +23,16 @@ namespace AirBnb.BL.Managers.BookingManagers
 
 		public async Task<bool> AddBooking(string userid, AmentityGetDto amentity)
 		{
-			Booking booking = new Booking();
-			booking.PropertyId=amentity.PropertyId;
-			booking.UserId=userid;
-			booking.CheckInDate = amentity.From;
-			booking.CheckOutDate=amentity.To;
-			booking.TotalPrice = amentity.TotalProice;
-			booking.BookingStatus = 0;
+			var booking = new Booking
+			{
+			PropertyId = amentity.PropertyId,
+			UserId = userid,
+			CheckInDate = amentity.From,
+			CheckOutDate = amentity.To,
+			TotalPrice = amentity.TotalProice,
+			BookingStatus = Status.Pending,
+		};
+			
 
 			await _unitOfWork.BookingRepository.AddAsync(booking);
 			return _unitOfWork.SaveChanges()>0;

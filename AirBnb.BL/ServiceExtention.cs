@@ -2,7 +2,10 @@
 using AirBnb.BL.Managers.AppointmentsAvailableManager;
 using AirBnb.BL.Managers.BookingManagers;
 using AirBnb.BL.Managers.Categories;
+using AirBnb.BL.Managers.Cities;
+using AirBnb.BL.Managers.Countries;
 using AirBnb.BL.Managers.Properties;
+using AirBnb.BL.Managers.PropertiesImages;
 using AirBnb.BL.Managers.Reviews;
 using Microsoft.Extensions.DependencyInjection;
 using System;
@@ -23,6 +26,9 @@ namespace AirBnb.BL
 			services.AddScoped<IAmenityManager, AmenityManager>();
 			services.AddScoped<IApptAvailableManager, ApptAvailableManager>();
 			services.AddScoped<IPropertyManager, PropertyManager>();
+			services.AddScoped<ICityManager, CityManager>();
+			services.AddScoped<ICountryManager, CountryManager>();
+			services.AddScoped<IPropertyImagesManager, PropertyImagesManager>();
 		}
 	}
 }

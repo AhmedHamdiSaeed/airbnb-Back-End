@@ -107,7 +107,7 @@ namespace AirBnb.API.Controllers
 		#endregion
 
 		#region AddBooking
-		[HttpPost("AddBooking/{obj}")]
+		[HttpPost("AddBooking")]
 		[Authorize(Policy = "ForUser")]
 		[AuthorizeCurrentUser]
 		public async Task<IActionResult> AddBooking(AmentityGetDto amentity)

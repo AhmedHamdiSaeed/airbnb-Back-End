@@ -308,191 +308,191 @@ namespace AirBnb.DAL.Migrations
                         new
                         {
                             Id = 21,
-                            From = new DateTime(2024, 5, 31, 11, 26, 58, 891, DateTimeKind.Local).AddTicks(9314),
+                            From = new DateTime(2024, 6, 7, 4, 59, 53, 132, DateTimeKind.Local).AddTicks(1882),
                             IsAvailable = true,
                             PricePerNight = 20m,
                             PropertyId = 1,
-                            To = new DateTime(2024, 6, 5, 11, 26, 58, 891, DateTimeKind.Local).AddTicks(9366)
+                            To = new DateTime(2024, 6, 12, 4, 59, 53, 132, DateTimeKind.Local).AddTicks(1947)
                         },
                         new
                         {
                             Id = 1,
-                            From = new DateTime(2024, 5, 31, 11, 26, 58, 891, DateTimeKind.Local).AddTicks(9373),
+                            From = new DateTime(2024, 6, 7, 4, 59, 53, 132, DateTimeKind.Local).AddTicks(1954),
                             IsAvailable = true,
                             PricePerNight = 20m,
                             PropertyId = 1,
-                            To = new DateTime(2024, 6, 5, 11, 26, 58, 891, DateTimeKind.Local).AddTicks(9375)
+                            To = new DateTime(2024, 6, 12, 4, 59, 53, 132, DateTimeKind.Local).AddTicks(1956)
                         },
                         new
                         {
                             Id = 2,
-                            From = new DateTime(2024, 6, 1, 11, 26, 58, 891, DateTimeKind.Local).AddTicks(9378),
+                            From = new DateTime(2024, 6, 8, 4, 59, 53, 132, DateTimeKind.Local).AddTicks(1958),
                             IsAvailable = true,
                             PricePerNight = 25m,
                             PropertyId = 2,
-                            To = new DateTime(2024, 6, 6, 11, 26, 58, 891, DateTimeKind.Local).AddTicks(9379)
+                            To = new DateTime(2024, 6, 13, 4, 59, 53, 132, DateTimeKind.Local).AddTicks(1959)
                         },
                         new
                         {
                             Id = 3,
-                            From = new DateTime(2024, 6, 2, 11, 26, 58, 891, DateTimeKind.Local).AddTicks(9381),
+                            From = new DateTime(2024, 6, 9, 4, 59, 53, 132, DateTimeKind.Local).AddTicks(1961),
                             IsAvailable = false,
                             PricePerNight = 30m,
                             PropertyId = 3,
-                            To = new DateTime(2024, 6, 7, 11, 26, 58, 891, DateTimeKind.Local).AddTicks(9382)
+                            To = new DateTime(2024, 6, 14, 4, 59, 53, 132, DateTimeKind.Local).AddTicks(1963)
                         },
                         new
                         {
                             Id = 4,
-                            From = new DateTime(2024, 6, 3, 11, 26, 58, 891, DateTimeKind.Local).AddTicks(9384),
+                            From = new DateTime(2024, 6, 10, 4, 59, 53, 132, DateTimeKind.Local).AddTicks(1965),
                             IsAvailable = true,
                             PricePerNight = 35m,
                             PropertyId = 4,
-                            To = new DateTime(2024, 6, 8, 11, 26, 58, 891, DateTimeKind.Local).AddTicks(9386)
+                            To = new DateTime(2024, 6, 15, 4, 59, 53, 132, DateTimeKind.Local).AddTicks(1966)
                         },
                         new
                         {
                             Id = 5,
-                            From = new DateTime(2024, 6, 4, 11, 26, 58, 891, DateTimeKind.Local).AddTicks(9388),
+                            From = new DateTime(2024, 6, 11, 4, 59, 53, 132, DateTimeKind.Local).AddTicks(1968),
                             IsAvailable = true,
                             PricePerNight = 40m,
                             PropertyId = 5,
-                            To = new DateTime(2024, 6, 9, 11, 26, 58, 891, DateTimeKind.Local).AddTicks(9389)
+                            To = new DateTime(2024, 6, 16, 4, 59, 53, 132, DateTimeKind.Local).AddTicks(1969)
                         },
                         new
                         {
                             Id = 6,
-                            From = new DateTime(2024, 6, 5, 11, 26, 58, 891, DateTimeKind.Local).AddTicks(9391),
+                            From = new DateTime(2024, 6, 12, 4, 59, 53, 132, DateTimeKind.Local).AddTicks(1971),
                             IsAvailable = false,
                             PricePerNight = 45m,
                             PropertyId = 6,
-                            To = new DateTime(2024, 6, 10, 11, 26, 58, 891, DateTimeKind.Local).AddTicks(9392)
+                            To = new DateTime(2024, 6, 17, 4, 59, 53, 132, DateTimeKind.Local).AddTicks(1972)
                         },
                         new
                         {
                             Id = 7,
-                            From = new DateTime(2024, 6, 6, 11, 26, 58, 891, DateTimeKind.Local).AddTicks(9394),
+                            From = new DateTime(2024, 6, 13, 4, 59, 53, 132, DateTimeKind.Local).AddTicks(1974),
                             IsAvailable = true,
                             PricePerNight = 50m,
                             PropertyId = 7,
-                            To = new DateTime(2024, 6, 11, 11, 26, 58, 891, DateTimeKind.Local).AddTicks(9395)
+                            To = new DateTime(2024, 6, 18, 4, 59, 53, 132, DateTimeKind.Local).AddTicks(1976)
                         },
                         new
                         {
                             Id = 8,
-                            From = new DateTime(2024, 6, 7, 11, 26, 58, 891, DateTimeKind.Local).AddTicks(9397),
+                            From = new DateTime(2024, 6, 14, 4, 59, 53, 132, DateTimeKind.Local).AddTicks(1978),
                             IsAvailable = true,
                             PricePerNight = 55m,
                             PropertyId = 8,
-                            To = new DateTime(2024, 6, 12, 11, 26, 58, 891, DateTimeKind.Local).AddTicks(9398)
+                            To = new DateTime(2024, 6, 19, 4, 59, 53, 132, DateTimeKind.Local).AddTicks(1979)
                         },
                         new
                         {
                             Id = 9,
-                            From = new DateTime(2024, 6, 8, 11, 26, 58, 891, DateTimeKind.Local).AddTicks(9400),
+                            From = new DateTime(2024, 6, 15, 4, 59, 53, 132, DateTimeKind.Local).AddTicks(1981),
                             IsAvailable = false,
                             PricePerNight = 60m,
                             PropertyId = 9,
-                            To = new DateTime(2024, 6, 13, 11, 26, 58, 891, DateTimeKind.Local).AddTicks(9401)
+                            To = new DateTime(2024, 6, 20, 4, 59, 53, 132, DateTimeKind.Local).AddTicks(1982)
                         },
                         new
                         {
                             Id = 10,
-                            From = new DateTime(2024, 6, 9, 11, 26, 58, 891, DateTimeKind.Local).AddTicks(9403),
+                            From = new DateTime(2024, 6, 16, 4, 59, 53, 132, DateTimeKind.Local).AddTicks(1984),
                             IsAvailable = true,
                             PricePerNight = 65m,
                             PropertyId = 10,
-                            To = new DateTime(2024, 6, 14, 11, 26, 58, 891, DateTimeKind.Local).AddTicks(9404)
+                            To = new DateTime(2024, 6, 21, 4, 59, 53, 132, DateTimeKind.Local).AddTicks(1985)
                         },
                         new
                         {
                             Id = 11,
-                            From = new DateTime(2024, 6, 10, 11, 26, 58, 891, DateTimeKind.Local).AddTicks(9406),
+                            From = new DateTime(2024, 6, 17, 4, 59, 53, 132, DateTimeKind.Local).AddTicks(1987),
                             IsAvailable = true,
                             PricePerNight = 70m,
                             PropertyId = 11,
-                            To = new DateTime(2024, 6, 15, 11, 26, 58, 891, DateTimeKind.Local).AddTicks(9407)
+                            To = new DateTime(2024, 6, 22, 4, 59, 53, 132, DateTimeKind.Local).AddTicks(1989)
                         },
                         new
                         {
                             Id = 12,
-                            From = new DateTime(2024, 6, 11, 11, 26, 58, 891, DateTimeKind.Local).AddTicks(9409),
+                            From = new DateTime(2024, 6, 18, 4, 59, 53, 132, DateTimeKind.Local).AddTicks(1991),
                             IsAvailable = false,
                             PricePerNight = 75m,
                             PropertyId = 12,
-                            To = new DateTime(2024, 6, 16, 11, 26, 58, 891, DateTimeKind.Local).AddTicks(9410)
+                            To = new DateTime(2024, 6, 23, 4, 59, 53, 132, DateTimeKind.Local).AddTicks(1992)
                         },
                         new
                         {
                             Id = 13,
-                            From = new DateTime(2024, 6, 12, 11, 26, 58, 891, DateTimeKind.Local).AddTicks(9412),
+                            From = new DateTime(2024, 6, 19, 4, 59, 53, 132, DateTimeKind.Local).AddTicks(1994),
                             IsAvailable = true,
                             PricePerNight = 80m,
                             PropertyId = 13,
-                            To = new DateTime(2024, 6, 17, 11, 26, 58, 891, DateTimeKind.Local).AddTicks(9414)
+                            To = new DateTime(2024, 6, 24, 4, 59, 53, 132, DateTimeKind.Local).AddTicks(1995)
                         },
                         new
                         {
                             Id = 14,
-                            From = new DateTime(2024, 6, 13, 11, 26, 58, 891, DateTimeKind.Local).AddTicks(9416),
+                            From = new DateTime(2024, 6, 20, 4, 59, 53, 132, DateTimeKind.Local).AddTicks(1997),
                             IsAvailable = true,
                             PricePerNight = 85m,
                             PropertyId = 14,
-                            To = new DateTime(2024, 6, 18, 11, 26, 58, 891, DateTimeKind.Local).AddTicks(9417)
+                            To = new DateTime(2024, 6, 25, 4, 59, 53, 132, DateTimeKind.Local).AddTicks(1998)
                         },
                         new
                         {
                             Id = 15,
-                            From = new DateTime(2024, 6, 14, 11, 26, 58, 891, DateTimeKind.Local).AddTicks(9419),
+                            From = new DateTime(2024, 6, 21, 4, 59, 53, 132, DateTimeKind.Local).AddTicks(2000),
                             IsAvailable = false,
                             PricePerNight = 90m,
                             PropertyId = 15,
-                            To = new DateTime(2024, 6, 19, 11, 26, 58, 891, DateTimeKind.Local).AddTicks(9420)
+                            To = new DateTime(2024, 6, 26, 4, 59, 53, 132, DateTimeKind.Local).AddTicks(2001)
                         },
                         new
                         {
                             Id = 16,
-                            From = new DateTime(2024, 6, 15, 11, 26, 58, 891, DateTimeKind.Local).AddTicks(9422),
+                            From = new DateTime(2024, 6, 22, 4, 59, 53, 132, DateTimeKind.Local).AddTicks(2003),
                             IsAvailable = true,
                             PricePerNight = 95m,
                             PropertyId = 16,
-                            To = new DateTime(2024, 6, 20, 11, 26, 58, 891, DateTimeKind.Local).AddTicks(9423)
+                            To = new DateTime(2024, 6, 27, 4, 59, 53, 132, DateTimeKind.Local).AddTicks(2004)
                         },
                         new
                         {
                             Id = 17,
-                            From = new DateTime(2024, 6, 16, 11, 26, 58, 891, DateTimeKind.Local).AddTicks(9425),
+                            From = new DateTime(2024, 6, 23, 4, 59, 53, 132, DateTimeKind.Local).AddTicks(2006),
                             IsAvailable = true,
                             PricePerNight = 100m,
                             PropertyId = 17,
-                            To = new DateTime(2024, 6, 21, 11, 26, 58, 891, DateTimeKind.Local).AddTicks(9426)
+                            To = new DateTime(2024, 6, 28, 4, 59, 53, 132, DateTimeKind.Local).AddTicks(2008)
                         },
                         new
                         {
                             Id = 18,
-                            From = new DateTime(2024, 6, 17, 11, 26, 58, 891, DateTimeKind.Local).AddTicks(9428),
+                            From = new DateTime(2024, 6, 24, 4, 59, 53, 132, DateTimeKind.Local).AddTicks(2010),
                             IsAvailable = false,
                             PricePerNight = 105m,
                             PropertyId = 18,
-                            To = new DateTime(2024, 6, 22, 11, 26, 58, 891, DateTimeKind.Local).AddTicks(9429)
+                            To = new DateTime(2024, 6, 29, 4, 59, 53, 132, DateTimeKind.Local).AddTicks(2011)
                         },
                         new
                         {
                             Id = 19,
-                            From = new DateTime(2024, 6, 18, 11, 26, 58, 891, DateTimeKind.Local).AddTicks(9431),
+                            From = new DateTime(2024, 6, 25, 4, 59, 53, 132, DateTimeKind.Local).AddTicks(2013),
                             IsAvailable = true,
                             PricePerNight = 110m,
                             PropertyId = 19,
-                            To = new DateTime(2024, 6, 23, 11, 26, 58, 891, DateTimeKind.Local).AddTicks(9432)
+                            To = new DateTime(2024, 6, 30, 4, 59, 53, 132, DateTimeKind.Local).AddTicks(2014)
                         },
                         new
                         {
                             Id = 20,
-                            From = new DateTime(2024, 6, 19, 11, 26, 58, 891, DateTimeKind.Local).AddTicks(9434),
+                            From = new DateTime(2024, 6, 26, 4, 59, 53, 132, DateTimeKind.Local).AddTicks(2016),
                             IsAvailable = true,
                             PricePerNight = 115m,
                             PropertyId = 20,
-                            To = new DateTime(2024, 6, 24, 11, 26, 58, 891, DateTimeKind.Local).AddTicks(9435)
+                            To = new DateTime(2024, 7, 1, 4, 59, 53, 132, DateTimeKind.Local).AddTicks(2017)
                         });
                 });
 
@@ -535,8 +535,8 @@ namespace AirBnb.DAL.Migrations
                         {
                             Id = 21,
                             BookingStatus = 0,
-                            CheckInDate = new DateTime(2024, 5, 31, 11, 26, 58, 891, DateTimeKind.Local).AddTicks(9469),
-                            CheckOutDate = new DateTime(2024, 6, 5, 11, 26, 58, 891, DateTimeKind.Local).AddTicks(9472),
+                            CheckInDate = new DateTime(2024, 6, 7, 4, 59, 53, 132, DateTimeKind.Local).AddTicks(2055),
+                            CheckOutDate = new DateTime(2024, 6, 12, 4, 59, 53, 132, DateTimeKind.Local).AddTicks(2058),
                             PropertyId = 1,
                             TotalPrice = 100,
                             UserId = "53f9998c-e5c9-4bd5-8db6-eefc68f7fb4f"
@@ -545,8 +545,8 @@ namespace AirBnb.DAL.Migrations
                         {
                             Id = 1,
                             BookingStatus = 0,
-                            CheckInDate = new DateTime(2024, 5, 31, 11, 26, 58, 891, DateTimeKind.Local).AddTicks(9475),
-                            CheckOutDate = new DateTime(2024, 6, 5, 11, 26, 58, 891, DateTimeKind.Local).AddTicks(9476),
+                            CheckInDate = new DateTime(2024, 6, 7, 4, 59, 53, 132, DateTimeKind.Local).AddTicks(2060),
+                            CheckOutDate = new DateTime(2024, 6, 12, 4, 59, 53, 132, DateTimeKind.Local).AddTicks(2062),
                             PropertyId = 1,
                             TotalPrice = 100,
                             UserId = "53f9998c-e5c9-4bd5-8db6-eefc68f7fb4f"
@@ -555,8 +555,8 @@ namespace AirBnb.DAL.Migrations
                         {
                             Id = 2,
                             BookingStatus = 1,
-                            CheckInDate = new DateTime(2024, 6, 1, 11, 26, 58, 891, DateTimeKind.Local).AddTicks(9478),
-                            CheckOutDate = new DateTime(2024, 6, 6, 11, 26, 58, 891, DateTimeKind.Local).AddTicks(9479),
+                            CheckInDate = new DateTime(2024, 6, 8, 4, 59, 53, 132, DateTimeKind.Local).AddTicks(2064),
+                            CheckOutDate = new DateTime(2024, 6, 13, 4, 59, 53, 132, DateTimeKind.Local).AddTicks(2065),
                             PropertyId = 2,
                             TotalPrice = 150,
                             UserId = "53f9998c-e5c9-4bd5-8db6-eefc68f7fb4f"
@@ -565,8 +565,8 @@ namespace AirBnb.DAL.Migrations
                         {
                             Id = 3,
                             BookingStatus = 1,
-                            CheckInDate = new DateTime(2024, 6, 2, 11, 26, 58, 891, DateTimeKind.Local).AddTicks(9481),
-                            CheckOutDate = new DateTime(2024, 6, 7, 11, 26, 58, 891, DateTimeKind.Local).AddTicks(9483),
+                            CheckInDate = new DateTime(2024, 6, 9, 4, 59, 53, 132, DateTimeKind.Local).AddTicks(2067),
+                            CheckOutDate = new DateTime(2024, 6, 14, 4, 59, 53, 132, DateTimeKind.Local).AddTicks(2068),
                             PropertyId = 3,
                             TotalPrice = 200,
                             UserId = "53f9998c-e5c9-4bd5-8db6-eefc68f7fb4f"
@@ -575,8 +575,8 @@ namespace AirBnb.DAL.Migrations
                         {
                             Id = 4,
                             BookingStatus = 0,
-                            CheckInDate = new DateTime(2024, 6, 3, 11, 26, 58, 891, DateTimeKind.Local).AddTicks(9484),
-                            CheckOutDate = new DateTime(2024, 6, 8, 11, 26, 58, 891, DateTimeKind.Local).AddTicks(9486),
+                            CheckInDate = new DateTime(2024, 6, 10, 4, 59, 53, 132, DateTimeKind.Local).AddTicks(2070),
+                            CheckOutDate = new DateTime(2024, 6, 15, 4, 59, 53, 132, DateTimeKind.Local).AddTicks(2072),
                             PropertyId = 4,
                             TotalPrice = 250,
                             UserId = "53f9998c-e5c9-4bd5-8db6-eefc68f7fb4f"
@@ -585,8 +585,8 @@ namespace AirBnb.DAL.Migrations
                         {
                             Id = 5,
                             BookingStatus = 1,
-                            CheckInDate = new DateTime(2024, 6, 4, 11, 26, 58, 891, DateTimeKind.Local).AddTicks(9488),
-                            CheckOutDate = new DateTime(2024, 6, 9, 11, 26, 58, 891, DateTimeKind.Local).AddTicks(9489),
+                            CheckInDate = new DateTime(2024, 6, 11, 4, 59, 53, 132, DateTimeKind.Local).AddTicks(2074),
+                            CheckOutDate = new DateTime(2024, 6, 16, 4, 59, 53, 132, DateTimeKind.Local).AddTicks(2075),
                             PropertyId = 5,
                             TotalPrice = 300,
                             UserId = "53f9998c-e5c9-4bd5-8db6-eefc68f7fb4f"
@@ -595,8 +595,8 @@ namespace AirBnb.DAL.Migrations
                         {
                             Id = 6,
                             BookingStatus = 1,
-                            CheckInDate = new DateTime(2024, 6, 5, 11, 26, 58, 891, DateTimeKind.Local).AddTicks(9491),
-                            CheckOutDate = new DateTime(2024, 6, 10, 11, 26, 58, 891, DateTimeKind.Local).AddTicks(9492),
+                            CheckInDate = new DateTime(2024, 6, 12, 4, 59, 53, 132, DateTimeKind.Local).AddTicks(2077),
+                            CheckOutDate = new DateTime(2024, 6, 17, 4, 59, 53, 132, DateTimeKind.Local).AddTicks(2078),
                             PropertyId = 6,
                             TotalPrice = 350,
                             UserId = "53f9998c-e5c9-4bd5-8db6-eefc68f7fb4f"
@@ -605,8 +605,8 @@ namespace AirBnb.DAL.Migrations
                         {
                             Id = 7,
                             BookingStatus = 0,
-                            CheckInDate = new DateTime(2024, 6, 6, 11, 26, 58, 891, DateTimeKind.Local).AddTicks(9494),
-                            CheckOutDate = new DateTime(2024, 6, 11, 11, 26, 58, 891, DateTimeKind.Local).AddTicks(9495),
+                            CheckInDate = new DateTime(2024, 6, 13, 4, 59, 53, 132, DateTimeKind.Local).AddTicks(2080),
+                            CheckOutDate = new DateTime(2024, 6, 18, 4, 59, 53, 132, DateTimeKind.Local).AddTicks(2081),
                             PropertyId = 7,
                             TotalPrice = 400,
                             UserId = "53f9998c-e5c9-4bd5-8db6-eefc68f7fb4f"
@@ -615,8 +615,8 @@ namespace AirBnb.DAL.Migrations
                         {
                             Id = 8,
                             BookingStatus = 1,
-                            CheckInDate = new DateTime(2024, 6, 7, 11, 26, 58, 891, DateTimeKind.Local).AddTicks(9497),
-                            CheckOutDate = new DateTime(2024, 6, 12, 11, 26, 58, 891, DateTimeKind.Local).AddTicks(9498),
+                            CheckInDate = new DateTime(2024, 6, 14, 4, 59, 53, 132, DateTimeKind.Local).AddTicks(2083),
+                            CheckOutDate = new DateTime(2024, 6, 19, 4, 59, 53, 132, DateTimeKind.Local).AddTicks(2084),
                             PropertyId = 8,
                             TotalPrice = 450,
                             UserId = "53f9998c-e5c9-4bd5-8db6-eefc68f7fb4f"
@@ -625,8 +625,8 @@ namespace AirBnb.DAL.Migrations
                         {
                             Id = 9,
                             BookingStatus = 1,
-                            CheckInDate = new DateTime(2024, 6, 8, 11, 26, 58, 891, DateTimeKind.Local).AddTicks(9500),
-                            CheckOutDate = new DateTime(2024, 6, 13, 11, 26, 58, 891, DateTimeKind.Local).AddTicks(9502),
+                            CheckInDate = new DateTime(2024, 6, 15, 4, 59, 53, 132, DateTimeKind.Local).AddTicks(2086),
+                            CheckOutDate = new DateTime(2024, 6, 20, 4, 59, 53, 132, DateTimeKind.Local).AddTicks(2088),
                             PropertyId = 9,
                             TotalPrice = 500,
                             UserId = "53f9998c-e5c9-4bd5-8db6-eefc68f7fb4f"
@@ -635,8 +635,8 @@ namespace AirBnb.DAL.Migrations
                         {
                             Id = 10,
                             BookingStatus = 0,
-                            CheckInDate = new DateTime(2024, 6, 9, 11, 26, 58, 891, DateTimeKind.Local).AddTicks(9504),
-                            CheckOutDate = new DateTime(2024, 6, 14, 11, 26, 58, 891, DateTimeKind.Local).AddTicks(9505),
+                            CheckInDate = new DateTime(2024, 6, 16, 4, 59, 53, 132, DateTimeKind.Local).AddTicks(2090),
+                            CheckOutDate = new DateTime(2024, 6, 21, 4, 59, 53, 132, DateTimeKind.Local).AddTicks(2091),
                             PropertyId = 10,
                             TotalPrice = 550,
                             UserId = "53f9998c-e5c9-4bd5-8db6-eefc68f7fb4f"
@@ -645,8 +645,8 @@ namespace AirBnb.DAL.Migrations
                         {
                             Id = 11,
                             BookingStatus = 1,
-                            CheckInDate = new DateTime(2024, 6, 10, 11, 26, 58, 891, DateTimeKind.Local).AddTicks(9507),
-                            CheckOutDate = new DateTime(2024, 6, 15, 11, 26, 58, 891, DateTimeKind.Local).AddTicks(9508),
+                            CheckInDate = new DateTime(2024, 6, 17, 4, 59, 53, 132, DateTimeKind.Local).AddTicks(2093),
+                            CheckOutDate = new DateTime(2024, 6, 22, 4, 59, 53, 132, DateTimeKind.Local).AddTicks(2094),
                             PropertyId = 11,
                             TotalPrice = 600,
                             UserId = "53f9998c-e5c9-4bd5-8db6-eefc68f7fb4f"
@@ -655,8 +655,8 @@ namespace AirBnb.DAL.Migrations
                         {
                             Id = 12,
                             BookingStatus = 1,
-                            CheckInDate = new DateTime(2024, 6, 11, 11, 26, 58, 891, DateTimeKind.Local).AddTicks(9510),
-                            CheckOutDate = new DateTime(2024, 6, 16, 11, 26, 58, 891, DateTimeKind.Local).AddTicks(9511),
+                            CheckInDate = new DateTime(2024, 6, 18, 4, 59, 53, 132, DateTimeKind.Local).AddTicks(2096),
+                            CheckOutDate = new DateTime(2024, 6, 23, 4, 59, 53, 132, DateTimeKind.Local).AddTicks(2098),
                             PropertyId = 12,
                             TotalPrice = 650,
                             UserId = "53f9998c-e5c9-4bd5-8db6-eefc68f7fb4f"
@@ -665,8 +665,8 @@ namespace AirBnb.DAL.Migrations
                         {
                             Id = 13,
                             BookingStatus = 0,
-                            CheckInDate = new DateTime(2024, 6, 12, 11, 26, 58, 891, DateTimeKind.Local).AddTicks(9513),
-                            CheckOutDate = new DateTime(2024, 6, 17, 11, 26, 58, 891, DateTimeKind.Local).AddTicks(9514),
+                            CheckInDate = new DateTime(2024, 6, 19, 4, 59, 53, 132, DateTimeKind.Local).AddTicks(2100),
+                            CheckOutDate = new DateTime(2024, 6, 24, 4, 59, 53, 132, DateTimeKind.Local).AddTicks(2101),
                             PropertyId = 13,
                             TotalPrice = 700,
                             UserId = "53f9998c-e5c9-4bd5-8db6-eefc68f7fb4f"
@@ -675,8 +675,8 @@ namespace AirBnb.DAL.Migrations
                         {
                             Id = 14,
                             BookingStatus = 1,
-                            CheckInDate = new DateTime(2024, 6, 13, 11, 26, 58, 891, DateTimeKind.Local).AddTicks(9516),
-                            CheckOutDate = new DateTime(2024, 6, 18, 11, 26, 58, 891, DateTimeKind.Local).AddTicks(9517),
+                            CheckInDate = new DateTime(2024, 6, 20, 4, 59, 53, 132, DateTimeKind.Local).AddTicks(2103),
+                            CheckOutDate = new DateTime(2024, 6, 25, 4, 59, 53, 132, DateTimeKind.Local).AddTicks(2104),
                             PropertyId = 14,
                             TotalPrice = 750,
                             UserId = "53f9998c-e5c9-4bd5-8db6-eefc68f7fb4f"
@@ -685,8 +685,8 @@ namespace AirBnb.DAL.Migrations
                         {
                             Id = 15,
                             BookingStatus = 1,
-                            CheckInDate = new DateTime(2024, 6, 14, 11, 26, 58, 891, DateTimeKind.Local).AddTicks(9519),
-                            CheckOutDate = new DateTime(2024, 6, 19, 11, 26, 58, 891, DateTimeKind.Local).AddTicks(9520),
+                            CheckInDate = new DateTime(2024, 6, 21, 4, 59, 53, 132, DateTimeKind.Local).AddTicks(2106),
+                            CheckOutDate = new DateTime(2024, 6, 26, 4, 59, 53, 132, DateTimeKind.Local).AddTicks(2107),
                             PropertyId = 15,
                             TotalPrice = 800,
                             UserId = "53f9998c-e5c9-4bd5-8db6-eefc68f7fb4f"
@@ -695,8 +695,8 @@ namespace AirBnb.DAL.Migrations
                         {
                             Id = 16,
                             BookingStatus = 0,
-                            CheckInDate = new DateTime(2024, 6, 15, 11, 26, 58, 891, DateTimeKind.Local).AddTicks(9522),
-                            CheckOutDate = new DateTime(2024, 6, 20, 11, 26, 58, 891, DateTimeKind.Local).AddTicks(9523),
+                            CheckInDate = new DateTime(2024, 6, 22, 4, 59, 53, 132, DateTimeKind.Local).AddTicks(2109),
+                            CheckOutDate = new DateTime(2024, 6, 27, 4, 59, 53, 132, DateTimeKind.Local).AddTicks(2110),
                             PropertyId = 16,
                             TotalPrice = 850,
                             UserId = "53f9998c-e5c9-4bd5-8db6-eefc68f7fb4f"
@@ -705,8 +705,8 @@ namespace AirBnb.DAL.Migrations
                         {
                             Id = 17,
                             BookingStatus = 1,
-                            CheckInDate = new DateTime(2024, 6, 16, 11, 26, 58, 891, DateTimeKind.Local).AddTicks(9525),
-                            CheckOutDate = new DateTime(2024, 6, 21, 11, 26, 58, 891, DateTimeKind.Local).AddTicks(9527),
+                            CheckInDate = new DateTime(2024, 6, 23, 4, 59, 53, 132, DateTimeKind.Local).AddTicks(2112),
+                            CheckOutDate = new DateTime(2024, 6, 28, 4, 59, 53, 132, DateTimeKind.Local).AddTicks(2114),
                             PropertyId = 17,
                             TotalPrice = 900,
                             UserId = "53f9998c-e5c9-4bd5-8db6-eefc68f7fb4f"
@@ -715,8 +715,8 @@ namespace AirBnb.DAL.Migrations
                         {
                             Id = 18,
                             BookingStatus = 1,
-                            CheckInDate = new DateTime(2024, 6, 17, 11, 26, 58, 891, DateTimeKind.Local).AddTicks(9528),
-                            CheckOutDate = new DateTime(2024, 6, 22, 11, 26, 58, 891, DateTimeKind.Local).AddTicks(9530),
+                            CheckInDate = new DateTime(2024, 6, 24, 4, 59, 53, 132, DateTimeKind.Local).AddTicks(2115),
+                            CheckOutDate = new DateTime(2024, 6, 29, 4, 59, 53, 132, DateTimeKind.Local).AddTicks(2117),
                             PropertyId = 18,
                             TotalPrice = 950,
                             UserId = "53f9998c-e5c9-4bd5-8db6-eefc68f7fb4f"
@@ -725,8 +725,8 @@ namespace AirBnb.DAL.Migrations
                         {
                             Id = 19,
                             BookingStatus = 0,
-                            CheckInDate = new DateTime(2024, 6, 18, 11, 26, 58, 891, DateTimeKind.Local).AddTicks(9531),
-                            CheckOutDate = new DateTime(2024, 6, 23, 11, 26, 58, 891, DateTimeKind.Local).AddTicks(9533),
+                            CheckInDate = new DateTime(2024, 6, 25, 4, 59, 53, 132, DateTimeKind.Local).AddTicks(2119),
+                            CheckOutDate = new DateTime(2024, 6, 30, 4, 59, 53, 132, DateTimeKind.Local).AddTicks(2120),
                             PropertyId = 19,
                             TotalPrice = 1000,
                             UserId = "53f9998c-e5c9-4bd5-8db6-eefc68f7fb4f"
@@ -735,8 +735,8 @@ namespace AirBnb.DAL.Migrations
                         {
                             Id = 20,
                             BookingStatus = 1,
-                            CheckInDate = new DateTime(2024, 6, 19, 11, 26, 58, 891, DateTimeKind.Local).AddTicks(9535),
-                            CheckOutDate = new DateTime(2024, 6, 24, 11, 26, 58, 891, DateTimeKind.Local).AddTicks(9536),
+                            CheckInDate = new DateTime(2024, 6, 26, 4, 59, 53, 132, DateTimeKind.Local).AddTicks(2122),
+                            CheckOutDate = new DateTime(2024, 7, 1, 4, 59, 53, 132, DateTimeKind.Local).AddTicks(2123),
                             PropertyId = 20,
                             TotalPrice = 1050,
                             UserId = "53f9998c-e5c9-4bd5-8db6-eefc68f7fb4f"
@@ -1124,10 +1124,19 @@ namespace AirBnb.DAL.Migrations
                     b.Property<int>("CategoryId")
                         .HasColumnType("int");
 
+                    b.Property<TimeOnly>("CheckIn")
+                        .HasColumnType("time");
+
+                    b.Property<TimeOnly>("CheckOut")
+                        .HasColumnType("time");
+
                     b.Property<int>("CityId")
                         .HasColumnType("int");
 
                     b.Property<string>("Description")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("DisplayedImage")
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Name")
@@ -1139,8 +1148,17 @@ namespace AirBnb.DAL.Migrations
                     b.Property<int>("NumberOfBedrooms")
                         .HasColumnType("int");
 
+                    b.Property<int>("NumberOfGuest")
+                        .HasColumnType("int");
+
+                    b.Property<bool>("Pets")
+                        .HasColumnType("bit");
+
                     b.Property<int>("Status")
                         .HasColumnType("int");
+
+                    b.Property<bool>("TakePhotos")
+                        .HasColumnType("bit");
 
                     b.Property<string>("UserId")
                         .HasColumnType("nvarchar(450)");
@@ -1162,12 +1180,18 @@ namespace AirBnb.DAL.Migrations
                             Adress = "Cairo",
                             Beds = 8,
                             CategoryId = 1,
+                            CheckIn = new TimeOnly(0, 0, 0).Add(TimeSpan.FromTicks(9)),
+                            CheckOut = new TimeOnly(0, 0, 0).Add(TimeSpan.FromTicks(15)),
                             CityId = 1,
                             Description = "No Description",
+                            DisplayedImage = "https://example.com/image1.jpg",
                             Name = "Apartment",
                             NumberOfBathrooms = 1,
                             NumberOfBedrooms = 4,
+                            NumberOfGuest = 10,
+                            Pets = true,
                             Status = 0,
+                            TakePhotos = false,
                             UserId = "53f9998c-e5c9-4bd5-8db6-eefc68f7fb4f"
                         },
                         new
@@ -1176,12 +1200,18 @@ namespace AirBnb.DAL.Migrations
                             Adress = "Alexandria",
                             Beds = 5,
                             CategoryId = 2,
+                            CheckIn = new TimeOnly(0, 0, 0).Add(TimeSpan.FromTicks(9)),
+                            CheckOut = new TimeOnly(0, 0, 0).Add(TimeSpan.FromTicks(15)),
                             CityId = 2,
                             Description = "Sea view with modern amenities",
+                            DisplayedImage = "https://example.com/image1.jpg",
                             Name = "Beach House",
                             NumberOfBathrooms = 2,
                             NumberOfBedrooms = 3,
+                            NumberOfGuest = 10,
+                            Pets = true,
                             Status = 1,
+                            TakePhotos = false,
                             UserId = "53f9998c-e5c9-4bd5-8db6-eefc68f7fb4f"
                         },
                         new
@@ -1190,12 +1220,18 @@ namespace AirBnb.DAL.Migrations
                             Adress = "Aswan",
                             Beds = 3,
                             CategoryId = 3,
+                            CheckIn = new TimeOnly(0, 0, 0).Add(TimeSpan.FromTicks(9)),
+                            CheckOut = new TimeOnly(0, 0, 0).Add(TimeSpan.FromTicks(15)),
                             CityId = 3,
                             Description = "Cozy cabin in the mountains",
+                            DisplayedImage = "https://example.com/image1.jpg",
                             Name = "Mountain Cabin",
                             NumberOfBathrooms = 1,
                             NumberOfBedrooms = 2,
+                            NumberOfGuest = 10,
+                            Pets = true,
                             Status = 0,
+                            TakePhotos = false,
                             UserId = "53f9998c-e5c9-4bd5-8db6-eefc68f7fb4f"
                         },
                         new
@@ -1204,12 +1240,18 @@ namespace AirBnb.DAL.Migrations
                             Adress = "Sharm El-Sheikh",
                             Beds = 10,
                             CategoryId = 4,
+                            CheckIn = new TimeOnly(0, 0, 0).Add(TimeSpan.FromTicks(9)),
+                            CheckOut = new TimeOnly(0, 0, 0).Add(TimeSpan.FromTicks(15)),
                             CityId = 4,
                             Description = "Luxurious villa with a private pool",
+                            DisplayedImage = "https://example.com/image1.jpg",
                             Name = "Luxury Villa",
                             NumberOfBathrooms = 4,
                             NumberOfBedrooms = 5,
+                            NumberOfGuest = 10,
+                            Pets = true,
                             Status = 2,
+                            TakePhotos = false,
                             UserId = "53f9998c-e5c9-4bd5-8db6-eefc68f7fb4f"
                         },
                         new
@@ -1218,12 +1260,18 @@ namespace AirBnb.DAL.Migrations
                             Adress = "Giza",
                             Beds = 4,
                             CategoryId = 5,
+                            CheckIn = new TimeOnly(0, 0, 0).Add(TimeSpan.FromTicks(9)),
+                            CheckOut = new TimeOnly(0, 0, 0).Add(TimeSpan.FromTicks(15)),
                             CityId = 5,
                             Description = "Modern condo in the city center",
+                            DisplayedImage = "https://example.com/image1.jpg",
                             Name = "Downtown Condo",
                             NumberOfBathrooms = 2,
                             NumberOfBedrooms = 2,
+                            NumberOfGuest = 10,
+                            Pets = true,
                             Status = 0,
+                            TakePhotos = false,
                             UserId = "53f9998c-e5c9-4bd5-8db6-eefc68f7fb4f"
                         },
                         new
@@ -1232,12 +1280,18 @@ namespace AirBnb.DAL.Migrations
                             Adress = "Luxor",
                             Beds = 7,
                             CategoryId = 6,
+                            CheckIn = new TimeOnly(0, 0, 0).Add(TimeSpan.FromTicks(9)),
+                            CheckOut = new TimeOnly(0, 0, 0).Add(TimeSpan.FromTicks(15)),
                             CityId = 6,
                             Description = "Spacious farmhouse with a garden",
+                            DisplayedImage = "https://example.com/image1.jpg",
                             Name = "Farmhouse",
                             NumberOfBathrooms = 3,
                             NumberOfBedrooms = 4,
+                            NumberOfGuest = 10,
+                            Pets = true,
                             Status = 1,
+                            TakePhotos = false,
                             UserId = "53f9998c-e5c9-4bd5-8db6-eefc68f7fb4f"
                         },
                         new
@@ -1246,12 +1300,18 @@ namespace AirBnb.DAL.Migrations
                             Adress = "Cairo",
                             Beds = 6,
                             CategoryId = 7,
+                            CheckIn = new TimeOnly(0, 0, 0).Add(TimeSpan.FromTicks(9)),
+                            CheckOut = new TimeOnly(0, 0, 0).Add(TimeSpan.FromTicks(15)),
                             CityId = 1,
                             Description = "Penthouse with panoramic views",
+                            DisplayedImage = "https://example.com/image1.jpg",
                             Name = "Penthouse",
                             NumberOfBathrooms = 3,
                             NumberOfBedrooms = 3,
+                            NumberOfGuest = 10,
+                            Pets = true,
                             Status = 0,
+                            TakePhotos = false,
                             UserId = "53f9998c-e5c9-4bd5-8db6-eefc68f7fb4f"
                         },
                         new
@@ -1260,12 +1320,18 @@ namespace AirBnb.DAL.Migrations
                             Adress = "Helwan",
                             Beds = 5,
                             CategoryId = 8,
+                            CheckIn = new TimeOnly(0, 0, 0).Add(TimeSpan.FromTicks(9)),
+                            CheckOut = new TimeOnly(0, 0, 0).Add(TimeSpan.FromTicks(15)),
                             CityId = 8,
                             Description = "Family home in a quiet suburb",
+                            DisplayedImage = "https://example.com/image1.jpg",
                             Name = "Suburban Home",
                             NumberOfBathrooms = 2,
                             NumberOfBedrooms = 3,
+                            NumberOfGuest = 10,
+                            Pets = true,
                             Status = 0,
+                            TakePhotos = false,
                             UserId = "53f9998c-e5c9-4bd5-8db6-eefc68f7fb4f"
                         },
                         new
@@ -1274,12 +1340,18 @@ namespace AirBnb.DAL.Migrations
                             Adress = "Alexandria",
                             Beds = 1,
                             CategoryId = 9,
+                            CheckIn = new TimeOnly(0, 0, 0).Add(TimeSpan.FromTicks(9)),
+                            CheckOut = new TimeOnly(0, 0, 0).Add(TimeSpan.FromTicks(15)),
                             CityId = 2,
                             Description = "Compact studio in a bustling area",
+                            DisplayedImage = "https://example.com/image1.jpg",
                             Name = "Studio Apartment",
                             NumberOfBathrooms = 1,
                             NumberOfBedrooms = 1,
+                            NumberOfGuest = 10,
+                            Pets = true,
                             Status = 2,
+                            TakePhotos = false,
                             UserId = "53f9998c-e5c9-4bd5-8db6-eefc68f7fb4f"
                         },
                         new
@@ -1288,12 +1360,18 @@ namespace AirBnb.DAL.Migrations
                             Adress = "Minya",
                             Beds = 3,
                             CategoryId = 10,
+                            CheckIn = new TimeOnly(0, 0, 0).Add(TimeSpan.FromTicks(9)),
+                            CheckOut = new TimeOnly(0, 0, 0).Add(TimeSpan.FromTicks(15)),
                             CityId = 10,
                             Description = "Charming cottage in the countryside",
+                            DisplayedImage = "https://example.com/image1.jpg",
                             Name = "Country Cottage",
                             NumberOfBathrooms = 1,
                             NumberOfBedrooms = 2,
+                            NumberOfGuest = 10,
+                            Pets = true,
                             Status = 0,
+                            TakePhotos = false,
                             UserId = "53f9998c-e5c9-4bd5-8db6-eefc68f7fb4f"
                         },
                         new
@@ -1302,12 +1380,18 @@ namespace AirBnb.DAL.Migrations
                             Adress = "Fayoum",
                             Beds = 5,
                             CategoryId = 11,
+                            CheckIn = new TimeOnly(0, 0, 0).Add(TimeSpan.FromTicks(9)),
+                            CheckOut = new TimeOnly(0, 0, 0).Add(TimeSpan.FromTicks(15)),
                             CityId = 11,
                             Description = "Peaceful house by the lake",
+                            DisplayedImage = "https://example.com/image1.jpg",
                             Name = "Lake House",
                             NumberOfBathrooms = 2,
                             NumberOfBedrooms = 3,
+                            NumberOfGuest = 10,
+                            Pets = true,
                             Status = 0,
+                            TakePhotos = false,
                             UserId = "53f9998c-e5c9-4bd5-8db6-eefc68f7fb4f"
                         },
                         new
@@ -1316,12 +1400,18 @@ namespace AirBnb.DAL.Migrations
                             Adress = "Cairo",
                             Beds = 2,
                             CategoryId = 12,
+                            CheckIn = new TimeOnly(0, 0, 0).Add(TimeSpan.FromTicks(9)),
+                            CheckOut = new TimeOnly(0, 0, 0).Add(TimeSpan.FromTicks(15)),
                             CityId = 1,
                             Description = "Stylish loft in an urban setting",
+                            DisplayedImage = "https://example.com/image1.jpg",
                             Name = "Urban Loft",
                             NumberOfBathrooms = 1,
                             NumberOfBedrooms = 2,
+                            NumberOfGuest = 10,
+                            Pets = true,
                             Status = 0,
+                            TakePhotos = false,
                             UserId = "53f9998c-e5c9-4bd5-8db6-eefc68f7fb4f"
                         },
                         new
@@ -1330,12 +1420,18 @@ namespace AirBnb.DAL.Migrations
                             Adress = "Suez",
                             Beds = 4,
                             CategoryId = 13,
+                            CheckIn = new TimeOnly(0, 0, 0).Add(TimeSpan.FromTicks(9)),
+                            CheckOut = new TimeOnly(0, 0, 0).Add(TimeSpan.FromTicks(15)),
                             CityId = 13,
                             Description = "Modern townhouse with a garage",
+                            DisplayedImage = "https://example.com/image1.jpg",
                             Name = "Townhouse",
                             NumberOfBathrooms = 2,
                             NumberOfBedrooms = 3,
+                            NumberOfGuest = 10,
+                            Pets = true,
                             Status = 0,
+                            TakePhotos = false,
                             UserId = "53f9998c-e5c9-4bd5-8db6-eefc68f7fb4f"
                         },
                         new
@@ -1344,12 +1440,18 @@ namespace AirBnb.DAL.Migrations
                             Adress = "Alexandria",
                             Beds = 7,
                             CategoryId = 14,
+                            CheckIn = new TimeOnly(0, 0, 0).Add(TimeSpan.FromTicks(9)),
+                            CheckOut = new TimeOnly(0, 0, 0).Add(TimeSpan.FromTicks(15)),
                             CityId = 2,
                             Description = "Home with historical significance",
+                            DisplayedImage = "https://example.com/image1.jpg",
                             Name = "Historical Home",
                             NumberOfBathrooms = 3,
                             NumberOfBedrooms = 4,
+                            NumberOfGuest = 10,
+                            Pets = true,
                             Status = 0,
+                            TakePhotos = false,
                             UserId = "53f9998c-e5c9-4bd5-8db6-eefc68f7fb4f"
                         },
                         new
@@ -1358,12 +1460,18 @@ namespace AirBnb.DAL.Migrations
                             Adress = "Siwa",
                             Beds = 3,
                             CategoryId = 15,
+                            CheckIn = new TimeOnly(0, 0, 0).Add(TimeSpan.FromTicks(9)),
+                            CheckOut = new TimeOnly(0, 0, 0).Add(TimeSpan.FromTicks(15)),
                             CityId = 15,
                             Description = "Retreat in the quiet of the desert",
+                            DisplayedImage = "https://example.com/image1.jpg",
                             Name = "Desert Retreat",
                             NumberOfBathrooms = 1,
                             NumberOfBedrooms = 2,
+                            NumberOfGuest = 10,
+                            Pets = true,
                             Status = 1,
+                            TakePhotos = false,
                             UserId = "53f9998c-e5c9-4bd5-8db6-eefc68f7fb4f"
                         },
                         new
@@ -1372,12 +1480,18 @@ namespace AirBnb.DAL.Migrations
                             Adress = "Dahab",
                             Beds = 4,
                             CategoryId = 16,
+                            CheckIn = new TimeOnly(0, 0, 0).Add(TimeSpan.FromTicks(9)),
+                            CheckOut = new TimeOnly(0, 0, 0).Add(TimeSpan.FromTicks(15)),
                             CityId = 16,
                             Description = "Single-story bungalow with a yard",
+                            DisplayedImage = "https://example.com/image1.jpg",
                             Name = "Bungalow",
                             NumberOfBathrooms = 1,
                             NumberOfBedrooms = 3,
+                            NumberOfGuest = 10,
+                            Pets = true,
                             Status = 0,
+                            TakePhotos = false,
                             UserId = "53f9998c-e5c9-4bd5-8db6-eefc68f7fb4f"
                         },
                         new
@@ -1386,12 +1500,18 @@ namespace AirBnb.DAL.Migrations
                             Adress = "Cairo",
                             Beds = 1,
                             CategoryId = 17,
+                            CheckIn = new TimeOnly(0, 0, 0).Add(TimeSpan.FromTicks(9)),
+                            CheckOut = new TimeOnly(0, 0, 0).Add(TimeSpan.FromTicks(15)),
                             CityId = 1,
                             Description = "Modern flat in a residential complex",
+                            DisplayedImage = "https://example.com/image1.jpg",
                             Name = "Modern Flat",
                             NumberOfBathrooms = 1,
                             NumberOfBedrooms = 1,
+                            NumberOfGuest = 10,
+                            Pets = true,
                             Status = 0,
+                            TakePhotos = false,
                             UserId = "53f9998c-e5c9-4bd5-8db6-eefc68f7fb4f"
                         },
                         new
@@ -1400,12 +1520,18 @@ namespace AirBnb.DAL.Migrations
                             Adress = "Port Said",
                             Beds = 5,
                             CategoryId = 18,
+                            CheckIn = new TimeOnly(0, 0, 0).Add(TimeSpan.FromTicks(9)),
+                            CheckOut = new TimeOnly(0, 0, 0).Add(TimeSpan.FromTicks(15)),
                             CityId = 18,
                             Description = "Eco-friendly house with solar panels",
+                            DisplayedImage = "https://example.com/image1.jpg",
                             Name = "Eco-Friendly House",
                             NumberOfBathrooms = 2,
                             NumberOfBedrooms = 3,
+                            NumberOfGuest = 10,
+                            Pets = true,
                             Status = 2,
+                            TakePhotos = false,
                             UserId = "53f9998c-e5c9-4bd5-8db6-eefc68f7fb4f"
                         },
                         new
@@ -1414,12 +1540,18 @@ namespace AirBnb.DAL.Migrations
                             Adress = "Hurghada",
                             Beds = 9,
                             CategoryId = 19,
+                            CheckIn = new TimeOnly(0, 0, 0).Add(TimeSpan.FromTicks(9)),
+                            CheckOut = new TimeOnly(0, 0, 0).Add(TimeSpan.FromTicks(15)),
                             CityId = 19,
                             Description = "Villa with a view of the sea",
+                            DisplayedImage = "https://example.com/image1.jpg",
                             Name = "Seaside Villa",
                             NumberOfBathrooms = 4,
                             NumberOfBedrooms = 5,
+                            NumberOfGuest = 10,
+                            Pets = true,
                             Status = 0,
+                            TakePhotos = false,
                             UserId = "53f9998c-e5c9-4bd5-8db6-eefc68f7fb4f"
                         },
                         new
@@ -1428,12 +1560,18 @@ namespace AirBnb.DAL.Migrations
                             Adress = "Sinai",
                             Beds = 3,
                             CategoryId = 20,
+                            CheckIn = new TimeOnly(0, 0, 0).Add(TimeSpan.FromTicks(9)),
+                            CheckOut = new TimeOnly(0, 0, 0).Add(TimeSpan.FromTicks(15)),
                             CityId = 20,
                             Description = "Cabin with a rustic charm",
+                            DisplayedImage = "https://example.com/image1.jpg",
                             Name = "Rustic Cabin",
                             NumberOfBathrooms = 1,
                             NumberOfBedrooms = 2,
+                            NumberOfGuest = 10,
+                            Pets = true,
                             Status = 1,
+                            TakePhotos = false,
                             UserId = "53f9998c-e5c9-4bd5-8db6-eefc68f7fb4f"
                         });
                 });
@@ -1449,9 +1587,6 @@ namespace AirBnb.DAL.Migrations
                     b.Property<string>("ImageUrl")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<bool>("IsMainImage")
-                        .HasColumnType("bit");
-
                     b.Property<int>("PropertyId")
                         .HasColumnType("int");
 
@@ -1466,413 +1601,354 @@ namespace AirBnb.DAL.Migrations
                         {
                             Id = 1,
                             ImageUrl = "https://example.com/image1.jpg",
-                            IsMainImage = true,
                             PropertyId = 1
                         },
                         new
                         {
                             Id = 2,
                             ImageUrl = "https://example.com/image2.jpg",
-                            IsMainImage = false,
                             PropertyId = 1
                         },
                         new
                         {
                             Id = 3,
                             ImageUrl = "https://example.com/image3.jpg",
-                            IsMainImage = false,
                             PropertyId = 1
                         },
                         new
                         {
                             Id = 4,
                             ImageUrl = "https://example.com/image4.jpg",
-                            IsMainImage = false,
                             PropertyId = 1
                         },
                         new
                         {
                             Id = 5,
                             ImageUrl = "https://example.com/image5.jpg",
-                            IsMainImage = true,
                             PropertyId = 2
                         },
                         new
                         {
                             Id = 6,
                             ImageUrl = "https://example.com/image6.jpg",
-                            IsMainImage = false,
                             PropertyId = 2
                         },
                         new
                         {
                             Id = 7,
                             ImageUrl = "https://example.com/image7.jpg",
-                            IsMainImage = false,
                             PropertyId = 2
                         },
                         new
                         {
                             Id = 8,
                             ImageUrl = "https://example.com/image8.jpg",
-                            IsMainImage = false,
                             PropertyId = 2
                         },
                         new
                         {
                             Id = 9,
                             ImageUrl = "https://example.com/image9.jpg",
-                            IsMainImage = true,
                             PropertyId = 3
                         },
                         new
                         {
                             Id = 10,
                             ImageUrl = "https://example.com/image10.jpg",
-                            IsMainImage = false,
                             PropertyId = 3
                         },
                         new
                         {
                             Id = 11,
                             ImageUrl = "https://example.com/image11.jpg",
-                            IsMainImage = false,
                             PropertyId = 3
                         },
                         new
                         {
                             Id = 12,
                             ImageUrl = "https://example.com/image12.jpg",
-                            IsMainImage = false,
                             PropertyId = 3
                         },
                         new
                         {
                             Id = 13,
                             ImageUrl = "https://example.com/image13.jpg",
-                            IsMainImage = true,
                             PropertyId = 4
                         },
                         new
                         {
                             Id = 14,
                             ImageUrl = "https://example.com/image14.jpg",
-                            IsMainImage = false,
                             PropertyId = 4
                         },
                         new
                         {
                             Id = 15,
                             ImageUrl = "https://example.com/image15.jpg",
-                            IsMainImage = false,
                             PropertyId = 4
                         },
                         new
                         {
                             Id = 16,
                             ImageUrl = "https://example.com/image16.jpg",
-                            IsMainImage = false,
                             PropertyId = 4
                         },
                         new
                         {
                             Id = 17,
                             ImageUrl = "https://example.com/image17.jpg",
-                            IsMainImage = true,
                             PropertyId = 5
                         },
                         new
                         {
                             Id = 18,
                             ImageUrl = "https://example.com/image18.jpg",
-                            IsMainImage = false,
                             PropertyId = 5
                         },
                         new
                         {
                             Id = 19,
                             ImageUrl = "https://example.com/image19.jpg",
-                            IsMainImage = false,
                             PropertyId = 5
                         },
                         new
                         {
                             Id = 20,
                             ImageUrl = "https://example.com/image20.jpg",
-                            IsMainImage = false,
                             PropertyId = 5
                         },
                         new
                         {
                             Id = 21,
                             ImageUrl = "https://example.com/image21.jpg",
-                            IsMainImage = true,
                             PropertyId = 6
                         },
                         new
                         {
                             Id = 22,
                             ImageUrl = "https://example.com/image22.jpg",
-                            IsMainImage = false,
                             PropertyId = 6
                         },
                         new
                         {
                             Id = 23,
                             ImageUrl = "https://example.com/image23.jpg",
-                            IsMainImage = false,
                             PropertyId = 6
                         },
                         new
                         {
                             Id = 24,
                             ImageUrl = "https://example.com/image24.jpg",
-                            IsMainImage = false,
                             PropertyId = 6
                         },
                         new
                         {
                             Id = 25,
                             ImageUrl = "https://example.com/image25.jpg",
-                            IsMainImage = true,
                             PropertyId = 7
                         },
                         new
                         {
                             Id = 26,
                             ImageUrl = "https://example.com/image26.jpg",
-                            IsMainImage = false,
                             PropertyId = 7
                         },
                         new
                         {
                             Id = 27,
                             ImageUrl = "https://example.com/image27.jpg",
-                            IsMainImage = false,
                             PropertyId = 7
                         },
                         new
                         {
                             Id = 28,
                             ImageUrl = "https://example.com/image28.jpg",
-                            IsMainImage = false,
                             PropertyId = 7
                         },
                         new
                         {
                             Id = 29,
                             ImageUrl = "https://example.com/image29.jpg",
-                            IsMainImage = true,
                             PropertyId = 8
                         },
                         new
                         {
                             Id = 30,
                             ImageUrl = "https://example.com/image30.jpg",
-                            IsMainImage = false,
                             PropertyId = 8
                         },
                         new
                         {
                             Id = 31,
                             ImageUrl = "https://example.com/image31.jpg",
-                            IsMainImage = false,
                             PropertyId = 8
                         },
                         new
                         {
                             Id = 32,
                             ImageUrl = "https://example.com/image32.jpg",
-                            IsMainImage = false,
                             PropertyId = 8
                         },
                         new
                         {
                             Id = 33,
                             ImageUrl = "https://example.com/image33.jpg",
-                            IsMainImage = true,
                             PropertyId = 9
                         },
                         new
                         {
                             Id = 34,
                             ImageUrl = "https://example.com/image34.jpg",
-                            IsMainImage = false,
                             PropertyId = 9
                         },
                         new
                         {
                             Id = 35,
                             ImageUrl = "https://example.com/image35.jpg",
-                            IsMainImage = false,
                             PropertyId = 9
                         },
                         new
                         {
                             Id = 36,
                             ImageUrl = "https://example.com/image36.jpg",
-                            IsMainImage = false,
                             PropertyId = 9
                         },
                         new
                         {
                             Id = 37,
                             ImageUrl = "https://example.com/image37.jpg",
-                            IsMainImage = true,
                             PropertyId = 10
                         },
                         new
                         {
                             Id = 38,
                             ImageUrl = "https://example.com/image38.jpg",
-                            IsMainImage = false,
                             PropertyId = 10
                         },
                         new
                         {
                             Id = 39,
                             ImageUrl = "https://example.com/image39.jpg",
-                            IsMainImage = false,
                             PropertyId = 10
                         },
                         new
                         {
                             Id = 40,
                             ImageUrl = "https://example.com/image40.jpg",
-                            IsMainImage = false,
                             PropertyId = 10
                         },
                         new
                         {
                             Id = 41,
                             ImageUrl = "https://example.com/image41.jpg",
-                            IsMainImage = true,
                             PropertyId = 11
                         },
                         new
                         {
                             Id = 42,
                             ImageUrl = "https://example.com/image42.jpg",
-                            IsMainImage = false,
                             PropertyId = 11
                         },
                         new
                         {
                             Id = 43,
                             ImageUrl = "https://example.com/image43.jpg",
-                            IsMainImage = false,
                             PropertyId = 11
                         },
                         new
                         {
                             Id = 44,
                             ImageUrl = "https://example.com/image44.jpg",
-                            IsMainImage = false,
                             PropertyId = 11
                         },
                         new
                         {
                             Id = 45,
                             ImageUrl = "https://example.com/image45.jpg",
-                            IsMainImage = true,
                             PropertyId = 12
                         },
                         new
                         {
                             Id = 46,
                             ImageUrl = "https://example.com/image46.jpg",
-                            IsMainImage = false,
                             PropertyId = 12
                         },
                         new
                         {
                             Id = 47,
                             ImageUrl = "https://example.com/image47.jpg",
-                            IsMainImage = false,
                             PropertyId = 12
                         },
                         new
                         {
                             Id = 48,
                             ImageUrl = "https://example.com/image48.jpg",
-                            IsMainImage = false,
                             PropertyId = 12
                         },
                         new
                         {
                             Id = 49,
                             ImageUrl = "https://example.com/image49.jpg",
-                            IsMainImage = true,
                             PropertyId = 13
                         },
                         new
                         {
                             Id = 50,
                             ImageUrl = "https://example.com/image50.jpg",
-                            IsMainImage = false,
                             PropertyId = 13
                         },
                         new
                         {
                             Id = 51,
                             ImageUrl = "https://example.com/image51.jpg",
-                            IsMainImage = false,
                             PropertyId = 13
                         },
                         new
                         {
                             Id = 52,
                             ImageUrl = "https://example.com/image52.jpg",
-                            IsMainImage = false,
                             PropertyId = 13
                         },
                         new
                         {
                             Id = 53,
                             ImageUrl = "https://example.com/image53.jpg",
-                            IsMainImage = true,
                             PropertyId = 14
                         },
                         new
                         {
                             Id = 54,
                             ImageUrl = "https://example.com/image54.jpg",
-                            IsMainImage = false,
                             PropertyId = 14
                         },
                         new
                         {
                             Id = 55,
                             ImageUrl = "https://example.com/image55.jpg",
-                            IsMainImage = false,
                             PropertyId = 14
                         },
                         new
                         {
                             Id = 56,
                             ImageUrl = "https://example.com/image56.jpg",
-                            IsMainImage = false,
                             PropertyId = 14
                         },
                         new
                         {
                             Id = 57,
                             ImageUrl = "https://example.com/image57.jpg",
-                            IsMainImage = true,
                             PropertyId = 15
                         },
                         new
                         {
                             Id = 58,
                             ImageUrl = "https://example.com/image58.jpg",
-                            IsMainImage = false,
                             PropertyId = 15
                         },
                         new
                         {
                             Id = 59,
                             ImageUrl = "https://example.com/image59.jpg",
-                            IsMainImage = false,
                             PropertyId = 15
                         });
                 });
@@ -2068,251 +2144,6 @@ namespace AirBnb.DAL.Migrations
                         });
                 });
 
-            modelBuilder.Entity("AirBnb.DAL.Data.Model.Rule", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
-
-                    b.Property<TimeOnly>("CheckIn")
-                        .HasColumnType("time");
-
-                    b.Property<TimeOnly>("CheckOut")
-                        .HasColumnType("time");
-
-                    b.Property<int>("NumberOfGuest")
-                        .HasColumnType("int");
-
-                    b.Property<bool>("Pets")
-                        .HasColumnType("bit");
-
-                    b.Property<int>("PropertyId")
-                        .HasColumnType("int");
-
-                    b.Property<bool>("TakePhotos")
-                        .HasColumnType("bit");
-
-                    b.HasKey("Id");
-
-                    b.HasIndex("PropertyId");
-
-                    b.ToTable("Rules");
-
-                    b.HasData(
-                        new
-                        {
-                            Id = 1,
-                            CheckIn = new TimeOnly(16, 0, 0),
-                            CheckOut = new TimeOnly(9, 0, 0),
-                            NumberOfGuest = 2,
-                            Pets = true,
-                            PropertyId = 1,
-                            TakePhotos = true
-                        },
-                        new
-                        {
-                            Id = 21,
-                            CheckIn = new TimeOnly(16, 0, 0),
-                            CheckOut = new TimeOnly(9, 0, 0),
-                            NumberOfGuest = 2,
-                            Pets = true,
-                            PropertyId = 1,
-                            TakePhotos = true
-                        },
-                        new
-                        {
-                            Id = 2,
-                            CheckIn = new TimeOnly(15, 0, 0),
-                            CheckOut = new TimeOnly(10, 0, 0),
-                            NumberOfGuest = 3,
-                            Pets = false,
-                            PropertyId = 2,
-                            TakePhotos = true
-                        },
-                        new
-                        {
-                            Id = 3,
-                            CheckIn = new TimeOnly(17, 0, 0),
-                            CheckOut = new TimeOnly(11, 0, 0),
-                            NumberOfGuest = 4,
-                            Pets = true,
-                            PropertyId = 3,
-                            TakePhotos = false
-                        },
-                        new
-                        {
-                            Id = 4,
-                            CheckIn = new TimeOnly(14, 0, 0),
-                            CheckOut = new TimeOnly(12, 0, 0),
-                            NumberOfGuest = 5,
-                            Pets = false,
-                            PropertyId = 4,
-                            TakePhotos = true
-                        },
-                        new
-                        {
-                            Id = 5,
-                            CheckIn = new TimeOnly(18, 0, 0),
-                            CheckOut = new TimeOnly(9, 30, 0),
-                            NumberOfGuest = 2,
-                            Pets = true,
-                            PropertyId = 5,
-                            TakePhotos = true
-                        },
-                        new
-                        {
-                            Id = 6,
-                            CheckIn = new TimeOnly(13, 0, 0),
-                            CheckOut = new TimeOnly(10, 30, 0),
-                            NumberOfGuest = 3,
-                            Pets = true,
-                            PropertyId = 6,
-                            TakePhotos = false
-                        },
-                        new
-                        {
-                            Id = 7,
-                            CheckIn = new TimeOnly(16, 30, 0),
-                            CheckOut = new TimeOnly(8, 0, 0),
-                            NumberOfGuest = 1,
-                            Pets = false,
-                            PropertyId = 7,
-                            TakePhotos = true
-                        },
-                        new
-                        {
-                            Id = 8,
-                            CheckIn = new TimeOnly(15, 30, 0),
-                            CheckOut = new TimeOnly(11, 0, 0),
-                            NumberOfGuest = 2,
-                            Pets = true,
-                            PropertyId = 8,
-                            TakePhotos = true
-                        },
-                        new
-                        {
-                            Id = 9,
-                            CheckIn = new TimeOnly(14, 30, 0),
-                            CheckOut = new TimeOnly(12, 30, 0),
-                            NumberOfGuest = 4,
-                            Pets = false,
-                            PropertyId = 9,
-                            TakePhotos = false
-                        },
-                        new
-                        {
-                            Id = 10,
-                            CheckIn = new TimeOnly(17, 30, 0),
-                            CheckOut = new TimeOnly(10, 0, 0),
-                            NumberOfGuest = 5,
-                            Pets = true,
-                            PropertyId = 10,
-                            TakePhotos = true
-                        },
-                        new
-                        {
-                            Id = 11,
-                            CheckIn = new TimeOnly(18, 0, 0),
-                            CheckOut = new TimeOnly(9, 0, 0),
-                            NumberOfGuest = 3,
-                            Pets = false,
-                            PropertyId = 11,
-                            TakePhotos = true
-                        },
-                        new
-                        {
-                            Id = 12,
-                            CheckIn = new TimeOnly(15, 0, 0),
-                            CheckOut = new TimeOnly(8, 30, 0),
-                            NumberOfGuest = 1,
-                            Pets = true,
-                            PropertyId = 12,
-                            TakePhotos = false
-                        },
-                        new
-                        {
-                            Id = 13,
-                            CheckIn = new TimeOnly(16, 30, 0),
-                            CheckOut = new TimeOnly(11, 30, 0),
-                            NumberOfGuest = 2,
-                            Pets = true,
-                            PropertyId = 13,
-                            TakePhotos = true
-                        },
-                        new
-                        {
-                            Id = 14,
-                            CheckIn = new TimeOnly(17, 0, 0),
-                            CheckOut = new TimeOnly(12, 0, 0),
-                            NumberOfGuest = 4,
-                            Pets = false,
-                            PropertyId = 14,
-                            TakePhotos = true
-                        },
-                        new
-                        {
-                            Id = 15,
-                            CheckIn = new TimeOnly(14, 0, 0),
-                            CheckOut = new TimeOnly(10, 0, 0),
-                            NumberOfGuest = 5,
-                            Pets = true,
-                            PropertyId = 15,
-                            TakePhotos = false
-                        },
-                        new
-                        {
-                            Id = 16,
-                            CheckIn = new TimeOnly(13, 0, 0),
-                            CheckOut = new TimeOnly(9, 30, 0),
-                            NumberOfGuest = 2,
-                            Pets = false,
-                            PropertyId = 16,
-                            TakePhotos = true
-                        },
-                        new
-                        {
-                            Id = 17,
-                            CheckIn = new TimeOnly(16, 0, 0),
-                            CheckOut = new TimeOnly(8, 0, 0),
-                            NumberOfGuest = 3,
-                            Pets = true,
-                            PropertyId = 17,
-                            TakePhotos = true
-                        },
-                        new
-                        {
-                            Id = 18,
-                            CheckIn = new TimeOnly(15, 0, 0),
-                            CheckOut = new TimeOnly(11, 0, 0),
-                            NumberOfGuest = 1,
-                            Pets = true,
-                            PropertyId = 18,
-                            TakePhotos = false
-                        },
-                        new
-                        {
-                            Id = 19,
-                            CheckIn = new TimeOnly(17, 0, 0),
-                            CheckOut = new TimeOnly(9, 30, 0),
-                            NumberOfGuest = 2,
-                            Pets = false,
-                            PropertyId = 19,
-                            TakePhotos = true
-                        },
-                        new
-                        {
-                            Id = 20,
-                            CheckIn = new TimeOnly(14, 0, 0),
-                            CheckOut = new TimeOnly(10, 0, 0),
-                            NumberOfGuest = 4,
-                            Pets = true,
-                            PropertyId = 20,
-                            TakePhotos = true
-                        });
-                });
-
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRole", b =>
                 {
                     b.Property<string>("Id")
@@ -2458,7 +2289,7 @@ namespace AirBnb.DAL.Migrations
             modelBuilder.Entity("AirBnb.DAL.Data.Model.AppointmentsAvailable", b =>
                 {
                     b.HasOne("AirBnb.DAL.Data.Model.Property", "Property")
-                        .WithMany()
+                        .WithMany("AppointmentsAvailable")
                         .HasForeignKey("PropertyId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
@@ -2547,15 +2378,6 @@ namespace AirBnb.DAL.Migrations
                     b.Navigation("User");
                 });
 
-            modelBuilder.Entity("AirBnb.DAL.Data.Model.Rule", b =>
-                {
-                    b.HasOne("AirBnb.DAL.Data.Model.Property", null)
-                        .WithMany("Rule")
-                        .HasForeignKey("PropertyId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-                });
-
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<string>", b =>
                 {
                     b.HasOne("Microsoft.AspNetCore.Identity.IdentityRole", null)
@@ -2630,11 +2452,11 @@ namespace AirBnb.DAL.Migrations
                 {
                     b.Navigation("Amenity");
 
+                    b.Navigation("AppointmentsAvailable");
+
                     b.Navigation("PropertyBokking");
 
                     b.Navigation("PropertyImages");
-
-                    b.Navigation("Rule");
                 });
 #pragma warning restore 612, 618
         }

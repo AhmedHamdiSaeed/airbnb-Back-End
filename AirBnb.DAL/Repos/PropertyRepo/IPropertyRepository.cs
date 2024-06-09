@@ -10,9 +10,15 @@ namespace AirBnb.DAL.Repos.PropertyRepo
 {
 	public interface IPropertyRepository : IGenericRepository<Property>
 	{
-		Task<IEnumerable<Property>> GetAllPropertyAsync();
-		Task<Property> GetProperty(int id);
+		Task<PaggenationReslut> GetAllPropertyForAllUsers(int pageSize,int pageNumber,int? cityId = null, int? cateId = null);
+		Task<Property> GetPropertyDetailsById(int propId);
+		Task<IEnumerable<Property>> GetHosterProperties(string hosterId);
 		Task<Property> GetPropertyToDeleteById(int id);
 		void DeleteProperty(Property entity);
+
+
+		//Admin
+		Task<PaggenationReslut> GetAllPropertyForAdmin(int pageSize, int pageNumber, int? cityId = null, int? cateId = null);
+
 	}
 }

@@ -18,7 +18,7 @@ namespace AirBnb.API.Controllers.Amenities
 
 
 		// Add amenity
-		[HttpPost]
+		[HttpPost("AddAmentity")]
 		[Authorize(Policy = "ForHost")]
 		[AuthorizeCurrentUser]
 		public async Task<IActionResult> Add(AmenityAddDto amenityAddDto)
@@ -32,8 +32,7 @@ namespace AirBnb.API.Controllers.Amenities
 
 
 		// Update amenity
-		[HttpPut]
-		[Route("{id}")]
+		[HttpPut("UpdateAmentity/{id}")]
 		[Authorize(Policy = "ForHost")]
 		[AuthorizeCurrentUser]
 		public async Task<IActionResult> Update(int id, AmenityAddDto amenityAddDto)
@@ -58,8 +57,7 @@ namespace AirBnb.API.Controllers.Amenities
 		}
 
 		// Delete amenity
-		[HttpDelete]
-		[Route("{id}")]
+		[HttpDelete("DeleteAmentity/{id}")]
 		[Authorize(Policy = "ForHost")]
 		[AuthorizeCurrentUser]
 		public async Task<IActionResult> Delete(int id)

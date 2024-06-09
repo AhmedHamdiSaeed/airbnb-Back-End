@@ -17,7 +17,15 @@ namespace AirBnb.BL.Dtos.AmentityDtos
 		public int TotalProice { get; set; }
 		public bool IsAvailable { get; set; }
 	}
-
+	public class AmentityUseInBookingDto
+	{
+		public int PropertyId { get; set; }
+		public DateTime From { get; set; }
+		public DateTime To { get; set; }
+		public int PricePerNight { get; set; }
+		public int TotalProice { get; set; }
+		public bool IsAvailable { get; set; }
+	}
 	public class AmenityDto
 	{
 		public int Id { get; set; }

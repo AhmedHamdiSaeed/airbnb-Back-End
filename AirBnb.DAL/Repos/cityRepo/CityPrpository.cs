@@ -1,5 +1,6 @@
 ﻿using AirBnb.DAL.Data.context;
 using AirBnb.DAL.Data.Model;
+using AirBnb.DAL.Repos.GenericRepo;
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
@@ -9,10 +10,10 @@ using System.Threading.Tasks;
 
 namespace AirBnb.DAL.Repos.cityRepo
 {
-	public class CityPrpository : ICityPrpository
+	public class CityPrpository :GenericRepository<City>, ICityPrpository
 	{
 		private readonly AppDbContext _context;
-		public CityPrpository(AppDbContext context)
+		public CityPrpository(AppDbContext context):base(context) 
 		{
 			_context = context;
 

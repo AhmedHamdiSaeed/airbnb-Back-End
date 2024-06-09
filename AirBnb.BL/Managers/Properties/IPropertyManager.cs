@@ -9,9 +9,14 @@ namespace AirBnb.BL.Managers.Properties
 {
 	public interface IPropertyManager
 	{
-		Task<IEnumerable<DisplayAllPropertyDto>> GetAllProperty();
-		Task<GetPropertyDetailsDto> GetPropertyDetailsById(int propertyId);
-		Task<bool> AddProperty(AddPropertyDto addProperty);
+		Task<PaggenationsResultDto> GetAllPropertyForAllUsers(int pageNumber, int pageSize, int? cityId = null, int? cateId = null);
+		Task<PropertyDetailsGetDto> GetPropertyDetailsById(int propId);
+		Task<IEnumerable<PropertyGetDto>> GetHosterProperties(string hosterId);
+		Task<bool> AddProperty(PropertyAddDto addProperty,string userId);
 		Task<bool> RemoveProperty(int propertyId);
+
+		// Admin
+		Task<PaggenationsResultDto> GetAllPropertyForAdmin(int pageNumber, int pageSize, int? cityId = null, int? cateId = null);
+
 	}
 }

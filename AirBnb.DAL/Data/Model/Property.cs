@@ -8,8 +8,9 @@ namespace AirBnb.DAL.Data.Model
 		public string Description { get; set; } = string.Empty;
 		public string Adress { get; set; } = string.Empty;
 		//public decimal PricePerNight { get; set; }
-		public int NumberOfBedrooms { get; set; }
+		public int NumberOfBedrooms { get; set; }		
 		public int NumberOfBathrooms { get; set; }
+		public string DisplayedImage { get; set; }
 		public int Beds { get; set; }
 
 		[ForeignKey(nameof(User))]
@@ -24,7 +25,12 @@ namespace AirBnb.DAL.Data.Model
 		public int CityId { get; set; }
 		public City City { get; set; }
 		public Status Status { get; set; }
-		public IEnumerable<Rule> Rule { get; set; } = new HashSet<Rule>();
+
+		public TimeOnly CheckIn { get; set; }
+		public TimeOnly CheckOut { get; set; }
+		public int NumberOfGuest { get; set; }
+		public bool Pets { get; set; }
+		public bool TakePhotos { get; set; }
 		public IEnumerable<Amenity> Amenity { get; set; } = new HashSet<Amenity>();
 		public IEnumerable<PropertyImage> PropertyImages { get; set; } = new HashSet<PropertyImage>();
 		public IEnumerable<Booking> PropertyBokking { get; set; } = new HashSet<Booking>();

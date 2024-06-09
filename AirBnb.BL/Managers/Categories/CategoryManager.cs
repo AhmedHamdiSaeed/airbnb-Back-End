@@ -18,94 +18,59 @@ namespace AirBnb.BL.Managers.Categories
 			_unitOfWork = unitOfWork;
 		}
 
-		public async Task AddCategory(CategoryDtos categoryDto) //admin
+		public async Task<bool> AddCategory(CategoryAddDto categoryDto)
 		{
-			var category = new Category
+			Category getCate = new Category()
 			{
 				Name = categoryDto.Name,
-				Description = categoryDto.IconUrl
+				Description = categoryDto.Description,
 			};
-
-			await _unitOfWork.CategoryRepository.AddAsync(category);
-			_unitOfWork.SaveChanges();
+			await _unitOfWork.CategoryRepository.AddAsync(getCate);
+			return  _unitOfWork.SaveChanges() > 0;
 		}
 
-		public async Task<IEnumerable<CategoryDtos>> GetAllCategories() //user 
+		public async Task<bool> DeleteCategory(int id)
 		{
-			var categories = await _unitOfWork.CategoryRepository.GetAllAsync();
-			return categories.Select(c => new CategoryDtos
-			{
-				Name = c.Name,
-				IconUrl = c.Description
-			}).ToList();
+			Category result =await  _unitOfWork.CategoryRepository.GetByIdAsync(id);
+			  _unitOfWork.CategoryRepository.Delete(result);
+			return _unitOfWork.SaveChanges()>0;
+
 		}
 
-
-		public async Task<CategoryDtos> GetCategoryById(int id) //user
+		public async Task<IEnumerable<CategoryGetDtos>> GetAllCategories()
 		{
-			Category category = await _unitOfWork.CategoryRepository.GetByIdAsync(id);
-			if (category is null)
+			IEnumerable<Category> getAllCategory =await _unitOfWork.CategoryRepository.GetAllAsync();
+			if(getAllCategory is null ) { return null; }
+			var result = getAllCategory.Select(x => new CategoryGetDtos
 			{
-				return null;
-			}
-			return new CategoryDtos
+				Id = x.Id,
+				Name = x.Name,
+				Description = x.Description,
+			})
+			;
+			return result ;
+		}
+
+		public async Task<CategoryGetDtos> GetCategoryById(int id)
+		{
+			Category getCate = await _unitOfWork.CategoryRepository.GetByIdAsync(id) ;
+			if (getCate is null) return null;
+			CategoryGetDtos result = new CategoryGetDtos
 			{
-				Name = category.Name,
-				IconUrl = category.Description
+				Name = getCate.Name,
+				Description = getCate.Description,
+				Id = getCate.Id,
 			};
-		}
+			return result;
+	}
 
-
-		//public async Task<CategoryDtos> GetCategoryById(int id)
-		//{
-		//    // Include related data using projection with Include
-		//    var category = await _unitOfWork.CategoryRepository
-		//        .GetByIdAsync(id, c => c.Include(x => x.Properties)); // Include Properties property
-
-		//    if (category == null)
-		//    {
-		//        return null;
-		//    }
-
-		//    // Map to DTO with potential adjustments for included data
-		//    return new CategoryDtos
-		//    {
-		//        Name = category.Name,
-		//        IconUrl = category.Description, // Double-check if this is correct
-		//        Properties = category.Properties.Select(p => new PropertyDto // Project properties to DTOs
-		//        {
-		//            // ... (map property properties to PropertyDto)
-		//        }).ToList()
-		//    };
-		//}
-
-		public async Task<bool> DeleteCategory(int id)  //admin
+		public async Task<bool> UpdateCategory(int cateId,CategoryEditDto categoryDto)
 		{
-			Category category = await _unitOfWork.CategoryRepository.GetByIdAsync(id);
-			if (category is null)
-			{
-				return false;
-			}
-
-			_unitOfWork.CategoryRepository.Delete(category);
-			_unitOfWork.SaveChanges();
-			return true;
-		}
-
-		public async Task<bool> UpdateCategory(EditCategoryDtos categoryDto) //admin
-		{
-			Category category = await _unitOfWork.CategoryRepository.GetByIdAsync(categoryDto.Id);
-			if (category is null)
-			{
-				return false;
-			}
-
-			category.Name = categoryDto.Name;
-			category.Description = categoryDto.IconUrl;
-
-			_unitOfWork.CategoryRepository.Update(category);
-			_unitOfWork.SaveChanges();
-			return true;
+			Category myCate = await _unitOfWork.CategoryRepository.GetByIdAsync(cateId);
+			myCate.Name = categoryDto.Name;
+			myCate.Description = categoryDto.Description;
+			_unitOfWork.CategoryRepository.Update(myCate);
+			return _unitOfWork.SaveChanges() >0;
 		}
 	}
 }

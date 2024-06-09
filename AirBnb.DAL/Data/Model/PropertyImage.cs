@@ -13,6 +13,6 @@ namespace AirBnb.DAL.Data.Model
 		public int PropertyId { get; set; }
 		public Property Property { get; set; }
 		public string ImageUrl { get; set; } = string.Empty;
-		public bool IsMainImage { get; set; }
+		//public bool IsMainImage { get; set; }
 	}
 }
