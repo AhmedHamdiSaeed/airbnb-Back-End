@@ -14,7 +14,8 @@ namespace AirBnb.BL.Dtos.PropertyDtos
 		public int Id { get; set; }
 		public string Name { get; set; } = string.Empty;
 		public string DisplayedImage { get; set; }
-		
+		public string Description { get; set; } 
+
 	}
 	public class PropAppoinmentAvailable
 	{

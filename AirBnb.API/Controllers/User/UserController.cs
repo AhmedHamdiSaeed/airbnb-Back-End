@@ -124,8 +124,8 @@ namespace AirBnb.API.Controllers.User
 		[HttpGet("get-current-user")]
 		public async Task<IActionResult> GetCurrentUser()
 		{
-			
-				AppUser result = await _userManager.GetUserAsync(User);
+
+			AppUser result = await _userManager.GetUserAsync(User);
 			var Myclaims = new List<Claim>();
 			Myclaims.Add(new Claim(ClaimTypes.Name, result.UserName));
 			Myclaims.Add(new Claim(ClaimTypes.Email, result.Email));
@@ -144,6 +144,16 @@ namespace AirBnb.API.Controllers.User
 				expires: DateTime.Now.AddDays(10),
 				signingCredentials: sc
 				);
+
+			//var email = HttpContext.User.Claims.FirstOrDefault(x => x.Type == ClaimTypes.Email).Value;
+			//var User = await _userManager.FindByEmailAsync(email);
+			//return Ok(new
+			//{
+			//	email = User.Email,
+			//	firstName = User.FirstName,
+			//	lastName = User.LastName,
+			//	Id = User.Id,
+			//});
 			return Ok(new
 				{
 					DisplayName = result.FirstName,

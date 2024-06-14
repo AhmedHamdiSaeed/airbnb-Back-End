@@ -47,7 +47,7 @@ namespace AirBnb.BL.Managers.Properties
 
 		public async Task<PaggenationsResultDto> GetAllPropertyForAdmin(int pageNumber, int pageSize, int? cityId = null, int? cateId = null)
 		{
-			PaggenationReslut AllProperty = await _unitOfWork.PropertyRepository.GetAllPropertyForAllUsers(pageNumber, pageSize, cityId, cateId);
+			PaggenationReslut AllProperty = await _unitOfWork.PropertyRepository.GetAllPropertyForAdmin(pageNumber, pageSize, cityId, cateId);
 			if (AllProperty is null)
 				return null;
 
@@ -58,7 +58,8 @@ namespace AirBnb.BL.Managers.Properties
 				{
 					Id = p.Id,
 					Name = p.Name,
-					DisplayedImage = p.DisplayedImage
+					DisplayedImage = p.DisplayedImage,
+					Description = p.Description,
 				})
 			};
 			return result;
@@ -77,7 +78,9 @@ namespace AirBnb.BL.Managers.Properties
 				{
 					Id = p.Id,
 					Name = p.Name,
-					DisplayedImage = p.DisplayedImage
+					DisplayedImage = p.DisplayedImage,
+					Description = p.Description,
+
 				})
 			};
 			return result;
@@ -94,6 +97,7 @@ namespace AirBnb.BL.Managers.Properties
 				Id = pro.Id,
 				Name = pro.Name,
 				DisplayedImage = pro.DisplayedImage,
+				Description = pro.Description,
 
 			});
 			return result;
