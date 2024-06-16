@@ -3,24 +3,76 @@
   "WorkspaceRootPath": "D:\\ITI 2023\\0- Final Project\\airbnb-Back-End - Copy\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{7CE570E2-B109-4D6B-AD0D-D7A2D365AA9F}|AirBnb.API\\AirBnb.API.csproj|d:\\iti 2023\\0- final project\\airbnb-back-end - copy\\airbnb.api\\controllers\\filescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{7CE570E2-B109-4D6B-AD0D-D7A2D365AA9F}|AirBnb.API\\AirBnb.API.csproj|d:\\iti 2023\\0- final project\\airbnb-back-end - copy\\airbnb.api\\controllers\\city\\citycontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7CE570E2-B109-4D6B-AD0D-D7A2D365AA9F}|AirBnb.API\\AirBnb.API.csproj|solutionrelative:airbnb.api\\controllers\\city\\citycontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7CE570E2-B109-4D6B-AD0D-D7A2D365AA9F}|AirBnb.API\\AirBnb.API.csproj|D:\\ITI 2023\\0- Final Project\\airbnb-Back-End - Copy\\airbnb.api\\controllers\\property\\propertycontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7CE570E2-B109-4D6B-AD0D-D7A2D365AA9F}|AirBnb.API\\AirBnb.API.csproj|solutionrelative:airbnb.api\\controllers\\property\\propertycontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4D4E1A9C-8C50-485A-85A4-3EA8CB0C29C0}|AirBnb.DAL\\AirBnb.DAL.csproj|D:\\ITI 2023\\0- Final Project\\airbnb-Back-End - Copy\\airbnb.dal\\data\\model\\review.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4D4E1A9C-8C50-485A-85A4-3EA8CB0C29C0}|AirBnb.DAL\\AirBnb.DAL.csproj|solutionrelative:airbnb.dal\\data\\model\\review.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4D4E1A9C-8C50-485A-85A4-3EA8CB0C29C0}|AirBnb.DAL\\AirBnb.DAL.csproj|D:\\ITI 2023\\0- Final Project\\airbnb-Back-End - Copy\\airbnb.dal\\data\\model\\propertyimage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4D4E1A9C-8C50-485A-85A4-3EA8CB0C29C0}|AirBnb.DAL\\AirBnb.DAL.csproj|solutionrelative:airbnb.dal\\data\\model\\propertyimage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4D4E1A9C-8C50-485A-85A4-3EA8CB0C29C0}|AirBnb.DAL\\AirBnb.DAL.csproj|D:\\ITI 2023\\0- Final Project\\airbnb-Back-End - Copy\\airbnb.dal\\data\\model\\property.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4D4E1A9C-8C50-485A-85A4-3EA8CB0C29C0}|AirBnb.DAL\\AirBnb.DAL.csproj|solutionrelative:airbnb.dal\\data\\model\\property.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4D4E1A9C-8C50-485A-85A4-3EA8CB0C29C0}|AirBnb.DAL\\AirBnb.DAL.csproj|D:\\ITI 2023\\0- Final Project\\airbnb-Back-End - Copy\\airbnb.dal\\data\\model\\paggenationreslut.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4D4E1A9C-8C50-485A-85A4-3EA8CB0C29C0}|AirBnb.DAL\\AirBnb.DAL.csproj|solutionrelative:airbnb.dal\\data\\model\\paggenationreslut.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4D4E1A9C-8C50-485A-85A4-3EA8CB0C29C0}|AirBnb.DAL\\AirBnb.DAL.csproj|D:\\ITI 2023\\0- Final Project\\airbnb-Back-End - Copy\\airbnb.dal\\data\\model\\country.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4D4E1A9C-8C50-485A-85A4-3EA8CB0C29C0}|AirBnb.DAL\\AirBnb.DAL.csproj|solutionrelative:airbnb.dal\\data\\model\\country.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4D4E1A9C-8C50-485A-85A4-3EA8CB0C29C0}|AirBnb.DAL\\AirBnb.DAL.csproj|D:\\ITI 2023\\0- Final Project\\airbnb-Back-End - Copy\\airbnb.dal\\data\\model\\city.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4D4E1A9C-8C50-485A-85A4-3EA8CB0C29C0}|AirBnb.DAL\\AirBnb.DAL.csproj|solutionrelative:airbnb.dal\\data\\model\\city.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4D4E1A9C-8C50-485A-85A4-3EA8CB0C29C0}|AirBnb.DAL\\AirBnb.DAL.csproj|D:\\ITI 2023\\0- Final Project\\airbnb-Back-End - Copy\\airbnb.dal\\data\\model\\category.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4D4E1A9C-8C50-485A-85A4-3EA8CB0C29C0}|AirBnb.DAL\\AirBnb.DAL.csproj|solutionrelative:airbnb.dal\\data\\model\\category.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4D4E1A9C-8C50-485A-85A4-3EA8CB0C29C0}|AirBnb.DAL\\AirBnb.DAL.csproj|D:\\ITI 2023\\0- Final Project\\airbnb-Back-End - Copy\\airbnb.dal\\data\\model\\booking.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4D4E1A9C-8C50-485A-85A4-3EA8CB0C29C0}|AirBnb.DAL\\AirBnb.DAL.csproj|solutionrelative:airbnb.dal\\data\\model\\booking.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4D4E1A9C-8C50-485A-85A4-3EA8CB0C29C0}|AirBnb.DAL\\AirBnb.DAL.csproj|D:\\ITI 2023\\0- Final Project\\airbnb-Back-End - Copy\\airbnb.dal\\data\\model\\baseentity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4D4E1A9C-8C50-485A-85A4-3EA8CB0C29C0}|AirBnb.DAL\\AirBnb.DAL.csproj|solutionrelative:airbnb.dal\\data\\model\\baseentity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4D4E1A9C-8C50-485A-85A4-3EA8CB0C29C0}|AirBnb.DAL\\AirBnb.DAL.csproj|D:\\ITI 2023\\0- Final Project\\airbnb-Back-End - Copy\\airbnb.dal\\data\\model\\appuser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4D4E1A9C-8C50-485A-85A4-3EA8CB0C29C0}|AirBnb.DAL\\AirBnb.DAL.csproj|solutionrelative:airbnb.dal\\data\\model\\appuser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4D4E1A9C-8C50-485A-85A4-3EA8CB0C29C0}|AirBnb.DAL\\AirBnb.DAL.csproj|D:\\ITI 2023\\0- Final Project\\airbnb-Back-End - Copy\\airbnb.dal\\data\\model\\appointmentsavailable.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4D4E1A9C-8C50-485A-85A4-3EA8CB0C29C0}|AirBnb.DAL\\AirBnb.DAL.csproj|solutionrelative:airbnb.dal\\data\\model\\appointmentsavailable.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4D4E1A9C-8C50-485A-85A4-3EA8CB0C29C0}|AirBnb.DAL\\AirBnb.DAL.csproj|D:\\ITI 2023\\0- Final Project\\airbnb-Back-End - Copy\\airbnb.dal\\data\\model\\amenity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4D4E1A9C-8C50-485A-85A4-3EA8CB0C29C0}|AirBnb.DAL\\AirBnb.DAL.csproj|solutionrelative:airbnb.dal\\data\\model\\amenity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7CE570E2-B109-4D6B-AD0D-D7A2D365AA9F}|AirBnb.API\\AirBnb.API.csproj|D:\\ITI 2023\\0- Final Project\\airbnb-Back-End - Copy\\airbnb.api\\controllers\\filescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{7CE570E2-B109-4D6B-AD0D-D7A2D365AA9F}|AirBnb.API\\AirBnb.API.csproj|solutionrelative:airbnb.api\\controllers\\filescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{7CE570E2-B109-4D6B-AD0D-D7A2D365AA9F}|AirBnb.API\\AirBnb.API.csproj|d:\\iti 2023\\0- final project\\airbnb-back-end - copy\\airbnb.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{7CE570E2-B109-4D6B-AD0D-D7A2D365AA9F}|AirBnb.API\\AirBnb.API.csproj|D:\\ITI 2023\\0- Final Project\\airbnb-Back-End - Copy\\airbnb.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{7CE570E2-B109-4D6B-AD0D-D7A2D365AA9F}|AirBnb.API\\AirBnb.API.csproj|solutionrelative:airbnb.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{DA886AC8-7BDA-438E-AE62-5BAA30A7B6DF}|AirBnb.BL\\AirBnb.BL.csproj|d:\\iti 2023\\0- final project\\airbnb-back-end - copy\\airbnb.bl\\airbnb.bl.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "AbsoluteMoniker": "D:0:0:{DA886AC8-7BDA-438E-AE62-5BAA30A7B6DF}|AirBnb.BL\\AirBnb.BL.csproj|D:\\ITI 2023\\0- Final Project\\airbnb-Back-End - Copy\\airbnb.bl\\airbnb.bl.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
       "RelativeMoniker": "D:0:0:{DA886AC8-7BDA-438E-AE62-5BAA30A7B6DF}|AirBnb.BL\\AirBnb.BL.csproj|solutionrelative:airbnb.bl\\airbnb.bl.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
     },
     {
       "AbsoluteMoniker": "D:0:0:{7CE570E2-B109-4D6B-AD0D-D7A2D365AA9F}|AirBnb.API\\AirBnb.API.csproj|D:\\ITI 2023\\0- Final Project\\airbnb-Back-End - Copy\\airbnb.api\\controllers\\user\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{7CE570E2-B109-4D6B-AD0D-D7A2D365AA9F}|AirBnb.API\\AirBnb.API.csproj|solutionrelative:airbnb.api\\controllers\\user\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{7CE570E2-B109-4D6B-AD0D-D7A2D365AA9F}|AirBnb.API\\AirBnb.API.csproj|D:\\ITI 2023\\0- Final Project\\airbnb-Back-End - Copy\\airbnb.api\\controllers\\property\\propertycontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7CE570E2-B109-4D6B-AD0D-D7A2D365AA9F}|AirBnb.API\\AirBnb.API.csproj|solutionrelative:airbnb.api\\controllers\\property\\propertycontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{DA886AC8-7BDA-438E-AE62-5BAA30A7B6DF}|AirBnb.BL\\AirBnb.BL.csproj|D:\\ITI 2023\\0- Final Project\\airbnb-Back-End - Copy\\airbnb.bl\\managers\\properties\\propertymanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -33,10 +85,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{DA886AC8-7BDA-438E-AE62-5BAA30A7B6DF}|AirBnb.BL\\AirBnb.BL.csproj|D:\\ITI 2023\\0- Final Project\\airbnb-Back-End - Copy\\airbnb.bl\\dtos\\propertydtos\\propertydtos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{DA886AC8-7BDA-438E-AE62-5BAA30A7B6DF}|AirBnb.BL\\AirBnb.BL.csproj|solutionrelative:airbnb.bl\\dtos\\propertydtos\\propertydtos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{4D4E1A9C-8C50-485A-85A4-3EA8CB0C29C0}|AirBnb.DAL\\AirBnb.DAL.csproj|D:\\ITI 2023\\0- Final Project\\airbnb-Back-End - Copy\\airbnb.dal\\data\\model\\property.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4D4E1A9C-8C50-485A-85A4-3EA8CB0C29C0}|AirBnb.DAL\\AirBnb.DAL.csproj|solutionrelative:airbnb.dal\\data\\model\\property.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -51,6 +99,151 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "CityController.cs",
+              "DocumentMoniker": "D:\\ITI 2023\\0- Final Project\\airbnb-Back-End - Copy\\AirBnb.API\\Controllers\\City\\CityController.cs",
+              "RelativeDocumentMoniker": "AirBnb.API\\Controllers\\City\\CityController.cs",
+              "ToolTip": "D:\\ITI 2023\\0- Final Project\\airbnb-Back-End - Copy\\AirBnb.API\\Controllers\\City\\CityController.cs",
+              "RelativeToolTip": "AirBnb.API\\Controllers\\City\\CityController.cs",
+              "ViewState": "AQIAAAwAAAAAAAAAAAAAABQAAAAbAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-14T18:53:30.573Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Review.cs",
+              "DocumentMoniker": "D:\\ITI 2023\\0- Final Project\\airbnb-Back-End - Copy\\AirBnb.DAL\\Data\\Model\\Review.cs",
+              "RelativeDocumentMoniker": "AirBnb.DAL\\Data\\Model\\Review.cs",
+              "ToolTip": "D:\\ITI 2023\\0- Final Project\\airbnb-Back-End - Copy\\AirBnb.DAL\\Data\\Model\\Review.cs",
+              "RelativeToolTip": "AirBnb.DAL\\Data\\Model\\Review.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABEAAAAhAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-14T11:57:48.444Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "PropertyImage.cs",
+              "DocumentMoniker": "D:\\ITI 2023\\0- Final Project\\airbnb-Back-End - Copy\\AirBnb.DAL\\Data\\Model\\PropertyImage.cs",
+              "RelativeDocumentMoniker": "AirBnb.DAL\\Data\\Model\\PropertyImage.cs",
+              "ToolTip": "D:\\ITI 2023\\0- Final Project\\airbnb-Back-End - Copy\\AirBnb.DAL\\Data\\Model\\PropertyImage.cs",
+              "RelativeToolTip": "AirBnb.DAL\\Data\\Model\\PropertyImage.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-14T11:57:22.173Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "PaggenationReslut.cs",
+              "DocumentMoniker": "D:\\ITI 2023\\0- Final Project\\airbnb-Back-End - Copy\\AirBnb.DAL\\Data\\Model\\PaggenationReslut.cs",
+              "RelativeDocumentMoniker": "AirBnb.DAL\\Data\\Model\\PaggenationReslut.cs",
+              "ToolTip": "D:\\ITI 2023\\0- Final Project\\airbnb-Back-End - Copy\\AirBnb.DAL\\Data\\Model\\PaggenationReslut.cs",
+              "RelativeToolTip": "AirBnb.DAL\\Data\\Model\\PaggenationReslut.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-14T11:56:41.901Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Country.cs",
+              "DocumentMoniker": "D:\\ITI 2023\\0- Final Project\\airbnb-Back-End - Copy\\AirBnb.DAL\\Data\\Model\\Country.cs",
+              "RelativeDocumentMoniker": "AirBnb.DAL\\Data\\Model\\Country.cs",
+              "ToolTip": "D:\\ITI 2023\\0- Final Project\\airbnb-Back-End - Copy\\AirBnb.DAL\\Data\\Model\\Country.cs",
+              "RelativeToolTip": "AirBnb.DAL\\Data\\Model\\Country.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-14T11:56:40.763Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "City.cs",
+              "DocumentMoniker": "D:\\ITI 2023\\0- Final Project\\airbnb-Back-End - Copy\\AirBnb.DAL\\Data\\Model\\City.cs",
+              "RelativeDocumentMoniker": "AirBnb.DAL\\Data\\Model\\City.cs",
+              "ToolTip": "D:\\ITI 2023\\0- Final Project\\airbnb-Back-End - Copy\\AirBnb.DAL\\Data\\Model\\City.cs",
+              "RelativeToolTip": "AirBnb.DAL\\Data\\Model\\City.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-14T11:56:37.773Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "Category.cs",
+              "DocumentMoniker": "D:\\ITI 2023\\0- Final Project\\airbnb-Back-End - Copy\\AirBnb.DAL\\Data\\Model\\Category.cs",
+              "RelativeDocumentMoniker": "AirBnb.DAL\\Data\\Model\\Category.cs",
+              "ToolTip": "D:\\ITI 2023\\0- Final Project\\airbnb-Back-End - Copy\\AirBnb.DAL\\Data\\Model\\Category.cs",
+              "RelativeToolTip": "AirBnb.DAL\\Data\\Model\\Category.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-14T11:56:34.317Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "Booking.cs",
+              "DocumentMoniker": "D:\\ITI 2023\\0- Final Project\\airbnb-Back-End - Copy\\AirBnb.DAL\\Data\\Model\\Booking.cs",
+              "RelativeDocumentMoniker": "AirBnb.DAL\\Data\\Model\\Booking.cs",
+              "ToolTip": "D:\\ITI 2023\\0- Final Project\\airbnb-Back-End - Copy\\AirBnb.DAL\\Data\\Model\\Booking.cs",
+              "RelativeToolTip": "AirBnb.DAL\\Data\\Model\\Booking.cs",
+              "ViewState": "AQIAAAsAAAAAAAAAAAAAwBkAAAArAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-14T11:56:08.947Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "BaseEntity.cs",
+              "DocumentMoniker": "D:\\ITI 2023\\0- Final Project\\airbnb-Back-End - Copy\\AirBnb.DAL\\Data\\Model\\BaseEntity.cs",
+              "RelativeDocumentMoniker": "AirBnb.DAL\\Data\\Model\\BaseEntity.cs",
+              "ToolTip": "D:\\ITI 2023\\0- Final Project\\airbnb-Back-End - Copy\\AirBnb.DAL\\Data\\Model\\BaseEntity.cs",
+              "RelativeToolTip": "AirBnb.DAL\\Data\\Model\\BaseEntity.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-14T11:56:07.356Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "AppUser.cs",
+              "DocumentMoniker": "D:\\ITI 2023\\0- Final Project\\airbnb-Back-End - Copy\\AirBnb.DAL\\Data\\Model\\AppUser.cs",
+              "RelativeDocumentMoniker": "AirBnb.DAL\\Data\\Model\\AppUser.cs",
+              "ToolTip": "D:\\ITI 2023\\0- Final Project\\airbnb-Back-End - Copy\\AirBnb.DAL\\Data\\Model\\AppUser.cs",
+              "RelativeToolTip": "AirBnb.DAL\\Data\\Model\\AppUser.cs",
+              "ViewState": "AQIAAAkAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-14T11:54:21.548Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "AppointmentsAvailable.cs",
+              "DocumentMoniker": "D:\\ITI 2023\\0- Final Project\\airbnb-Back-End - Copy\\AirBnb.DAL\\Data\\Model\\AppointmentsAvailable.cs",
+              "RelativeDocumentMoniker": "AirBnb.DAL\\Data\\Model\\AppointmentsAvailable.cs",
+              "ToolTip": "D:\\ITI 2023\\0- Final Project\\airbnb-Back-End - Copy\\AirBnb.DAL\\Data\\Model\\AppointmentsAvailable.cs",
+              "RelativeToolTip": "AirBnb.DAL\\Data\\Model\\AppointmentsAvailable.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABEAAAAjAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-14T11:54:09.02Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "Amenity.cs",
+              "DocumentMoniker": "D:\\ITI 2023\\0- Final Project\\airbnb-Back-End - Copy\\AirBnb.DAL\\Data\\Model\\Amenity.cs",
+              "RelativeDocumentMoniker": "AirBnb.DAL\\Data\\Model\\Amenity.cs",
+              "ToolTip": "D:\\ITI 2023\\0- Final Project\\airbnb-Back-End - Copy\\AirBnb.DAL\\Data\\Model\\Amenity.cs",
+              "RelativeToolTip": "AirBnb.DAL\\Data\\Model\\Amenity.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-14T11:53:48.676Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
               "Title": "FilesController.cs",
               "DocumentMoniker": "D:\\ITI 2023\\0- Final Project\\airbnb-Back-End - Copy\\AirBnb.API\\Controllers\\FilesController.cs",
               "RelativeDocumentMoniker": "AirBnb.API\\Controllers\\FilesController.cs",
@@ -58,12 +251,11 @@
               "RelativeToolTip": "AirBnb.API\\Controllers\\FilesController.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAA8AAAAoAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-14T11:40:45.535Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-06-14T11:40:45.535Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 15,
               "Title": "Program.cs",
               "DocumentMoniker": "D:\\ITI 2023\\0- Final Project\\airbnb-Back-End - Copy\\AirBnb.API\\Program.cs",
               "RelativeDocumentMoniker": "AirBnb.API\\Program.cs",
@@ -71,12 +263,11 @@
               "RelativeToolTip": "AirBnb.API\\Program.cs",
               "ViewState": "AQIAACQAAAAAAAAAAAAQwC0AAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-14T11:39:25.246Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-06-14T11:39:25.246Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 16,
               "Title": "AirBnb.BL.csproj",
               "DocumentMoniker": "D:\\ITI 2023\\0- Final Project\\airbnb-Back-End - Copy\\AirBnb.BL\\AirBnb.BL.csproj",
               "RelativeDocumentMoniker": "AirBnb.BL\\AirBnb.BL.csproj",
@@ -84,12 +275,11 @@
               "RelativeToolTip": "AirBnb.BL\\AirBnb.BL.csproj",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAEAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2024-06-14T03:23:45.825Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-06-14T03:23:45.825Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 17,
               "Title": "UserController.cs",
               "DocumentMoniker": "D:\\ITI 2023\\0- Final Project\\airbnb-Back-End - Copy\\AirBnb.API\\Controllers\\User\\UserController.cs",
               "RelativeDocumentMoniker": "AirBnb.API\\Controllers\\User\\UserController.cs",
@@ -101,19 +291,19 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 1,
               "Title": "PropertyController.cs",
               "DocumentMoniker": "D:\\ITI 2023\\0- Final Project\\airbnb-Back-End - Copy\\AirBnb.API\\Controllers\\Property\\PropertyController.cs",
               "RelativeDocumentMoniker": "AirBnb.API\\Controllers\\Property\\PropertyController.cs",
               "ToolTip": "D:\\ITI 2023\\0- Final Project\\airbnb-Back-End - Copy\\AirBnb.API\\Controllers\\Property\\PropertyController.cs",
               "RelativeToolTip": "AirBnb.API\\Controllers\\Property\\PropertyController.cs",
-              "ViewState": "AQIAAGoAAAAAAAAAAAAAADMAAAA5AAAA",
+              "ViewState": "AQIAAA0AAAAAAAAAAAAywB0AAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-06-10T11:05:58.242Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 18,
               "Title": "PropertyManager.cs",
               "DocumentMoniker": "D:\\ITI 2023\\0- Final Project\\airbnb-Back-End - Copy\\AirBnb.BL\\Managers\\Properties\\PropertyManager.cs",
               "RelativeDocumentMoniker": "AirBnb.BL\\Managers\\Properties\\PropertyManager.cs",
@@ -125,19 +315,19 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 4,
               "Title": "Property.cs",
               "DocumentMoniker": "D:\\ITI 2023\\0- Final Project\\airbnb-Back-End - Copy\\AirBnb.DAL\\Data\\Model\\Property.cs",
               "RelativeDocumentMoniker": "AirBnb.DAL\\Data\\Model\\Property.cs",
               "ToolTip": "D:\\ITI 2023\\0- Final Project\\airbnb-Back-End - Copy\\AirBnb.DAL\\Data\\Model\\Property.cs",
               "RelativeToolTip": "AirBnb.DAL\\Data\\Model\\Property.cs",
-              "ViewState": "AQIAAAMAAAAAAAAAAAAAAAcAAAACAAAA",
+              "ViewState": "AQIAABIAAAAAAAAAAAAIwAcAAAACAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-06-10T11:00:23.598Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 20,
               "Title": "PropertyDtos.cs",
               "DocumentMoniker": "D:\\ITI 2023\\0- Final Project\\airbnb-Back-End - Copy\\AirBnb.BL\\Dtos\\PropertyDtos\\PropertyDtos.cs",
               "RelativeDocumentMoniker": "AirBnb.BL\\Dtos\\PropertyDtos\\PropertyDtos.cs",
@@ -149,7 +339,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 19,
               "Title": "IPropertyManager.cs",
               "DocumentMoniker": "D:\\ITI 2023\\0- Final Project\\airbnb-Back-End - Copy\\AirBnb.BL\\Managers\\Properties\\IPropertyManager.cs",
               "RelativeDocumentMoniker": "AirBnb.BL\\Managers\\Properties\\IPropertyManager.cs",
