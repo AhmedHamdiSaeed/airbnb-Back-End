@@ -40,7 +40,7 @@ namespace AirBnb.BL.Managers.Categories
 			return _unitOfWork.SaveChanges()>0;
         }
 
-		public  object? GetAllCategories(QueryParams queryParams)
+		public  object GetAllCategories(QueryParams queryParams)
 		{
 			var query = _unitOfWork.CategoryRepository.getAll();
 			if(query is null ) { return null; }

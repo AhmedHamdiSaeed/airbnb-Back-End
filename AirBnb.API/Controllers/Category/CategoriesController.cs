@@ -23,10 +23,32 @@ namespace AirBnb.API.Controllers.Category
 			_userManager = userManager;
 		}
 
-		#region AddCategory
-		[HttpPost]
-		[Authorize(Policy = "ForAdmin")]
-		[AuthorizeCurrentUser]
+        #region GetAllCategories
+        [HttpGet("GetAllCategories")]
+        public ActionResult GetAllCategories([FromQuery]QueryParams queryParams)
+		{
+			var result = _categoryManager.GetAllCategories(queryParams);
+			if (result is null)
+				return Ok(new ApiResponse(404,"notFound","Data Empty"));
+			return Ok(new ApiResponse(200,"success",result));	
+		}
+        #endregion
+
+        #region GetCategoryById
+        [HttpGet("GetCategoryDetails/{id}")]
+        public async Task<IActionResult> GetCategoryById(int id)
+		{
+			var result =await _categoryManager.GetCategoryById(id);
+			if (result is null)
+				return Ok("Data Empty");
+			return Ok(result);
+		}
+        #endregion
+
+        #region AddCategory
+        [HttpPost("AddCategory")] 
+        //[Authorize(Policy = "ForAdmin")]
+		//[AuthorizeCurrentUser]
 		public async Task<IActionResult> AddCategory([FromForm] CategoryAddDto category)
         {
             string[] allowExtenstion = [".jpg", ".jpeg", ".png"];
@@ -49,43 +71,10 @@ namespace AirBnb.API.Controllers.Category
 
         }
         #endregion
-        #region DeleteCategory
-        [HttpDelete("{id}")]
-		[Authorize(Policy = "ForAdmin")]
-		[AuthorizeCurrentUser]
-		public async Task<IActionResult> DeleteCategory(int categoryId)
-		{
-			var result =await _categoryManager.DeleteCategory(categoryId);
-			if (result is false)
-				return BadRequest("Feild In Deleting Data");
-			return Ok(result);
-		}
-		#endregion
 
-		#region GetAllCategories
-		[HttpGet]
-		public   ActionResult GetAllCategories([FromQuery]QueryParams queryParams)
-		{
-			var result = _categoryManager.GetAllCategories(queryParams);
-			if (result is null)
-				return Ok(new ApiResponse(404,"notFound","Data Empty"));
-			return Ok(new ApiResponse(200,"success",result));	
-		}
-		#endregion
-		#region GetCategoryById
-		[HttpGet("{id}")]
-		public async Task<IActionResult> GetCategoryById(int id)
-		{
-			var result =await _categoryManager.GetCategoryById(id);
-			if (result is null)
-				return Ok("Data Empty");
-			return Ok(result);
-		}
-		#endregion
-
-		#region UpdateCategory
-		[HttpPut]
-		[Authorize(Policy = "ForAdmin")]
+        #region UpdateCategory
+        [HttpPut("UpdateCategory/{id}")]  //admin
+        [Authorize(Policy = "ForAdmin")]
 		[AuthorizeCurrentUser]
 		public async Task<IActionResult> UpdateCategory([FromForm] CategoryEditDto category)
         {
@@ -111,6 +100,21 @@ namespace AirBnb.API.Controllers.Category
 			return Ok(new ApiResponse(200,"updated",string.Empty));
 		}
 		#endregion
+
+        #region DeleteCategory
+         [HttpDelete("DeleteCategory/{id}")] //admin
+  //      [Authorize(Policy = "ForAdmin")]
+		//[AuthorizeCurrentUser]
+		public async Task<IActionResult> DeleteCategory(int categoryId)
+		{
+			var result =await _categoryManager.DeleteCategory(categoryId);
+			if (result is false)
+				return BadRequest("Feild In Deleting Data");
+			return Ok(result);
+		}
+        #endregion
+
+
 
 
 	}
