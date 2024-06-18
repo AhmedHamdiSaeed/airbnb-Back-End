@@ -63,8 +63,25 @@ namespace AirBnb.API.Controllers.Category
 		#endregion
 
 		#region GetAllCategories
+
 		[HttpGet]
-		public   ActionResult GetAllCategories([FromQuery]QueryParams queryParams)
+		public async Task<ActionResult<CategoryReadDto>> Categories()
+		{
+			var categories =await _categoryManager.getCategories();
+            if (categories is null)
+                return Ok(new ApiResponse(404, "notFound",string.Empty));
+			return Ok(new ApiResponse(200, "success", categories));
+
+        }
+
+
+
+
+
+		[HttpGet("admin")]
+        [Authorize(Policy = "ForAdmin")]
+        [AuthorizeCurrentUser]
+        public   ActionResult GetAllCategories([FromQuery]QueryParams queryParams)
 		{
 			var result = _categoryManager.GetAllCategories(queryParams);
 			if (result is null)

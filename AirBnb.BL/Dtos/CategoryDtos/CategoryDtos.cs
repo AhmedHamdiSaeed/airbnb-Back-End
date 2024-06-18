@@ -16,6 +16,7 @@ namespace AirBnb.BL.Dtos.CategoryDtos
     public record CategoryEditDto(int id,string Name, IFormFile IconURL, string? Desc);
     public record CategoryEditDtoURL(int id, string Name, string IconURL, string? Desc);
     public record CategoryAddDto(string Name, IFormFile IconURL, string? Desc);
-    public record CategoryDto(string Name, string? IconURL, string Desc);
+    public record CategoryDto(string Name, string IconURL, string Desc);
+	public record CategoryReadDto(string Name,string IconURL);
 
 }

@@ -10,6 +10,7 @@ namespace AirBnb.BL.Managers.Categories
 {
 	public interface ICategoryManager
 	{
+		Task<IEnumerable<CategoryReadDto>?> getCategories();
         object? GetAllCategories(QueryParams queryParams );
 		Task<CategoryDto> GetCategoryById(int id);
 		Task<bool> AddCategory(CategoryDto categoryDto);

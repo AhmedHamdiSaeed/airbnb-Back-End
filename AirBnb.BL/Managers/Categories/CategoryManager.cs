@@ -57,8 +57,14 @@ namespace AirBnb.BL.Managers.Categories
             return  new QueryResult(query.Skip(skipAmount).Take(queryParams.PageSize).Select(c => new CategoryDto(c.Name,c.IconURL,c.Description)).ToList(),totalPages, queryParams.PageNumber, queryParams.PageSize, Total);
         }
     
+		public async Task<IEnumerable<CategoryReadDto>?> getCategories()
+		{
+			var categories=await _unitOfWork.CategoryRepository.GetAllAsync();
+            if (categories is null) return null;
+            return   categories.Select(c=>new CategoryReadDto(c.Name,c.IconURL));
+        }
 
-		public async Task<CategoryDto> GetCategoryById(int id)
+        public async Task<CategoryDto> GetCategoryById(int id)
 		{
 			Category category = await _unitOfWork.CategoryRepository.GetByIdAsync(id) ;
 			if (category is null) return null;
