@@ -332,7 +332,7 @@ namespace AirBnb.DAL.Data.context
 			#endregion
 			//#region Rule
 			//builder.Entity<Rule>().HasData(
-			//	new Rule { Id = 1, CheckIn= new TimeOnly(16, 0), CheckOut= new TimeOnly(9, 0), NumberOfGuest=2,Pets=true, TakePhotos=true, PropertyId=1 },
+			//	new Rule { Id = 1, CheckIn = new TimeOnly(16, 0), CheckOut = new TimeOnly(9, 0), NumberOfGuest = 2, Pets = true, TakePhotos = true, PropertyId = 1 },
 			//	new Rule { Id = 21, CheckIn = new TimeOnly(16, 0), CheckOut = new TimeOnly(9, 0), NumberOfGuest = 2, Pets = true, TakePhotos = true, PropertyId = 1 },
 			//	new Rule { Id = 2, CheckIn = new TimeOnly(15, 0), CheckOut = new TimeOnly(10, 0), NumberOfGuest = 3, Pets = false, TakePhotos = true, PropertyId = 2 },
 			//	new Rule { Id = 3, CheckIn = new TimeOnly(17, 0), CheckOut = new TimeOnly(11, 0), NumberOfGuest = 4, Pets = true, TakePhotos = false, PropertyId = 3 },

@@ -1,6 +1,9 @@
-﻿using AirBnb.BL.Dtos.CategoryDtos;
+﻿
+using AirBnb.BL.Dtos.CategoryDtos;
+using AirBnb.BL.Managers.Services;
 using AirBnb.DAL.Data.Model;
 using AirBnb.DAL.Unit;
+using Microsoft.IdentityModel.Tokens;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -18,12 +21,13 @@ namespace AirBnb.BL.Managers.Categories
 			_unitOfWork = unitOfWork;
 		}
 
-		public async Task<bool> AddCategory(CategoryAddDto categoryDto)
+		public async Task<bool> AddCategory(CategoryDto categoryDto)
 		{
 			Category getCate = new Category()
 			{
 				Name = categoryDto.Name,
-				Description = categoryDto.Description,
+				Description = categoryDto.Desc,
+				IconURL = categoryDto.IconURL,
 			};
 			await _unitOfWork.CategoryRepository.AddAsync(getCate);
 			return  _unitOfWork.SaveChanges() > 0;
@@ -34,42 +38,40 @@ namespace AirBnb.BL.Managers.Categories
 			Category result =await  _unitOfWork.CategoryRepository.GetByIdAsync(id);
 			  _unitOfWork.CategoryRepository.Delete(result);
 			return _unitOfWork.SaveChanges()>0;
+        }
 
-		}
-
-		public async Task<IEnumerable<CategoryGetDtos>> GetAllCategories()
+		public  object? GetAllCategories(QueryParams queryParams)
 		{
-			IEnumerable<Category> getAllCategory =await _unitOfWork.CategoryRepository.GetAllAsync();
-			if(getAllCategory is null ) { return null; }
-			var result = getAllCategory.Select(x => new CategoryGetDtos
-			{
-				Id = x.Id,
-				Name = x.Name,
-				Description = x.Description,
-			})
-			;
-			return result ;
-		}
+			var query = _unitOfWork.CategoryRepository.getAll();
+			if(query is null ) { return null; }
+			if (!string.IsNullOrWhiteSpace(queryParams.SearchTerm))
+				query = query.Where(c=>c.Name.Contains(queryParams.SearchTerm.ToLower()));
+			if (!string.IsNullOrWhiteSpace(queryParams.SortBy))
+				if(queryParams.SortBy.ToLower()=="Name")
+				query = query.OrderBy(c=>c.Name);
+            //paging
+            var Total = query.Count();
+            var totalPages = Total / queryParams.PageSize;
+            if (totalPages < 1) totalPages = 1;
+            var skipAmount = (queryParams.PageNumber - 1) * queryParams.PageSize;
+            return  new QueryResult(query.Skip(skipAmount).Take(queryParams.PageSize).Select(c => new CategoryDto(c.Name,c.IconURL,c.Description)).ToList(),totalPages, queryParams.PageNumber, queryParams.PageSize, Total);
+        }
+    
 
-		public async Task<CategoryGetDtos> GetCategoryById(int id)
+		public async Task<CategoryDto> GetCategoryById(int id)
 		{
-			Category getCate = await _unitOfWork.CategoryRepository.GetByIdAsync(id) ;
-			if (getCate is null) return null;
-			CategoryGetDtos result = new CategoryGetDtos
-			{
-				Name = getCate.Name,
-				Description = getCate.Description,
-				Id = getCate.Id,
-			};
-			return result;
+			Category category = await _unitOfWork.CategoryRepository.GetByIdAsync(id) ;
+			if (category is null) return null;
+			return new CategoryDto(category.Name,category.IconURL,category.Description);
 	}
 
-		public async Task<bool> UpdateCategory(int cateId,CategoryEditDto categoryDto)
+		public async Task<bool> UpdateCategory(CategoryEditDtoURL category)
 		{
-			Category myCate = await _unitOfWork.CategoryRepository.GetByIdAsync(cateId);
-			myCate.Name = categoryDto.Name;
-			myCate.Description = categoryDto.Description;
-			_unitOfWork.CategoryRepository.Update(myCate);
+			Category cate = await _unitOfWork.CategoryRepository.GetByIdAsync(category.id);
+			cate.Name = category.Name;
+			cate.Description = category.Desc;
+			cate.IconURL = category.IconURL;
+			_unitOfWork.CategoryRepository.Update(cate);
 			return _unitOfWork.SaveChanges() >0;
 		}
 	}

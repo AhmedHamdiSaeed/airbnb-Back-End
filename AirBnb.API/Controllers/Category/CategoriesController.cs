@@ -1,6 +1,8 @@
 ﻿using AirBnb.API.CustomAuth;
+using AirBnb.API.Extentions;
 using AirBnb.BL.Dtos.CategoryDtos;
 using AirBnb.BL.Managers.Categories;
+using AirBnb.BL.Managers.Services;
 using AirBnb.DAL.Data.Model;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
@@ -22,22 +24,33 @@ namespace AirBnb.API.Controllers.Category
 		}
 
 		#region AddCategory
-		[HttpPost("AddCategory")]
+		[HttpPost]
 		[Authorize(Policy = "ForAdmin")]
 		[AuthorizeCurrentUser]
-		public async Task<IActionResult> AddCategory([FromBody]CategoryAddDto newCate) {
-			if(ModelState.IsValid)
-			{
-				var result =await _categoryManager.AddCategory(newCate);
-				if (result is false)
-					return BadRequest("Feild Added Category");
-				return Ok(result);
-			}
-			return BadRequest("Data Not Valid");
-		}
-		#endregion
-		#region DeleteCategory
-		[HttpDelete("DeleteCategory/{id}")]
+		public async Task<IActionResult> AddCategory([FromForm] CategoryAddDto category)
+        {
+            string[] allowExtenstion = [".jpg", ".jpeg", ".png"];
+
+            if (!allowExtenstion.Contains(Path.GetExtension(category.IconURL.FileName), StringComparer.InvariantCultureIgnoreCase))
+            { return BadRequest(new ApiResponse(400, "not support this extension", string.Empty)); }
+            if (category.IconURL.Length > 2_000_000)
+            {
+                return BadRequest(new ApiResponse(400, "must less or equal 2MB", string.Empty));
+            }
+
+            var newFileName = $"{Guid.NewGuid()}{Path.GetExtension(category.IconURL.FileName)}";
+            var fullFilePath = Path.Combine(Environment.CurrentDirectory, "Assets", $"{newFileName}");
+            using var stream = new FileStream(fullFilePath, FileMode.Create);
+            category.IconURL.CopyTo(stream);
+
+
+            var newCategory = await _categoryManager.AddCategory(new CategoryDto(category.Name, $"{Request.Scheme}://{Request.Host}/Assets/{newFileName}", category.Desc));
+            return Ok(new ApiResponse(201, "created", newCategory));
+
+        }
+        #endregion
+        #region DeleteCategory
+        [HttpDelete("{id}")]
 		[Authorize(Policy = "ForAdmin")]
 		[AuthorizeCurrentUser]
 		public async Task<IActionResult> DeleteCategory(int categoryId)
@@ -50,17 +63,17 @@ namespace AirBnb.API.Controllers.Category
 		#endregion
 
 		#region GetAllCategories
-		[HttpGet("GetAllCategories")]
-		public async Task<IActionResult> GetAllCategories()
+		[HttpGet]
+		public   ActionResult GetAllCategories([FromQuery]QueryParams queryParams)
 		{
-			var result =await _categoryManager.GetAllCategories();
+			var result = _categoryManager.GetAllCategories(queryParams);
 			if (result is null)
-				return Ok("Data Empty");
-			return Ok(result);	
+				return Ok(new ApiResponse(404,"notFound","Data Empty"));
+			return Ok(new ApiResponse(200,"success",result));	
 		}
 		#endregion
 		#region GetCategoryById
-		[HttpGet("GetCategoryById/{id}")]
+		[HttpGet("{id}")]
 		public async Task<IActionResult> GetCategoryById(int id)
 		{
 			var result =await _categoryManager.GetCategoryById(id);
@@ -71,19 +84,31 @@ namespace AirBnb.API.Controllers.Category
 		#endregion
 
 		#region UpdateCategory
-		[HttpPut("UpdateCategory/{id}")]
+		[HttpPut]
 		[Authorize(Policy = "ForAdmin")]
 		[AuthorizeCurrentUser]
-		public async Task<IActionResult> UpdateCategory(int id,[FromBody] CategoryEditDto categoryDto)
-		{
-			if(ModelState.IsValid)
-			{
-				var result = await _categoryManager.UpdateCategory(id, categoryDto);
+		public async Task<IActionResult> UpdateCategory([FromForm] CategoryEditDto category)
+        {
+            string[] allowExtenstion = [".jpg", ".jpeg", ".png"];
+
+            if (!allowExtenstion.Contains(Path.GetExtension(category.IconURL.FileName), StringComparer.InvariantCultureIgnoreCase))
+            { return BadRequest(new ApiResponse(400, "not support this extension", string.Empty)); }
+            if (category.IconURL.Length > 2_000_000)
+            {
+                return BadRequest(new ApiResponse(400, "must less or equal 2MB", string.Empty));
+            }
+
+            var newFileName = $"{Guid.NewGuid()}{Path.GetExtension(category.IconURL.FileName)}";
+            var fullFilePath = Path.Combine(Environment.CurrentDirectory, "Assets", $"{newFileName}");
+            using var stream = new FileStream(fullFilePath, FileMode.Create);
+            category.IconURL.CopyTo(stream);
+
+
+            var result = await _categoryManager.UpdateCategory(new CategoryEditDtoURL(category.id,category.Name, $"{Request.Scheme}://{Request.Host}/Assets/{newFileName}", category.Desc));
 				if (result is false)
-					return BadRequest("Delet Data Feild");
-				return Ok(result);
-			}
-			return BadRequest("Data Not Valid");
+					return BadRequest(new ApiResponse(400,"faild",string.Empty));
+			
+			return Ok(new ApiResponse(200,"updated",string.Empty));
 		}
 		#endregion
 

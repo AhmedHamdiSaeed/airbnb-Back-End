@@ -16,5 +16,9 @@ namespace AirBnb.DAL.Repos.CategoryRepo
 		{
 			_context = context;
 		}
+		public IQueryable<Category> getAll()
+		{
+			return _context.Categories.AsQueryable();
+		}
 	}
 }
