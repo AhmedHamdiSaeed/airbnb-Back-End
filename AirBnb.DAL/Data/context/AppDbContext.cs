@@ -83,29 +83,29 @@ namespace AirBnb.DAL.Data.context
 				);
 			#endregion
 
-			#region category
-			builder.Entity<Category>().HasData(
-				new Category { Id = 21, Name = "Apartment", Description = "Description For Category" },
-				new Category { Id = 1, Name = "Entire Place", Description = "Guests have the entire home or apartment to themselves" },
-				new Category { Id = 2, Name = "Private Room", Description = "Guests have a private room but share common areas with the host or other guests" },
-				new Category { Id = 3, Name = "Shared Room", Description = "Guests share a room with the host or other guests" },
-				new Category { Id = 4, Name = "Unique Stays", Description = "Unusual or unconventional accommodations (treehouses, yurts, etc.)" },
-				new Category { Id = 5, Name = "Beachfront", Description = "Properties with direct access to a beach" },
-				new Category { Id = 6, Name = "Ski-in/Ski-out", Description = "Properties with ski-in/ski-out access" },
-				new Category { Id = 7, Name = "Pet-Friendly", Description = "Properties that allow pets" },
-				new Category { Id = 8, Name = "Luxury", Description = "High-end properties with premium amenities" },
-				new Category { Id = 9, Name = "Cabin", Description = "Rustic cabins for a cozy getaway" },
-				new Category { Id = 10, Name = "Apartment", Description = "Modern apartments in urban settings" },
-				new Category { Id = 11, Name = "Loft", Description = "Spacious lofts with open layouts" },
-				new Category { Id = 12, Name = "Villa", Description = "Luxurious villas with private pools or jacuzzis" },
-				new Category { Id = 13, Name = "Castle", Description = "Historic castles for a unique experience" },
-				new Category { Id = 14, Name = "Treehouse", Description = "Treehouses for a whimsical stay" },
-				new Category { Id = 15, Name = "Boat", Description = "Houseboats or other boats for a stay on the water" },
-				new Category { Id = 16, Name = "Dome", Description = "Unique dome-shaped accommodations" },
-				new Category { Id = 17, Name = "Boutique Hotel", Description = "Small, stylish hotels with personalized service" },
-				new Category { Id = 18, Name = "Eco-Friendly", Description = "Properties committed to sustainable practices" },
-				new Category { Id = 19, Name = "Family-Friendly", Description = "Properties with amenities for families with children" },
-				new Category { Id = 20, Name = "Workcation-Friendly", Description = "Properties with features suitable for remote work (fast Wi-Fi, dedicated workspace)" }
+			//#region category
+			//builder.Entity<Category>().HasData(
+			//	new Category { Id = 21, Name = "Apartment", Description = "Description For Category" },
+			//	new Category { Id = 1, Name = "Entire Place", Description = "Guests have the entire home or apartment to themselves" },
+			//	new Category { Id = 2, Name = "Private Room", Description = "Guests have a private room but share common areas with the host or other guests" },
+			//	new Category { Id = 3, Name = "Shared Room", Description = "Guests share a room with the host or other guests" },
+			//	new Category { Id = 4, Name = "Unique Stays", Description = "Unusual or unconventional accommodations (treehouses, yurts, etc.)" },
+			//	new Category { Id = 5, Name = "Beachfront", Description = "Properties with direct access to a beach" },
+			//	new Category { Id = 6, Name = "Ski-in/Ski-out", Description = "Properties with ski-in/ski-out access" },
+			//	new Category { Id = 7, Name = "Pet-Friendly", Description = "Properties that allow pets" },
+			//	new Category { Id = 8, Name = "Luxury", Description = "High-end properties with premium amenities" },
+			//	new Category { Id = 9, Name = "Cabin", Description = "Rustic cabins for a cozy getaway" },
+			//	new Category { Id = 10, Name = "Apartment", Description = "Modern apartments in urban settings" },
+			//	new Category { Id = 11, Name = "Loft", Description = "Spacious lofts with open layouts" },
+			//	new Category { Id = 12, Name = "Villa", Description = "Luxurious villas with private pools or jacuzzis" },
+			//	new Category { Id = 13, Name = "Castle", Description = "Historic castles for a unique experience" },
+			//	new Category { Id = 14, Name = "Treehouse", Description = "Treehouses for a whimsical stay" },
+			//	new Category { Id = 15, Name = "Boat", Description = "Houseboats or other boats for a stay on the water" },
+			//	new Category { Id = 16, Name = "Dome", Description = "Unique dome-shaped accommodations" },
+			//	new Category { Id = 17, Name = "Boutique Hotel", Description = "Small, stylish hotels with personalized service" },
+			//	new Category { Id = 18, Name = "Eco-Friendly", Description = "Properties committed to sustainable practices" },
+			//	new Category { Id = 19, Name = "Family-Friendly", Description = "Properties with amenities for families with children" },
+			//	new Category { Id = 20, Name = "Workcation-Friendly", Description = "Properties with features suitable for remote work (fast Wi-Fi, dedicated workspace)" }
 
 
 
@@ -113,8 +113,8 @@ namespace AirBnb.DAL.Data.context
 
 
 
-				);
-			#endregion
+			//	);
+			//#endregion
 
 			#region Property
 			builder.Entity<Property>().HasData(

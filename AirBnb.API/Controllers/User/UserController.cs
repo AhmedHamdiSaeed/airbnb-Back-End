@@ -19,7 +19,8 @@ namespace AirBnb.API.Controllers.User
 		string? tok=null;
 		private readonly UserManager<AppUser> _userManager;
 		private readonly IConfiguration _config;
-		public UserController(UserManager<AppUser> userManager, IConfiguration config)
+		private readonly ILogger<UserController> _logger;
+		public UserController(UserManager<AppUser> userManager, IConfiguration config, ILogger<UserController> logger)
         {
 			_userManager=userManager;
 			_config=config;
@@ -30,31 +31,43 @@ namespace AirBnb.API.Controllers.User
 		[HttpPost("Register")]
 		public async Task<IActionResult> Register(RegisterDto user)
 		{
-			if (ModelState.IsValid)
+			try
 			{
-
-				
-				
-				AppUser newUser = new AppUser()
+				if (ModelState.IsValid)
 				{
-					FirstName = user.firstName,
-					LastName = user.lastName,
-					UserName = $"{Guid.NewGuid()}",
-					Email = user.email,
-					Role = (Role)user.role
-				};
 
-				IdentityResult reslut = await _userManager.CreateAsync(newUser, user.password);
 
-				if (!reslut.Succeeded)
-				{
-					return BadRequest(reslut.Errors);
+					var emailExist = await _userManager.FindByEmailAsync(user.email);
+					if (emailExist != null)
+					{
+						return BadRequest("Email already exists");
+					}
+					AppUser newUser = new AppUser()
+					{
+						FirstName = user.firstName,
+						LastName = user.lastName,
+						UserName = $"{Guid.NewGuid()}",
+						Email = user.email,
+						Role = (Role)user.role,
+					};
+
+					IdentityResult reslut = await _userManager.CreateAsync(newUser, user.password);
+
+					if (!reslut.Succeeded)
+					{
+						return BadRequest(reslut.Errors);
+					}
+					return Ok("Successed");
+
+
 				}
-				return Ok("Successed");
-
-
+				return BadRequest(ModelState);
 			}
-			return BadRequest();
+			catch (Exception ex)
+			{
+				_logger.LogError(ex, "An error occurred while registering the user.");
+				return StatusCode(500, new { message = "Internal server error" });
+			}
 		}
 		#endregion
 
@@ -108,7 +121,7 @@ namespace AirBnb.API.Controllers.User
 
 
 		[HttpGet("check-email-exist")]
-		public async Task<ActionResult<bool>> CheckEmailExist([FromQuery] string email)
+		public async Task<ActionResult<bool>> CheckEmailExist(string email)
 		{
 			var result = await _userManager.FindByEmailAsync(email);
 			if (result is not null)
