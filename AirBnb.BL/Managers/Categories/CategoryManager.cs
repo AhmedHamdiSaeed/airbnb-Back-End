@@ -21,7 +21,15 @@ namespace AirBnb.BL.Managers.Categories
 			_unitOfWork = unitOfWork;
 		}
 
-		public async Task<bool> AddCategory(CategoryDto categoryDto)
+		public async Task<List<CategoryReadDto>?> getAll()
+		{
+			var categories= _unitOfWork.CategoryRepository.getAll().ToList();
+			if(categories==null)
+				return null;
+			return categories.Select(c=>new CategoryReadDto(c.Name,c.IconURL)).ToList();
+		}
+
+        public async Task<bool> AddCategory(CategoryDto categoryDto)
 		{
 			Category getCate = new Category()
 			{
