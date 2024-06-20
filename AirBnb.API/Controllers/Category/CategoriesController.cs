@@ -28,7 +28,7 @@ namespace AirBnb.API.Controllers.Category
 
 
 
-        [HttpGet]
+        [HttpGet("GetAll")]
         public async Task<ActionResult<List<CategoryReadDto>?>> Category() 
         {
             var categories=await _categoryManager.getAll();
@@ -50,7 +50,7 @@ namespace AirBnb.API.Controllers.Category
         #endregion
 
         #region GetCategoryById
-        [HttpGet("GetCategoryDetails/{id}")]
+        [HttpGet("GetCategoryById/{id}")]
         public async Task<IActionResult> GetCategoryById(int id)
 		{
 			var result =await _categoryManager.GetCategoryById(id);
@@ -62,8 +62,8 @@ namespace AirBnb.API.Controllers.Category
 
         #region AddCategory
         [HttpPost("AddCategory")]
-        [Authorize(Policy = "ForAdmin")]
-        [AuthorizeCurrentUser]
+        //[Authorize(Policy = "ForAdmin")]
+        //[AuthorizeCurrentUser]
         public async Task<IActionResult> AddCategory([FromForm] CategoryAddDto category)
         {
             string[] allowExtenstion = [".jpg", ".jpeg", ".png"];

@@ -1,5 +1,6 @@
 ﻿
 using AirBnb.BL.Dtos.CategoryDtos;
+using AirBnb.BL.Dtos.PropertyDtos;
 using AirBnb.BL.Managers.Services;
 using AirBnb.DAL.Data.Model;
 using AirBnb.DAL.Unit;
@@ -72,12 +73,26 @@ namespace AirBnb.BL.Managers.Categories
             return   categories.Select(c=>new CategoryReadDto(c.Name,c.IconURL));
         }
 
-        public async Task<CategoryDto> GetCategoryById(int id)
+        public async Task<GetOneCategoryDtos> GetCategoryById(int id)
 		{
-			Category category = await _unitOfWork.CategoryRepository.GetByIdAsync(id) ;
+			Category category = await _unitOfWork.CategoryRepository.GetPropertiesOfCategory(id) ;
 			if (category is null) return null;
-			return new CategoryDto(category.Name,category.IconURL,category.Description);
-	}
+			return new GetOneCategoryDtos
+			{
+				Id=category.Id,
+				Name=category.Name,
+				IconURL=category.IconURL,
+				Description=category.Description,
+                Properties = category.Properties.Select(p => new PropertyGetDto
+                {
+                    Id = p.Id,
+                    Name = p.Name,
+					Description = p.Description,
+                    DisplayedImage=p.DisplayedImage,
+
+                }).ToList()
+            };
+		}
 
 		public async Task<bool> UpdateCategory(CategoryEditDtoURL category)
 		{

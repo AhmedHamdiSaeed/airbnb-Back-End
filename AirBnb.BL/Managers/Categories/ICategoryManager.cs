@@ -12,7 +12,7 @@ namespace AirBnb.BL.Managers.Categories
 	{
 		Task<List<CategoryReadDto>?> getAll();
 		object? GetAllCategories(QueryParams queryParams );
-		Task<CategoryDto> GetCategoryById(int id);
+		Task<GetOneCategoryDtos> GetCategoryById(int id);
 		Task<bool> AddCategory(CategoryDto categoryDto);
 		Task<bool> UpdateCategory(CategoryEditDtoURL categoryDto);
 		Task<bool> DeleteCategory(int id);
