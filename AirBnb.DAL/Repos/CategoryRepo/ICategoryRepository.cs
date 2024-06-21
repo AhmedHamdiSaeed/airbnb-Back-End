@@ -10,5 +10,9 @@ namespace AirBnb.DAL.Repos.CategoryRepo
 {
 	public interface ICategoryRepository : IGenericRepository<Category>
 	{
-	}
+        IQueryable<Category> getAll();
+        Task<Category> GetPropertiesOfCategory(int categoryid);
+
+
+    }
 }

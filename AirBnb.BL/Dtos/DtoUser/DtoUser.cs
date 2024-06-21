@@ -15,6 +15,8 @@ namespace AirBnb.BL.Dtos.DtoUser
 
 		public string password { get; set; }
 		[Required]
+		public string confirmpassword { get; set; }
+		[Required]
 
 		public string firstName { get; set; }
 		[Required]
@@ -23,6 +25,7 @@ namespace AirBnb.BL.Dtos.DtoUser
 		[Required]
 		public int role {  get; set; }
 
+		
 	}
 
 	public class LoginDto

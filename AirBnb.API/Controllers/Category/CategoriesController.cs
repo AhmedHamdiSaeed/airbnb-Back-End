@@ -1,6 +1,8 @@
 ﻿using AirBnb.API.CustomAuth;
+using AirBnb.API.Extentions;
 using AirBnb.BL.Dtos.CategoryDtos;
 using AirBnb.BL.Managers.Categories;
+using AirBnb.BL.Managers.Services;
 using AirBnb.DAL.Data.Model;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
@@ -21,25 +23,103 @@ namespace AirBnb.API.Controllers.Category
 			_userManager = userManager;
 		}
 
-		#region AddCategory
-		[HttpPost("AddCategory")]
-		[Authorize(Policy = "ForAdmin")]
+        #region GetAllCategories
+
+
+
+
+        [HttpGet("GetAll")]
+        public async Task<ActionResult<List<CategoryReadDto>?>> Category() 
+        {
+            var categories=await _categoryManager.getAll();
+            if (categories == null)
+                return NotFound(new ApiResponse(404,"notFound",string.Empty));
+            return Ok(new ApiResponse(200,"success",categories));
+        }
+
+        [HttpGet("GetAllCategories")]
+        [Authorize(Policy = "ForAdmin")]
+        [AuthorizeCurrentUser]
+        public ActionResult GetAllCategories([FromQuery]QueryParams queryParams)
+		{
+			var result = _categoryManager.GetAllCategories(queryParams);
+			if (result is null)
+				return Ok(new ApiResponse(404,"notFound","Data Empty"));
+			return Ok(new ApiResponse(200,"success",result));	
+		}
+        #endregion
+
+        #region GetCategoryById
+        [HttpGet("GetCategoryById/{id}")]
+        public async Task<IActionResult> GetCategoryById(int id)
+		{
+			var result =await _categoryManager.GetCategoryById(id);
+			if (result is null)
+				return Ok("Data Empty");
+			return Ok(result);
+		}
+        #endregion
+
+        #region AddCategory
+        [HttpPost("AddCategory")]
+        //[Authorize(Policy = "ForAdmin")]
+        //[AuthorizeCurrentUser]
+        public async Task<IActionResult> AddCategory([FromForm] CategoryAddDto category)
+        {
+            string[] allowExtenstion = [".jpg", ".jpeg", ".png"];
+
+            if (!allowExtenstion.Contains(Path.GetExtension(category.IconURL.FileName), StringComparer.InvariantCultureIgnoreCase))
+            { return BadRequest(new ApiResponse(400, "not support this extension", string.Empty)); }
+            if (category.IconURL.Length > 2_000_000)
+            {
+                return BadRequest(new ApiResponse(400, "must less or equal 2MB", string.Empty));
+            }
+
+            var newFileName = $"{Guid.NewGuid()}{Path.GetExtension(category.IconURL.FileName)}";
+            var fullFilePath = Path.Combine(Environment.CurrentDirectory, "Assets", $"{newFileName}");
+            using var stream = new FileStream(fullFilePath, FileMode.Create);
+            category.IconURL.CopyTo(stream);
+
+
+            var newCategory = await _categoryManager.AddCategory(new CategoryDto(category.Name, $"{Request.Scheme}://{Request.Host}/Assets/{newFileName}", category.Desc));
+            return Ok(new ApiResponse(201, "created", newCategory));
+
+        }
+        #endregion
+
+        #region UpdateCategory
+        [HttpPut("UpdateCategory/{id}")]  //admin
+        [Authorize(Policy = "ForAdmin")]
 		[AuthorizeCurrentUser]
-		public async Task<IActionResult> AddCategory([FromBody]CategoryAddDto newCate) {
-			if(ModelState.IsValid)
-			{
-				var result =await _categoryManager.AddCategory(newCate);
+		public async Task<IActionResult> UpdateCategory([FromForm] CategoryEditDto category)
+        {
+            string[] allowExtenstion = [".jpg", ".jpeg", ".png"];
+
+            if (!allowExtenstion.Contains(Path.GetExtension(category.IconURL.FileName), StringComparer.InvariantCultureIgnoreCase))
+            { return BadRequest(new ApiResponse(400, "not support this extension", string.Empty)); }
+            if (category.IconURL.Length > 2_000_000)
+            {
+                return BadRequest(new ApiResponse(400, "must less or equal 2MB", string.Empty));
+            }
+
+            var newFileName = $"{Guid.NewGuid()}{Path.GetExtension(category.IconURL.FileName)}";
+            var fullFilePath = Path.Combine(Environment.CurrentDirectory, "Assets", $"{newFileName}");
+            using var stream = new FileStream(fullFilePath, FileMode.Create);
+            category.IconURL.CopyTo(stream);
+
+
+            var result = await _categoryManager.UpdateCategory(new CategoryEditDtoURL(category.id,category.Name, $"{Request.Scheme}://{Request.Host}/Assets/{newFileName}", category.Desc));
 				if (result is false)
-					return BadRequest("Feild Added Category");
-				return Ok(result);
-			}
-			return BadRequest("Data Not Valid");
+					return BadRequest(new ApiResponse(400,"faild",string.Empty));
+			
+			return Ok(new ApiResponse(200,"updated",string.Empty));
 		}
 		#endregion
-		#region DeleteCategory
-		[HttpDelete("DeleteCategory/{id}")]
-		[Authorize(Policy = "ForAdmin")]
-		[AuthorizeCurrentUser]
+
+        #region DeleteCategory
+         [HttpDelete("DeleteCategory/{id}")] //admin
+  //      [Authorize(Policy = "ForAdmin")]
+		//[AuthorizeCurrentUser]
 		public async Task<IActionResult> DeleteCategory(int categoryId)
 		{
 			var result =await _categoryManager.DeleteCategory(categoryId);
@@ -47,45 +127,9 @@ namespace AirBnb.API.Controllers.Category
 				return BadRequest("Feild In Deleting Data");
 			return Ok(result);
 		}
-		#endregion
+        #endregion
 
-		#region GetAllCategories
-		[HttpGet("GetAllCategories")]
-		public async Task<IActionResult> GetAllCategories()
-		{
-			var result =await _categoryManager.GetAllCategories();
-			if (result is null)
-				return Ok("Data Empty");
-			return Ok(result);	
-		}
-		#endregion
-		#region GetCategoryById
-		[HttpGet("GetCategoryById/{id}")]
-		public async Task<IActionResult> GetCategoryById(int id)
-		{
-			var result =await _categoryManager.GetCategoryById(id);
-			if (result is null)
-				return Ok("Data Empty");
-			return Ok(result);
-		}
-		#endregion
 
-		#region UpdateCategory
-		[HttpPut("UpdateCategory/{id}")]
-		[Authorize(Policy = "ForAdmin")]
-		[AuthorizeCurrentUser]
-		public async Task<IActionResult> UpdateCategory(int id,[FromBody] CategoryEditDto categoryDto)
-		{
-			if(ModelState.IsValid)
-			{
-				var result = await _categoryManager.UpdateCategory(id, categoryDto);
-				if (result is false)
-					return BadRequest("Delet Data Feild");
-				return Ok(result);
-			}
-			return BadRequest("Data Not Valid");
-		}
-		#endregion
 
 
 	}

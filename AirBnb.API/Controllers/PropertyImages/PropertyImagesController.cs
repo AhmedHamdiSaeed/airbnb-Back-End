@@ -45,7 +45,7 @@ namespace AirBnb.API.Controllers.PropertyImages
 		[HttpDelete("DeleteImage/{id}")]
 		[Authorize(Policy = "ForHost")]
 		[AuthorizeCurrentUser]
-		public async Task<IActionResult> AddImage(int id)
+		public async Task<IActionResult> DeleteImage(int id)
 		{
 			var result = await _propertyImagesManager.DeleteImage(id);
 			if (result is false)

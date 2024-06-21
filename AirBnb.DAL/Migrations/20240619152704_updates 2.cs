@@ -3,10 +3,12 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 #nullable disable
 
+#pragma warning disable CA1814 // Prefer jagged arrays over multidimensional
+
 namespace AirBnb.DAL.Migrations
 {
     /// <inheritdoc />
-    public partial class initial : Migration
+    public partial class updates2 : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
@@ -62,7 +64,8 @@ namespace AirBnb.DAL.Migrations
                     Id = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
                     Name = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    Description = table.Column<string>(type: "nvarchar(max)", nullable: true)
+                    Description = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    IconURL = table.Column<string>(type: "nvarchar(max)", nullable: true)
                 },
                 constraints: table =>
                 {
@@ -371,6 +374,23 @@ namespace AirBnb.DAL.Migrations
                         principalTable: "Bookings",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Cascade);
+                });
+
+            migrationBuilder.InsertData(
+                table: "Countires",
+                columns: new[] { "Id", "Name" },
+                values: new object[,]
+                {
+                    { 1, "Egypt" },
+                    { 2, "France" },
+                    { 3, "Italy" },
+                    { 4, "Algeria" },
+                    { 5, "Oman" },
+                    { 6, "Yemen" },
+                    { 7, "Germany" },
+                    { 8, "Qatar" },
+                    { 9, "Palestine" },
+                    { 10, "Morocco" }
                 });
 
             migrationBuilder.CreateIndex(

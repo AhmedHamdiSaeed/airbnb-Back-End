@@ -1,4 +1,5 @@
 ﻿using AirBnb.BL.Dtos.AmentityDtos;
+using AirBnb.BL.Dtos.AppointmentAvailableDtos;
 using AirBnb.BL.Dtos.BookingDtos;
 using AirBnb.DAL.Data.Model;
 using AirBnb.DAL.Unit;
@@ -21,7 +22,7 @@ namespace AirBnb.BL.Managers.BookingManagers
 
 		}
 
-		public async Task<bool> AddBooking(string userid, AmentityGetDto amentity)
+		public async Task<bool> AddBooking(string userid, appAvailbletGetDto amentity)
 		{
 			var booking = new Booking
 			{

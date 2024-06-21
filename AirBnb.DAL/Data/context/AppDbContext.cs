@@ -44,9 +44,13 @@ namespace AirBnb.DAL.Data.context
            
 
 
-            #region countries
-            builder.Entity<Country>().HasData(
-				new Country { Id = 1, Name = "Egypt" },
+            
+			
+		
+	
+			#region countries
+			builder.Entity<Country>().HasData(
+                new Country { Id = 1, Name = "Egypt" },
 				new Country { Id = 2, Name = "France" },
 				new Country { Id = 3, Name = "Italy" },
 				new Country { Id = 4, Name = "Algeria" },
@@ -83,34 +87,34 @@ namespace AirBnb.DAL.Data.context
 				new City { Id = 18, Name = "Los Angeles", CountryId = 8 },
 				new City { Id = 19, Name = "Mumbai", CountryId = 9 },
 				new City { Id = 20, Name = "Istanbul", CountryId = 10 },
-				new City { Id = 21, Name = "Beijing", CountryId = 1 }
-
-				);
+				new City { Id = 21, Name = "Beijing", CountryId = 1 },
+               
+                );
 			#endregion
 
 			#region category
-			builder.Entity<Category>().HasData(
-				new Category { Id = 21, Name = "Apartment", Description = "Description For Category" },
-				new Category { Id = 1, Name = "Entire Place", Description = "Guests have the entire home or apartment to themselves" },
-				new Category { Id = 2, Name = "Private Room", Description = "Guests have a private room but share common areas with the host or other guests" },
-				new Category { Id = 3, Name = "Shared Room", Description = "Guests share a room with the host or other guests" },
-				new Category { Id = 4, Name = "Unique Stays", Description = "Unusual or unconventional accommodations (treehouses, yurts, etc.)" },
-				new Category { Id = 5, Name = "Beachfront", Description = "Properties with direct access to a beach" },
-				new Category { Id = 6, Name = "Ski-in/Ski-out", Description = "Properties with ski-in/ski-out access" },
-				new Category { Id = 7, Name = "Pet-Friendly", Description = "Properties that allow pets" },
-				new Category { Id = 8, Name = "Luxury", Description = "High-end properties with premium amenities" },
-				new Category { Id = 9, Name = "Cabin", Description = "Rustic cabins for a cozy getaway" },
-				new Category { Id = 10, Name = "Apartment", Description = "Modern apartments in urban settings" },
-				new Category { Id = 11, Name = "Loft", Description = "Spacious lofts with open layouts" },
-				new Category { Id = 12, Name = "Villa", Description = "Luxurious villas with private pools or jacuzzis" },
-				new Category { Id = 13, Name = "Castle", Description = "Historic castles for a unique experience" },
-				new Category { Id = 14, Name = "Treehouse", Description = "Treehouses for a whimsical stay" },
-				new Category { Id = 15, Name = "Boat", Description = "Houseboats or other boats for a stay on the water" },
-				new Category { Id = 16, Name = "Dome", Description = "Unique dome-shaped accommodations" },
-				new Category { Id = 17, Name = "Boutique Hotel", Description = "Small, stylish hotels with personalized service" },
-				new Category { Id = 18, Name = "Eco-Friendly", Description = "Properties committed to sustainable practices" },
-				new Category { Id = 19, Name = "Family-Friendly", Description = "Properties with amenities for families with children" },
-				new Category { Id = 20, Name = "Workcation-Friendly", Description = "Properties with features suitable for remote work (fast Wi-Fi, dedicated workspace)" }
+			//builder.Entity<Category>().HasData(
+			//	new Category { Id = 21, Name = "Apartment", Description = "Description For Category" },
+			//	new Category { Id = 1, Name = "Entire Place", Description = "Guests have the entire home or apartment to themselves" },
+			//	new Category { Id = 2, Name = "Private Room", Description = "Guests have a private room but share common areas with the host or other guests" },
+			//	new Category { Id = 3, Name = "Shared Room", Description = "Guests share a room with the host or other guests" },
+			//	new Category { Id = 4, Name = "Unique Stays", Description = "Unusual or unconventional accommodations (treehouses, yurts, etc.)" },
+			//	new Category { Id = 5, Name = "Beachfront", Description = "Properties with direct access to a beach" },
+			//	new Category { Id = 6, Name = "Ski-in/Ski-out", Description = "Properties with ski-in/ski-out access" },
+			//	new Category { Id = 7, Name = "Pet-Friendly", Description = "Properties that allow pets" },
+			//	new Category { Id = 8, Name = "Luxury", Description = "High-end properties with premium amenities" },
+			//	new Category { Id = 9, Name = "Cabin", Description = "Rustic cabins for a cozy getaway" },
+			//	new Category { Id = 10, Name = "Apartment", Description = "Modern apartments in urban settings" },
+			//	new Category { Id = 11, Name = "Loft", Description = "Spacious lofts with open layouts" },
+			//	new Category { Id = 12, Name = "Villa", Description = "Luxurious villas with private pools or jacuzzis" },
+			//	new Category { Id = 13, Name = "Castle", Description = "Historic castles for a unique experience" },
+			//	new Category { Id = 14, Name = "Treehouse", Description = "Treehouses for a whimsical stay" },
+			//	new Category { Id = 15, Name = "Boat", Description = "Houseboats or other boats for a stay on the water" },
+			//	new Category { Id = 16, Name = "Dome", Description = "Unique dome-shaped accommodations" },
+			//	new Category { Id = 17, Name = "Boutique Hotel", Description = "Small, stylish hotels with personalized service" },
+			//	new Category { Id = 18, Name = "Eco-Friendly", Description = "Properties committed to sustainable practices" },
+			//	new Category { Id = 19, Name = "Family-Friendly", Description = "Properties with amenities for families with children" },
+			//	new Category { Id = 20, Name = "Workcation-Friendly", Description = "Properties with features suitable for remote work (fast Wi-Fi, dedicated workspace)" }
 
 
 
@@ -118,31 +122,31 @@ namespace AirBnb.DAL.Data.context
 
 
 
-				);
+			//	);
 			#endregion
 
 			#region Property
 			builder.Entity<Property>().HasData(
 				new Property { Id = 1, DisplayedImage = "https://example.com/image1.jpg", CheckIn = new TimeOnly(9), CheckOut = new TimeOnly(15), NumberOfGuest = 10, Pets = true, TakePhotos = false, Name = "Apartment", Description = "No Description", Adress = "Cairo", NumberOfBathrooms = 1, NumberOfBedrooms = 4, Beds = 8, UserId = "53f9998c-e5c9-4bd5-8db6-eefc68f7fb4f", CategoryId = 1, CityId = 1, Status = Status.Pending },
-				new Property { Id = 2, DisplayedImage = "https://example.com/image1.jpg", CheckIn = new TimeOnly(9), CheckOut = new TimeOnly(15), NumberOfGuest = 10, Pets = true, TakePhotos = false, Name = "Beach House", Description = "Sea view with modern amenities", Adress = "Alexandria", NumberOfBathrooms = 2, NumberOfBedrooms = 3, Beds = 5, UserId = "53f9998c-e5c9-4bd5-8db6-eefc68f7fb4f", CategoryId = 2, CityId = 2, Status = Status.Confirmed },
-				new Property { Id = 3, DisplayedImage = "https://example.com/image1.jpg", CheckIn = new TimeOnly(9), CheckOut = new TimeOnly(15), NumberOfGuest = 10, Pets = true, TakePhotos = false, Name = "Mountain Cabin", Description = "Cozy cabin in the mountains", Adress = "Aswan", NumberOfBathrooms = 1, NumberOfBedrooms = 2, Beds = 3, UserId = "53f9998c-e5c9-4bd5-8db6-eefc68f7fb4f", CategoryId = 3, CityId = 3, Status = Status.Pending },
-				new Property { Id = 4, DisplayedImage = "https://example.com/image1.jpg", CheckIn = new TimeOnly(9), CheckOut = new TimeOnly(15), NumberOfGuest = 10, Pets = true, TakePhotos = false, Name = "Luxury Villa", Description = "Luxurious villa with a private pool", Adress = "Sharm El-Sheikh", NumberOfBathrooms = 4, NumberOfBedrooms = 5, Beds = 10, UserId = "53f9998c-e5c9-4bd5-8db6-eefc68f7fb4f", CategoryId = 4, CityId = 4, Status = Status.Canceled },
-				new Property { Id = 5, DisplayedImage = "https://example.com/image1.jpg", CheckIn = new TimeOnly(9), CheckOut = new TimeOnly(15), NumberOfGuest = 10, Pets = true, TakePhotos = false, Name = "Downtown Condo", Description = "Modern condo in the city center", Adress = "Giza", NumberOfBathrooms = 2, NumberOfBedrooms = 2, Beds = 4, UserId = "53f9998c-e5c9-4bd5-8db6-eefc68f7fb4f", CategoryId = 5, CityId = 5, Status = Status.Pending },
-				new Property { Id = 6, DisplayedImage = "https://example.com/image1.jpg", CheckIn = new TimeOnly(9), CheckOut = new TimeOnly(15), NumberOfGuest = 10, Pets = true, TakePhotos = false, Name = "Farmhouse", Description = "Spacious farmhouse with a garden", Adress = "Luxor", NumberOfBathrooms = 3, NumberOfBedrooms = 4, Beds = 7, UserId = "53f9998c-e5c9-4bd5-8db6-eefc68f7fb4f", CategoryId = 6, CityId = 6, Status = Status.Confirmed },
-				new Property { Id = 7, DisplayedImage = "https://example.com/image1.jpg", CheckIn = new TimeOnly(9), CheckOut = new TimeOnly(15), NumberOfGuest = 10, Pets = true, TakePhotos = false, Name = "Penthouse", Description = "Penthouse with panoramic views", Adress = "Cairo", NumberOfBathrooms = 3, NumberOfBedrooms = 3, Beds = 6, UserId = "53f9998c-e5c9-4bd5-8db6-eefc68f7fb4f", CategoryId = 7, CityId = 1, Status = Status.Pending },
-				new Property { Id = 8, DisplayedImage = "https://example.com/image1.jpg", CheckIn = new TimeOnly(9), CheckOut = new TimeOnly(15), NumberOfGuest = 10, Pets = true, TakePhotos = false, Name = "Suburban Home", Description = "Family home in a quiet suburb", Adress = "Helwan", NumberOfBathrooms = 2, NumberOfBedrooms = 3, Beds = 5, UserId = "53f9998c-e5c9-4bd5-8db6-eefc68f7fb4f", CategoryId = 8, CityId = 8, Status = Status.Pending },
-				new Property { Id = 9, DisplayedImage = "https://example.com/image1.jpg", CheckIn = new TimeOnly(9), CheckOut = new TimeOnly(15), NumberOfGuest = 10, Pets = true, TakePhotos = false, Name = "Studio Apartment", Description = "Compact studio in a bustling area", Adress = "Alexandria", NumberOfBathrooms = 1, NumberOfBedrooms = 1, Beds = 1, UserId = "53f9998c-e5c9-4bd5-8db6-eefc68f7fb4f", CategoryId = 9, CityId = 2, Status = Status.Canceled },
-				new Property { Id = 10, DisplayedImage = "https://example.com/image1.jpg", CheckIn = new TimeOnly(9), CheckOut = new TimeOnly(15), NumberOfGuest = 10, Pets = true, TakePhotos = false, Name = "Country Cottage", Description = "Charming cottage in the countryside", Adress = "Minya", NumberOfBathrooms = 1, NumberOfBedrooms = 2, Beds = 3, UserId = "53f9998c-e5c9-4bd5-8db6-eefc68f7fb4f", CategoryId = 10, CityId = 10, Status = Status.Pending },
-				new Property { Id = 11, DisplayedImage = "https://example.com/image1.jpg", CheckIn = new TimeOnly(9), CheckOut = new TimeOnly(15), NumberOfGuest = 10, Pets = true, TakePhotos = false, Name = "Lake House", Description = "Peaceful house by the lake", Adress = "Fayoum", NumberOfBathrooms = 2, NumberOfBedrooms = 3, Beds = 5, UserId = "53f9998c-e5c9-4bd5-8db6-eefc68f7fb4f", CategoryId = 11, CityId = 11, Status = Status.Pending },
-				new Property { Id = 12, DisplayedImage = "https://example.com/image1.jpg", CheckIn = new TimeOnly(9), CheckOut = new TimeOnly(15), NumberOfGuest = 10, Pets = true, TakePhotos = false, Name = "Urban Loft", Description = "Stylish loft in an urban setting", Adress = "Cairo", NumberOfBathrooms = 1, NumberOfBedrooms = 2, Beds = 2, UserId = "53f9998c-e5c9-4bd5-8db6-eefc68f7fb4f", CategoryId = 12, CityId = 1, Status = 0 },
-				new Property { Id = 13, DisplayedImage = "https://example.com/image1.jpg", CheckIn = new TimeOnly(9), CheckOut = new TimeOnly(15), NumberOfGuest = 10, Pets = true, TakePhotos = false, Name = "Townhouse", Description = "Modern townhouse with a garage", Adress = "Suez", NumberOfBathrooms = 2, NumberOfBedrooms = 3, Beds = 4, UserId = "53f9998c-e5c9-4bd5-8db6-eefc68f7fb4f", CategoryId = 13, CityId = 13, Status = Status.Pending },
-				new Property { Id = 14, DisplayedImage = "https://example.com/image1.jpg", CheckIn = new TimeOnly(9), CheckOut = new TimeOnly(15), NumberOfGuest = 10, Pets = true, TakePhotos = false, Name = "Historical Home", Description = "Home with historical significance", Adress = "Alexandria", NumberOfBathrooms = 3, NumberOfBedrooms = 4, Beds = 7, UserId = "53f9998c-e5c9-4bd5-8db6-eefc68f7fb4f", CategoryId = 14, CityId = 2, Status = Status.Pending },
-				new Property { Id = 15, DisplayedImage = "https://example.com/image1.jpg", CheckIn = new TimeOnly(9), CheckOut = new TimeOnly(15), NumberOfGuest = 10, Pets = true, TakePhotos = false, Name = "Desert Retreat", Description = "Retreat in the quiet of the desert", Adress = "Siwa", NumberOfBathrooms = 1, NumberOfBedrooms = 2, Beds = 3, UserId = "53f9998c-e5c9-4bd5-8db6-eefc68f7fb4f", CategoryId = 15, CityId = 15, Status = Status.Confirmed },
-				new Property { Id = 16, DisplayedImage = "https://example.com/image1.jpg", CheckIn = new TimeOnly(9), CheckOut = new TimeOnly(15), NumberOfGuest = 10, Pets = true, TakePhotos = false, Name = "Bungalow", Description = "Single-story bungalow with a yard", Adress = "Dahab", NumberOfBathrooms = 1, NumberOfBedrooms = 3, Beds = 4, UserId = "53f9998c-e5c9-4bd5-8db6-eefc68f7fb4f", CategoryId = 16, CityId = 16, Status = Status.Pending },
-				new Property { Id = 17, DisplayedImage = "https://example.com/image1.jpg", CheckIn = new TimeOnly(9), CheckOut = new TimeOnly(15), NumberOfGuest = 10, Pets = true, TakePhotos = false, Name = "Modern Flat", Description = "Modern flat in a residential complex", Adress = "Cairo", NumberOfBathrooms = 1, NumberOfBedrooms = 1, Beds = 1, UserId = "53f9998c-e5c9-4bd5-8db6-eefc68f7fb4f", CategoryId = 17, CityId = 1, Status = Status.Pending },
-				new Property { Id = 18, DisplayedImage = "https://example.com/image1.jpg", CheckIn = new TimeOnly(9), CheckOut = new TimeOnly(15), NumberOfGuest = 10, Pets = true, TakePhotos = false, Name = "Eco-Friendly House", Description = "Eco-friendly house with solar panels", Adress = "Port Said", NumberOfBathrooms = 2, NumberOfBedrooms = 3, Beds = 5, UserId = "53f9998c-e5c9-4bd5-8db6-eefc68f7fb4f", CategoryId = 18, CityId = 18, Status = Status.Canceled },
-				new Property { Id = 19, DisplayedImage = "https://example.com/image1.jpg", CheckIn = new TimeOnly(9), CheckOut = new TimeOnly(15), NumberOfGuest = 10, Pets = true, TakePhotos = false, Name = "Seaside Villa", Description = "Villa with a view of the sea", Adress = "Hurghada", NumberOfBathrooms = 4, NumberOfBedrooms = 5, Beds = 9, UserId = "53f9998c-e5c9-4bd5-8db6-eefc68f7fb4f", CategoryId = 19, CityId = 19, Status = Status.Pending },
-				new Property { Id = 20, DisplayedImage = "https://example.com/image1.jpg", CheckIn = new TimeOnly(9), CheckOut = new TimeOnly(15), NumberOfGuest = 10, Pets = true, TakePhotos = false, Name = "Rustic Cabin", Description = "Cabin with a rustic charm", Adress = "Sinai", NumberOfBathrooms = 1, NumberOfBedrooms = 2, Beds = 3, UserId = "53f9998c-e5c9-4bd5-8db6-eefc68f7fb4f", CategoryId = 20, CityId = 20, Status = Status.Confirmed }
+				new Property { Id = 2, DisplayedImage = "https://example.com/image1.jpg", CheckIn = new TimeOnly(9), CheckOut = new TimeOnly(15), NumberOfGuest = 10, Pets = true, TakePhotos = false, Name = "Beach House", Description = "Sea view with modern amenities", Adress = "Alexandria", NumberOfBathrooms = 2, NumberOfBedrooms = 3, Beds = 5, UserId = "53f9998c-e5c9-4bd5-8db6-eefc68f7fb4f", CategoryId = 1, CityId = 2, Status = Status.Confirmed },
+				new Property { Id = 3, DisplayedImage = "https://example.com/image1.jpg", CheckIn = new TimeOnly(9), CheckOut = new TimeOnly(15), NumberOfGuest = 10, Pets = true, TakePhotos = false, Name = "Mountain Cabin", Description = "Cozy cabin in the mountains", Adress = "Aswan", NumberOfBathrooms = 1, NumberOfBedrooms = 2, Beds = 3, UserId = "53f9998c-e5c9-4bd5-8db6-eefc68f7fb4f", CategoryId = 1, CityId = 3, Status = Status.Pending },
+				new Property { Id = 4, DisplayedImage = "https://example.com/image1.jpg", CheckIn = new TimeOnly(9), CheckOut = new TimeOnly(15), NumberOfGuest = 10, Pets = true, TakePhotos = false, Name = "Luxury Villa", Description = "Luxurious villa with a private pool", Adress = "Sharm El-Sheikh", NumberOfBathrooms = 4, NumberOfBedrooms = 5, Beds = 10, UserId = "53f9998c-e5c9-4bd5-8db6-eefc68f7fb4f", CategoryId = 1, CityId = 4, Status = Status.Canceled },
+				new Property { Id = 5, DisplayedImage = "https://example.com/image1.jpg", CheckIn = new TimeOnly(9), CheckOut = new TimeOnly(15), NumberOfGuest = 10, Pets = true, TakePhotos = false, Name = "Downtown Condo", Description = "Modern condo in the city center", Adress = "Giza", NumberOfBathrooms = 2, NumberOfBedrooms = 2, Beds = 4, UserId = "53f9998c-e5c9-4bd5-8db6-eefc68f7fb4f", CategoryId = 1, CityId = 5, Status = Status.Pending },
+				new Property { Id = 6, DisplayedImage = "https://example.com/image1.jpg", CheckIn = new TimeOnly(9), CheckOut = new TimeOnly(15), NumberOfGuest = 10, Pets = true, TakePhotos = false, Name = "Farmhouse", Description = "Spacious farmhouse with a garden", Adress = "Luxor", NumberOfBathrooms = 3, NumberOfBedrooms = 4, Beds = 7, UserId = "53f9998c-e5c9-4bd5-8db6-eefc68f7fb4f", CategoryId = 1, CityId = 6, Status = Status.Confirmed },
+				new Property { Id = 7, DisplayedImage = "https://example.com/image1.jpg", CheckIn = new TimeOnly(9), CheckOut = new TimeOnly(15), NumberOfGuest = 10, Pets = true, TakePhotos = false, Name = "Penthouse", Description = "Penthouse with panoramic views", Adress = "Cairo", NumberOfBathrooms = 3, NumberOfBedrooms = 3, Beds = 6, UserId = "53f9998c-e5c9-4bd5-8db6-eefc68f7fb4f", CategoryId = 1, CityId = 1, Status = Status.Pending },
+				new Property { Id = 8, DisplayedImage = "https://example.com/image1.jpg", CheckIn = new TimeOnly(9), CheckOut = new TimeOnly(15), NumberOfGuest = 10, Pets = true, TakePhotos = false, Name = "Suburban Home", Description = "Family home in a quiet suburb", Adress = "Helwan", NumberOfBathrooms = 2, NumberOfBedrooms = 3, Beds = 5, UserId = "53f9998c-e5c9-4bd5-8db6-eefc68f7fb4f", CategoryId = 1, CityId = 8, Status = Status.Pending },
+				new Property { Id = 9, DisplayedImage = "https://example.com/image1.jpg", CheckIn = new TimeOnly(9), CheckOut = new TimeOnly(15), NumberOfGuest = 10, Pets = true, TakePhotos = false, Name = "Studio Apartment", Description = "Compact studio in a bustling area", Adress = "Alexandria", NumberOfBathrooms = 1, NumberOfBedrooms = 1, Beds = 1, UserId = "53f9998c-e5c9-4bd5-8db6-eefc68f7fb4f", CategoryId = 1, CityId = 2, Status = Status.Canceled },
+				new Property { Id = 10, DisplayedImage = "https://example.com/image1.jpg", CheckIn = new TimeOnly(9), CheckOut = new TimeOnly(15), NumberOfGuest = 10, Pets = true, TakePhotos = false, Name = "Country Cottage", Description = "Charming cottage in the countryside", Adress = "Minya", NumberOfBathrooms = 1, NumberOfBedrooms = 2, Beds = 3, UserId = "53f9998c-e5c9-4bd5-8db6-eefc68f7fb4f", CategoryId = 1, CityId = 10, Status = Status.Pending },
+				new Property { Id = 11, DisplayedImage = "https://example.com/image1.jpg", CheckIn = new TimeOnly(9), CheckOut = new TimeOnly(15), NumberOfGuest = 10, Pets = true, TakePhotos = false, Name = "Lake House", Description = "Peaceful house by the lake", Adress = "Fayoum", NumberOfBathrooms = 2, NumberOfBedrooms = 3, Beds = 5, UserId = "53f9998c-e5c9-4bd5-8db6-eefc68f7fb4f", CategoryId = 1, CityId = 11, Status = Status.Pending },
+				new Property { Id = 12, DisplayedImage = "https://example.com/image1.jpg", CheckIn = new TimeOnly(9), CheckOut = new TimeOnly(15), NumberOfGuest = 10, Pets = true, TakePhotos = false, Name = "Urban Loft", Description = "Stylish loft in an urban setting", Adress = "Cairo", NumberOfBathrooms = 1, NumberOfBedrooms = 2, Beds = 2, UserId = "53f9998c-e5c9-4bd5-8db6-eefc68f7fb4f", CategoryId = 1, CityId = 1, Status = 0 },
+				new Property { Id = 13, DisplayedImage = "https://example.com/image1.jpg", CheckIn = new TimeOnly(9), CheckOut = new TimeOnly(15), NumberOfGuest = 10, Pets = true, TakePhotos = false, Name = "Townhouse", Description = "Modern townhouse with a garage", Adress = "Suez", NumberOfBathrooms = 2, NumberOfBedrooms = 3, Beds = 4, UserId = "53f9998c-e5c9-4bd5-8db6-eefc68f7fb4f", CategoryId = 1, CityId = 13, Status = Status.Pending },
+				new Property { Id = 14, DisplayedImage = "https://example.com/image1.jpg", CheckIn = new TimeOnly(9), CheckOut = new TimeOnly(15), NumberOfGuest = 10, Pets = true, TakePhotos = false, Name = "Historical Home", Description = "Home with historical significance", Adress = "Alexandria", NumberOfBathrooms = 3, NumberOfBedrooms = 4, Beds = 7, UserId = "53f9998c-e5c9-4bd5-8db6-eefc68f7fb4f", CategoryId = 1, CityId = 2, Status = Status.Pending },
+				new Property { Id = 15, DisplayedImage = "https://example.com/image1.jpg", CheckIn = new TimeOnly(9), CheckOut = new TimeOnly(15), NumberOfGuest = 10, Pets = true, TakePhotos = false, Name = "Desert Retreat", Description = "Retreat in the quiet of the desert", Adress = "Siwa", NumberOfBathrooms = 1, NumberOfBedrooms = 2, Beds = 3, UserId = "53f9998c-e5c9-4bd5-8db6-eefc68f7fb4f", CategoryId = 1, CityId = 15, Status = Status.Confirmed },
+				new Property { Id = 16, DisplayedImage = "https://example.com/image1.jpg", CheckIn = new TimeOnly(9), CheckOut = new TimeOnly(15), NumberOfGuest = 10, Pets = true, TakePhotos = false, Name = "Bungalow", Description = "Single-story bungalow with a yard", Adress = "Dahab", NumberOfBathrooms = 1, NumberOfBedrooms = 3, Beds = 4, UserId = "53f9998c-e5c9-4bd5-8db6-eefc68f7fb4f", CategoryId = 1, CityId = 16, Status = Status.Pending },
+				new Property { Id = 17, DisplayedImage = "https://example.com/image1.jpg", CheckIn = new TimeOnly(9), CheckOut = new TimeOnly(15), NumberOfGuest = 10, Pets = true, TakePhotos = false, Name = "Modern Flat", Description = "Modern flat in a residential complex", Adress = "Cairo", NumberOfBathrooms = 1, NumberOfBedrooms = 1, Beds = 1, UserId = "53f9998c-e5c9-4bd5-8db6-eefc68f7fb4f", CategoryId = 1, CityId = 1, Status = Status.Pending },
+				new Property { Id = 18, DisplayedImage = "https://example.com/image1.jpg", CheckIn = new TimeOnly(9), CheckOut = new TimeOnly(15), NumberOfGuest = 10, Pets = true, TakePhotos = false, Name = "Eco-Friendly House", Description = "Eco-friendly house with solar panels", Adress = "Port Said", NumberOfBathrooms = 2, NumberOfBedrooms = 3, Beds = 5, UserId = "53f9998c-e5c9-4bd5-8db6-eefc68f7fb4f", CategoryId = 1, CityId = 18, Status = Status.Canceled },
+				new Property { Id = 19, DisplayedImage = "https://example.com/image1.jpg", CheckIn = new TimeOnly(9), CheckOut = new TimeOnly(15), NumberOfGuest = 10, Pets = true, TakePhotos = false, Name = "Seaside Villa", Description = "Villa with a view of the sea", Adress = "Hurghada", NumberOfBathrooms = 4, NumberOfBedrooms = 5, Beds = 9, UserId = "53f9998c-e5c9-4bd5-8db6-eefc68f7fb4f", CategoryId = 1, CityId = 19, Status = Status.Pending },
+				new Property { Id = 20, DisplayedImage = "https://example.com/image1.jpg", CheckIn = new TimeOnly(9), CheckOut = new TimeOnly(15), NumberOfGuest = 10, Pets = true, TakePhotos = false, Name = "Rustic Cabin", Description = "Cabin with a rustic charm", Adress = "Sinai", NumberOfBathrooms = 1, NumberOfBedrooms = 2, Beds = 3, UserId = "53f9998c-e5c9-4bd5-8db6-eefc68f7fb4f", CategoryId = 1, CityId = 20, Status = Status.Confirmed }
 
 
 				);
@@ -335,9 +339,9 @@ namespace AirBnb.DAL.Data.context
 				new Review { Id = 20, PropertyId = 20, BookingId = 20, UserId = "53f9998c-e5c9-4bd5-8db6-eefc68f7fb4f", Rating = 5, Comment = "Amazing experience" }
 				);
 			#endregion
-			//#region Rule
+			#region Rule
 			//builder.Entity<Rule>().HasData(
-			//	new Rule { Id = 1, CheckIn= new TimeOnly(16, 0), CheckOut= new TimeOnly(9, 0), NumberOfGuest=2,Pets=true, TakePhotos=true, PropertyId=1 },
+			//	new Rule { Id = 1, CheckIn = new TimeOnly(16, 0), CheckOut = new TimeOnly(9, 0), NumberOfGuest = 2, Pets = true, TakePhotos = true, PropertyId = 1 },
 			//	new Rule { Id = 21, CheckIn = new TimeOnly(16, 0), CheckOut = new TimeOnly(9, 0), NumberOfGuest = 2, Pets = true, TakePhotos = true, PropertyId = 1 },
 			//	new Rule { Id = 2, CheckIn = new TimeOnly(15, 0), CheckOut = new TimeOnly(10, 0), NumberOfGuest = 3, Pets = false, TakePhotos = true, PropertyId = 2 },
 			//	new Rule { Id = 3, CheckIn = new TimeOnly(17, 0), CheckOut = new TimeOnly(11, 0), NumberOfGuest = 4, Pets = true, TakePhotos = false, PropertyId = 3 },
@@ -359,7 +363,7 @@ namespace AirBnb.DAL.Data.context
 			//	new Rule { Id = 19, CheckIn = new TimeOnly(17, 0), CheckOut = new TimeOnly(9, 30), NumberOfGuest = 2, Pets = false, TakePhotos = true, PropertyId = 19 },
 			//	new Rule { Id = 20, CheckIn = new TimeOnly(14, 0), CheckOut = new TimeOnly(10, 0), NumberOfGuest = 4, Pets = true, TakePhotos = true, PropertyId = 20 }
 			//	);
-			//#endregion
+			#endregion
 
 		}
 	}

@@ -10,5 +10,6 @@ namespace AirBnb.DAL.Repos.AmentityRepo
 {
 	public interface IAmentityRepository:IGenericRepository<Amenity>
 	{
+		Task<IEnumerable<Amenity>> GetAllPropAmentity(int propId); 
 	}
 }

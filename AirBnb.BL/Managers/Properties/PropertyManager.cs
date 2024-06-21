@@ -1,4 +1,5 @@
-﻿using AirBnb.BL.Dtos.PropertyDtos;
+﻿using AirBnb.BL.Dtos.AppointmentAvailableDtos;
+using AirBnb.BL.Dtos.PropertyDtos;
 using AirBnb.DAL.Data.Model;
 using AirBnb.DAL.Unit;
 using System;
@@ -25,17 +26,17 @@ namespace AirBnb.BL.Managers.Properties
 				Name = addProperty.Name,
 				Description = addProperty.Description,
 				Adress = addProperty.Adress,
-				NumberOfBathrooms = addProperty.NumberOfBathrooms,
-				NumberOfBedrooms = addProperty.NumberOfBedrooms,
+				NumberOfBathrooms = Convert.ToInt32(addProperty.NumberOfBathrooms),
+				NumberOfBedrooms = Convert.ToInt32(addProperty.NumberOfBedrooms),
 				DisplayedImage = addProperty.DisplayedImage,
-				Beds = addProperty.Beds,
+				Beds = Convert.ToInt32(addProperty.Beds),
 				UserId = userId,
-				CategoryId = addProperty.CategoryId,
-				CityId = addProperty.CityId,
+				CategoryId = Convert.ToInt32(addProperty.CategoryId),
+				CityId = Convert.ToInt32(addProperty.CityId),
 				Status = Status.Pending,
-				NumberOfGuest = addProperty.NumberOfGuest,
-				Pets = addProperty.Pets,
-				TakePhotos = addProperty.TakePhotos,
+				NumberOfGuest = Convert.ToInt32(addProperty.NumberOfGuest),
+				Pets = Convert.ToBoolean(Convert.ToInt32(addProperty.Pets)),
+				TakePhotos = Convert.ToBoolean(Convert.ToInt32(addProperty.TakePhotos)),
 
 			};
 			await _unitOfWork.PropertyRepository.AddAsync(newProp);
@@ -58,6 +59,7 @@ namespace AirBnb.BL.Managers.Properties
 					Name = p.Name,
 					DisplayedImage = p.DisplayedImage,
 					Description = p.Description,
+
 				})
 			};
 			return result;
@@ -135,12 +137,12 @@ namespace AirBnb.BL.Managers.Properties
 				Description = am.Description
 			}).ToList();
 			result.AppoinmentAvaiable = singleProp.AppointmentsAvailable.Select(app=> new PropAppoinmentAvailable
-			{
+            {
 				Id=app.Id,
 				From = app.From,
 				To = app.To,
 				PricePerNight=app.PricePerNight,
-				IsAvailable=app.IsAvailable,
+				IsAvailable = app.IsAvailable,
 			}).ToList();
 			result.Reviews = singleProp.Reviews.Select(x => new Reviewdto { Rate = x.Rating, ReviewComment = x.Comment, UserName = x.User.FirstName + ' ' + x.User.LastName, Userimage = x.User.Image });
 			result.BookingDates = singleProp.PropertyBokking.Select(x => new PropertyBookingDates { CheckInDate = x.CheckInDate, CheckOutDate = x.CheckOutDate });
@@ -183,5 +185,24 @@ namespace AirBnb.BL.Managers.Properties
 			}
 		}
 
+		public async Task<bool> UpdatePropertyByHoster(int propId, PropertyUpdateDto updateProperty)
+		{
+			Property prop =await _unitOfWork.PropertyRepository.GetByIdAsync(propId);
+			if(prop == null)
+			{ return false; }
+			prop.Name = updateProperty.Name;
+			prop.Description = updateProperty.Description;
+			prop.Adress = updateProperty.Adress;
+			prop.NumberOfBathrooms = Convert.ToInt32(updateProperty.NumberOfBathrooms);
+			prop.NumberOfBedrooms	= Convert.ToInt32(updateProperty.NumberOfBedrooms);
+			prop.DisplayedImage= updateProperty.DisplayedImage;
+			prop.Beds = Convert.ToInt32(updateProperty.Beds);
+			prop.UserId= prop.UserId;
+			prop.CategoryId = Convert.ToInt32(updateProperty.CategoryId);
+			prop.CityId = Convert.ToInt32(updateProperty.CityId);
+
+			_unitOfWork.PropertyRepository.Update(prop);
+			return _unitOfWork.SaveChanges() > 0;
+		}
 	}
 }

@@ -59,7 +59,7 @@ namespace AirBnb.API.Controllers.Property
 
 		#region GetHosterProperties
 		[HttpGet("GetHosterProperties")]
-		[Authorize]
+		[Authorize(Policy = "ForHost")]
 		[AuthorizeCurrentUser]
 		public async Task<IActionResult> GetHosterProperties()
 		{
@@ -73,6 +73,7 @@ namespace AirBnb.API.Controllers.Property
 		}
 
 		#endregion
+		#region addNew Property
 		[HttpPost("AddNewProperty")]
 		public async Task<ActionResult> AddProperty(PropertyAddDto addProperty)
 		{
@@ -97,7 +98,9 @@ namespace AirBnb.API.Controllers.Property
 			return BadRequest("Data Not Valid");
 
 		}
+		#endregion
 
+		#region Delete Property
 		[HttpDelete("DeletePropertyById/{id}")]
 		public async Task<IActionResult> DeleteProperty(int id)
 		{
@@ -112,5 +115,17 @@ namespace AirBnb.API.Controllers.Property
 			}
 
 		}
+		#endregion
+
+		#region Update Property
+		[HttpPut("UpdatePropertyByHoster/{id}")]
+		public async Task<IActionResult> UpdatePropertyByHoster(int id, PropertyUpdateDto updateProp)
+		{
+			var result = await _propertyManager.UpdatePropertyByHoster(id, updateProp);
+			if (result is false)
+				return BadRequest("Error Happend");
+			return Ok(result);
+		}
+		#endregion
 	}
 }

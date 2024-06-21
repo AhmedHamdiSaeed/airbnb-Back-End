@@ -308,191 +308,358 @@ namespace AirBnb.DAL.Migrations
                         new
                         {
                             Id = 21,
+
                             From = new DateTime(2024, 6, 18, 12, 12, 14, 0, DateTimeKind.Local).AddTicks(2105),
                             IsAvailable = true,
                             PricePerNight = 20m,
                             PropertyId = 1,
                             To = new DateTime(2024, 6, 23, 12, 12, 14, 0, DateTimeKind.Local).AddTicks(2164)
+
+                            From = new DateTime(2024, 6, 19, 19, 56, 33, 569, DateTimeKind.Local).AddTicks(3741),
+                            IsAvailable = true,
+                            PricePerNight = 20m,
+                            PropertyId = 1,
+                            To = new DateTime(2024, 6, 24, 19, 56, 33, 569, DateTimeKind.Local).AddTicks(3830)
                         },
                         new
                         {
                             Id = 1,
+
                             From = new DateTime(2024, 6, 18, 12, 12, 14, 0, DateTimeKind.Local).AddTicks(2174),
                             IsAvailable = true,
                             PricePerNight = 20m,
                             PropertyId = 1,
                             To = new DateTime(2024, 6, 23, 12, 12, 14, 0, DateTimeKind.Local).AddTicks(2177)
+=======
+                            From = new DateTime(2024, 6, 19, 19, 56, 33, 569, DateTimeKind.Local).AddTicks(3841),
+                            IsAvailable = true,
+                            PricePerNight = 20m,
+                            PropertyId = 1,
+                            To = new DateTime(2024, 6, 24, 19, 56, 33, 569, DateTimeKind.Local).AddTicks(3844)
+>>>>>>> e4b51e25a53b1149c08f5a4bee642253e58f4114
                         },
                         new
                         {
                             Id = 2,
+<<<<<<< HEAD
                             From = new DateTime(2024, 6, 19, 12, 12, 14, 0, DateTimeKind.Local).AddTicks(2181),
                             IsAvailable = true,
                             PricePerNight = 25m,
                             PropertyId = 2,
                             To = new DateTime(2024, 6, 24, 12, 12, 14, 0, DateTimeKind.Local).AddTicks(2183)
+=======
+                            From = new DateTime(2024, 6, 20, 19, 56, 33, 569, DateTimeKind.Local).AddTicks(3848),
+                            IsAvailable = true,
+                            PricePerNight = 25m,
+                            PropertyId = 2,
+                            To = new DateTime(2024, 6, 25, 19, 56, 33, 569, DateTimeKind.Local).AddTicks(3851)
+>>>>>>> e4b51e25a53b1149c08f5a4bee642253e58f4114
                         },
                         new
                         {
                             Id = 3,
+<<<<<<< HEAD
                             From = new DateTime(2024, 6, 20, 12, 12, 14, 0, DateTimeKind.Local).AddTicks(2187),
                             IsAvailable = false,
                             PricePerNight = 30m,
                             PropertyId = 3,
                             To = new DateTime(2024, 6, 25, 12, 12, 14, 0, DateTimeKind.Local).AddTicks(2189)
+=======
+                            From = new DateTime(2024, 6, 21, 19, 56, 33, 569, DateTimeKind.Local).AddTicks(3855),
+                            IsAvailable = false,
+                            PricePerNight = 30m,
+                            PropertyId = 3,
+                            To = new DateTime(2024, 6, 26, 19, 56, 33, 569, DateTimeKind.Local).AddTicks(3858)
+>>>>>>> e4b51e25a53b1149c08f5a4bee642253e58f4114
                         },
                         new
                         {
                             Id = 4,
+<<<<<<< HEAD
                             From = new DateTime(2024, 6, 21, 12, 12, 14, 0, DateTimeKind.Local).AddTicks(2193),
                             IsAvailable = true,
                             PricePerNight = 35m,
                             PropertyId = 4,
                             To = new DateTime(2024, 6, 26, 12, 12, 14, 0, DateTimeKind.Local).AddTicks(2195)
+=======
+                            From = new DateTime(2024, 6, 22, 19, 56, 33, 569, DateTimeKind.Local).AddTicks(3862),
+                            IsAvailable = true,
+                            PricePerNight = 35m,
+                            PropertyId = 4,
+                            To = new DateTime(2024, 6, 27, 19, 56, 33, 569, DateTimeKind.Local).AddTicks(3866)
+>>>>>>> e4b51e25a53b1149c08f5a4bee642253e58f4114
                         },
                         new
                         {
                             Id = 5,
+<<<<<<< HEAD
                             From = new DateTime(2024, 6, 22, 12, 12, 14, 0, DateTimeKind.Local).AddTicks(2198),
                             IsAvailable = true,
                             PricePerNight = 40m,
                             PropertyId = 5,
                             To = new DateTime(2024, 6, 27, 12, 12, 14, 0, DateTimeKind.Local).AddTicks(2201)
+=======
+                            From = new DateTime(2024, 6, 23, 19, 56, 33, 569, DateTimeKind.Local).AddTicks(3870),
+                            IsAvailable = true,
+                            PricePerNight = 40m,
+                            PropertyId = 5,
+                            To = new DateTime(2024, 6, 28, 19, 56, 33, 569, DateTimeKind.Local).AddTicks(3872)
+>>>>>>> e4b51e25a53b1149c08f5a4bee642253e58f4114
                         },
                         new
                         {
                             Id = 6,
+<<<<<<< HEAD
                             From = new DateTime(2024, 6, 23, 12, 12, 14, 0, DateTimeKind.Local).AddTicks(2204),
                             IsAvailable = false,
                             PricePerNight = 45m,
                             PropertyId = 6,
                             To = new DateTime(2024, 6, 28, 12, 12, 14, 0, DateTimeKind.Local).AddTicks(2206)
+=======
+                            From = new DateTime(2024, 6, 24, 19, 56, 33, 569, DateTimeKind.Local).AddTicks(3876),
+                            IsAvailable = false,
+                            PricePerNight = 45m,
+                            PropertyId = 6,
+                            To = new DateTime(2024, 6, 29, 19, 56, 33, 569, DateTimeKind.Local).AddTicks(3879)
+>>>>>>> e4b51e25a53b1149c08f5a4bee642253e58f4114
                         },
                         new
                         {
                             Id = 7,
+<<<<<<< HEAD
                             From = new DateTime(2024, 6, 24, 12, 12, 14, 0, DateTimeKind.Local).AddTicks(2210),
                             IsAvailable = true,
                             PricePerNight = 50m,
                             PropertyId = 7,
                             To = new DateTime(2024, 6, 29, 12, 12, 14, 0, DateTimeKind.Local).AddTicks(2212)
+=======
+                            From = new DateTime(2024, 6, 25, 19, 56, 33, 569, DateTimeKind.Local).AddTicks(3986),
+                            IsAvailable = true,
+                            PricePerNight = 50m,
+                            PropertyId = 7,
+                            To = new DateTime(2024, 6, 30, 19, 56, 33, 569, DateTimeKind.Local).AddTicks(3990)
+>>>>>>> e4b51e25a53b1149c08f5a4bee642253e58f4114
                         },
                         new
                         {
                             Id = 8,
+<<<<<<< HEAD
                             From = new DateTime(2024, 6, 25, 12, 12, 14, 0, DateTimeKind.Local).AddTicks(2216),
                             IsAvailable = true,
                             PricePerNight = 55m,
                             PropertyId = 8,
                             To = new DateTime(2024, 6, 30, 12, 12, 14, 0, DateTimeKind.Local).AddTicks(2219)
+=======
+                            From = new DateTime(2024, 6, 26, 19, 56, 33, 569, DateTimeKind.Local).AddTicks(3994),
+                            IsAvailable = true,
+                            PricePerNight = 55m,
+                            PropertyId = 8,
+                            To = new DateTime(2024, 7, 1, 19, 56, 33, 569, DateTimeKind.Local).AddTicks(3997)
+>>>>>>> e4b51e25a53b1149c08f5a4bee642253e58f4114
                         },
                         new
                         {
                             Id = 9,
+<<<<<<< HEAD
                             From = new DateTime(2024, 6, 26, 12, 12, 14, 0, DateTimeKind.Local).AddTicks(2222),
                             IsAvailable = false,
                             PricePerNight = 60m,
                             PropertyId = 9,
                             To = new DateTime(2024, 7, 1, 12, 12, 14, 0, DateTimeKind.Local).AddTicks(2225)
+=======
+                            From = new DateTime(2024, 6, 27, 19, 56, 33, 569, DateTimeKind.Local).AddTicks(4001),
+                            IsAvailable = false,
+                            PricePerNight = 60m,
+                            PropertyId = 9,
+                            To = new DateTime(2024, 7, 2, 19, 56, 33, 569, DateTimeKind.Local).AddTicks(4004)
+>>>>>>> e4b51e25a53b1149c08f5a4bee642253e58f4114
                         },
                         new
                         {
                             Id = 10,
+<<<<<<< HEAD
                             From = new DateTime(2024, 6, 27, 12, 12, 14, 0, DateTimeKind.Local).AddTicks(2228),
                             IsAvailable = true,
                             PricePerNight = 65m,
                             PropertyId = 10,
                             To = new DateTime(2024, 7, 2, 12, 12, 14, 0, DateTimeKind.Local).AddTicks(2230)
+=======
+                            From = new DateTime(2024, 6, 28, 19, 56, 33, 569, DateTimeKind.Local).AddTicks(4007),
+                            IsAvailable = true,
+                            PricePerNight = 65m,
+                            PropertyId = 10,
+                            To = new DateTime(2024, 7, 3, 19, 56, 33, 569, DateTimeKind.Local).AddTicks(4010)
+>>>>>>> e4b51e25a53b1149c08f5a4bee642253e58f4114
                         },
                         new
                         {
                             Id = 11,
+<<<<<<< HEAD
                             From = new DateTime(2024, 6, 28, 12, 12, 14, 0, DateTimeKind.Local).AddTicks(2234),
                             IsAvailable = true,
                             PricePerNight = 70m,
                             PropertyId = 11,
                             To = new DateTime(2024, 7, 3, 12, 12, 14, 0, DateTimeKind.Local).AddTicks(2236)
+=======
+                            From = new DateTime(2024, 6, 29, 19, 56, 33, 569, DateTimeKind.Local).AddTicks(4014),
+                            IsAvailable = true,
+                            PricePerNight = 70m,
+                            PropertyId = 11,
+                            To = new DateTime(2024, 7, 4, 19, 56, 33, 569, DateTimeKind.Local).AddTicks(4017)
+>>>>>>> e4b51e25a53b1149c08f5a4bee642253e58f4114
                         },
                         new
                         {
                             Id = 12,
+<<<<<<< HEAD
                             From = new DateTime(2024, 6, 29, 12, 12, 14, 0, DateTimeKind.Local).AddTicks(2240),
                             IsAvailable = false,
                             PricePerNight = 75m,
                             PropertyId = 12,
                             To = new DateTime(2024, 7, 4, 12, 12, 14, 0, DateTimeKind.Local).AddTicks(2242)
+=======
+                            From = new DateTime(2024, 6, 30, 19, 56, 33, 569, DateTimeKind.Local).AddTicks(4020),
+                            IsAvailable = false,
+                            PricePerNight = 75m,
+                            PropertyId = 12,
+                            To = new DateTime(2024, 7, 5, 19, 56, 33, 569, DateTimeKind.Local).AddTicks(4023)
+>>>>>>> e4b51e25a53b1149c08f5a4bee642253e58f4114
                         },
                         new
                         {
                             Id = 13,
+<<<<<<< HEAD
                             From = new DateTime(2024, 6, 30, 12, 12, 14, 0, DateTimeKind.Local).AddTicks(2245),
                             IsAvailable = true,
                             PricePerNight = 80m,
                             PropertyId = 13,
                             To = new DateTime(2024, 7, 5, 12, 12, 14, 0, DateTimeKind.Local).AddTicks(2248)
+=======
+                            From = new DateTime(2024, 7, 1, 19, 56, 33, 569, DateTimeKind.Local).AddTicks(4027),
+                            IsAvailable = true,
+                            PricePerNight = 80m,
+                            PropertyId = 13,
+                            To = new DateTime(2024, 7, 6, 19, 56, 33, 569, DateTimeKind.Local).AddTicks(4029)
+>>>>>>> e4b51e25a53b1149c08f5a4bee642253e58f4114
                         },
                         new
                         {
                             Id = 14,
+<<<<<<< HEAD
                             From = new DateTime(2024, 7, 1, 12, 12, 14, 0, DateTimeKind.Local).AddTicks(2251),
                             IsAvailable = true,
                             PricePerNight = 85m,
                             PropertyId = 14,
                             To = new DateTime(2024, 7, 6, 12, 12, 14, 0, DateTimeKind.Local).AddTicks(2254)
+=======
+                            From = new DateTime(2024, 7, 2, 19, 56, 33, 569, DateTimeKind.Local).AddTicks(4034),
+                            IsAvailable = true,
+                            PricePerNight = 85m,
+                            PropertyId = 14,
+                            To = new DateTime(2024, 7, 7, 19, 56, 33, 569, DateTimeKind.Local).AddTicks(4036)
+>>>>>>> e4b51e25a53b1149c08f5a4bee642253e58f4114
                         },
                         new
                         {
                             Id = 15,
+<<<<<<< HEAD
                             From = new DateTime(2024, 7, 2, 12, 12, 14, 0, DateTimeKind.Local).AddTicks(2257),
                             IsAvailable = false,
                             PricePerNight = 90m,
                             PropertyId = 15,
                             To = new DateTime(2024, 7, 7, 12, 12, 14, 0, DateTimeKind.Local).AddTicks(2259)
+=======
+                            From = new DateTime(2024, 7, 3, 19, 56, 33, 569, DateTimeKind.Local).AddTicks(4040),
+                            IsAvailable = false,
+                            PricePerNight = 90m,
+                            PropertyId = 15,
+                            To = new DateTime(2024, 7, 8, 19, 56, 33, 569, DateTimeKind.Local).AddTicks(4042)
+>>>>>>> e4b51e25a53b1149c08f5a4bee642253e58f4114
                         },
                         new
                         {
                             Id = 16,
+<<<<<<< HEAD
                             From = new DateTime(2024, 7, 3, 12, 12, 14, 0, DateTimeKind.Local).AddTicks(2263),
                             IsAvailable = true,
                             PricePerNight = 95m,
                             PropertyId = 16,
                             To = new DateTime(2024, 7, 8, 12, 12, 14, 0, DateTimeKind.Local).AddTicks(2265)
+=======
+                            From = new DateTime(2024, 7, 4, 19, 56, 33, 569, DateTimeKind.Local).AddTicks(4046),
+                            IsAvailable = true,
+                            PricePerNight = 95m,
+                            PropertyId = 16,
+                            To = new DateTime(2024, 7, 9, 19, 56, 33, 569, DateTimeKind.Local).AddTicks(4049)
+>>>>>>> e4b51e25a53b1149c08f5a4bee642253e58f4114
                         },
                         new
                         {
                             Id = 17,
+<<<<<<< HEAD
                             From = new DateTime(2024, 7, 4, 12, 12, 14, 0, DateTimeKind.Local).AddTicks(2268),
                             IsAvailable = true,
                             PricePerNight = 100m,
                             PropertyId = 17,
                             To = new DateTime(2024, 7, 9, 12, 12, 14, 0, DateTimeKind.Local).AddTicks(2271)
+=======
+                            From = new DateTime(2024, 7, 5, 19, 56, 33, 569, DateTimeKind.Local).AddTicks(4053),
+                            IsAvailable = true,
+                            PricePerNight = 100m,
+                            PropertyId = 17,
+                            To = new DateTime(2024, 7, 10, 19, 56, 33, 569, DateTimeKind.Local).AddTicks(4055)
+>>>>>>> e4b51e25a53b1149c08f5a4bee642253e58f4114
                         },
                         new
                         {
                             Id = 18,
+<<<<<<< HEAD
                             From = new DateTime(2024, 7, 5, 12, 12, 14, 0, DateTimeKind.Local).AddTicks(2274),
                             IsAvailable = false,
                             PricePerNight = 105m,
                             PropertyId = 18,
                             To = new DateTime(2024, 7, 10, 12, 12, 14, 0, DateTimeKind.Local).AddTicks(2276)
+=======
+                            From = new DateTime(2024, 7, 6, 19, 56, 33, 569, DateTimeKind.Local).AddTicks(4060),
+                            IsAvailable = false,
+                            PricePerNight = 105m,
+                            PropertyId = 18,
+                            To = new DateTime(2024, 7, 11, 19, 56, 33, 569, DateTimeKind.Local).AddTicks(4063)
+>>>>>>> e4b51e25a53b1149c08f5a4bee642253e58f4114
                         },
                         new
                         {
                             Id = 19,
+<<<<<<< HEAD
                             From = new DateTime(2024, 7, 6, 12, 12, 14, 0, DateTimeKind.Local).AddTicks(2280),
                             IsAvailable = true,
                             PricePerNight = 110m,
                             PropertyId = 19,
                             To = new DateTime(2024, 7, 11, 12, 12, 14, 0, DateTimeKind.Local).AddTicks(2282)
+=======
+                            From = new DateTime(2024, 7, 7, 19, 56, 33, 569, DateTimeKind.Local).AddTicks(4068),
+                            IsAvailable = true,
+                            PricePerNight = 110m,
+                            PropertyId = 19,
+                            To = new DateTime(2024, 7, 12, 19, 56, 33, 569, DateTimeKind.Local).AddTicks(4071)
+>>>>>>> e4b51e25a53b1149c08f5a4bee642253e58f4114
                         },
                         new
                         {
                             Id = 20,
+<<<<<<< HEAD
                             From = new DateTime(2024, 7, 7, 12, 12, 14, 0, DateTimeKind.Local).AddTicks(2286),
                             IsAvailable = true,
                             PricePerNight = 115m,
                             PropertyId = 20,
                             To = new DateTime(2024, 7, 12, 12, 12, 14, 0, DateTimeKind.Local).AddTicks(2289)
+=======
+                            From = new DateTime(2024, 7, 8, 19, 56, 33, 569, DateTimeKind.Local).AddTicks(4075),
+                            IsAvailable = true,
+                            PricePerNight = 115m,
+                            PropertyId = 20,
+                            To = new DateTime(2024, 7, 13, 19, 56, 33, 569, DateTimeKind.Local).AddTicks(4077)
+>>>>>>> e4b51e25a53b1149c08f5a4bee642253e58f4114
                         });
                 });
 
@@ -535,8 +702,13 @@ namespace AirBnb.DAL.Migrations
                         {
                             Id = 21,
                             BookingStatus = 0,
+<<<<<<< HEAD
                             CheckInDate = new DateTime(2024, 6, 18, 12, 12, 14, 0, DateTimeKind.Local).AddTicks(2406),
                             CheckOutDate = new DateTime(2024, 6, 23, 12, 12, 14, 0, DateTimeKind.Local).AddTicks(2410),
+=======
+                            CheckInDate = new DateTime(2024, 6, 19, 19, 56, 33, 569, DateTimeKind.Local).AddTicks(4150),
+                            CheckOutDate = new DateTime(2024, 6, 24, 19, 56, 33, 569, DateTimeKind.Local).AddTicks(4156),
+>>>>>>> e4b51e25a53b1149c08f5a4bee642253e58f4114
                             PropertyId = 1,
                             TotalPrice = 100,
                             UserId = "53f9998c-e5c9-4bd5-8db6-eefc68f7fb4f"
@@ -545,8 +717,13 @@ namespace AirBnb.DAL.Migrations
                         {
                             Id = 1,
                             BookingStatus = 0,
+<<<<<<< HEAD
                             CheckInDate = new DateTime(2024, 6, 18, 12, 12, 14, 0, DateTimeKind.Local).AddTicks(2416),
                             CheckOutDate = new DateTime(2024, 6, 23, 12, 12, 14, 0, DateTimeKind.Local).AddTicks(2418),
+=======
+                            CheckInDate = new DateTime(2024, 6, 19, 19, 56, 33, 569, DateTimeKind.Local).AddTicks(4160),
+                            CheckOutDate = new DateTime(2024, 6, 24, 19, 56, 33, 569, DateTimeKind.Local).AddTicks(4163),
+>>>>>>> e4b51e25a53b1149c08f5a4bee642253e58f4114
                             PropertyId = 1,
                             TotalPrice = 100,
                             UserId = "53f9998c-e5c9-4bd5-8db6-eefc68f7fb4f"
@@ -555,8 +732,13 @@ namespace AirBnb.DAL.Migrations
                         {
                             Id = 2,
                             BookingStatus = 1,
+<<<<<<< HEAD
                             CheckInDate = new DateTime(2024, 6, 19, 12, 12, 14, 0, DateTimeKind.Local).AddTicks(2422),
                             CheckOutDate = new DateTime(2024, 6, 24, 12, 12, 14, 0, DateTimeKind.Local).AddTicks(2424),
+=======
+                            CheckInDate = new DateTime(2024, 6, 20, 19, 56, 33, 569, DateTimeKind.Local).AddTicks(4167),
+                            CheckOutDate = new DateTime(2024, 6, 25, 19, 56, 33, 569, DateTimeKind.Local).AddTicks(4170),
+>>>>>>> e4b51e25a53b1149c08f5a4bee642253e58f4114
                             PropertyId = 2,
                             TotalPrice = 150,
                             UserId = "53f9998c-e5c9-4bd5-8db6-eefc68f7fb4f"
@@ -565,8 +747,13 @@ namespace AirBnb.DAL.Migrations
                         {
                             Id = 3,
                             BookingStatus = 1,
+<<<<<<< HEAD
                             CheckInDate = new DateTime(2024, 6, 20, 12, 12, 14, 0, DateTimeKind.Local).AddTicks(2428),
                             CheckOutDate = new DateTime(2024, 6, 25, 12, 12, 14, 0, DateTimeKind.Local).AddTicks(2431),
+=======
+                            CheckInDate = new DateTime(2024, 6, 21, 19, 56, 33, 569, DateTimeKind.Local).AddTicks(4174),
+                            CheckOutDate = new DateTime(2024, 6, 26, 19, 56, 33, 569, DateTimeKind.Local).AddTicks(4177),
+>>>>>>> e4b51e25a53b1149c08f5a4bee642253e58f4114
                             PropertyId = 3,
                             TotalPrice = 200,
                             UserId = "53f9998c-e5c9-4bd5-8db6-eefc68f7fb4f"
@@ -575,8 +762,13 @@ namespace AirBnb.DAL.Migrations
                         {
                             Id = 4,
                             BookingStatus = 0,
+<<<<<<< HEAD
                             CheckInDate = new DateTime(2024, 6, 21, 12, 12, 14, 0, DateTimeKind.Local).AddTicks(2434),
                             CheckOutDate = new DateTime(2024, 6, 26, 12, 12, 14, 0, DateTimeKind.Local).AddTicks(2437),
+=======
+                            CheckInDate = new DateTime(2024, 6, 22, 19, 56, 33, 569, DateTimeKind.Local).AddTicks(4181),
+                            CheckOutDate = new DateTime(2024, 6, 27, 19, 56, 33, 569, DateTimeKind.Local).AddTicks(4184),
+>>>>>>> e4b51e25a53b1149c08f5a4bee642253e58f4114
                             PropertyId = 4,
                             TotalPrice = 250,
                             UserId = "53f9998c-e5c9-4bd5-8db6-eefc68f7fb4f"
@@ -585,8 +777,13 @@ namespace AirBnb.DAL.Migrations
                         {
                             Id = 5,
                             BookingStatus = 1,
+<<<<<<< HEAD
                             CheckInDate = new DateTime(2024, 6, 22, 12, 12, 14, 0, DateTimeKind.Local).AddTicks(2440),
                             CheckOutDate = new DateTime(2024, 6, 27, 12, 12, 14, 0, DateTimeKind.Local).AddTicks(2443),
+=======
+                            CheckInDate = new DateTime(2024, 6, 23, 19, 56, 33, 569, DateTimeKind.Local).AddTicks(4189),
+                            CheckOutDate = new DateTime(2024, 6, 28, 19, 56, 33, 569, DateTimeKind.Local).AddTicks(4191),
+>>>>>>> e4b51e25a53b1149c08f5a4bee642253e58f4114
                             PropertyId = 5,
                             TotalPrice = 300,
                             UserId = "53f9998c-e5c9-4bd5-8db6-eefc68f7fb4f"
@@ -595,8 +792,13 @@ namespace AirBnb.DAL.Migrations
                         {
                             Id = 6,
                             BookingStatus = 1,
+<<<<<<< HEAD
                             CheckInDate = new DateTime(2024, 6, 23, 12, 12, 14, 0, DateTimeKind.Local).AddTicks(2446),
                             CheckOutDate = new DateTime(2024, 6, 28, 12, 12, 14, 0, DateTimeKind.Local).AddTicks(2449),
+=======
+                            CheckInDate = new DateTime(2024, 6, 24, 19, 56, 33, 569, DateTimeKind.Local).AddTicks(4195),
+                            CheckOutDate = new DateTime(2024, 6, 29, 19, 56, 33, 569, DateTimeKind.Local).AddTicks(4198),
+>>>>>>> e4b51e25a53b1149c08f5a4bee642253e58f4114
                             PropertyId = 6,
                             TotalPrice = 350,
                             UserId = "53f9998c-e5c9-4bd5-8db6-eefc68f7fb4f"
@@ -605,8 +807,13 @@ namespace AirBnb.DAL.Migrations
                         {
                             Id = 7,
                             BookingStatus = 0,
+<<<<<<< HEAD
                             CheckInDate = new DateTime(2024, 6, 24, 12, 12, 14, 0, DateTimeKind.Local).AddTicks(2452),
                             CheckOutDate = new DateTime(2024, 6, 29, 12, 12, 14, 0, DateTimeKind.Local).AddTicks(2454),
+=======
+                            CheckInDate = new DateTime(2024, 6, 25, 19, 56, 33, 569, DateTimeKind.Local).AddTicks(4202),
+                            CheckOutDate = new DateTime(2024, 6, 30, 19, 56, 33, 569, DateTimeKind.Local).AddTicks(4205),
+>>>>>>> e4b51e25a53b1149c08f5a4bee642253e58f4114
                             PropertyId = 7,
                             TotalPrice = 400,
                             UserId = "53f9998c-e5c9-4bd5-8db6-eefc68f7fb4f"
@@ -615,8 +822,13 @@ namespace AirBnb.DAL.Migrations
                         {
                             Id = 8,
                             BookingStatus = 1,
+<<<<<<< HEAD
                             CheckInDate = new DateTime(2024, 6, 25, 12, 12, 14, 0, DateTimeKind.Local).AddTicks(2458),
                             CheckOutDate = new DateTime(2024, 6, 30, 12, 12, 14, 0, DateTimeKind.Local).AddTicks(2460),
+=======
+                            CheckInDate = new DateTime(2024, 6, 26, 19, 56, 33, 569, DateTimeKind.Local).AddTicks(4209),
+                            CheckOutDate = new DateTime(2024, 7, 1, 19, 56, 33, 569, DateTimeKind.Local).AddTicks(4212),
+>>>>>>> e4b51e25a53b1149c08f5a4bee642253e58f4114
                             PropertyId = 8,
                             TotalPrice = 450,
                             UserId = "53f9998c-e5c9-4bd5-8db6-eefc68f7fb4f"
@@ -625,8 +837,13 @@ namespace AirBnb.DAL.Migrations
                         {
                             Id = 9,
                             BookingStatus = 1,
+<<<<<<< HEAD
                             CheckInDate = new DateTime(2024, 6, 26, 12, 12, 14, 0, DateTimeKind.Local).AddTicks(2464),
                             CheckOutDate = new DateTime(2024, 7, 1, 12, 12, 14, 0, DateTimeKind.Local).AddTicks(2466),
+=======
+                            CheckInDate = new DateTime(2024, 6, 27, 19, 56, 33, 569, DateTimeKind.Local).AddTicks(4216),
+                            CheckOutDate = new DateTime(2024, 7, 2, 19, 56, 33, 569, DateTimeKind.Local).AddTicks(4218),
+>>>>>>> e4b51e25a53b1149c08f5a4bee642253e58f4114
                             PropertyId = 9,
                             TotalPrice = 500,
                             UserId = "53f9998c-e5c9-4bd5-8db6-eefc68f7fb4f"
@@ -635,8 +852,13 @@ namespace AirBnb.DAL.Migrations
                         {
                             Id = 10,
                             BookingStatus = 0,
+<<<<<<< HEAD
                             CheckInDate = new DateTime(2024, 6, 27, 12, 12, 14, 0, DateTimeKind.Local).AddTicks(2470),
                             CheckOutDate = new DateTime(2024, 7, 2, 12, 12, 14, 0, DateTimeKind.Local).AddTicks(2472),
+=======
+                            CheckInDate = new DateTime(2024, 6, 28, 19, 56, 33, 569, DateTimeKind.Local).AddTicks(4223),
+                            CheckOutDate = new DateTime(2024, 7, 3, 19, 56, 33, 569, DateTimeKind.Local).AddTicks(4225),
+>>>>>>> e4b51e25a53b1149c08f5a4bee642253e58f4114
                             PropertyId = 10,
                             TotalPrice = 550,
                             UserId = "53f9998c-e5c9-4bd5-8db6-eefc68f7fb4f"
@@ -645,8 +867,13 @@ namespace AirBnb.DAL.Migrations
                         {
                             Id = 11,
                             BookingStatus = 1,
+<<<<<<< HEAD
                             CheckInDate = new DateTime(2024, 6, 28, 12, 12, 14, 0, DateTimeKind.Local).AddTicks(2476),
                             CheckOutDate = new DateTime(2024, 7, 3, 12, 12, 14, 0, DateTimeKind.Local).AddTicks(2479),
+=======
+                            CheckInDate = new DateTime(2024, 6, 29, 19, 56, 33, 569, DateTimeKind.Local).AddTicks(4229),
+                            CheckOutDate = new DateTime(2024, 7, 4, 19, 56, 33, 569, DateTimeKind.Local).AddTicks(4232),
+>>>>>>> e4b51e25a53b1149c08f5a4bee642253e58f4114
                             PropertyId = 11,
                             TotalPrice = 600,
                             UserId = "53f9998c-e5c9-4bd5-8db6-eefc68f7fb4f"
@@ -655,8 +882,13 @@ namespace AirBnb.DAL.Migrations
                         {
                             Id = 12,
                             BookingStatus = 1,
+<<<<<<< HEAD
                             CheckInDate = new DateTime(2024, 6, 29, 12, 12, 14, 0, DateTimeKind.Local).AddTicks(2483),
                             CheckOutDate = new DateTime(2024, 7, 4, 12, 12, 14, 0, DateTimeKind.Local).AddTicks(2485),
+=======
+                            CheckInDate = new DateTime(2024, 6, 30, 19, 56, 33, 569, DateTimeKind.Local).AddTicks(4236),
+                            CheckOutDate = new DateTime(2024, 7, 5, 19, 56, 33, 569, DateTimeKind.Local).AddTicks(4239),
+>>>>>>> e4b51e25a53b1149c08f5a4bee642253e58f4114
                             PropertyId = 12,
                             TotalPrice = 650,
                             UserId = "53f9998c-e5c9-4bd5-8db6-eefc68f7fb4f"
@@ -665,8 +897,13 @@ namespace AirBnb.DAL.Migrations
                         {
                             Id = 13,
                             BookingStatus = 0,
+<<<<<<< HEAD
                             CheckInDate = new DateTime(2024, 6, 30, 12, 12, 14, 0, DateTimeKind.Local).AddTicks(2489),
                             CheckOutDate = new DateTime(2024, 7, 5, 12, 12, 14, 0, DateTimeKind.Local).AddTicks(2491),
+=======
+                            CheckInDate = new DateTime(2024, 7, 1, 19, 56, 33, 569, DateTimeKind.Local).AddTicks(4243),
+                            CheckOutDate = new DateTime(2024, 7, 6, 19, 56, 33, 569, DateTimeKind.Local).AddTicks(4246),
+>>>>>>> e4b51e25a53b1149c08f5a4bee642253e58f4114
                             PropertyId = 13,
                             TotalPrice = 700,
                             UserId = "53f9998c-e5c9-4bd5-8db6-eefc68f7fb4f"
@@ -675,8 +912,13 @@ namespace AirBnb.DAL.Migrations
                         {
                             Id = 14,
                             BookingStatus = 1,
+<<<<<<< HEAD
                             CheckInDate = new DateTime(2024, 7, 1, 12, 12, 14, 0, DateTimeKind.Local).AddTicks(2494),
                             CheckOutDate = new DateTime(2024, 7, 6, 12, 12, 14, 0, DateTimeKind.Local).AddTicks(2497),
+=======
+                            CheckInDate = new DateTime(2024, 7, 2, 19, 56, 33, 569, DateTimeKind.Local).AddTicks(4250),
+                            CheckOutDate = new DateTime(2024, 7, 7, 19, 56, 33, 569, DateTimeKind.Local).AddTicks(4252),
+>>>>>>> e4b51e25a53b1149c08f5a4bee642253e58f4114
                             PropertyId = 14,
                             TotalPrice = 750,
                             UserId = "53f9998c-e5c9-4bd5-8db6-eefc68f7fb4f"
@@ -685,8 +927,13 @@ namespace AirBnb.DAL.Migrations
                         {
                             Id = 15,
                             BookingStatus = 1,
+<<<<<<< HEAD
                             CheckInDate = new DateTime(2024, 7, 2, 12, 12, 14, 0, DateTimeKind.Local).AddTicks(2500),
                             CheckOutDate = new DateTime(2024, 7, 7, 12, 12, 14, 0, DateTimeKind.Local).AddTicks(2503),
+=======
+                            CheckInDate = new DateTime(2024, 7, 3, 19, 56, 33, 569, DateTimeKind.Local).AddTicks(4256),
+                            CheckOutDate = new DateTime(2024, 7, 8, 19, 56, 33, 569, DateTimeKind.Local).AddTicks(4259),
+>>>>>>> e4b51e25a53b1149c08f5a4bee642253e58f4114
                             PropertyId = 15,
                             TotalPrice = 800,
                             UserId = "53f9998c-e5c9-4bd5-8db6-eefc68f7fb4f"
@@ -695,8 +942,13 @@ namespace AirBnb.DAL.Migrations
                         {
                             Id = 16,
                             BookingStatus = 0,
+<<<<<<< HEAD
                             CheckInDate = new DateTime(2024, 7, 3, 12, 12, 14, 0, DateTimeKind.Local).AddTicks(2506),
                             CheckOutDate = new DateTime(2024, 7, 8, 12, 12, 14, 0, DateTimeKind.Local).AddTicks(2508),
+=======
+                            CheckInDate = new DateTime(2024, 7, 4, 19, 56, 33, 569, DateTimeKind.Local).AddTicks(4263),
+                            CheckOutDate = new DateTime(2024, 7, 9, 19, 56, 33, 569, DateTimeKind.Local).AddTicks(4266),
+>>>>>>> e4b51e25a53b1149c08f5a4bee642253e58f4114
                             PropertyId = 16,
                             TotalPrice = 850,
                             UserId = "53f9998c-e5c9-4bd5-8db6-eefc68f7fb4f"
@@ -705,8 +957,13 @@ namespace AirBnb.DAL.Migrations
                         {
                             Id = 17,
                             BookingStatus = 1,
+<<<<<<< HEAD
                             CheckInDate = new DateTime(2024, 7, 4, 12, 12, 14, 0, DateTimeKind.Local).AddTicks(2512),
                             CheckOutDate = new DateTime(2024, 7, 9, 12, 12, 14, 0, DateTimeKind.Local).AddTicks(2514),
+=======
+                            CheckInDate = new DateTime(2024, 7, 5, 19, 56, 33, 569, DateTimeKind.Local).AddTicks(4269),
+                            CheckOutDate = new DateTime(2024, 7, 10, 19, 56, 33, 569, DateTimeKind.Local).AddTicks(4272),
+>>>>>>> e4b51e25a53b1149c08f5a4bee642253e58f4114
                             PropertyId = 17,
                             TotalPrice = 900,
                             UserId = "53f9998c-e5c9-4bd5-8db6-eefc68f7fb4f"
@@ -715,8 +972,13 @@ namespace AirBnb.DAL.Migrations
                         {
                             Id = 18,
                             BookingStatus = 1,
+<<<<<<< HEAD
                             CheckInDate = new DateTime(2024, 7, 5, 12, 12, 14, 0, DateTimeKind.Local).AddTicks(2518),
                             CheckOutDate = new DateTime(2024, 7, 10, 12, 12, 14, 0, DateTimeKind.Local).AddTicks(2520),
+=======
+                            CheckInDate = new DateTime(2024, 7, 6, 19, 56, 33, 569, DateTimeKind.Local).AddTicks(4276),
+                            CheckOutDate = new DateTime(2024, 7, 11, 19, 56, 33, 569, DateTimeKind.Local).AddTicks(4279),
+>>>>>>> e4b51e25a53b1149c08f5a4bee642253e58f4114
                             PropertyId = 18,
                             TotalPrice = 950,
                             UserId = "53f9998c-e5c9-4bd5-8db6-eefc68f7fb4f"
@@ -725,8 +987,13 @@ namespace AirBnb.DAL.Migrations
                         {
                             Id = 19,
                             BookingStatus = 0,
+<<<<<<< HEAD
                             CheckInDate = new DateTime(2024, 7, 6, 12, 12, 14, 0, DateTimeKind.Local).AddTicks(2524),
                             CheckOutDate = new DateTime(2024, 7, 11, 12, 12, 14, 0, DateTimeKind.Local).AddTicks(2526),
+=======
+                            CheckInDate = new DateTime(2024, 7, 7, 19, 56, 33, 569, DateTimeKind.Local).AddTicks(4282),
+                            CheckOutDate = new DateTime(2024, 7, 12, 19, 56, 33, 569, DateTimeKind.Local).AddTicks(4285),
+>>>>>>> e4b51e25a53b1149c08f5a4bee642253e58f4114
                             PropertyId = 19,
                             TotalPrice = 1000,
                             UserId = "53f9998c-e5c9-4bd5-8db6-eefc68f7fb4f"
@@ -735,8 +1002,13 @@ namespace AirBnb.DAL.Migrations
                         {
                             Id = 20,
                             BookingStatus = 1,
+<<<<<<< HEAD
                             CheckInDate = new DateTime(2024, 7, 7, 12, 12, 14, 0, DateTimeKind.Local).AddTicks(2530),
                             CheckOutDate = new DateTime(2024, 7, 12, 12, 12, 14, 0, DateTimeKind.Local).AddTicks(2532),
+=======
+                            CheckInDate = new DateTime(2024, 7, 8, 19, 56, 33, 569, DateTimeKind.Local).AddTicks(4288),
+                            CheckOutDate = new DateTime(2024, 7, 13, 19, 56, 33, 569, DateTimeKind.Local).AddTicks(4291),
+>>>>>>> e4b51e25a53b1149c08f5a4bee642253e58f4114
                             PropertyId = 20,
                             TotalPrice = 1050,
                             UserId = "53f9998c-e5c9-4bd5-8db6-eefc68f7fb4f"
@@ -754,140 +1026,15 @@ namespace AirBnb.DAL.Migrations
                     b.Property<string>("Description")
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<string>("IconURL")
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<string>("Name")
                         .HasColumnType("nvarchar(max)");
 
                     b.HasKey("Id");
 
                     b.ToTable("Categories");
-
-                    b.HasData(
-                        new
-                        {
-                            Id = 21,
-                            Description = "Description For Category",
-                            Name = "Apartment"
-                        },
-                        new
-                        {
-                            Id = 1,
-                            Description = "Guests have the entire home or apartment to themselves",
-                            Name = "Entire Place"
-                        },
-                        new
-                        {
-                            Id = 2,
-                            Description = "Guests have a private room but share common areas with the host or other guests",
-                            Name = "Private Room"
-                        },
-                        new
-                        {
-                            Id = 3,
-                            Description = "Guests share a room with the host or other guests",
-                            Name = "Shared Room"
-                        },
-                        new
-                        {
-                            Id = 4,
-                            Description = "Unusual or unconventional accommodations (treehouses, yurts, etc.)",
-                            Name = "Unique Stays"
-                        },
-                        new
-                        {
-                            Id = 5,
-                            Description = "Properties with direct access to a beach",
-                            Name = "Beachfront"
-                        },
-                        new
-                        {
-                            Id = 6,
-                            Description = "Properties with ski-in/ski-out access",
-                            Name = "Ski-in/Ski-out"
-                        },
-                        new
-                        {
-                            Id = 7,
-                            Description = "Properties that allow pets",
-                            Name = "Pet-Friendly"
-                        },
-                        new
-                        {
-                            Id = 8,
-                            Description = "High-end properties with premium amenities",
-                            Name = "Luxury"
-                        },
-                        new
-                        {
-                            Id = 9,
-                            Description = "Rustic cabins for a cozy getaway",
-                            Name = "Cabin"
-                        },
-                        new
-                        {
-                            Id = 10,
-                            Description = "Modern apartments in urban settings",
-                            Name = "Apartment"
-                        },
-                        new
-                        {
-                            Id = 11,
-                            Description = "Spacious lofts with open layouts",
-                            Name = "Loft"
-                        },
-                        new
-                        {
-                            Id = 12,
-                            Description = "Luxurious villas with private pools or jacuzzis",
-                            Name = "Villa"
-                        },
-                        new
-                        {
-                            Id = 13,
-                            Description = "Historic castles for a unique experience",
-                            Name = "Castle"
-                        },
-                        new
-                        {
-                            Id = 14,
-                            Description = "Treehouses for a whimsical stay",
-                            Name = "Treehouse"
-                        },
-                        new
-                        {
-                            Id = 15,
-                            Description = "Houseboats or other boats for a stay on the water",
-                            Name = "Boat"
-                        },
-                        new
-                        {
-                            Id = 16,
-                            Description = "Unique dome-shaped accommodations",
-                            Name = "Dome"
-                        },
-                        new
-                        {
-                            Id = 17,
-                            Description = "Small, stylish hotels with personalized service",
-                            Name = "Boutique Hotel"
-                        },
-                        new
-                        {
-                            Id = 18,
-                            Description = "Properties committed to sustainable practices",
-                            Name = "Eco-Friendly"
-                        },
-                        new
-                        {
-                            Id = 19,
-                            Description = "Properties with amenities for families with children",
-                            Name = "Family-Friendly"
-                        },
-                        new
-                        {
-                            Id = 20,
-                            Description = "Properties with features suitable for remote work (fast Wi-Fi, dedicated workspace)",
-                            Name = "Workcation-Friendly"
-                        });
                 });
 
             modelBuilder.Entity("AirBnb.DAL.Data.Model.City", b =>
@@ -1036,6 +1183,12 @@ namespace AirBnb.DAL.Migrations
                             Id = 21,
                             CountryId = 1,
                             Name = "Beijing"
+                        },
+                        new
+                        {
+                            Id = 22,
+                            CountryId = 1,
+                            Name = "fayooum"
                         });
                 });
 
@@ -1199,7 +1352,7 @@ namespace AirBnb.DAL.Migrations
                             Id = 2,
                             Adress = "Alexandria",
                             Beds = 5,
-                            CategoryId = 2,
+                            CategoryId = 1,
                             CheckIn = new TimeOnly(0, 0, 0).Add(TimeSpan.FromTicks(9)),
                             CheckOut = new TimeOnly(0, 0, 0).Add(TimeSpan.FromTicks(15)),
                             CityId = 2,
@@ -1219,7 +1372,7 @@ namespace AirBnb.DAL.Migrations
                             Id = 3,
                             Adress = "Aswan",
                             Beds = 3,
-                            CategoryId = 3,
+                            CategoryId = 1,
                             CheckIn = new TimeOnly(0, 0, 0).Add(TimeSpan.FromTicks(9)),
                             CheckOut = new TimeOnly(0, 0, 0).Add(TimeSpan.FromTicks(15)),
                             CityId = 3,
@@ -1239,7 +1392,7 @@ namespace AirBnb.DAL.Migrations
                             Id = 4,
                             Adress = "Sharm El-Sheikh",
                             Beds = 10,
-                            CategoryId = 4,
+                            CategoryId = 1,
                             CheckIn = new TimeOnly(0, 0, 0).Add(TimeSpan.FromTicks(9)),
                             CheckOut = new TimeOnly(0, 0, 0).Add(TimeSpan.FromTicks(15)),
                             CityId = 4,
@@ -1259,7 +1412,7 @@ namespace AirBnb.DAL.Migrations
                             Id = 5,
                             Adress = "Giza",
                             Beds = 4,
-                            CategoryId = 5,
+                            CategoryId = 1,
                             CheckIn = new TimeOnly(0, 0, 0).Add(TimeSpan.FromTicks(9)),
                             CheckOut = new TimeOnly(0, 0, 0).Add(TimeSpan.FromTicks(15)),
                             CityId = 5,
@@ -1279,7 +1432,7 @@ namespace AirBnb.DAL.Migrations
                             Id = 6,
                             Adress = "Luxor",
                             Beds = 7,
-                            CategoryId = 6,
+                            CategoryId = 1,
                             CheckIn = new TimeOnly(0, 0, 0).Add(TimeSpan.FromTicks(9)),
                             CheckOut = new TimeOnly(0, 0, 0).Add(TimeSpan.FromTicks(15)),
                             CityId = 6,
@@ -1299,7 +1452,7 @@ namespace AirBnb.DAL.Migrations
                             Id = 7,
                             Adress = "Cairo",
                             Beds = 6,
-                            CategoryId = 7,
+                            CategoryId = 1,
                             CheckIn = new TimeOnly(0, 0, 0).Add(TimeSpan.FromTicks(9)),
                             CheckOut = new TimeOnly(0, 0, 0).Add(TimeSpan.FromTicks(15)),
                             CityId = 1,
@@ -1319,7 +1472,7 @@ namespace AirBnb.DAL.Migrations
                             Id = 8,
                             Adress = "Helwan",
                             Beds = 5,
-                            CategoryId = 8,
+                            CategoryId = 1,
                             CheckIn = new TimeOnly(0, 0, 0).Add(TimeSpan.FromTicks(9)),
                             CheckOut = new TimeOnly(0, 0, 0).Add(TimeSpan.FromTicks(15)),
                             CityId = 8,
@@ -1339,7 +1492,7 @@ namespace AirBnb.DAL.Migrations
                             Id = 9,
                             Adress = "Alexandria",
                             Beds = 1,
-                            CategoryId = 9,
+                            CategoryId = 1,
                             CheckIn = new TimeOnly(0, 0, 0).Add(TimeSpan.FromTicks(9)),
                             CheckOut = new TimeOnly(0, 0, 0).Add(TimeSpan.FromTicks(15)),
                             CityId = 2,
@@ -1359,7 +1512,7 @@ namespace AirBnb.DAL.Migrations
                             Id = 10,
                             Adress = "Minya",
                             Beds = 3,
-                            CategoryId = 10,
+                            CategoryId = 1,
                             CheckIn = new TimeOnly(0, 0, 0).Add(TimeSpan.FromTicks(9)),
                             CheckOut = new TimeOnly(0, 0, 0).Add(TimeSpan.FromTicks(15)),
                             CityId = 10,
@@ -1379,7 +1532,7 @@ namespace AirBnb.DAL.Migrations
                             Id = 11,
                             Adress = "Fayoum",
                             Beds = 5,
-                            CategoryId = 11,
+                            CategoryId = 1,
                             CheckIn = new TimeOnly(0, 0, 0).Add(TimeSpan.FromTicks(9)),
                             CheckOut = new TimeOnly(0, 0, 0).Add(TimeSpan.FromTicks(15)),
                             CityId = 11,
@@ -1399,7 +1552,7 @@ namespace AirBnb.DAL.Migrations
                             Id = 12,
                             Adress = "Cairo",
                             Beds = 2,
-                            CategoryId = 12,
+                            CategoryId = 1,
                             CheckIn = new TimeOnly(0, 0, 0).Add(TimeSpan.FromTicks(9)),
                             CheckOut = new TimeOnly(0, 0, 0).Add(TimeSpan.FromTicks(15)),
                             CityId = 1,
@@ -1419,7 +1572,7 @@ namespace AirBnb.DAL.Migrations
                             Id = 13,
                             Adress = "Suez",
                             Beds = 4,
-                            CategoryId = 13,
+                            CategoryId = 1,
                             CheckIn = new TimeOnly(0, 0, 0).Add(TimeSpan.FromTicks(9)),
                             CheckOut = new TimeOnly(0, 0, 0).Add(TimeSpan.FromTicks(15)),
                             CityId = 13,
@@ -1439,7 +1592,7 @@ namespace AirBnb.DAL.Migrations
                             Id = 14,
                             Adress = "Alexandria",
                             Beds = 7,
-                            CategoryId = 14,
+                            CategoryId = 1,
                             CheckIn = new TimeOnly(0, 0, 0).Add(TimeSpan.FromTicks(9)),
                             CheckOut = new TimeOnly(0, 0, 0).Add(TimeSpan.FromTicks(15)),
                             CityId = 2,
@@ -1459,7 +1612,7 @@ namespace AirBnb.DAL.Migrations
                             Id = 15,
                             Adress = "Siwa",
                             Beds = 3,
-                            CategoryId = 15,
+                            CategoryId = 1,
                             CheckIn = new TimeOnly(0, 0, 0).Add(TimeSpan.FromTicks(9)),
                             CheckOut = new TimeOnly(0, 0, 0).Add(TimeSpan.FromTicks(15)),
                             CityId = 15,
@@ -1479,7 +1632,7 @@ namespace AirBnb.DAL.Migrations
                             Id = 16,
                             Adress = "Dahab",
                             Beds = 4,
-                            CategoryId = 16,
+                            CategoryId = 1,
                             CheckIn = new TimeOnly(0, 0, 0).Add(TimeSpan.FromTicks(9)),
                             CheckOut = new TimeOnly(0, 0, 0).Add(TimeSpan.FromTicks(15)),
                             CityId = 16,
@@ -1499,7 +1652,7 @@ namespace AirBnb.DAL.Migrations
                             Id = 17,
                             Adress = "Cairo",
                             Beds = 1,
-                            CategoryId = 17,
+                            CategoryId = 1,
                             CheckIn = new TimeOnly(0, 0, 0).Add(TimeSpan.FromTicks(9)),
                             CheckOut = new TimeOnly(0, 0, 0).Add(TimeSpan.FromTicks(15)),
                             CityId = 1,
@@ -1519,7 +1672,7 @@ namespace AirBnb.DAL.Migrations
                             Id = 18,
                             Adress = "Port Said",
                             Beds = 5,
-                            CategoryId = 18,
+                            CategoryId = 1,
                             CheckIn = new TimeOnly(0, 0, 0).Add(TimeSpan.FromTicks(9)),
                             CheckOut = new TimeOnly(0, 0, 0).Add(TimeSpan.FromTicks(15)),
                             CityId = 18,
@@ -1539,7 +1692,7 @@ namespace AirBnb.DAL.Migrations
                             Id = 19,
                             Adress = "Hurghada",
                             Beds = 9,
-                            CategoryId = 19,
+                            CategoryId = 1,
                             CheckIn = new TimeOnly(0, 0, 0).Add(TimeSpan.FromTicks(9)),
                             CheckOut = new TimeOnly(0, 0, 0).Add(TimeSpan.FromTicks(15)),
                             CityId = 19,
@@ -1559,7 +1712,7 @@ namespace AirBnb.DAL.Migrations
                             Id = 20,
                             Adress = "Sinai",
                             Beds = 3,
-                            CategoryId = 20,
+                            CategoryId = 1,
                             CheckIn = new TimeOnly(0, 0, 0).Add(TimeSpan.FromTicks(9)),
                             CheckOut = new TimeOnly(0, 0, 0).Add(TimeSpan.FromTicks(15)),
                             CityId = 20,

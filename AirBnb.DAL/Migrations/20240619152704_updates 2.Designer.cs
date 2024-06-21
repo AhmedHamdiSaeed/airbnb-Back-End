@@ -12,8 +12,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace AirBnb.DAL.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    [Migration("20240607015920_initial")]
-    partial class initial
+    [Migration("20240619152704_updates 2")]
+    partial class updates2
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -205,6 +205,9 @@ namespace AirBnb.DAL.Migrations
                     b.Property<string>("Description")
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<string>("IconURL")
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<string>("Name")
                         .HasColumnType("nvarchar(max)");
 
@@ -248,6 +251,58 @@ namespace AirBnb.DAL.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("Countires");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = 1,
+                            Name = "Egypt"
+                        },
+                        new
+                        {
+                            Id = 2,
+                            Name = "France"
+                        },
+                        new
+                        {
+                            Id = 3,
+                            Name = "Italy"
+                        },
+                        new
+                        {
+                            Id = 4,
+                            Name = "Algeria"
+                        },
+                        new
+                        {
+                            Id = 5,
+                            Name = "Oman"
+                        },
+                        new
+                        {
+                            Id = 6,
+                            Name = "Yemen"
+                        },
+                        new
+                        {
+                            Id = 7,
+                            Name = "Germany"
+                        },
+                        new
+                        {
+                            Id = 8,
+                            Name = "Qatar"
+                        },
+                        new
+                        {
+                            Id = 9,
+                            Name = "Palestine"
+                        },
+                        new
+                        {
+                            Id = 10,
+                            Name = "Morocco"
+                        });
                 });
 
             modelBuilder.Entity("AirBnb.DAL.Data.Model.Property", b =>

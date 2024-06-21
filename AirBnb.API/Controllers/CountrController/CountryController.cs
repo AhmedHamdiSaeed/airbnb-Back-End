@@ -22,7 +22,7 @@ namespace AirBnb.API.Controllers.CountrController
 		[HttpGet("GetAllCountry")]
 		public async Task<IActionResult> GetAllCountry()
 		{
-			var result = _countryManager.GetAllCountry();
+			var result = await _countryManager.GetAllCountry();
 			if (result == null)
 			{
 				return BadRequest("Data Are Empty");

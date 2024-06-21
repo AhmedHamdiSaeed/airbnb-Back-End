@@ -1,6 +1,7 @@
 ﻿using AirBnb.DAL.Data.context;
 using AirBnb.DAL.Data.Model;
 using AirBnb.DAL.Repos.GenericRepo;
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -15,6 +16,11 @@ namespace AirBnb.DAL.Repos.AmentityRepo
 		public AmentityRepository(AppDbContext context) : base(context)
 		{
 			_context = context;
+		}
+
+		public async Task<IEnumerable<Amenity>> GetAllPropAmentity(int propId)
+		{
+			return await _context.Set<Amenity>().Where(x=>x.propertyId==propId).AsNoTracking().ToListAsync();
 		}
 	}
 }

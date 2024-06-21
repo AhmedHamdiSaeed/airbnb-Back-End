@@ -19,7 +19,7 @@ namespace AirBnb.BL.Managers.Amenities
 
 
 		// Add new amenity
-		public async Task<AmenityDto> Add(AmenityAddDto amenityAddDto)
+		public async Task<bool> AddAmentity(AmenityAddDto amenityAddDto)
 		{
 			var amenity = new Amenity
 			{
@@ -30,15 +30,7 @@ namespace AirBnb.BL.Managers.Amenities
 
 
 			await _unitOfWork.AmentityRepository.AddAsync(amenity);
-			_unitOfWork.SaveChanges();
-
-			return new AmenityDto
-			{
-				Id = amenity.Id,
-				Name = amenity.Name,
-				Description = amenity.Description,
-				propertyId = amenity.propertyId
-			};
+			return _unitOfWork.SaveChanges() > 0;
 
 		}
 
@@ -81,6 +73,19 @@ namespace AirBnb.BL.Managers.Amenities
 			_unitOfWork.SaveChanges();
 		}
 
-
+		public async Task<IEnumerable<AmenityDto>> GetAllPropAmentity(int propId)
+		{
+			var GetAmentities =await _unitOfWork.AmentityRepository.GetAllPropAmentity(propId);
+			if (GetAmentities == null)
+				return null;
+			var result = GetAmentities.Select(a => new AmenityDto
+			{
+				Id = a.Id,
+				Name = a.Name,
+				Description = a.Description,
+				propertyId= a.propertyId
+			});
+			return result;
+		}
 	}
 }
