@@ -89,7 +89,7 @@ namespace AirBnb.API.Controllers.User
 				return BadRequest("Password Is UnCorrect");
 			}
 			var Myclaims = new List<Claim>();
-			Myclaims.Add(new Claim(ClaimTypes.Name, result.UserName));
+			Myclaims.Add(new Claim(ClaimTypes.Name, result.FirstName));
 			Myclaims.Add(new Claim(ClaimTypes.Email, result.Email));
 			Myclaims.Add(new Claim(ClaimTypes.NameIdentifier, result.Id));
 			Myclaims.Add(new Claim(ClaimTypes.Role, result.Role.ToString()));

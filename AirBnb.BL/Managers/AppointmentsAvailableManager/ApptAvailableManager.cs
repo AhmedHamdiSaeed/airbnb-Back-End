@@ -22,11 +22,11 @@ namespace AirBnb.BL.Managers.AppointmentsAvailableManager
 		{
 			var apptAvailable = new AppointmentsAvailable
 			{
-				PropertyId = apptAvailableAddDto.PropertyId,
-				From = apptAvailableAddDto.From,
-				To = apptAvailableAddDto.To,
-				PricePerNight = apptAvailableAddDto.PricePerNight,
-				IsAvailable = apptAvailableAddDto.IsAvailable
+				PropertyId = Convert.ToInt32(apptAvailableAddDto.PropertyId),
+				From = Convert.ToDateTime(apptAvailableAddDto.From),
+				To = Convert.ToDateTime(apptAvailableAddDto.To),
+				PricePerNight = Convert.ToDecimal(apptAvailableAddDto.PricePerNight),
+				IsAvailable =Convert.ToBoolean(apptAvailableAddDto.IsAvailable),
 			};
 
 			await _unitOfwork.ApptAvailableRepository.AddAsync(apptAvailable);
@@ -36,10 +36,10 @@ namespace AirBnb.BL.Managers.AppointmentsAvailableManager
 			{
 				Id = apptAvailable.Id,
 				PropertyId = apptAvailable.PropertyId,
-				From = apptAvailable.From,
-				To = apptAvailable.To,
-				PricePerNight = apptAvailable.PricePerNight,
-				IsAvailable = apptAvailable.IsAvailable
+				From = Convert.ToDateTime(apptAvailable.From),
+				To = Convert.ToDateTime(apptAvailable.To),
+				PricePerNight = Convert.ToDecimal(apptAvailable.PricePerNight),
+				IsAvailable = Convert.ToBoolean(apptAvailableAddDto.IsAvailable)
 			};
 
 		}
@@ -55,10 +55,10 @@ namespace AirBnb.BL.Managers.AppointmentsAvailableManager
 
 
 			apptAvailble.PropertyId = apptAvailableAddDto.PropertyId;
-			apptAvailble.From = apptAvailableAddDto.From;
-			apptAvailble.To = apptAvailableAddDto.To;
-			apptAvailble.PricePerNight = apptAvailableAddDto.PricePerNight;
-			apptAvailble.IsAvailable = apptAvailableAddDto.IsAvailable;
+			apptAvailble.From = Convert.ToDateTime(apptAvailableAddDto.From);
+			apptAvailble.To = Convert.ToDateTime(apptAvailableAddDto.To);
+			apptAvailble.PricePerNight =Convert.ToDecimal(apptAvailableAddDto.PricePerNight) ;
+			apptAvailble.IsAvailable =Convert.ToBoolean(apptAvailableAddDto.IsAvailable) ;
 
 			_unitOfwork.SaveChanges();
 
@@ -88,5 +88,21 @@ namespace AirBnb.BL.Managers.AppointmentsAvailableManager
 
 		}
 
+		public async Task<IEnumerable<appAvailbletGetDto>> GetAllAppoinmentAvailable(int propId)
+		{
+			IEnumerable<AppointmentsAvailable> allAppoinment =await _unitOfwork.ApptAvailableRepository.GetAllAppoinmentAvailable(propId);
+			var result = allAppoinment.Select(x => new appAvailbletGetDto
+			{
+				Id = x.Id,
+				PropertyId = x.PropertyId,
+				From = x.From,
+				To = x.To,
+				PricePerNight = x.PricePerNight,
+				TotalProice= (int)(((TimeSpan)(x.To - x.From)).TotalDays) * ((int)x.PricePerNight),
+				IsAvailable = x.IsAvailable
+
+			});
+			return result;
+		}
 	}
 }

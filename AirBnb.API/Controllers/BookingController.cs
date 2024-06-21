@@ -1,5 +1,6 @@
 ﻿using AirBnb.API.CustomAuth;
 using AirBnb.BL.Dtos.AmentityDtos;
+using AirBnb.BL.Dtos.AppointmentAvailableDtos;
 using AirBnb.BL.Dtos.BookingDtos;
 using AirBnb.BL.Managers.BookingManagers;
 using AirBnb.DAL.Data.Model;
@@ -110,7 +111,7 @@ namespace AirBnb.API.Controllers
 		[HttpPost("AddBooking")]
 		[Authorize(Policy = "ForUser")]
 		[AuthorizeCurrentUser]
-		public async Task<IActionResult> AddBooking(AmentityGetDto amentity)
+		public async Task<IActionResult> AddBooking(appAvailbletGetDto amentity)
 		{
 
 			AppUser CurrentUser = await _userManager.GetUserAsync(User);

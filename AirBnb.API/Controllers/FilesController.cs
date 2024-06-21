@@ -19,7 +19,7 @@ namespace AirBnb.API.Controllers
 			{
 				return BadRequest("File size is not right");
 			}
-			string[] allowedExtentions = [".jpg", ".svg", ".png"];
+			string[] allowedExtentions = [".jpg", ".jpeg",".svg", ".png"];
 			var fileExtention = Path.GetExtension(file.FileName);
 			var isExtensionAllowed = allowedExtentions.Select(e => e.ToLower()).Contains(fileExtention);
 			if (!isExtensionAllowed)

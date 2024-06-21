@@ -1,4 +1,5 @@
-﻿using AirBnb.BL.Dtos.PropertyImagesDtos;
+﻿using AirBnb.BL.Dtos.AppointmentAvailableDtos;
+using AirBnb.BL.Dtos.PropertyImagesDtos;
 using AirBnb.DAL.Data.Model;
 using System;
 using System.Collections.Generic;
@@ -50,7 +51,7 @@ namespace AirBnb.BL.Dtos.PropertyDtos
 		public bool TakePhotos { get; set; }
 		public List<PropertyImagesGet> ImageUrl { get; set; }
 		public List<PropAmentity> Amentities { get; set;}
-		public List<PropAppoinmentAvailable> AppoinmentAvaiable { get; set; }
+		public List<appAvailbletGetDto> AppoinmentAvaiable { get; set; }
 
 	}
 	public class PaggenationsResultDto
@@ -73,8 +74,8 @@ namespace AirBnb.BL.Dtos.PropertyDtos
 		public int CheckIn { get; set; }
 		public int CheckOut { get; set; }
 		public int NumberOfGuest { get; set; }
-		public bool Pets { get; set; }
-		public bool TakePhotos { get; set; }
+		public int Pets { get; set; }
+		public int TakePhotos { get; set; }
 	}
 	public class PropertyUpdateDto
 	{

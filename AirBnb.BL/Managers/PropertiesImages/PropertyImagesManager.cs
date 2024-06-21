@@ -31,7 +31,7 @@ namespace AirBnb.BL.Managers.PropertiesImages
 		public async Task<bool> DeleteImage(int propId)
 		{
 			PropertyImage DelImage =await _manager.PropertyImagesRepository.GetByIdAsync(propId);
-			if( DelImage != null ) { return false; }
+			if( DelImage is null ) { return false; }
 			 _manager.PropertyImagesRepository.Delete(DelImage);
 			return _manager.SaveChanges() > 0;
 		}
@@ -43,6 +43,7 @@ namespace AirBnb.BL.Managers.PropertiesImages
 
 			var result = getAllBasedOnPropId.Select(x => new PropertyImagesGet
 			{
+				Id = x.Id,
 				PropertyId = x.PropertyId,
 				ImageUrl = x.ImageUrl,
 			});

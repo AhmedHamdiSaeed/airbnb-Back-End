@@ -37,8 +37,8 @@ namespace AirBnb.DAL.Data.context
 			base.OnModelCreating(builder);
 			builder.ApplyConfigurationsFromAssembly(Assembly.GetExecutingAssembly());
 
-
-
+			
+			
 			#region countries
 			builder.Entity<Country>().HasData(
 				new Country { Id = 1, Name = "Egypt" },
@@ -331,7 +331,7 @@ namespace AirBnb.DAL.Data.context
 				new Review { Id = 20, BookingId = 20, UserId = "53f9998c-e5c9-4bd5-8db6-eefc68f7fb4f", Rating = 5, Comment = "Amazing experience" }
 				);
 			#endregion
-			//#region Rule
+			#region Rule
 			//builder.Entity<Rule>().HasData(
 			//	new Rule { Id = 1, CheckIn = new TimeOnly(16, 0), CheckOut = new TimeOnly(9, 0), NumberOfGuest = 2, Pets = true, TakePhotos = true, PropertyId = 1 },
 			//	new Rule { Id = 21, CheckIn = new TimeOnly(16, 0), CheckOut = new TimeOnly(9, 0), NumberOfGuest = 2, Pets = true, TakePhotos = true, PropertyId = 1 },
@@ -355,7 +355,7 @@ namespace AirBnb.DAL.Data.context
 			//	new Rule { Id = 19, CheckIn = new TimeOnly(17, 0), CheckOut = new TimeOnly(9, 30), NumberOfGuest = 2, Pets = false, TakePhotos = true, PropertyId = 19 },
 			//	new Rule { Id = 20, CheckIn = new TimeOnly(14, 0), CheckOut = new TimeOnly(10, 0), NumberOfGuest = 4, Pets = true, TakePhotos = true, PropertyId = 20 }
 			//	);
-			//#endregion
+			#endregion
 
 		}
 	}

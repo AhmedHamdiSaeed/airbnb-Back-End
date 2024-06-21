@@ -1,4 +1,5 @@
 ﻿using AirBnb.BL.Dtos.AmentityDtos;
+using AirBnb.BL.Dtos.AppointmentAvailableDtos;
 using AirBnb.BL.Dtos.BookingDtos;
 using System;
 using System.Collections.Generic;
@@ -17,6 +18,6 @@ namespace AirBnb.BL.Managers.BookingManagers
 
 		Task<IEnumerable<BookingGetAllDto>> GetAllUserBooking(string userid);
 		Task<BookingGetDetailsUserDtos> GetUserBookingetails(int bookingid);
-		Task<bool> AddBooking(string userid, AmentityGetDto amentity );
+		Task<bool> AddBooking(string userid, appAvailbletGetDto amentity );
 	}
 }

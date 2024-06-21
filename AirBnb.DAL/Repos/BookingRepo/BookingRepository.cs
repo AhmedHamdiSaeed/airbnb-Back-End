@@ -37,7 +37,7 @@ namespace AirBnb.DAL.Repos.BookingRepo
 		{
 			return await _context.Set<Booking>().Include(x=>x.Property).FirstOrDefaultAsync(x=>x.Id == bookingid);
 		}
-
+		//hgfhfg
 		
 
 		public void UpdateBooking(Booking booking)

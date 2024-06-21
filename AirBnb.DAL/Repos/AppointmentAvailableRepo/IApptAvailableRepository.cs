@@ -10,5 +10,7 @@ namespace AirBnb.DAL.Repos.AppointmentAvailableRepo
 {
 	public interface IApptAvailableRepository : IGenericRepository<AppointmentsAvailable>
 	{
+		Task<IEnumerable<AppointmentsAvailable>> GetAllAppoinmentAvailable(int propId);
+
 	}
 }

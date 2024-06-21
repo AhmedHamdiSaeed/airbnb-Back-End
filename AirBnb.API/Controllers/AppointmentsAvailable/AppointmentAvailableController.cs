@@ -18,21 +18,18 @@ namespace AirBnb.API.Controllers.AppointmentsAvailable
         }
 
         // Add new appointment available
-        [HttpPost]
-        [Authorize(Policy = "ForHost")]
-        [AuthorizeCurrentUser]
+        [HttpPost("addAppoinmentAvail")]
+        
         public async Task<IActionResult> Add(ApptAvailableAddDto apptAvailableAddDto)
         {
-            if (!ModelState.IsValid)
-                return BadRequest(ModelState);
+           
 
             ApptAvailableDto createdApptAvailable = await _apptAvailableManager.Add(apptAvailableAddDto);
             return Created("", createdApptAvailable);
         }
 
         // Update appointment available
-        [HttpPut]
-        [Route("{id}")]
+        [HttpPut("UpdateAppoinmentAvail/{id}")]
         [Authorize(Policy = "ForHost")]
         [AuthorizeCurrentUser]
         public async Task<IActionResult> Update(int id, ApptAvailableAddDto apptAvailableAddDto)
@@ -57,8 +54,7 @@ namespace AirBnb.API.Controllers.AppointmentsAvailable
         }
 
         // Delete appointment available
-        [HttpDelete]
-        [Route("{id}")]
+        [HttpDelete("DeleteAppoinmentAvail/{id}")]
         [Authorize(Policy = "ForHost")]
         [AuthorizeCurrentUser]
         public async Task<IActionResult> Delete(int id)
@@ -73,5 +69,16 @@ namespace AirBnb.API.Controllers.AppointmentsAvailable
                 return BadRequest(new { message = ex.Message });
             }
         }
-    }
+
+
+        [HttpGet("GetAllAppoinmentAvailable/{id}")]
+		
+		public async Task<IActionResult> GetAllAppoinmentAvailable(int id)
+		{
+            var result =await _apptAvailableManager.GetAllAppoinmentAvailable(id);
+            if (result == null)
+                return NotFound("Data Not Found");
+            return Ok(result);
+		}
+	}
 }

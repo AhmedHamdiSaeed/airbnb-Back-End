@@ -1,4 +1,5 @@
-﻿using AirBnb.BL.Dtos.PropertyDtos;
+﻿using AirBnb.BL.Dtos.CountryDtos;
+using AirBnb.BL.Dtos.PropertyDtos;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -14,6 +15,7 @@ namespace AirBnb.BL.Managers.Properties
 		Task<IEnumerable<PropertyGetDto>> GetHosterProperties(string hosterId);
 		Task<bool> AddProperty(PropertyAddDto addProperty,string userId);
 		Task<bool> RemoveProperty(int propertyId);
+		public Task<bool> UpdatePropertyByHoster(int propId, PropertyUpdateDto updateProperty);
 
 		// Admin
 		Task<PaggenationsResultDto> GetAllPropertyForAdmin(int pageNumber, int pageSize, int? cityId = null, int? cateId = null);

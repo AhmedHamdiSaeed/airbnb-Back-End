@@ -19,15 +19,21 @@ namespace AirBnb.API.Controllers.Amenities
 
 		// Add amenity
 		[HttpPost("AddAmentity")]
-		[Authorize(Policy = "ForHost")]
-		[AuthorizeCurrentUser]
+		
 		public async Task<IActionResult> Add(AmenityAddDto amenityAddDto)
 		{
-			if (!ModelState.IsValid)
-				return BadRequest(ModelState);
+			if(ModelState.IsValid)
+			{
+				var result = await _amenityManager.AddAmentity(amenityAddDto);
 
-			AmenityDto createdAmenity = await _amenityManager.Add(amenityAddDto);
-			return Created("", createdAmenity);
+
+
+				if (result is false)
+					return BadRequest("Added Feild");
+				return Ok(result);
+			}
+			return BadRequest("Data Not Valid");
+
 		}
 
 
@@ -72,7 +78,21 @@ namespace AirBnb.API.Controllers.Amenities
 				return BadRequest(new { message = ex.Message });
 			}
 		}
-
+		[HttpGet("GetAllPropAmentity/{id}")]
+		[Authorize(Policy = "ForHost")]
+		[AuthorizeCurrentUser]
+		public async Task<IActionResult> GetAllPropAmentity(int id)
+		{
+			try
+			{
+				
+				return Ok(await _amenityManager.GetAllPropAmentity(id));
+			}
+			catch (Exception ex)
+			{
+				return BadRequest(new { message = ex.Message });
+			}
+		}
 
 	}
 }

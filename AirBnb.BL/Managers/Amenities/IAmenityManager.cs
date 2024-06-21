@@ -9,8 +9,9 @@ namespace AirBnb.BL.Managers.Amenities
 {
 	public interface IAmenityManager
 	{
-		Task<AmenityDto> Add(AmenityAddDto amenityAddDto);
+		Task<bool> AddAmentity(AmenityAddDto amenityAddDto);
 		Task<AmenityDto> Update(int amenityId, AmenityAddDto amenityAddDto);
 		Task Delete(int amenityId);
+		Task<IEnumerable<AmenityDto>> GetAllPropAmentity(int propId);
 	}
 }
