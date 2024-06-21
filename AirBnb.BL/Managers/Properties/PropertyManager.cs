@@ -33,8 +33,6 @@ namespace AirBnb.BL.Managers.Properties
 				CategoryId = addProperty.CategoryId,
 				CityId = addProperty.CityId,
 				Status = Status.Pending,
-				CheckIn = new TimeOnly(addProperty.CheckIn),
-				CheckOut = new TimeOnly(addProperty.CheckOut),
 				NumberOfGuest = addProperty.NumberOfGuest,
 				Pets = addProperty.Pets,
 				TakePhotos = addProperty.TakePhotos,
@@ -47,7 +45,7 @@ namespace AirBnb.BL.Managers.Properties
 
 		public async Task<PaggenationsResultDto> GetAllPropertyForAdmin(int pageNumber, int pageSize, int? cityId = null, int? cateId = null)
 		{
-			PaggenationReslut AllProperty = await _unitOfWork.PropertyRepository.GetAllPropertyForAllUsers(pageNumber, pageSize, cityId, cateId);
+			PaggenationReslut AllProperty = await _unitOfWork.PropertyRepository.GetAllPropertyForAdmin(pageNumber, pageSize, cityId, cateId);
 			if (AllProperty is null)
 				return null;
 
@@ -58,7 +56,8 @@ namespace AirBnb.BL.Managers.Properties
 				{
 					Id = p.Id,
 					Name = p.Name,
-					DisplayedImage = p.DisplayedImage
+					DisplayedImage = p.DisplayedImage,
+					Description = p.Description,
 				})
 			};
 			return result;
@@ -77,7 +76,9 @@ namespace AirBnb.BL.Managers.Properties
 				{
 					Id = p.Id,
 					Name = p.Name,
-					DisplayedImage = p.DisplayedImage
+					DisplayedImage = p.DisplayedImage,
+					Description = p.Description,
+
 				})
 			};
 			return result;
@@ -94,6 +95,7 @@ namespace AirBnb.BL.Managers.Properties
 				Id = pro.Id,
 				Name = pro.Name,
 				DisplayedImage = pro.DisplayedImage,
+				Description = pro.Description,
 
 			});
 			return result;
@@ -110,11 +112,13 @@ namespace AirBnb.BL.Managers.Properties
 			result.NumberOfBedrooms = singleProp.NumberOfBedrooms;
 			result.DisplayedImage = singleProp.DisplayedImage;
 			result.Beds= singleProp.Beds;
-			result.UserName=singleProp.User.FirstName;
+			result.UserName = $"{singleProp.User?.FirstName ?? string.Empty} {singleProp.User?.LastName ?? string.Empty}";
+           
+			result.UserImage = singleProp.User?.Image ;
 			result.CategoryName = singleProp.Category.Name;
 			result.CityName = singleProp.City.Name;
-			result.CheckIn = singleProp.CheckIn;
-			result.CheckOut = singleProp.CheckOut;
+			result.RatingOverroll = singleProp.OverALLReview;
+			result.NumOfReview = singleProp.NumberOfReview;
 			result.NumberOfGuest=singleProp.NumberOfGuest;
 			result.Pets=singleProp.Pets;
 			result.TakePhotos=singleProp.TakePhotos;
@@ -138,8 +142,12 @@ namespace AirBnb.BL.Managers.Properties
 				PricePerNight=app.PricePerNight,
 				IsAvailable=app.IsAvailable,
 			}).ToList();
+			result.Reviews = singleProp.Reviews.Select(x => new Reviewdto { Rate = x.Rating, ReviewComment = x.Comment, UserName = x.User.FirstName + ' ' + x.User.LastName, Userimage = x.User.Image });
+			result.BookingDates = singleProp.PropertyBokking.Select(x => new PropertyBookingDates { CheckInDate = x.CheckInDate, CheckOutDate = x.CheckOutDate });
 
-			return result;
+          
+
+            return result;
 		}
 
 		public async Task<bool> RemoveProperty(int propertyId)

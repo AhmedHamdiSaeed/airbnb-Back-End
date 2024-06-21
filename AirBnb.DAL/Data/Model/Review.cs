@@ -15,7 +15,13 @@ namespace AirBnb.DAL.Data.Model
 		[ForeignKey(nameof(User))]
 		public string UserId { get; set; }
 		public AppUser User { get; set; }
-		public int Rating { get; set; }
+
+
+        [ForeignKey(nameof(Property))]
+        public int PropertyId { get; set; }
+        public Property Property { get; set; }
+
+        public int Rating { get; set; }
 		public string Comment { get; set; } = string.Empty;
 	}
 }

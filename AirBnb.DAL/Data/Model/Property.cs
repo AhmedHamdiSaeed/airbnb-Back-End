@@ -1,4 +1,5 @@
-﻿using System.ComponentModel.DataAnnotations.Schema;
+﻿using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace AirBnb.DAL.Data.Model
 {
@@ -35,8 +36,26 @@ namespace AirBnb.DAL.Data.Model
 		public IEnumerable<PropertyImage> PropertyImages { get; set; } = new HashSet<PropertyImage>();
 		public IEnumerable<Booking> PropertyBokking { get; set; } = new HashSet<Booking>();
 		public IEnumerable<AppointmentsAvailable> AppointmentsAvailable { get; set; } = new HashSet<AppointmentsAvailable>();
+        public IEnumerable<Review> Reviews { get; set; }
 
-
-
-	}
+        public int NumberOfReview
+        {
+            get { return Reviews?.Count() ?? 0; }
+        }
+        [Range(0, 5)]
+        public double OverALLReview
+        {
+            get
+            {
+                if (Reviews?.Count() > 0)
+                {
+                    return Reviews.Average(review => review.Rating);
+                }
+                else
+                {
+                    return 0.0;
+                }
+            }
+        }
+    }
 }

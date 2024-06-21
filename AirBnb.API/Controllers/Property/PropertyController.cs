@@ -26,7 +26,7 @@ namespace AirBnb.API.Controllers.Property
 		public async Task<IActionResult> GetAllPropertyForAllUsers(int pageNumber , int pageSize , int? cityId = null, int? cateId = null)
 		{
 			if (pageNumber < 1 ) pageNumber = 1;
-			if (pageSize < 5) pageSize = 5;
+			if (pageSize < 2) pageSize = 2;
 
 			var result = await _propertyManager.GetAllPropertyForAllUsers(pageNumber, pageSize, cityId, cateId);
 			if (result == null) return NotFound("Data Is Empty");

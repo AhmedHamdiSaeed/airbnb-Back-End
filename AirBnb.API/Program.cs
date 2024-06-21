@@ -2,6 +2,7 @@
 using AirBnb.API.Extentions;
 using AirBnb.BL;
 using AirBnb.DAL;
+using Microsoft.Extensions.FileProviders;
 
 namespace AirBnb.API
 {
@@ -40,9 +41,14 @@ namespace AirBnb.API
 				app.UseSwagger();
 				app.UseSwaggerUI();
 			}
+			var folderPath = Path.Combine(builder.Environment.ContentRootPath, "Assets");
+			Directory.CreateDirectory(folderPath);
 
-
-
+			app.UseStaticFiles(new StaticFileOptions
+			{
+				FileProvider = new PhysicalFileProvider(folderPath),
+				RequestPath = "/Assets"
+			});
 			app.UseHttpsRedirection();
 
 			app.UseCors("AllowAllDomains");

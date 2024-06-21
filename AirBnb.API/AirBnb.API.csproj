@@ -23,4 +23,8 @@
     <ProjectReference Include="..\AirBnb.BL\AirBnb.BL.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Assets\" />
+  </ItemGroup>
+
 </Project>

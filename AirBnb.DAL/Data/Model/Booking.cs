@@ -27,6 +27,8 @@ namespace AirBnb.DAL.Data.Model
 		public DateTime CheckOutDate { get; set;}
 		public int TotalPrice { get; set; }
 		public Status BookingStatus { get; set; }
-		
-	}
+        public IEnumerable<Review> Reviews { get; set; } = new List<Review>();
+
+
+    }
 }
