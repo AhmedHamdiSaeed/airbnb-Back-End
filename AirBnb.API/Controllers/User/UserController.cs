@@ -169,13 +169,46 @@ namespace AirBnb.API.Controllers.User
 			//});
 			return Ok(new
 				{
-					DisplayName = result.FirstName,
+					DisplayName = $"{result.FirstName} {result.LastName}",
+					image=result.Image,
 					Email = result.Email,
 					Token = new JwtSecurityTokenHandler().WriteToken(token)
 
 			}); ;
-			
-			
+
+
 		}
+
+
+		#region Update User Information
+
+		[HttpPut("UpdateUser")]
+		[Authorize]
+
+		public async Task<IActionResult> updateUserData(updateUserDto userData)
+		{
+			var currentUser = await _userManager.GetUserAsync(User);
+			if (currentUser == null)
+			{
+				return NotFound(new { success = false, message = "User not found" });
+			}
+
+			currentUser.Email = userData.email;
+			currentUser.FirstName = userData.firstName;
+			currentUser.LastName = userData.lastName;
+			currentUser.Age = userData.age;
+			currentUser.PhoneNumber = userData.phoneNumber;
+			currentUser.Image = userData.Image;
+
+			IdentityResult result = await _userManager.UpdateAsync(currentUser);
+			if (!result.Succeeded)
+			{
+				return BadRequest(new { success = false, message = "Failed to update user data", errors = result.Errors });
+			}
+
+			return Ok(new { success = true, message = "User profile updated successfully" });
+		}
+
+		#endregion
 	}
 }

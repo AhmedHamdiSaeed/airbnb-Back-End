@@ -34,6 +34,8 @@ namespace AirBnb.BL.Managers.Properties
 				CategoryId = Convert.ToInt32(addProperty.CategoryId),
 				CityId = Convert.ToInt32(addProperty.CityId),
 				Status = Status.Pending,
+				CheckIn = TimeOnly.Parse(addProperty.CheckIn),
+				CheckOut = TimeOnly.Parse(addProperty.CheckOut),
 				NumberOfGuest = Convert.ToInt32(addProperty.NumberOfGuest),
 				Pets = Convert.ToBoolean(Convert.ToInt32(addProperty.Pets)),
 				TakePhotos = Convert.ToBoolean(Convert.ToInt32(addProperty.TakePhotos)),

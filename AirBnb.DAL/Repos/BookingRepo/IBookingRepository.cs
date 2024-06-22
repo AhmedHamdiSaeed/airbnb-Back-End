@@ -10,6 +10,7 @@ namespace AirBnb.DAL.Repos.BookingRepo
 {
 	public interface IBookingRepository:IGenericRepository<Booking>
 	{
+
 		void UpdateBooking(Booking booking);
 		//Hoster
 		Task<IEnumerable<Booking>> GetAllBookingForProperty(int propertyId);
