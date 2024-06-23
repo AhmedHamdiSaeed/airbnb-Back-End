@@ -22,12 +22,12 @@ namespace AirBnb.BL.Managers.Categories
 			_unitOfWork = unitOfWork;
 		}
 
-		public async Task<List<CategoryReadDto>?> getAll()
+		public async Task<List<CategoryReadDto>> getAll()
 		{
 			var categories= _unitOfWork.CategoryRepository.getAll().ToList();
 			if(categories==null)
 				return null;
-			return categories.Select(c=>new CategoryReadDto(c.Name,c.IconURL)).ToList();
+			return categories.Select(c=>new CategoryReadDto(c.Id,c.Name,c.IconURL)).ToList();
 		}
 
         public async Task<bool> AddCategory(CategoryDto categoryDto)
@@ -70,7 +70,7 @@ namespace AirBnb.BL.Managers.Categories
 		{
 			var categories=await _unitOfWork.CategoryRepository.GetAllAsync();
             if (categories is null) return null;
-            return   categories.Select(c=>new CategoryReadDto(c.Name,c.IconURL));
+            return   categories.Select(c=>new CategoryReadDto(c.Id,c.Name,c.IconURL));
         }
 
         public async Task<GetOneCategoryDtos> GetCategoryById(int id)
