@@ -29,12 +29,13 @@ namespace AirBnb.API.Controllers.Category
 
 
         [HttpGet("GetAll")]
-        public async Task<ActionResult<List<CategoryReadDto>?>> Category() 
+        public async Task<ActionResult> Category() 
         {
-            var categories=await _categoryManager.getAll();
+            var categories=await _categoryManager.getAllCategoryLastUpdate();
             if (categories == null)
                 return NotFound(new ApiResponse(404,"notFound",string.Empty));
-            return Ok(new ApiResponse(200,"success",categories));
+            return Ok(categories);
+            //return Ok(new ApiResponse(200,"success",categories));
         }
 
         [HttpGet("GetAllCategories")]

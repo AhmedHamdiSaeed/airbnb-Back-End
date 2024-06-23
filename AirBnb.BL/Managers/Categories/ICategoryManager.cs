@@ -16,5 +16,7 @@ namespace AirBnb.BL.Managers.Categories
 		Task<bool> AddCategory(CategoryDto categoryDto);
 		Task<bool> UpdateCategory(CategoryEditDtoURL categoryDto);
 		Task<bool> DeleteCategory(int id);
+
+		Task<IEnumerable<getAllCategoryDto>> getAllCategoryLastUpdate();
 	}
 }

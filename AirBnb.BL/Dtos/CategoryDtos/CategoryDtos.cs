@@ -22,5 +22,13 @@ namespace AirBnb.BL.Dtos.CategoryDtos
     public record CategoryDto(string Name, string IconURL, string Desc);
 	public record CategoryReadDto(string Name,string IconURL);
 
+    public class getAllCategoryDto
+    {
+		public int Id { get; set; }
+        public string Name { get; set; }
+        public string IconURL { get; set; }
+    }
+
+
 
 }

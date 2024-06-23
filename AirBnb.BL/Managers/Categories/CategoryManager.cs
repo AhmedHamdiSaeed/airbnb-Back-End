@@ -103,5 +103,22 @@ namespace AirBnb.BL.Managers.Categories
 			_unitOfWork.CategoryRepository.Update(cate);
 			return _unitOfWork.SaveChanges() >0;
 		}
+
+		public async Task<IEnumerable<getAllCategoryDto>> getAllCategoryLastUpdate()
+		{
+			IEnumerable<Category> allCate =await _unitOfWork.CategoryRepository.GetAllAsync();
+			if(allCate is null)
+			{
+				return null;
+			}
+			var result = allCate.Select(x => new getAllCategoryDto
+			{
+				Id = x.Id,
+				Name = x.Name,
+				IconURL = x.IconURL,
+
+			}).ToList();
+			return result;
+		}
 	}
 }

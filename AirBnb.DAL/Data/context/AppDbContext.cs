@@ -87,7 +87,7 @@ namespace AirBnb.DAL.Data.context
 				new City { Id = 18, Name = "Los Angeles", CountryId = 8 },
 				new City { Id = 19, Name = "Mumbai", CountryId = 9 },
 				new City { Id = 20, Name = "Istanbul", CountryId = 10 },
-				new City { Id = 21, Name = "Beijing", CountryId = 1 },
+				new City { Id = 21, Name = "Beijing", CountryId = 1 }
                
                 );
 			#endregion
