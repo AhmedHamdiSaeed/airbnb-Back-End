@@ -18,20 +18,40 @@ namespace AirBnb.BL.Managers.Reviews
 
 		}
 
-		public async Task<bool> AddReview(string userid,ReviewsAddDto review)
-		{
-			Review result = new Review
-			{
-				UserId = userid,
-				Rating = review.Rating,
-				Comment = review.Comment,
-			};
+        public async Task<bool> AddReview(string userId, ReviewsAddDto review)
+        {
+            // Check if the user is eligible to add a review
+            var isEligible = await CheckReviewEligibility(userId, review.PropertyId);
+            if (!isEligible)
+            {
+                return false; // User is not eligible to add a review
+            }
 
-			await _unitOfWork.ReviewRepository.AddAsync(result);
-			return _unitOfWork.SaveChanges() > 0;
-		}
+            // Create a new Review object
+            var newReview = new Review
+            {
+                UserId = userId,
+                PropertyId = review.PropertyId, 
+				BookingId = review.BookingId,
+                Rating = review.Rating,
+                Comment = review.Comment,
+            };
 
-		public async Task<bool> DeleteReview(int reviewId)
+            // Add the new review to the repository
+            await _unitOfWork.ReviewRepository.AddAsync(newReview);
+
+           
+            return _unitOfWork.SaveChanges() > 0;
+        }
+
+        public async Task<bool> CheckReviewEligibility(string userId, int propertyId)
+        {
+            var booking = await _unitOfWork.BookingRepository.GetByIdAsync(userId, propertyId);
+
+            return booking != null && booking.CheckOutDate <= DateTime.Now;
+        }
+
+        public async Task<bool> DeleteReview(int reviewId)
 		{
 			Review result = await _unitOfWork.ReviewRepository.GetByIdAsync(reviewId);
 			 _unitOfWork.ReviewRepository.Delete(result);
@@ -96,5 +116,8 @@ namespace AirBnb.BL.Managers.Reviews
 			 _unitOfWork.ReviewRepository.Update(singleReviewData);
 			return _unitOfWork.SaveChanges() > 0;
 		}
-	}
+
+       
+
+    }
 }

@@ -30,16 +30,16 @@ namespace AirBnb.API.Controllers.AppointmentsAvailable
 
         // Update appointment available
         [HttpPut("UpdateAppoinmentAvail/{id}")]
-        [Authorize(Policy = "ForHost")]
-        [AuthorizeCurrentUser]
-        public async Task<IActionResult> Update(int id, ApptAvailableAddDto apptAvailableAddDto)
+        //[Authorize(Policy = "ForHost")]
+        //[AuthorizeCurrentUser]
+        public async Task<IActionResult> Update(int id, ApptAvailableUpdateDto apptAvailableAddDto)
         {
             if (!ModelState.IsValid)
                 return BadRequest(ModelState);
 
             try
             {
-                ApptAvailableDto updatedApptAvailable = await _apptAvailableManager.Update(id, apptAvailableAddDto);
+                ApptAvailableUpdateDto updatedApptAvailable = await _apptAvailableManager.UpdateAvailabilityByPropertyIdAsync(id, apptAvailableAddDto);
 
                 if (updatedApptAvailable == null)
                     return NotFound($"Amenity with ID {id} not found.");

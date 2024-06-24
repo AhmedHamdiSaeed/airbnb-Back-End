@@ -10,6 +10,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Xml;
 
 namespace AirBnb.BL.Managers.BookingManagers
 {
@@ -39,7 +40,23 @@ namespace AirBnb.BL.Managers.BookingManagers
 			return _unitOfWork.SaveChanges()>0;
 		}
 
-		public async Task<IEnumerable<BookingGetAllDto>> GetAllBookingForProperty(int propertyid)
+        public async Task<bool> AddBooking(string userid, BookingAddDto bookingAddDto)
+        {
+            var booking = new Booking
+            {
+                PropertyId = bookingAddDto.PropertyId,
+                UserId = userid,
+                CheckInDate = bookingAddDto.CheckInDate,
+                CheckOutDate = bookingAddDto.CheckOutDate,
+                TotalPrice = bookingAddDto.TotalPrice,
+                BookingStatus = Status.Pending,
+            };
+
+            await _unitOfWork.BookingRepository.AddAsync(booking);
+            return _unitOfWork.SaveChanges() > 0;
+        }
+
+        public async Task<IEnumerable<BookingGetAllDto>> GetAllBookingForProperty(int propertyid)
 		{
 			IEnumerable<Booking> allBooking =await _unitOfWork.BookingRepository.GetAllBookingForProperty(propertyid);
 			if (allBooking is null)
@@ -77,7 +94,8 @@ namespace AirBnb.BL.Managers.BookingManagers
 			return result;
 		}
 
-		public async Task<BookingGetDetailsHostDto> GetPropertyBookingDetails(int propertyId)
+
+        public async Task<BookingGetDetailsHostDto> GetPropertyBookingDetails(int propertyId)
 		{
 			Booking getbooking = await _unitOfWork.BookingRepository.GetPropertyBookingDetails(propertyId);
 			if (getbooking is null)
@@ -111,7 +129,8 @@ namespace AirBnb.BL.Managers.BookingManagers
 			return result;
 		}
 
-		public  async Task<bool> UpdateBooking(int bookingid, BookingUpdateDto booking)
+    
+        public  async Task<bool> UpdateBooking(int bookingid, BookingUpdateDto booking)
 		{
 			Booking getbooking =await _unitOfWork.BookingRepository.GetByIdAsync(bookingid);
 

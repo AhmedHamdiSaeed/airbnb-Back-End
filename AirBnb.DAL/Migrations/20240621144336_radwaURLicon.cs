@@ -8,7 +8,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 namespace AirBnb.DAL.Migrations
 {
     /// <inheritdoc />
-    public partial class updates2 : Migration
+    public partial class radwaURLicon : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
@@ -357,6 +357,7 @@ namespace AirBnb.DAL.Migrations
                         .Annotation("SqlServer:Identity", "1, 1"),
                     BookingId = table.Column<int>(type: "int", nullable: false),
                     UserId = table.Column<string>(type: "nvarchar(450)", nullable: true),
+                    PropertyId = table.Column<int>(type: "int", nullable: false),
                     Rating = table.Column<int>(type: "int", nullable: false),
                     Comment = table.Column<string>(type: "nvarchar(max)", nullable: true)
                 },
@@ -374,6 +375,12 @@ namespace AirBnb.DAL.Migrations
                         principalTable: "Bookings",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Cascade);
+                    table.ForeignKey(
+                        name: "FK_Reviews_Properties_PropertyId",
+                        column: x => x.PropertyId,
+                        principalTable: "Properties",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Restrict);
                 });
 
             migrationBuilder.InsertData(
@@ -481,6 +488,11 @@ namespace AirBnb.DAL.Migrations
                 name: "IX_Reviews_BookingId",
                 table: "Reviews",
                 column: "BookingId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_Reviews_PropertyId",
+                table: "Reviews",
+                column: "PropertyId");
 
             migrationBuilder.CreateIndex(
                 name: "IX_Reviews_UserId",

@@ -14,11 +14,11 @@ namespace AirBnb.DAL.Repos.BookingRepo
 		//Hoster
 		Task<IEnumerable<Booking>> GetAllBookingForProperty(int propertyId);
 		Task<Booking> GetPropertyBookingDetails(int propertyId);
-		
 
+        Task<Booking> GetByIdAsync(string userId, int propertyId);
 
-		//Guest
-		Task<IEnumerable<Booking>> GetAllUserBooking(string userid);
+        //Guest
+        Task<IEnumerable<Booking>> GetAllUserBooking(string userid);
 		Task<Booking> GetUserBookingetails(int bookingid);
 		
 	}

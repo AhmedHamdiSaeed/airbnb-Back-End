@@ -12,6 +12,7 @@ namespace AirBnb.BL.Dtos.ReviewsDtos
 	{
 		public int Id { get; set; }
 		public int BookingId { get; set; }
+
 		public int Rating { get; set; }
 		public string Comment { get; set; } = string.Empty;
 	}
@@ -20,13 +21,15 @@ namespace AirBnb.BL.Dtos.ReviewsDtos
 	{
 		public int BookingId { get; set; }
 		public int Rating { get; set; }
-		public string Comment { get; set; } = string.Empty;
+        public int PropertyId { get; set; }
+        public string Comment { get; set; } = string.Empty;
 	}
 
 	public class ReviewsUpdateDto
 	{
 		public int BookingId { get; set; }
 		public int Rating { get; set; }
-		public string Comment { get; set; } = string.Empty;
+        public int PropertyId { get; set; }
+        public string Comment { get; set; } = string.Empty;
 	}
 }

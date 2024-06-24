@@ -35,12 +35,12 @@ namespace AirBnb.DAL.Data.context
 		protected override void OnModelCreating(ModelBuilder builder)
 		{
 			base.OnModelCreating(builder);
-            builder.Entity<Review>()
-          .HasOne(r => r.Property)
-          .WithMany(p => p.Reviews)
-          .HasForeignKey(r => r.PropertyId)
-          .OnDelete(DeleteBehavior.Restrict);
-            builder.ApplyConfigurationsFromAssembly(Assembly.GetExecutingAssembly());
+			builder.Entity<Review>()
+		  .HasOne(r => r.Property)
+		  .WithMany(p => p.Reviews)
+		  .HasForeignKey(r => r.PropertyId)
+		  .OnDelete(DeleteBehavior.Restrict);
+			builder.ApplyConfigurationsFromAssembly(Assembly.GetExecutingAssembly());
            
 
 
@@ -87,34 +87,34 @@ namespace AirBnb.DAL.Data.context
 				new City { Id = 18, Name = "Los Angeles", CountryId = 8 },
 				new City { Id = 19, Name = "Mumbai", CountryId = 9 },
 				new City { Id = 20, Name = "Istanbul", CountryId = 10 },
-				new City { Id = 21, Name = "Beijing", CountryId = 1 },
-               
-                );
+				new City { Id = 21, Name = "Beijing", CountryId = 1 }
+
+				) ;
 			#endregion
 
 			#region category
-			//builder.Entity<Category>().HasData(
-			//	new Category { Id = 21, Name = "Apartment", Description = "Description For Category" },
-			//	new Category { Id = 1, Name = "Entire Place", Description = "Guests have the entire home or apartment to themselves" },
-			//	new Category { Id = 2, Name = "Private Room", Description = "Guests have a private room but share common areas with the host or other guests" },
-			//	new Category { Id = 3, Name = "Shared Room", Description = "Guests share a room with the host or other guests" },
-			//	new Category { Id = 4, Name = "Unique Stays", Description = "Unusual or unconventional accommodations (treehouses, yurts, etc.)" },
-			//	new Category { Id = 5, Name = "Beachfront", Description = "Properties with direct access to a beach" },
-			//	new Category { Id = 6, Name = "Ski-in/Ski-out", Description = "Properties with ski-in/ski-out access" },
-			//	new Category { Id = 7, Name = "Pet-Friendly", Description = "Properties that allow pets" },
-			//	new Category { Id = 8, Name = "Luxury", Description = "High-end properties with premium amenities" },
-			//	new Category { Id = 9, Name = "Cabin", Description = "Rustic cabins for a cozy getaway" },
-			//	new Category { Id = 10, Name = "Apartment", Description = "Modern apartments in urban settings" },
-			//	new Category { Id = 11, Name = "Loft", Description = "Spacious lofts with open layouts" },
-			//	new Category { Id = 12, Name = "Villa", Description = "Luxurious villas with private pools or jacuzzis" },
-			//	new Category { Id = 13, Name = "Castle", Description = "Historic castles for a unique experience" },
-			//	new Category { Id = 14, Name = "Treehouse", Description = "Treehouses for a whimsical stay" },
-			//	new Category { Id = 15, Name = "Boat", Description = "Houseboats or other boats for a stay on the water" },
-			//	new Category { Id = 16, Name = "Dome", Description = "Unique dome-shaped accommodations" },
-			//	new Category { Id = 17, Name = "Boutique Hotel", Description = "Small, stylish hotels with personalized service" },
-			//	new Category { Id = 18, Name = "Eco-Friendly", Description = "Properties committed to sustainable practices" },
-			//	new Category { Id = 19, Name = "Family-Friendly", Description = "Properties with amenities for families with children" },
-			//	new Category { Id = 20, Name = "Workcation-Friendly", Description = "Properties with features suitable for remote work (fast Wi-Fi, dedicated workspace)" }
+			builder.Entity<Category>().HasData(
+				new Category { Id = 21, Name = "Apartment", Description = "Description For Category" },
+				new Category { Id = 1, Name = "Entire Place", Description = "Guests have the entire home or apartment to themselves" },
+				new Category { Id = 2, Name = "Private Room", Description = "Guests have a private room but share common areas with the host or other guests" },
+				new Category { Id = 3, Name = "Shared Room", Description = "Guests share a room with the host or other guests" },
+				new Category { Id = 4, Name = "Unique Stays", Description = "Unusual or unconventional accommodations (treehouses, yurts, etc.)" },
+				new Category { Id = 5, Name = "Beachfront", Description = "Properties with direct access to a beach" },
+				new Category { Id = 6, Name = "Ski-in/Ski-out", Description = "Properties with ski-in/ski-out access" },
+				new Category { Id = 7, Name = "Pet-Friendly", Description = "Properties that allow pets" },
+				new Category { Id = 8, Name = "Luxury", Description = "High-end properties with premium amenities" },
+				new Category { Id = 9, Name = "Cabin", Description = "Rustic cabins for a cozy getaway" },
+				new Category { Id = 10, Name = "Apartment", Description = "Modern apartments in urban settings" },
+				new Category { Id = 11, Name = "Loft", Description = "Spacious lofts with open layouts" },
+				new Category { Id = 12, Name = "Villa", Description = "Luxurious villas with private pools or jacuzzis" },
+				new Category { Id = 13, Name = "Castle", Description = "Historic castles for a unique experience" },
+				new Category { Id = 14, Name = "Treehouse", Description = "Treehouses for a whimsical stay" },
+				new Category { Id = 15, Name = "Boat", Description = "Houseboats or other boats for a stay on the water" },
+				new Category { Id = 16, Name = "Dome", Description = "Unique dome-shaped accommodations" },
+				new Category { Id = 17, Name = "Boutique Hotel", Description = "Small, stylish hotels with personalized service" },
+				new Category { Id = 18, Name = "Eco-Friendly", Description = "Properties committed to sustainable practices" },
+				new Category { Id = 19, Name = "Family-Friendly", Description = "Properties with amenities for families with children" },
+				new Category { Id = 20, Name = "Workcation-Friendly", Description = "Properties with features suitable for remote work (fast Wi-Fi, dedicated workspace)" }
 
 
 
@@ -122,7 +122,7 @@ namespace AirBnb.DAL.Data.context
 
 
 
-			//	);
+				);
 			#endregion
 
 			#region Property
@@ -339,32 +339,7 @@ namespace AirBnb.DAL.Data.context
 				new Review { Id = 20, PropertyId = 20, BookingId = 20, UserId = "53f9998c-e5c9-4bd5-8db6-eefc68f7fb4f", Rating = 5, Comment = "Amazing experience" }
 				);
 			#endregion
-			#region Rule
-			//builder.Entity<Rule>().HasData(
-			//	new Rule { Id = 1, CheckIn = new TimeOnly(16, 0), CheckOut = new TimeOnly(9, 0), NumberOfGuest = 2, Pets = true, TakePhotos = true, PropertyId = 1 },
-			//	new Rule { Id = 21, CheckIn = new TimeOnly(16, 0), CheckOut = new TimeOnly(9, 0), NumberOfGuest = 2, Pets = true, TakePhotos = true, PropertyId = 1 },
-			//	new Rule { Id = 2, CheckIn = new TimeOnly(15, 0), CheckOut = new TimeOnly(10, 0), NumberOfGuest = 3, Pets = false, TakePhotos = true, PropertyId = 2 },
-			//	new Rule { Id = 3, CheckIn = new TimeOnly(17, 0), CheckOut = new TimeOnly(11, 0), NumberOfGuest = 4, Pets = true, TakePhotos = false, PropertyId = 3 },
-			//	new Rule { Id = 4, CheckIn = new TimeOnly(14, 0), CheckOut = new TimeOnly(12, 0), NumberOfGuest = 5, Pets = false, TakePhotos = true, PropertyId = 4 },
-			//	new Rule { Id = 5, CheckIn = new TimeOnly(18, 0), CheckOut = new TimeOnly(9, 30), NumberOfGuest = 2, Pets = true, TakePhotos = true, PropertyId = 5 },
-			//	new Rule { Id = 6, CheckIn = new TimeOnly(13, 0), CheckOut = new TimeOnly(10, 30), NumberOfGuest = 3, Pets = true, TakePhotos = false, PropertyId = 6 },
-			//	new Rule { Id = 7, CheckIn = new TimeOnly(16, 30), CheckOut = new TimeOnly(8, 0), NumberOfGuest = 1, Pets = false, TakePhotos = true, PropertyId = 7 },
-			//	new Rule { Id = 8, CheckIn = new TimeOnly(15, 30), CheckOut = new TimeOnly(11, 0), NumberOfGuest = 2, Pets = true, TakePhotos = true, PropertyId = 8 },
-			//	new Rule { Id = 9, CheckIn = new TimeOnly(14, 30), CheckOut = new TimeOnly(12, 30), NumberOfGuest = 4, Pets = false, TakePhotos = false, PropertyId = 9 },
-			//	new Rule { Id = 10, CheckIn = new TimeOnly(17, 30), CheckOut = new TimeOnly(10, 0), NumberOfGuest = 5, Pets = true, TakePhotos = true, PropertyId = 10 },
-			//	new Rule { Id = 11, CheckIn = new TimeOnly(18, 0), CheckOut = new TimeOnly(9, 0), NumberOfGuest = 3, Pets = false, TakePhotos = true, PropertyId = 11 },
-			//	new Rule { Id = 12, CheckIn = new TimeOnly(15, 0), CheckOut = new TimeOnly(8, 30), NumberOfGuest = 1, Pets = true, TakePhotos = false, PropertyId = 12 },
-			//	new Rule { Id = 13, CheckIn = new TimeOnly(16, 30), CheckOut = new TimeOnly(11, 30), NumberOfGuest = 2, Pets = true, TakePhotos = true, PropertyId = 13 },
-			//	new Rule { Id = 14, CheckIn = new TimeOnly(17, 0), CheckOut = new TimeOnly(12, 0), NumberOfGuest = 4, Pets = false, TakePhotos = true, PropertyId = 14 },
-			//	new Rule { Id = 15, CheckIn = new TimeOnly(14, 0), CheckOut = new TimeOnly(10, 0), NumberOfGuest = 5, Pets = true, TakePhotos = false, PropertyId = 15 },
-			//	new Rule { Id = 16, CheckIn = new TimeOnly(13, 0), CheckOut = new TimeOnly(9, 30), NumberOfGuest = 2, Pets = false, TakePhotos = true, PropertyId = 16 },
-			//	new Rule { Id = 17, CheckIn = new TimeOnly(16, 0), CheckOut = new TimeOnly(8, 0), NumberOfGuest = 3, Pets = true, TakePhotos = true, PropertyId = 17 },
-			//	new Rule { Id = 18, CheckIn = new TimeOnly(15, 0), CheckOut = new TimeOnly(11, 0), NumberOfGuest = 1, Pets = true, TakePhotos = false, PropertyId = 18 },
-			//	new Rule { Id = 19, CheckIn = new TimeOnly(17, 0), CheckOut = new TimeOnly(9, 30), NumberOfGuest = 2, Pets = false, TakePhotos = true, PropertyId = 19 },
-			//	new Rule { Id = 20, CheckIn = new TimeOnly(14, 0), CheckOut = new TimeOnly(10, 0), NumberOfGuest = 4, Pets = true, TakePhotos = true, PropertyId = 20 }
-			//	);
-			#endregion
-
+			
 		}
 	}
 }

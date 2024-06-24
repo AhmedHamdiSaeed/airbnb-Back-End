@@ -112,7 +112,8 @@ namespace AirBnb.API.Controllers.User
 				token = new JwtSecurityTokenHandler().WriteToken(token),
 				Role = result.Role.ToString(),
 				userName = $"{result.FirstName} {result.LastName}",
-				expiration = token.ValidTo
+                userId = result.Id,
+                expiration = token.ValidTo
 			};
 			tok = _token.token;
 			return Ok(_token);
@@ -171,7 +172,8 @@ namespace AirBnb.API.Controllers.User
 				{
 					DisplayName = result.FirstName,
 					Email = result.Email,
-					Token = new JwtSecurityTokenHandler().WriteToken(token)
+                   ImageUrl = result.Image,
+                Token = new JwtSecurityTokenHandler().WriteToken(token)
 
 			}); ;
 			

@@ -54,4 +54,10 @@ namespace AirBnb.BL.Dtos.BookingDtos
 		public int TotalPrice { get; set; }
 		public Status BookingStatus { get; set; } 
 	}
+    public class AvailabilityUpdateDto
+    {
+        public DateTime From { get; set; }
+        public DateTime To { get; set; }
+        public bool IsAvailable { get; set; }
+    }
 }

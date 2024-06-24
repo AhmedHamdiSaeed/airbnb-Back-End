@@ -13,6 +13,5 @@ namespace AirBnb.DAL.Repos.ReviewRepo
 		Task<IEnumerable<Review>> GetAllUserReviews(string userid);
 		Task<IEnumerable<Review>> GetAllBookingReviews(int bookingid);
 		Task<Review> GetUserReviewDetails(int reviewId);
-
-	}
+		}
 }

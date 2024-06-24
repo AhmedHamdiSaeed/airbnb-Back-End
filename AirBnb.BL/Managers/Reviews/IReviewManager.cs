@@ -15,5 +15,7 @@ namespace AirBnb.BL.Managers.Reviews
 		Task<bool> UpdateReview(int reviewId,ReviewsUpdateDto review);
 		Task<bool> DeleteReview(int reviewId);
 		Task<bool> AddReview(string userid, ReviewsAddDto review);
-	}
+		Task<bool> CheckReviewEligibility(string userId, int propertyId);
+
+    }
 }

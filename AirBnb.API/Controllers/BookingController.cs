@@ -105,20 +105,20 @@ namespace AirBnb.API.Controllers
 			return Ok(result);
 
 		}
-		#endregion
-
-		#region AddBooking
-		[HttpPost("AddBooking")]
+        #endregion
+       
+       #region AddBooking
+        [HttpPost("AddBooking")]
 		[Authorize(Policy = "ForUser")]
 		[AuthorizeCurrentUser]
-		public async Task<IActionResult> AddBooking(appAvailbletGetDto amentity)
+		public async Task<IActionResult> AddBooking(BookingAddDto bookingAdd)
 		{
 
 			AppUser CurrentUser = await _userManager.GetUserAsync(User);
 
 			if(ModelState.IsValid)
 			{
-				var result = await _bookingManager.AddBooking(CurrentUser.Id, amentity);
+				var result = await _bookingManager.AddBooking(CurrentUser.Id, bookingAdd);
 				if (result is false)
 					return BadRequest("Add Field");
 

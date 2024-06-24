@@ -12,8 +12,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace AirBnb.DAL.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    [Migration("20240619152704_updates 2")]
-    partial class updates2
+    [Migration("20240621144336_radwaURLicon")]
+    partial class radwaURLicon
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -407,6 +407,9 @@ namespace AirBnb.DAL.Migrations
                     b.Property<string>("Comment")
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<int>("PropertyId")
+                        .HasColumnType("int");
+
                     b.Property<int>("Rating")
                         .HasColumnType("int");
 
@@ -416,6 +419,8 @@ namespace AirBnb.DAL.Migrations
                     b.HasKey("Id");
 
                     b.HasIndex("BookingId");
+
+                    b.HasIndex("PropertyId");
 
                     b.HasIndex("UserId");
 
@@ -642,9 +647,15 @@ namespace AirBnb.DAL.Migrations
             modelBuilder.Entity("AirBnb.DAL.Data.Model.Review", b =>
                 {
                     b.HasOne("AirBnb.DAL.Data.Model.Booking", "Booking")
-                        .WithMany()
+                        .WithMany("Reviews")
                         .HasForeignKey("BookingId")
                         .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("AirBnb.DAL.Data.Model.Property", "Property")
+                        .WithMany("Reviews")
+                        .HasForeignKey("PropertyId")
+                        .OnDelete(DeleteBehavior.Restrict)
                         .IsRequired();
 
                     b.HasOne("AirBnb.DAL.Data.Model.AppUser", "User")
@@ -652,6 +663,8 @@ namespace AirBnb.DAL.Migrations
                         .HasForeignKey("UserId");
 
                     b.Navigation("Booking");
+
+                    b.Navigation("Property");
 
                     b.Navigation("User");
                 });
@@ -716,6 +729,11 @@ namespace AirBnb.DAL.Migrations
                     b.Navigation("UserReviews");
                 });
 
+            modelBuilder.Entity("AirBnb.DAL.Data.Model.Booking", b =>
+                {
+                    b.Navigation("Reviews");
+                });
+
             modelBuilder.Entity("AirBnb.DAL.Data.Model.Category", b =>
                 {
                     b.Navigation("Properties");
@@ -735,6 +753,8 @@ namespace AirBnb.DAL.Migrations
                     b.Navigation("PropertyBokking");
 
                     b.Navigation("PropertyImages");
+
+                    b.Navigation("Reviews");
                 });
 #pragma warning restore 612, 618
         }

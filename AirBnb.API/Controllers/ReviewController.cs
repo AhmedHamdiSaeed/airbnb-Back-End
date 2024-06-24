@@ -125,6 +125,19 @@ namespace AirBnb.API.Controllers
 			}
 			return BadRequest("Data Not Valid");
 		}
-		#endregion
-	}
+        #endregion
+
+
+        [HttpGet("check-eligibility/{userId}/{propertyId}")]
+        public async Task<IActionResult> CheckReviewEligibility(string userId, int propertyId)
+        {
+            var isEligible = await _ReviewsManager.CheckReviewEligibility(userId, propertyId);
+            if (isEligible)
+            {
+                return Ok(true);
+            }
+            return Ok(false);
+        }
+
+    }
 }
