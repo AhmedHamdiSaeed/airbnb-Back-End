@@ -15,6 +15,8 @@ namespace AirBnb.BL.Dtos.BookingDtos
 		public DateTime CheckOutDate { get; set; }
 		public int TotalPrice { get; set; }
 		public Status BookingStatus { get; set; }
+		public string propImage {  get; set; }
+		public string propTitle { get; set; }
 
 	}
 	public class BookingUpdateDto

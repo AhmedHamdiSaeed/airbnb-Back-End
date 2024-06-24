@@ -36,4 +36,15 @@ namespace AirBnb.BL.Dtos.DtoUser
 
 		public string password { get; set; }
 	}
+
+	public class updateUserDto
+	{
+		public string email { get; set; }
+
+		public string firstName { get; set; }
+		public string lastName { get; set; }
+		public int age { get; set; }
+		public string phoneNumber { get; set; }
+		public string Image { get; set; }
+	}
 }

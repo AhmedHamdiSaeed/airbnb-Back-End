@@ -88,6 +88,8 @@ namespace AirBnb.BL.Managers.BookingManagers
 				CheckInDate = x.CheckInDate,
 				CheckOutDate = x.CheckOutDate,
 				TotalPrice = x.TotalPrice,
+				propImage=x.Property.DisplayedImage,
+				propTitle=x.Property.Name,
 				BookingStatus = x.BookingStatus,
 			}
 			);

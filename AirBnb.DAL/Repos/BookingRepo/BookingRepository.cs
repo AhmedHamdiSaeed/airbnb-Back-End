@@ -25,7 +25,7 @@ namespace AirBnb.DAL.Repos.BookingRepo
 
 		public async Task<IEnumerable<Booking>> GetAllUserBooking(string userid)
 		{
-			return await _context.Set<Booking>().AsNoTracking().Where(x=>x.UserId==userid).ToListAsync();
+			return await _context.Set<Booking>().Where(x=>x.UserId==userid).Include(x=>x.Property).AsNoTracking().ToListAsync();
 		}
 
         public async Task<Booking> GetByIdAsync(string userId, int propertyId)

@@ -93,7 +93,8 @@ namespace AirBnb.BL.Dtos.PropertyDtos
 
 		public int CategoryId { get; set; }
 		public int CityId { get; set; }
-	
+		public string CheckIn { get; set; }
+		public string CheckOut { get; set; }
 		public int NumberOfGuest { get; set; }
 		public int Pets { get; set; }
 		public int TakePhotos { get; set; }

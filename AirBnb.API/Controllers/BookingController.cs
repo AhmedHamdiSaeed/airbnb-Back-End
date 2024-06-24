@@ -26,7 +26,7 @@ namespace AirBnb.API.Controllers
 
 		#region GetAllBookingForProperty
 		[HttpGet("GetAllBookingForProperty/{id}")]
-		[Authorize(Policy = "ForHost")]
+		//[Authorize(Policy = "ForHost")]
 		[AuthorizeCurrentUser]
 		public async Task<IActionResult> GetAllBookingForProperty(int id)
 		{
@@ -41,7 +41,7 @@ namespace AirBnb.API.Controllers
 
 		#region GetPropertyBookingDetails
 		[HttpGet("GetPropertyBookingDetails/{id}")]
-		[Authorize(Policy = "ForHost")]
+		//[Authorize(Policy = "ForHost")]
 		[AuthorizeCurrentUser]
 		public async Task<IActionResult> GetPropertyBookingDetails(int id)
 		{
@@ -54,7 +54,7 @@ namespace AirBnb.API.Controllers
 		#endregion
 
 		#region UpdateBooking
-		[HttpPut("UpdateBooking/{id}/{obj}")]
+		[HttpPut("UpdateBooking/{id}")]
 		[Authorize]
 		[AuthorizeCurrentUser]
 		public async Task<IActionResult> UpdateBooking(int id, BookingUpdateDto obj)
@@ -75,7 +75,7 @@ namespace AirBnb.API.Controllers
 
 		#region GetAllUserBooking
 		[HttpGet("GetAllUserBooking")]
-		[Authorize(Policy = "ForUser")]
+		//[Authorize(Policy = "ForUser")]
 		[AuthorizeCurrentUser]
 		public async Task<IActionResult> GetAllUserBooking()
 		{
@@ -92,24 +92,32 @@ namespace AirBnb.API.Controllers
 
 		#region GetUserBookingetails
 		[HttpGet("GetUserBookingetails/{id}")]
-		[Authorize(Policy = "ForUser")]
+		//[Authorize(Policy = "ForUser")]
 		[AuthorizeCurrentUser]
-		public async Task<IActionResult> GetUserBookingetails(int bookingid)
+		public async Task<IActionResult> GetUserBookingetails(int id)
 		{
 			
 
-			var result = await _bookingManager.GetUserBookingetails(bookingid);
+			var result = await _bookingManager.GetUserBookingetails(id);
 			if (result is null)
 				return NotFound("Data Is Empty");
 
 			return Ok(result);
 
 		}
+<<<<<<< HEAD
         #endregion
        
        #region AddBooking
         [HttpPost("AddBooking")]
 		[Authorize(Policy = "ForUser")]
+=======
+		#endregion
+
+		#region AddBooking
+		[HttpPost("AddBooking")]
+		//[Authorize(Policy = "ForUser")]
+>>>>>>> 26648e03b4f4b0b1fe4b7b49f101b6db7dd36e50
 		[AuthorizeCurrentUser]
 		public async Task<IActionResult> AddBooking(BookingAddDto bookingAdd)
 		{
