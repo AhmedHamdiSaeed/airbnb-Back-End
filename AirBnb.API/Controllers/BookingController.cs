@@ -105,19 +105,11 @@ namespace AirBnb.API.Controllers
 			return Ok(result);
 
 		}
-<<<<<<< HEAD
         #endregion
-       
-       #region AddBooking
+
+        #region AddBooking
         [HttpPost("AddBooking")]
 		[Authorize(Policy = "ForUser")]
-=======
-		#endregion
-
-		#region AddBooking
-		[HttpPost("AddBooking")]
-		//[Authorize(Policy = "ForUser")]
->>>>>>> 26648e03b4f4b0b1fe4b7b49f101b6db7dd36e50
 		[AuthorizeCurrentUser]
 		public async Task<IActionResult> AddBooking(BookingAddDto bookingAdd)
 		{

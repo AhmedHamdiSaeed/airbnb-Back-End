@@ -69,7 +69,7 @@ namespace AirBnb.BL.Dtos.PropertyDtos
     }
     public class Reviewdto
     {
-        public int Id { get; set; }
+        public string userID { get; set; }
         public string ReviewComment { get; set; } = string.Empty;
         public int Rate { get; set; }
         public string UserName { get; set; } = string.Empty;

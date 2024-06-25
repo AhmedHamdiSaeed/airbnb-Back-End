@@ -33,6 +33,7 @@ namespace AirBnb.API
 			builder.Services.AddBLServices();
 			builder.Services.AddDALService(builder.Configuration);
 			builder.Services.AddCustomJwtAuth(builder.Configuration);
+			builder.Services.AddLogging();
 			var app = builder.Build();
 
 			// Configure the HTTP request pipeline.

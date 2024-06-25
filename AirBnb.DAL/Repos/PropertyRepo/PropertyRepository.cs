@@ -74,12 +74,13 @@ namespace AirBnb.DAL.Repos.PropertyRepo
 		public async Task<Property> GetPropertyDetailsById(int propId)
 		{
 			return await _context.Set<Property>().Include(x => x.City).Include(x => x.Category)
-				.Include(x => x.PropertyImages).
+				.Include(x => x.PropertyImages).Include(x=>x.User).
 				Include(x => x.PropertyBokking).
 				Include(x=>x.User).Include(x => x.Amenity).
 				Include(x => x.AppointmentsAvailable)
-				.Include(x=> x.Reviews)
-				.FirstOrDefaultAsync(p => p.Id == propId);
+                 .Include(p => p.Reviews)
+                 .ThenInclude(r => r.User)
+                .FirstOrDefaultAsync(p => p.Id == propId);
 		}
 
 		public async Task<Property> GetPropertyToDeleteById(int id)

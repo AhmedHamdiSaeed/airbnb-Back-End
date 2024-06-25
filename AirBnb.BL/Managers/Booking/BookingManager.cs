@@ -49,7 +49,8 @@ namespace AirBnb.BL.Managers.BookingManagers
                 CheckInDate = bookingAddDto.CheckInDate,
                 CheckOutDate = bookingAddDto.CheckOutDate,
                 TotalPrice = bookingAddDto.TotalPrice,
-                BookingStatus = Status.Pending,
+                BookingStatus = Status.Confirmed,
+                //BookingStatus = bookingAddDto.BookingStatus,
             };
 
             await _unitOfWork.BookingRepository.AddAsync(booking);

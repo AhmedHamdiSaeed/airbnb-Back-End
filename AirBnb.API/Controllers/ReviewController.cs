@@ -127,17 +127,11 @@ namespace AirBnb.API.Controllers
 		}
         #endregion
 
-
-        [HttpGet("check-eligibility/{userId}/{propertyId}")]
-        public async Task<IActionResult> CheckReviewEligibility(string userId, int propertyId)
+        [HttpGet("check-eligibility/{propertyId}/{userId}")]
+        public async Task<IActionResult> CheckForReview(int propertyId, string userId)
         {
-            var isEligible = await _ReviewsManager.CheckReviewEligibility(userId, propertyId);
-            if (isEligible)
-            {
-                return Ok(true);
-            }
-            return Ok(false);
+            var checkForReview = await _ReviewsManager.CheckForReview(propertyId, userId);
+            return Ok(checkForReview);
         }
-
     }
 }
