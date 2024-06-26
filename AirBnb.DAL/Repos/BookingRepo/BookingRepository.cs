@@ -71,5 +71,11 @@ namespace AirBnb.DAL.Repos.BookingRepo
                         .Where(b => b.UserId == userId && b.PropertyId == propertyId)
                         .ToListAsync();
         }
+
+        public async Task<Booking> GetUserBookingetail(int bookingid)
+        {
+            return await _context.Set<Booking>().FirstOrDefaultAsync(x => x.Id == bookingid);
+
+        }
     }
 }

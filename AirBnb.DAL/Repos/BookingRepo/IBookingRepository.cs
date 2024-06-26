@@ -22,7 +22,8 @@ namespace AirBnb.DAL.Repos.BookingRepo
         //Guest
         Task<IEnumerable<Booking>> GetAllUserBooking(string userid);
 		Task<Booking> GetUserBookingetails(int bookingid);
-		Task<Booking> GetBookingByUserAndPropertyAsync(string userId, int propertyId);
+        Task<Booking> GetUserBookingetail(int bookingid);
+        Task<Booking> GetBookingByUserAndPropertyAsync(string userId, int propertyId);
         
 
     }

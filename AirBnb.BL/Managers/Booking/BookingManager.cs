@@ -4,6 +4,7 @@ using AirBnb.BL.Dtos.BookingDtos;
 using AirBnb.DAL.Data.Model;
 using AirBnb.DAL.Unit;
 using Microsoft.AspNetCore.Http.HttpResults;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Internal;
 using System;
 using System.Collections.Generic;
@@ -37,7 +38,7 @@ namespace AirBnb.BL.Managers.BookingManagers
 			
 
 			await _unitOfWork.BookingRepository.AddAsync(booking);
-			return _unitOfWork.SaveChanges()>0;
+			return _unitOfWork.SaveChanges()>0;  
 		}
 
         public async Task<bool> AddBooking(string userid, BookingAddDto bookingAddDto)
@@ -49,12 +50,49 @@ namespace AirBnb.BL.Managers.BookingManagers
                 CheckInDate = bookingAddDto.CheckInDate,
                 CheckOutDate = bookingAddDto.CheckOutDate,
                 TotalPrice = bookingAddDto.TotalPrice,
-                BookingStatus = Status.Confirmed,
-                //BookingStatus = bookingAddDto.BookingStatus,
+                BookingStatus = Status.Pending,
+                //BookingStatus = bookingAdd Dto.BookingStatus,
             };
 
             await _unitOfWork.BookingRepository.AddAsync(booking);
             return _unitOfWork.SaveChanges() > 0;
+        }
+     
+        public async Task<int?> AdddBooking(string userId, BookingAddDto bookingAddDto)
+        {
+			var booking = new Booking
+			{
+				// Initialize properties
+				UserId = userId,
+				PropertyId = bookingAddDto.PropertyId,
+				CheckInDate = bookingAddDto.CheckInDate,
+				CheckOutDate = bookingAddDto.CheckOutDate,
+				TotalPrice = bookingAddDto.TotalPrice,
+                BookingStatus = Status.Pending,
+               
+            };
+
+            await _unitOfWork.BookingRepository.AddAsync(booking);
+            var result = _unitOfWork.SaveChanges() ;
+
+            if (result > 0)
+            {
+                return booking.Id; 
+            }
+            return null;
+        }
+
+        public async Task<bool> DeleteBookingAsync(int bookingId)
+        {
+			var booking = await _unitOfWork.BookingRepository.GetUserBookingetail(bookingId);
+            if (booking == null)
+            {
+                return false;
+            }
+
+			 _unitOfWork.BookingRepository.Delete(booking);
+              _unitOfWork.SaveChanges();
+            return true;
         }
 
         public async Task<IEnumerable<BookingGetAllDto>> GetAllBookingForProperty(int propertyid)
@@ -86,6 +124,7 @@ namespace AirBnb.BL.Managers.BookingManagers
 			var result = allBooking.Select(x => new BookingGetAllDto
 			{
 				Id = x.Id,
+				propertyId=x.PropertyId,
 				CheckInDate = x.CheckInDate,
 				CheckOutDate = x.CheckOutDate,
 				TotalPrice = x.TotalPrice,

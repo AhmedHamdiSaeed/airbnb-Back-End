@@ -38,8 +38,8 @@ namespace AirBnb.API.Controllers
 				if(result is false)
 					return BadRequest("Add Fail");
 
-				return Ok("Added Succesfuly");
-			}
+                return Ok(new { message = "Added Successfully" });
+            }
 			return BadRequest("Data Not Valid");
 
 		}

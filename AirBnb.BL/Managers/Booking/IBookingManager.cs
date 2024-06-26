@@ -2,6 +2,7 @@
 using AirBnb.BL.Dtos.AppointmentAvailableDtos;
 using AirBnb.BL.Dtos.BookingDtos;
 using AirBnb.DAL.Data.Model;
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -19,9 +20,12 @@ namespace AirBnb.BL.Managers.BookingManagers
 
 		Task<IEnumerable<BookingGetAllDto>> GetAllUserBooking(string userid);
 		Task<BookingGetDetailsUserDtos> GetUserBookingetails(int bookingid);
-		Task<bool> AddBooking(string userid, BookingAddDto bookingAddDto);
+		Task<int?> AdddBooking(string userId, BookingAddDto bookingAddDto);
+		Task<bool> DeleteBookingAsync(int bookingId);
+        Task<bool> AddBooking(string userid, BookingAddDto bookingAddDto);
         //Task<IEnumerable<AppointmentsAvailable>> GetPropertyAvailabilityAsync(int propertyId);
         //Task<bool> UpdateAvailabilityAsync(int propertyId, List<AvailabilityUpdateDto> availabilityUpdates);
-
+        
+           
     }
 }
