@@ -14,7 +14,7 @@ namespace AirBnb.BL.Managers.AppointmentsAvailableManager
 		Task<ApptAvailableDto> Update(int apptAvailableId, ApptAvailableAddDto apptAvailableAddDto);
 		Task Delete(int apptAvailableId);
 		Task<IEnumerable<appAvailbletGetDto>> GetAllAppoinmentAvailable(int propId);
-        Task<ApptAvailableUpdateDto> UpdateAvailabilityByPropertyIdAsync(int propertyId, ApptAvailableUpdateDto apptAvailableAddDto);
+		Task<ApptAvailableUpdateDto> UpdateAvailabilityByPropertyIdAsync(int propertyId, ApptAvailableUpdateDto apptAvailableAddDto);
 
-    }
+	}
 }

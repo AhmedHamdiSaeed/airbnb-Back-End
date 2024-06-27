@@ -31,12 +31,11 @@ namespace AirBnb.DAL.Repos.ReviewRepo
 
 		public async Task<Review> GetUserReviewDetails(int reviewId)
 		{
-			return await _context.Set<Review>().Include(x => x.Booking).Include(x=> x.User).FirstOrDefaultAsync(x=>x.Id== reviewId);
+			return await _context.Set<Review>().Include(x=>x.Booking).FirstOrDefaultAsync(x=>x.Id== reviewId);
 		}
-
-        public async Task<bool> AnyAsync(Expression<Func<Review, bool>> predicate)
-        {
-            return await _context.Set<Review>().AnyAsync(predicate);
-        }
-    }
+		public async Task<bool> AnyAsync(Expression<Func<Review, bool>> predicate)
+		{
+			return await _context.Set<Review>().AnyAsync(predicate);
+		}
+	}
 }

@@ -1,4 +1,5 @@
 ﻿using AirBnb.BL.Dtos.AppointmentAvailableDtos;
+using AirBnb.BL.Dtos.BookingDtos;
 using AirBnb.BL.Dtos.PropertyImagesDtos;
 using AirBnb.DAL.Data.Model;
 using System;
@@ -16,6 +17,15 @@ namespace AirBnb.BL.Dtos.PropertyDtos
 		public string Name { get; set; } = string.Empty;
 		public string DisplayedImage { get; set; }
 		public string Description { get; set; } 
+
+	}
+	public class PropertyGetForHosterDto
+	{
+		public int Id { get; set; }
+		public string Name { get; set; } = string.Empty;
+		public string DisplayedImage { get; set; }
+		public IEnumerable<BookingGetAllDto> booking {  get; set; }
+		public string Description { get; set; }
 
 	}
 	public class PropAppoinmentAvailable
@@ -69,13 +79,13 @@ namespace AirBnb.BL.Dtos.PropertyDtos
     }
     public class Reviewdto
     {
-        public string userID { get; set; }
-        public string ReviewComment { get; set; } = string.Empty;
-        public int Rate { get; set; }
-        public string UserName { get; set; } = string.Empty;
-        public string Userimage { get; set; } = string.Empty;
-        
-    }
+		public string userID { get; set; }
+		public string ReviewComment { get; set; } = string.Empty;
+		public int Rate { get; set; }
+		public string UserName { get; set; } = string.Empty;
+		public string Userimage { get; set; } = string.Empty;
+
+	}
     public class PaggenationsResultDto
 	{
 		public int Quantity { get; set; }
@@ -111,5 +121,9 @@ namespace AirBnb.BL.Dtos.PropertyDtos
 		public string UserId { get; set; }
 		public int CategoryId { get; set; }
 		public int CityId { get; set; }
+	}
+	public class PropertyUpdateByAdminDto
+	{
+		public Status PropertStatus { get; set; }
 	}
 }

@@ -26,7 +26,7 @@ namespace AirBnb.API.Controllers.Property
 		public async Task<IActionResult> GetAllPropertyForAllUsers(int pageNumber , int pageSize , int? cityId = null, int? cateId = null)
 		{
 			if (pageNumber < 1 ) pageNumber = 1;
-			if (pageSize < 2) pageSize = 2;
+			if (pageSize < 2) pageSize = 3;
 
 			var result = await _propertyManager.GetAllPropertyForAllUsers(pageNumber, pageSize, cityId, cateId);
 			if (result == null) return NotFound("Data Is Empty");
@@ -34,19 +34,22 @@ namespace AirBnb.API.Controllers.Property
 		}
 		#endregion
 
-
 		#region GetAllPropertyForAdmin
 		[HttpGet("GetAllPropertyForAdmin")]
-
 		[Authorize(Policy = "ForAdmin")]
 		[AuthorizeCurrentUser]
+
 		public async Task<IActionResult> GetAllPropertyForAdmin(int pageNumber, int pageSize, int? cityId = null, int? cateId = null)
 		{
+			if (pageNumber < 1) pageNumber = 1;
+			if (pageSize < 2) pageSize = 3;
+
 			var result = await _propertyManager.GetAllPropertyForAdmin(pageNumber, pageSize, cityId, cateId);
 			if (result == null) return NotFound("Data Is Empty");
 			return Ok(result);
 		}
 		#endregion
+
 		#region GetPropertyDetailsById
 		[HttpGet("GetPropertyDetailsById/{id}")]
 		public async Task<IActionResult> GetPropertyDetailsById(int id)
@@ -126,6 +129,21 @@ namespace AirBnb.API.Controllers.Property
 				return BadRequest("Error Happend");
 			return Ok(result);
 		}
+
+		#endregion
+
+		#region Update Property
+		[HttpPut("UpdatePropertyByAmin/{id}")]
+		//[Authorize(Policy = "ForAdmin")]
+		//[AuthorizeCurrentUser]
+		public async Task<IActionResult> UpdatePropertyAdmin(int id, PropertyUpdateByAdminDto updateProp)
+		{
+			var result = await _propertyManager.UpdatePropertyByAdmin(id, updateProp);
+			if (result is false)
+				return BadRequest("Error Happend");
+			return Ok(result);
+		}
+
 		#endregion
 	}
 }

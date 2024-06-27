@@ -27,7 +27,7 @@ namespace AirBnb.BL.Managers.Categories
 			var categories= _unitOfWork.CategoryRepository.getAll().ToList();
 			if(categories==null)
 				return null;
-			return categories.Select(c=>new CategoryReadDto(c.Id,c.Name,c.IconURL)).ToList();
+			return categories.Select(c=>new CategoryReadDto(c.Name,c.IconURL)).ToList();
 		}
 
         public async Task<bool> AddCategory(CategoryDto categoryDto)
@@ -70,7 +70,7 @@ namespace AirBnb.BL.Managers.Categories
 		{
 			var categories=await _unitOfWork.CategoryRepository.GetAllAsync();
             if (categories is null) return null;
-            return   categories.Select(c=>new CategoryReadDto(c.Id,c.Name,c.IconURL));
+            return   categories.Select(c=>new CategoryReadDto(c.Name,c.IconURL));
         }
 
         public async Task<GetOneCategoryDtos> GetCategoryById(int id)
@@ -94,9 +94,9 @@ namespace AirBnb.BL.Managers.Categories
             };
 		}
 
-		public async Task<bool> UpdateCategory(CategoryEditDtoURL category)
+		public async Task<bool> UpdateCategory(int id,CategoryDto category)
 		{
-			Category cate = await _unitOfWork.CategoryRepository.GetByIdAsync(category.id);
+			Category cate = await _unitOfWork.CategoryRepository.GetByIdAsync(id);
 			cate.Name = category.Name;
 			cate.Description = category.Desc;
 			cate.IconURL = category.IconURL;

@@ -38,8 +38,8 @@ namespace AirBnb.API.Controllers
 				if(result is false)
 					return BadRequest("Add Fail");
 
-                return Ok(new { message = "Added Successfully" });
-            }
+				return Ok(new { message = "Added Successfully" });
+			}
 			return BadRequest("Data Not Valid");
 
 		}
@@ -125,13 +125,13 @@ namespace AirBnb.API.Controllers
 			}
 			return BadRequest("Data Not Valid");
 		}
-        #endregion
+		#endregion
 
-        [HttpGet("check-eligibility/{propertyId}/{userId}")]
-        public async Task<IActionResult> CheckForReview(int propertyId, string userId)
-        {
-            var checkForReview = await _ReviewsManager.CheckForReview(propertyId, userId);
-            return Ok(checkForReview);
-        }
-    }
+		[HttpGet("check-eligibility/{propertyId}/{userId}")]
+		public async Task<IActionResult> CheckForReview(int propertyId, string userId)
+		{
+			var checkForReview = await _ReviewsManager.CheckForReview(propertyId, userId);
+			return Ok(checkForReview);
+		}
+	}
 }

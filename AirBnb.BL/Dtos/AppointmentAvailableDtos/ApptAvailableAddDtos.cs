@@ -60,13 +60,13 @@ namespace AirBnb.BL.Dtos.AppointmentAvailableDtos
 
 		public bool IsAvailable { get; set; }
 	}
+	
+	public class ApptAvailableUpdateDto
+	{
 
-    public class ApptAvailableUpdateDto
-    {
-      
 
-        public DateTime From { get; set; }
-        public DateTime To { get; set; }
-        public bool IsAvailable { get; set; }
-    }
+		public DateTime From { get; set; }
+		public DateTime To { get; set; }
+		public bool IsAvailable { get; set; }
+	}
 }

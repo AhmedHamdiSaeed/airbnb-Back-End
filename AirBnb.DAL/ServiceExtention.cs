@@ -6,6 +6,7 @@ using AirBnb.DAL.Repos.BookingRepo;
 using AirBnb.DAL.Repos.CategoryRepo;
 using AirBnb.DAL.Repos.cityRepo;
 using AirBnb.DAL.Repos.CountryRepo;
+using AirBnb.DAL.Repos.PaymentRepo;
 using AirBnb.DAL.Repos.PropertyImagesRepo;
 using AirBnb.DAL.Repos.PropertyRepo;
 using AirBnb.DAL.Repos.ReviewRepo;
@@ -29,7 +30,7 @@ namespace AirBnb.DAL
 		{
 			var connectionString = config.GetConnectionString("cs");
 			service.AddDbContext<AppDbContext>(option=>option.UseSqlServer(connectionString));
-
+			
 
 			service.AddScoped<IReviewRepository, ReviewRepository>();
 			service.AddScoped<IBookingRepository, BookingRepository>();

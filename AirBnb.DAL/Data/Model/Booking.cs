@@ -10,8 +10,10 @@ namespace AirBnb.DAL.Data.Model
 	public enum Status
 	{
 		Pending=0,
-		Confirmed = 1,
-		Canceled = 2
+		WaitForPayment=1,
+		Confirmed = 2,
+		Canceled = 3,
+			
 	}
 	public class Booking:BaseEntity<int>
 	{
@@ -29,6 +31,10 @@ namespace AirBnb.DAL.Data.Model
 		public Status BookingStatus { get; set; }
         public IEnumerable<Review> Reviews { get; set; } = new List<Review>();
 
-     
+		// Payment 
+		public string ClientSecret { get; set; }
+		public string PaymentIntentId { get; set; }
+
+
     }
 }

@@ -26,10 +26,10 @@ namespace AirBnb.DAL.Repos.PropertyRepo
 			_context.SaveChanges();
 		}
 
-		public async Task<PaggenationReslut> GetAllPropertyForAdmin(int pageSize, int pageNumber, int? cityId = null, int? cateId = null)
+		public async Task<PaggenationReslut> GetAllPropertyForAdmin(int pageNumber, int pageSize, int? cityId = null, int? cateId = null)
 		{
 
-			var query = _context.Set<Property>().AsNoTracking().AsQueryable();
+			var query = _context.Set<Property>().Where(x => x.Status == Status.Pending).AsNoTracking().AsQueryable();
 
 			if (cityId.HasValue)
 			{
@@ -68,19 +68,17 @@ namespace AirBnb.DAL.Repos.PropertyRepo
 
 		public async Task<IEnumerable<Property>> GetHosterProperties(string hosterId)
 		{
-			return await _context.Set<Property>().AsNoTracking().Where(x=>x.UserId==hosterId).ToListAsync();
+			return await _context.Set<Property>().AsNoTracking().Where(x=>x.UserId==hosterId && x.Status==Status.Confirmed).ToListAsync();
 		}
 
 		public async Task<Property> GetPropertyDetailsById(int propId)
 		{
 			return await _context.Set<Property>().Include(x => x.City).Include(x => x.Category)
-				.Include(x => x.PropertyImages).Include(x=>x.User).
+				.Include(x => x.PropertyImages).
 				Include(x => x.PropertyBokking).
 				Include(x=>x.User).Include(x => x.Amenity).
 				Include(x => x.AppointmentsAvailable)
-                 .Include(p => p.Reviews)
-                 .ThenInclude(r => r.User)
-                .FirstOrDefaultAsync(p => p.Id == propId);
+				.FirstOrDefaultAsync(p => p.Id == propId);//.Include(x=> x.Reviews)
 		}
 
 		public async Task<Property> GetPropertyToDeleteById(int id)

@@ -41,13 +41,13 @@ namespace AirBnb.API.Controllers
 
 		#region GetPropertyBookingDetails
 		[HttpGet("GetPropertyBookingDetails/{id}")]
-		//[Authorize(Policy = "ForHost")]
+		[Authorize(Policy = "ForHost")]
 		[AuthorizeCurrentUser]
 		public async Task<IActionResult> GetPropertyBookingDetails(int id)
 		{
 			var result = await _bookingManager.GetPropertyBookingDetails(id);
 			if (result == null)
-				return NotFound("Data Is Empty");
+				return Ok("Data Is Empty");
 
 			return Ok(result);
 		}
@@ -64,7 +64,7 @@ namespace AirBnb.API.Controllers
 				
 				var result = await _bookingManager.UpdateBooking(id, obj);
 				if(result is false)
-					return BadRequest("Update Feild");
+					return Ok("Update Feild");
 
 				return Ok(result);
 			}
@@ -75,7 +75,7 @@ namespace AirBnb.API.Controllers
 
 		#region GetAllUserBooking
 		[HttpGet("GetAllUserBooking")]
-		[Authorize(Policy = "ForUser")]
+		//[Authorize(Policy = "ForUser")]
 		[AuthorizeCurrentUser]
 		public async Task<IActionResult> GetAllUserBooking()
 		{
@@ -88,20 +88,24 @@ namespace AirBnb.API.Controllers
 				return Ok(result);
 			
 		}
-        #endregion
-        [HttpDelete("DeleteBooking/{id}")]
-        public async Task<IActionResult> DeleteBooking(int id)
-        {
-            var result = await _bookingManager.DeleteBookingAsync(id);
-            if (!result)
-            {
-                return NotFound(new { message = "Booking not found" });
-            }
+		#endregion
 
-            return Ok(new { message = "Booking deleted successfully" });
-        }
-        #region GetUserBookingetails
-        [HttpGet("GetUserBookingetails/{id}")]
+		#region Delete Booking
+		[HttpDelete("DeleteBooking/{id}")]
+		public async Task<IActionResult> DeleteBooking(int id)
+		{
+			var result = await _bookingManager.DeleteBookingAsync(id);
+			if (!result)
+			{
+				return NotFound(new { message = "Booking not found" });
+			}
+
+			return Ok(new { message = "Booking deleted successfully" });
+		}
+		#endregion
+
+		#region GetUserBookingetails
+		[HttpGet("GetUserBookingetails/{id}")]
 		//[Authorize(Policy = "ForUser")]
 		[AuthorizeCurrentUser]
 		public async Task<IActionResult> GetUserBookingetails(int id)
@@ -115,47 +119,48 @@ namespace AirBnb.API.Controllers
 			return Ok(result);
 
 		}
-        #endregion
-
-        #region AddBooking
-        [HttpPost("AddBooking")]
+		#endregion
+			
+		#region AddBooking
+		[HttpPost("AddBooking")]
 		[Authorize(Policy = "ForUser")]
 		[AuthorizeCurrentUser]
-        public async Task<IActionResult> AddBooking(BookingAddDto bookingAdd)
-        {
+		public async Task<IActionResult> AddBooking(BookingAddDto bookingAdd)
+		{
 
-            AppUser CurrentUser = await _userManager.GetUserAsync(User);
+			AppUser CurrentUser = await _userManager.GetUserAsync(User);
 
-            if (ModelState.IsValid)
-            {
-                var result = await _bookingManager.AddBooking(CurrentUser.Id, bookingAdd);
-                if (result is false)
-                    return BadRequest("Add Field");
+			if (ModelState.IsValid)
+			{
+				var result = await _bookingManager.AddBooking(CurrentUser.Id, bookingAdd);
+				if (result is false)
+					return BadRequest("Add Field");
 
-                return Ok(result);
-            }
-            return BadRequest("Data Not Valid");
-        }
-        #endregion
-        #region AdddBooking
-        [HttpPost("AdddBooking")]
-        [Authorize(Policy = "ForUser")]
-        [AuthorizeCurrentUser]
-        public async Task<IActionResult> AdddBooking(BookingAddDto bookingAdd)
-        {
+				return Ok(result);
+			}
+			return BadRequest("Data Not Valid");
+		}
+		#endregion
 
-            AppUser CurrentUser = await _userManager.GetUserAsync(User);
+		#region AdddBooking
+		[HttpPost("AdddBooking")]
+		[Authorize(Policy = "ForUser")]
+		[AuthorizeCurrentUser]
+		public async Task<IActionResult> AdddBooking(BookingAddDto bookingAdd)
+		{
 
-            if (ModelState.IsValid)
-            {
-                var bookingId = await _bookingManager.AdddBooking(CurrentUser.Id, bookingAdd);
-                if (bookingId == null)
-                    return BadRequest("Add Failed");
+			AppUser CurrentUser = await _userManager.GetUserAsync(User);
 
-                return Ok(bookingId);
-            }
-            return BadRequest("Data Not Valid");
-        }
-        #endregion
-    }
+			if (ModelState.IsValid)
+			{
+				var bookingId = await _bookingManager.AdddBooking(CurrentUser.Id, bookingAdd);
+				if (bookingId == null)
+					return BadRequest("Add Failed");
+
+				return Ok(bookingId);
+			}
+			return BadRequest("Data Not Valid");
+		}
+		#endregion
+	}
 }

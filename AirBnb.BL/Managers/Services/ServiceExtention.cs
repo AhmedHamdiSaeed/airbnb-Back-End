@@ -4,6 +4,7 @@ using AirBnb.BL.Managers.BookingManagers;
 using AirBnb.BL.Managers.Categories;
 using AirBnb.BL.Managers.Cities;
 using AirBnb.BL.Managers.Countries;
+using AirBnb.BL.Managers.PaymentManages;
 using AirBnb.BL.Managers.Properties;
 using AirBnb.BL.Managers.PropertiesImages;
 using AirBnb.BL.Managers.Reviews;
@@ -20,6 +21,8 @@ namespace AirBnb.BL.Managers.Services
     {
         public static void AddBLServices(this IServiceCollection services)
         {
+            // Pyament
+            services.AddScoped<IPaymentManager,PaymentManager>();
             services.AddScoped<IBookingManager, BookingManager>();
             services.AddScoped<IReviewManager, ReviewManager>();
             services.AddScoped<ICategoryManager, CategoryManager>();

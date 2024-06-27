@@ -23,12 +23,12 @@ namespace AirBnb.DAL.Repos.AppointmentAvailableRepo
 		{
 			return await _context.Set<AppointmentsAvailable>().Where(x=>x.PropertyId==propId).AsNoTracking().ToListAsync();	
 		}
-        public async Task<AppointmentsAvailable> GetByPropertyIdAsync(int propertyId)
-        {
-            return await _context.Set<AppointmentsAvailable>()
-                                 .FirstOrDefaultAsync(a => a.PropertyId == propertyId);
-        }
+		public async Task<AppointmentsAvailable> GetByPropertyIdAsync(int propertyId)
+		{
+			return await _context.Set<AppointmentsAvailable>()
+								 .FirstOrDefaultAsync(a => a.PropertyId == propertyId);
+		}
 
-        
-    }
+
+	}
 }

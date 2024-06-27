@@ -21,21 +21,21 @@ namespace AirBnb.BL.Dtos.ReviewsDtos
 	{
 		public int BookingId { get; set; }
 		public int Rating { get; set; }
-        public int PropertyId { get; set; }
-        public string Comment { get; set; } = string.Empty;
+		public int PropertyId { get; set; }
+		public string Comment { get; set; } = string.Empty;
 	}
 
 	public class ReviewsUpdateDto
 	{
 		public int BookingId { get; set; }
 		public int Rating { get; set; }
-        public int PropertyId { get; set; }
-        public string Comment { get; set; } = string.Empty;
+		public int PropertyId { get; set; }
+		public string Comment { get; set; } = string.Empty;
 	}
-    public class CheckForReviewDto
-    {
-        public bool HasReview { get; set; }
-        public int? BookingId { get; set; }
-    }
+	public class CheckForReviewDto
+	{
+		public bool HasReview { get; set; }
+		public int? BookingId { get; set; }
+	}
 
 }

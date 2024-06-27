@@ -22,10 +22,6 @@ namespace AirBnb.BL.Managers.BookingManagers
 		Task<BookingGetDetailsUserDtos> GetUserBookingetails(int bookingid);
 		Task<int?> AdddBooking(string userId, BookingAddDto bookingAddDto);
 		Task<bool> DeleteBookingAsync(int bookingId);
-        Task<bool> AddBooking(string userid, BookingAddDto bookingAddDto);
-        //Task<IEnumerable<AppointmentsAvailable>> GetPropertyAvailabilityAsync(int propertyId);
-        //Task<bool> UpdateAvailabilityAsync(int propertyId, List<AvailabilityUpdateDto> availabilityUpdates);
-        
-           
-    }
+		Task<bool> AddBooking(string userid, BookingAddDto bookingAddDto);
+	}
 }

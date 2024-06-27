@@ -72,30 +72,30 @@ namespace AirBnb.BL.Managers.AppointmentsAvailableManager
 			};
 		}
 
-        public async Task<ApptAvailableUpdateDto> UpdateAvailabilityByPropertyIdAsync(int propertyId, ApptAvailableUpdateDto apptAvailableAddDto)
-        {
-            var apptAvailble = await _unitOfwork.ApptAvailableRepository.GetByPropertyIdAsync(propertyId);
+		public async Task<ApptAvailableUpdateDto> UpdateAvailabilityByPropertyIdAsync(int propertyId, ApptAvailableUpdateDto apptAvailableAddDto)
+		{
+			var apptAvailble = await _unitOfwork.ApptAvailableRepository.GetByPropertyIdAsync(propertyId);
 
-            if (apptAvailble == null)
-                return null;
+			if (apptAvailble == null)
+				return null;
 
-            apptAvailble.From = Convert.ToDateTime(apptAvailableAddDto.From);
-            apptAvailble.To = Convert.ToDateTime(apptAvailableAddDto.To);
-             apptAvailble.IsAvailable = Convert.ToBoolean(apptAvailableAddDto.IsAvailable);
+			apptAvailble.From = Convert.ToDateTime(apptAvailableAddDto.From);
+			apptAvailble.To = Convert.ToDateTime(apptAvailableAddDto.To);
+			apptAvailble.IsAvailable = Convert.ToBoolean(apptAvailableAddDto.IsAvailable);
 
-             _unitOfwork.SaveChanges();
+			_unitOfwork.SaveChanges();
 
-            return new ApptAvailableUpdateDto
-            {
-              
-                From = apptAvailble.From,
-                To = apptAvailble.To,
-                IsAvailable = apptAvailble.IsAvailable
-            };
-        }
+			return new ApptAvailableUpdateDto
+			{
 
-        // Delete an appoitment availability
-        public async Task Delete(int apptAvailableId)
+				From = apptAvailble.From,
+				To = apptAvailble.To,
+				IsAvailable = apptAvailble.IsAvailable
+			};
+		}
+
+		// Delete an appoitment availability
+		public async Task Delete(int apptAvailableId)
 		{
 			var apptAvailble = await _unitOfwork.ApptAvailableRepository.GetByIdAsync(apptAvailableId);
 
@@ -125,5 +125,7 @@ namespace AirBnb.BL.Managers.AppointmentsAvailableManager
 			});
 			return result;
 		}
+
+		
 	}
 }
