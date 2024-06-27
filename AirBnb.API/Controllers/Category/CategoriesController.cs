@@ -63,67 +63,69 @@ namespace AirBnb.API.Controllers.Category
 
         #region AddCategory
         [HttpPost("AddCategory")]
-        //[Authorize(Policy = "ForAdmin")]
-        //[AuthorizeCurrentUser]
-        public async Task<IActionResult> AddCategory([FromForm] CategoryAddDto category)
+		[Authorize(Policy = "ForAdmin")]
+		[AuthorizeCurrentUser]
+		public async Task<IActionResult> AddCategory(CategoryDto category)
         {
-            string[] allowExtenstion = [".jpg", ".jpeg", ".png"];
+			//string[] allowExtenstion = [".jpg", ".jpeg", ".png"];
 
-            if (!allowExtenstion.Contains(Path.GetExtension(category.IconURL.FileName), StringComparer.InvariantCultureIgnoreCase))
-            { return BadRequest(new ApiResponse(400, "not support this extension", string.Empty)); }
-            if (category.IconURL.Length > 2_000_000)
-            {
-                return BadRequest(new ApiResponse(400, "must less or equal 2MB", string.Empty));
-            }
+			//if (!allowExtenstion.Contains(Path.GetExtension(category.IconURL.FileName), StringComparer.InvariantCultureIgnoreCase))
+			//{ return BadRequest(new ApiResponse(400, "not support this extension", string.Empty)); }
+			//if (category.IconURL.Length > 2_000_000)
+			//{
+			//    return BadRequest(new ApiResponse(400, "must less or equal 2MB", string.Empty));
+			//}
 
-            var newFileName = $"{Guid.NewGuid()}{Path.GetExtension(category.IconURL.FileName)}";
-            var fullFilePath = Path.Combine(Environment.CurrentDirectory, "Assets", $"{newFileName}");
-            using var stream = new FileStream(fullFilePath, FileMode.Create);
-            category.IconURL.CopyTo(stream);
+			//var newFileName = $"{Guid.NewGuid()}{Path.GetExtension(category.IconURL.FileName)}";
+			//var fullFilePath = Path.Combine(Environment.CurrentDirectory, "Assets", $"{newFileName}");
+			//using var stream = new FileStream(fullFilePath, FileMode.Create);
+			//category.IconURL.CopyTo(stream);
 
 
-            var newCategory = await _categoryManager.AddCategory(new CategoryDto(category.Name, $"{Request.Scheme}://{Request.Host}/Assets/{newFileName}", category.Desc));
-            return Ok(new ApiResponse(201, "created", newCategory));
+			//var newCategory = await _categoryManager.AddCategory(new CategoryDto(category.Name, $"{Request.Scheme}://{Request.Host}/Assets/{newFileName}", category.Desc));
+			//return Ok(new ApiResponse(201, "created", newCategory));.
 
-        }
+			if (ModelState.IsValid)
+			{
+				bool result = await _categoryManager.AddCategory(category);
+				if (result is false)
+				{
+					return BadRequest("Field On Add Data");
+				}
+				return Ok(result);
+			}
+			return BadRequest("Data Not Valid");
+		}
         #endregion
 
         #region UpdateCategory
         [HttpPut("UpdateCategory/{id}")]  //admin
         [Authorize(Policy = "ForAdmin")]
 		[AuthorizeCurrentUser]
-		public async Task<IActionResult> UpdateCategory([FromForm] CategoryEditDto category)
+		public async Task<IActionResult> UpdateCategory(int id,CategoryDto category)
         {
-            string[] allowExtenstion = [".jpg", ".jpeg", ".png"];
+  
 
-            if (!allowExtenstion.Contains(Path.GetExtension(category.IconURL.FileName), StringComparer.InvariantCultureIgnoreCase))
-            { return BadRequest(new ApiResponse(400, "not support this extension", string.Empty)); }
-            if (category.IconURL.Length > 2_000_000)
-            {
-                return BadRequest(new ApiResponse(400, "must less or equal 2MB", string.Empty));
-            }
-
-            var newFileName = $"{Guid.NewGuid()}{Path.GetExtension(category.IconURL.FileName)}";
-            var fullFilePath = Path.Combine(Environment.CurrentDirectory, "Assets", $"{newFileName}");
-            using var stream = new FileStream(fullFilePath, FileMode.Create);
-            category.IconURL.CopyTo(stream);
-
-
-            var result = await _categoryManager.UpdateCategory(new CategoryEditDtoURL(category.id,category.Name, $"{Request.Scheme}://{Request.Host}/Assets/{newFileName}", category.Desc));
+			if (ModelState.IsValid)
+			{
+				bool result = await _categoryManager.UpdateCategory(id,category);
 				if (result is false)
-					return BadRequest(new ApiResponse(400,"faild",string.Empty));
-			
-			return Ok(new ApiResponse(200,"updated",string.Empty));
+				{
+					return BadRequest("Field On Update Data");
+				}
+				return Ok(result);
+			}
+			return BadRequest("Data Not Valid");
 		}
 		#endregion
 
         #region DeleteCategory
          [HttpDelete("DeleteCategory/{id}")] //admin
-  //      [Authorize(Policy = "ForAdmin")]
-		//[AuthorizeCurrentUser]
-		public async Task<IActionResult> DeleteCategory(int categoryId)
+		[Authorize(Policy = "ForAdmin")]
+		[AuthorizeCurrentUser]
+		public async Task<IActionResult> DeleteCategory(int id)
 		{
-			var result =await _categoryManager.DeleteCategory(categoryId);
+			var result =await _categoryManager.DeleteCategory(id);
 			if (result is false)
 				return BadRequest("Feild In Deleting Data");
 			return Ok(result);

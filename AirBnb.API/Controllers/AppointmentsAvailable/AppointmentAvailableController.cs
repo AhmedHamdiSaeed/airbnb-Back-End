@@ -32,7 +32,7 @@ namespace AirBnb.API.Controllers.AppointmentsAvailable
         [HttpPut("UpdateAppoinmentAvail/{id}")]
         //[Authorize(Policy = "ForHost")]
         //[AuthorizeCurrentUser]
-        public async Task<IActionResult> Update(int id, ApptAvailableUpdateDto apptAvailableAddDto)
+        public async Task<IActionResult> Update(int id, ApptAvailableAddDto apptAvailableAddDto)
         {
             if (!ModelState.IsValid)
                 return BadRequest(ModelState);
