@@ -155,7 +155,8 @@ namespace AirBnb.BL.Managers.BookingManagers
 				UserName = $"{x.User.FirstName} {x.User.LastName}",
 				UserImage = x.User.Image,
 				UserPhone = x.User.PhoneNumber,
-			});
+				Status =(int) x.BookingStatus
+			}); ;
 			return result;
 			
 		}

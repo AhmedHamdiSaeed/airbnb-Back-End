@@ -47,6 +47,7 @@ namespace AirBnb.BL.Dtos.BookingDtos
 		public int UserAge { get; set; }
 		public string UserImage {  get; set; }
 		public string UserPhone { get; set; }
+		public int Status { get; set; }
 	}
 	public class BookingAddDto
 	{

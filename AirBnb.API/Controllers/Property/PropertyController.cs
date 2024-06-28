@@ -107,14 +107,22 @@ namespace AirBnb.API.Controllers.Property
 		[HttpDelete("DeletePropertyById/{id}")]
 		public async Task<IActionResult> DeleteProperty(int id)
 		{
-			var propertyDeleted = await _propertyManager.RemoveProperty(id);
-			if (propertyDeleted)
+			try
 			{
-				return Ok("Property updated to disable future bookings.");
+				var propertyDeleted = await _propertyManager.RemoveProperty(id);
+				if (propertyDeleted)
+				{
+					return Ok("Property Deleted Successfully");
+				}
+				else
+				{
+					return NotFound("Property not found or failed to delete.");
+				}
 			}
-			else
+			catch (Exception ex)
 			{
-				return BadRequest("Failed to update the property status.");
+				// Log the exception
+				return StatusCode(500, "Internal server error");
 			}
 
 		}

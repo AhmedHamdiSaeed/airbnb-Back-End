@@ -173,35 +173,13 @@ namespace AirBnb.BL.Managers.Properties
 
 		public async Task<bool> RemoveProperty(int propertyId)
 		{
-			var res = await _unitOfWork.PropertyRepository.GetPropertyToDeleteById(propertyId);
-			var bookings = res.PropertyBokking.ToList();
-
-			bool hasActiveOrFutureBookings = bookings.Any(booking =>
-				(booking.CheckInDate <= DateTime.Now && booking.CheckOutDate >= DateTime.Now) || // Ongoing booking
-				booking.CheckInDate > DateTime.Now);
-
-			if (hasActiveOrFutureBookings)
+			Property singleProp = await _unitOfWork.PropertyRepository.GetPropertyDetailsById(propertyId);
+			if (singleProp == null)
 			{
-				// If there are future bookings, set property to unavailable for future bookings only
-				foreach (var appointment in res.AppointmentsAvailable)
-				{
-					appointment.IsAvailable = false;
-				}
-
-
-				return _unitOfWork.SaveChanges() > 0; // Update successful
+				return false;
 			}
-			else
-			{
-				// If no future bookings, proceed with setting appointments to unavailable and deleting property
-				foreach (var appointment in res.AppointmentsAvailable)
-				{
-					appointment.IsAvailable = false;
-				}
-
-				_unitOfWork.PropertyRepository.DeleteProperty(res);
-				return _unitOfWork.SaveChanges() > 0; // Deletion successful
-			}
+			_unitOfWork.PropertyRepository.Delete(singleProp);
+			return _unitOfWork.SaveChanges()>0;
 		}
 
 		public async Task<bool> UpdatePropertyByHoster(int propId, PropertyUpdateDto updateProperty)
