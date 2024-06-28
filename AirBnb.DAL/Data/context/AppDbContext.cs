@@ -10,6 +10,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Xml;
 
+
 namespace AirBnb.DAL.Data.context
 {
 	public class AppDbContext : IdentityDbContext<AppUser>
@@ -317,25 +318,25 @@ namespace AirBnb.DAL.Data.context
 			#endregion
 			#region Review
 			builder.Entity<Review>().HasData(
-				new Review { Id = 1,  BookingId = 1, UserId = "53f9998c-e5c9-4bd5-8db6-eefc68f7fb4f", Rating = 5, Comment = "Good Comment" },
-				new Review { Id = 2,  BookingId = 2, UserId = "53f9998c-e5c9-4bd5-8db6-eefc68f7fb4f", Rating = 4, Comment = "Nice place" },
-				new Review { Id = 3,  BookingId = 3, UserId = "53f9998c-e5c9-4bd5-8db6-eefc68f7fb4f", Rating = 3, Comment = "Average experience" },
-				new Review { Id = 4,  BookingId = 4, UserId = "53f9998c-e5c9-4bd5-8db6-eefc68f7fb4f", Rating = 2, Comment = "Not as expected" },
-				new Review { Id = 5,  BookingId = 5, UserId = "53f9998c-e5c9-4bd5-8db6-eefc68f7fb4f", Rating = 5, Comment = "Excellent service" },
-				new Review { Id = 6,  BookingId = 6, UserId = "53f9998c-e5c9-4bd5-8db6-eefc68f7fb4f", Rating = 4, Comment = "Good value for money" },
-				new Review { Id = 7,  BookingId = 7, UserId = "53f9998c-e5c9-4bd5-8db6-eefc68f7fb4f", Rating = 3, Comment = "Decent stay" },
-				new Review { Id = 8,  BookingId = 8, UserId = "53f9998c-e5c9-4bd5-8db6-eefc68f7fb4f", Rating = 1, Comment = "Terrible experience" },
-				new Review { Id = 9,  BookingId = 9, UserId = "53f9998c-e5c9-4bd5-8db6-eefc68f7fb4f", Rating = 5, Comment = "Highly recommend" },
-				new Review { Id = 10, BookingId = 10, UserId = "53f9998c-e5c9-4bd5-8db6-eefc68f7fb4f", Rating = 4, Comment = "Very comfortable" },
-				new Review { Id = 11, BookingId = 11, UserId = "53f9998c-e5c9-4bd5-8db6-eefc68f7fb4f", Rating = 2, Comment = "Could be better" },
-				new Review { Id = 12, BookingId = 12, UserId = "53f9998c-e5c9-4bd5-8db6-eefc68f7fb4f", Rating = 5, Comment = "Loved the place" },
-				new Review { Id = 13, BookingId = 13, UserId = "53f9998c-e5c9-4bd5-8db6-eefc68f7fb4f", Rating = 3, Comment = "It was okay" },
-				new Review { Id = 14, BookingId = 14, UserId = "53f9998c-e5c9-4bd5-8db6-eefc68f7fb4f", Rating = 4, Comment = "Pretty good" },
-				new Review { Id = 15, BookingId = 15, UserId = "53f9998c-e5c9-4bd5-8db6-eefc68f7fb4f", Rating = 2, Comment = "Needs improvement" },
-				new Review { Id = 16, BookingId = 16, UserId = "53f9998c-e5c9-4bd5-8db6-eefc68f7fb4f", Rating = 5, Comment = "Fantastic stay" },
-				new Review { Id = 17, BookingId = 17, UserId = "53f9998c-e5c9-4bd5-8db6-eefc68f7fb4f", Rating = 1, Comment = "Very disappointing" },
-				new Review { Id = 18, BookingId = 18, UserId = "53f9998c-e5c9-4bd5-8db6-eefc68f7fb4f", Rating = 4, Comment = "Good location" },
-				new Review { Id = 19, BookingId = 19, UserId = "53f9998c-e5c9-4bd5-8db6-eefc68f7fb4f", Rating = 3, Comment = "Not bad" },
+				new Review { Id = 1, BookingId = 1, UserId = "53f9998c-e5c9-4bd5-8db6-eefc68f7fb4f", Rating = 5, Comment = "Good Comment" },
+				new Review { Id = 2, BookingId = 2, UserId = "53f9998c-e5c9-4bd5-8db6-eefc68f7fb4f", Rating = 4, Comment = "Nice place" },
+				new Review { Id = 3, BookingId = 3, UserId = "53f9998c-e5c9-4bd5-8db6-eefc68f7fb4f", Rating = 3, Comment = "Average experience" },
+				new Review { Id = 4, BookingId = 4, UserId = "53f9998c-e5c9-4bd5-8db6-eefc68f7fb4f", Rating = 2, Comment = "Not as expected" },
+				new Review { Id = 5, BookingId = 5, UserId = "53f9998c-e5c9-4bd5-8db6-eefc68f7fb4f", Rating = 5, Comment = "Excellent service" },
+				new Review { Id = 6, BookingId = 6, UserId = "53f9998c-e5c9-4bd5-8db6-eefc68f7fb4f", Rating = 4, Comment = "Good value for money" },
+				new Review { Id = 7, BookingId = 7, UserId = "53f9998c-e5c9-4bd5-8db6-eefc68f7fb4f", Rating = 3, Comment = "Decent stay" },
+				new Review { Id = 8, BookingId = 8, UserId = "53f9998c-e5c9-4bd5-8db6-eefc68f7fb4f", Rating = 1, Comment = "Terrible experience" },
+				new Review { Id = 9, BookingId = 9, UserId = "53f9998c-e5c9-4bd5-8db6-eefc68f7fb4f", Rating = 5, Comment = "Highly recommend" },
+				new Review { Id = 10,BookingId = 10, UserId = "53f9998c-e5c9-4bd5-8db6-eefc68f7fb4f", Rating = 4, Comment = "Very comfortable" },
+				new Review { Id = 11,BookingId = 11, UserId = "53f9998c-e5c9-4bd5-8db6-eefc68f7fb4f", Rating = 2, Comment = "Could be better" },
+				new Review { Id = 12,BookingId = 12, UserId = "53f9998c-e5c9-4bd5-8db6-eefc68f7fb4f", Rating = 5, Comment = "Loved the place" },
+				new Review { Id = 13,BookingId = 13, UserId = "53f9998c-e5c9-4bd5-8db6-eefc68f7fb4f", Rating = 3, Comment = "It was okay" },
+				new Review { Id = 14,BookingId = 14, UserId = "53f9998c-e5c9-4bd5-8db6-eefc68f7fb4f", Rating = 4, Comment = "Pretty good" },
+				new Review { Id = 15,BookingId = 15, UserId = "53f9998c-e5c9-4bd5-8db6-eefc68f7fb4f", Rating = 2, Comment = "Needs improvement" },
+				new Review { Id = 16,BookingId = 16, UserId = "53f9998c-e5c9-4bd5-8db6-eefc68f7fb4f", Rating = 5, Comment = "Fantastic stay" },
+				new Review { Id = 17,BookingId = 17, UserId = "53f9998c-e5c9-4bd5-8db6-eefc68f7fb4f", Rating = 1, Comment = "Very disappointing" },
+				new Review { Id = 18,BookingId = 18, UserId = "53f9998c-e5c9-4bd5-8db6-eefc68f7fb4f", Rating = 4, Comment = "Good location" },
+				new Review { Id = 19,BookingId = 19, UserId = "53f9998c-e5c9-4bd5-8db6-eefc68f7fb4f", Rating = 3, Comment = "Not bad" },
 				new Review { Id = 20, BookingId = 20, UserId = "53f9998c-e5c9-4bd5-8db6-eefc68f7fb4f", Rating = 5, Comment = "Amazing experience" }
 				);
 			#endregion

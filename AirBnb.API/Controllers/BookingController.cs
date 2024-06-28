@@ -92,6 +92,7 @@ namespace AirBnb.API.Controllers
 
 		#region Delete Booking
 		[HttpDelete("DeleteBooking/{id}")]
+		[AuthorizeCurrentUser]
 		public async Task<IActionResult> DeleteBooking(int id)
 		{
 			var result = await _bookingManager.DeleteBookingAsync(id);
@@ -123,9 +124,9 @@ namespace AirBnb.API.Controllers
 			
 		#region AddBooking
 		[HttpPost("AddBooking")]
-		[Authorize(Policy = "ForUser")]
-		[AuthorizeCurrentUser]
-		public async Task<IActionResult> AddBooking(BookingAddDto bookingAdd)
+		//[Authorize(Policy = "ForUser")]
+		//[AuthorizeCurrentUser]
+		public async Task<IActionResult> AddBooking(appAvailbletGetDto bookingAdd)
 		{
 
 			AppUser CurrentUser = await _userManager.GetUserAsync(User);

@@ -33,9 +33,9 @@ namespace AirBnb.DAL.Repos.BookingRepo
 			return await _context.Set<Booking>().Include(x => x.User).FirstOrDefaultAsync(x => x.Id == bookingId);
 		}
 
-		public async Task<Booking> GetPropertyBookingDetails(int propertyId)
+		public async Task<IEnumerable<Booking>> GetPropertyBookingDetails(int propertyId)
 		{
-			return await _context.Set<Booking>().Include(x=>x.User).Include(x=>x.Property).FirstOrDefaultAsync(x=>x.PropertyId==propertyId);
+			return await  _context.Set<Booking>().Include(x=>x.User).Include(x=>x.Property).Where(x => x.PropertyId == propertyId && x.BookingStatus == Status.Pending).AsNoTracking().ToListAsync();
 		}
 
 		public async Task<Booking> GetUserBookingetails(int bookingid)

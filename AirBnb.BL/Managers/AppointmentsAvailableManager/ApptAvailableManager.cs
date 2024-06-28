@@ -72,24 +72,24 @@ namespace AirBnb.BL.Managers.AppointmentsAvailableManager
 			};
 		}
 
-		public async Task<ApptAvailableUpdateDto> UpdateAvailabilityByPropertyIdAsync(int propertyId, ApptAvailableUpdateDto apptAvailableAddDto)
+		public async Task<ApptAvailableUpdateDto> UpdateAvailabilityByPropertyIdAsync(int appAvailable, ApptAvailableUpdateDto apptAvailableAddDto)
 		{
-			var apptAvailble = await _unitOfwork.ApptAvailableRepository.GetByPropertyIdAsync(propertyId);
+			var apptAvailble = await _unitOfwork.ApptAvailableRepository.GetByIdAsync(appAvailable);
 
 			if (apptAvailble == null)
 				return null;
 
-			apptAvailble.From = Convert.ToDateTime(apptAvailableAddDto.From);
-			apptAvailble.To = Convert.ToDateTime(apptAvailableAddDto.To);
-			apptAvailble.IsAvailable = Convert.ToBoolean(apptAvailableAddDto.IsAvailable);
+			//apptAvailble.From = Convert.ToDateTime(apptAvailableAddDto.From);
+			//apptAvailble.To = Convert.ToDateTime(apptAvailableAddDto.To);
+			apptAvailble.IsAvailable = apptAvailableAddDto.IsAvailable;
 
 			_unitOfwork.SaveChanges();
 
 			return new ApptAvailableUpdateDto
 			{
 
-				From = apptAvailble.From,
-				To = apptAvailble.To,
+				//From = apptAvailble.From,
+				//To = apptAvailble.To,
 				IsAvailable = apptAvailble.IsAvailable
 			};
 		}

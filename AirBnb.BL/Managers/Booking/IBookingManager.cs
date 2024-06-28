@@ -14,7 +14,7 @@ namespace AirBnb.BL.Managers.BookingManagers
 	public interface IBookingManager
 	{
 		Task<IEnumerable<BookingGetAllDto>> GetAllBookingForProperty(int propertyid);
-		Task<BookingGetDetailsHostDto> GetPropertyBookingDetails(int propertyId);
+		Task<IEnumerable<BookingGetDetailsHostDto>> GetPropertyBookingDetails(int propertyId);
 
 		Task<bool> UpdateBooking(int bookingid, BookingUpdateDto booking);
 
@@ -22,6 +22,6 @@ namespace AirBnb.BL.Managers.BookingManagers
 		Task<BookingGetDetailsUserDtos> GetUserBookingetails(int bookingid);
 		Task<int?> AdddBooking(string userId, BookingAddDto bookingAddDto);
 		Task<bool> DeleteBookingAsync(int bookingId);
-		Task<bool> AddBooking(string userid, BookingAddDto bookingAddDto);
+		Task<bool> AddBooking(string userid, appAvailbletGetDto amentity);
 	}
 }

@@ -12,14 +12,14 @@ namespace AirBnb.DAL.Data.Model
 		[ForeignKey(nameof(Booking))]
 		public int BookingId { get; set; }
 		public Booking Booking { get; set; }
-		[ForeignKey(nameof(User))]
+		[ForeignKey(nameof(UserReview))]
 		public string UserId { get; set; }
-		public AppUser User { get; set; }
+		public AppUser UserReview { get; set; }
 
 
-		[ForeignKey(nameof(Property))]
-		public int PropertyId { get; set; }
-		public Property Property { get; set; }
+		//[ForeignKey(nameof(Property))]
+		//public int PropertyId { get; set; }
+		//public Property Property { get; set; }
 
 		  public int Rating { get; set; }
 			public string Comment { get; set; } = string.Empty;

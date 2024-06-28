@@ -33,7 +33,7 @@ namespace AirBnb.BL.Managers.Reviews
 			var newReview = new Review
 			{
 				UserId = userId,
-				PropertyId = review.PropertyId,
+				//PropertyId = review.PropertyId,
 				BookingId = review.BookingId,
 				Rating = review.Rating,
 				Comment = review.Comment,

@@ -76,6 +76,8 @@ namespace AirBnb.DAL.Repos.PropertyRepo
 			return await _context.Set<Property>().Include(x => x.City).Include(x => x.Category)
 				.Include(x => x.PropertyImages).
 				Include(x => x.PropertyBokking).
+				ThenInclude(b=>b.Reviews).
+				ThenInclude(u=>u.UserReview).
 				Include(x=>x.User).Include(x => x.Amenity).
 				Include(x => x.AppointmentsAvailable)
 				.FirstOrDefaultAsync(p => p.Id == propId);//.Include(x=> x.Reviews)

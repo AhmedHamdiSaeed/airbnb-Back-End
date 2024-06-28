@@ -12,8 +12,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace AirBnb.DAL.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    [Migration("20240624044442_initial")]
-    partial class initial
+    [Migration("20240627122114_addData")]
+    partial class addData
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -361,7 +361,7 @@ namespace AirBnb.DAL.Migrations
                     b.Property<string>("Comment")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<int?>("PropertyId")
+                    b.Property<int>("PropertyId")
                         .HasColumnType("int");
 
                     b.Property<int>("Rating")
@@ -606,15 +606,19 @@ namespace AirBnb.DAL.Migrations
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.HasOne("AirBnb.DAL.Data.Model.Property", null)
+                    b.HasOne("AirBnb.DAL.Data.Model.Property", "Property")
                         .WithMany("Reviews")
-                        .HasForeignKey("PropertyId");
+                        .HasForeignKey("PropertyId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
 
                     b.HasOne("AirBnb.DAL.Data.Model.AppUser", "User")
                         .WithMany("UserReviews")
                         .HasForeignKey("UserId");
 
                     b.Navigation("Booking");
+
+                    b.Navigation("Property");
 
                     b.Navigation("User");
                 });

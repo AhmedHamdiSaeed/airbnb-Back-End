@@ -30,8 +30,8 @@ namespace AirBnb.BL.Managers.BookingManagers
 			{
 				PropertyId = amentity.PropertyId,
 				UserId = userid,
-				CheckInDate = amentity.From,
-				CheckOutDate = amentity.To,
+				CheckInDate = Convert.ToDateTime(amentity.From),
+				CheckOutDate = Convert.ToDateTime(amentity.To),
 				TotalPrice = amentity.TotalProice,
 				BookingStatus = Status.Pending,
 			};
@@ -41,24 +41,24 @@ namespace AirBnb.BL.Managers.BookingManagers
 			return _unitOfWork.SaveChanges()>0;
 		}
 
-		public async Task<bool> AddBooking(string userid, BookingAddDto bookingAddDto)
-		{
-			var booking = new Booking
-			{
-				PropertyId = bookingAddDto.PropertyId,
-				UserId = userid,
-				CheckInDate = bookingAddDto.CheckInDate,
-				CheckOutDate = bookingAddDto.CheckOutDate,
-				TotalPrice = bookingAddDto.TotalPrice,
-				BookingStatus = Status.Pending,
-				//BookingStatus = bookingAdd Dto.BookingStatus,
-			};
+		//public async Task<bool> AddBooking(string userid, BookingAddDto bookingAddDto)
+		//{
+		//	var booking = new Booking
+		//	{
+		//		PropertyId = bookingAddDto.PropertyId,
+		//		UserId = userid,
+		//		CheckInDate = bookingAddDto.CheckInDate,
+		//		CheckOutDate = bookingAddDto.CheckOutDate,
+		//		TotalPrice = bookingAddDto.TotalPrice,
+		//		BookingStatus = Status.Pending,
+		//		BookingStatus = bookingAdd Dto.BookingStatus,
+		//	};
 
-			await _unitOfWork.BookingRepository.AddAsync(booking);
-			return _unitOfWork.SaveChanges() > 0;
-		}
+		//	await _unitOfWork.BookingRepository.AddAsync(booking);
+		//	return _unitOfWork.SaveChanges() > 0;
+		//}
 
-		
+
 		public async Task<int?> AdddBooking(string userId, BookingAddDto bookingAddDto)
 		{
 			var booking = new Booking
@@ -138,23 +138,26 @@ namespace AirBnb.BL.Managers.BookingManagers
 		}
 		
 
-		public async Task<BookingGetDetailsHostDto> GetPropertyBookingDetails(int propertyId)
+		public async Task<IEnumerable<BookingGetDetailsHostDto>> GetPropertyBookingDetails(int propertyId)
 		{
-			Booking getbooking = await _unitOfWork.BookingRepository.GetPropertyBookingDetails(propertyId);
+			IEnumerable<Booking> getbooking = await _unitOfWork.BookingRepository.GetPropertyBookingDetails(propertyId);
 			if (getbooking is null)
 			{
 				return null;
 			}
-			BookingGetDetailsHostDto result = new BookingGetDetailsHostDto();
-			result.Id = getbooking.Id;
-			result.CheckInDate = getbooking.CheckInDate;
-			result.CheckOutDate = getbooking.CheckOutDate;
-			result.TotalPrice = getbooking.TotalPrice;
-			result.PropertyName = getbooking.Property.Name;
-			result.UserName = $"{getbooking.User.FirstName} {getbooking.User.LastName}";
-			result.UserImage = getbooking.User.Image;
-			result.UserPhone = getbooking.User.PhoneNumber;
+			var result = getbooking.Select(x => new BookingGetDetailsHostDto
+			{
+				Id = x.Id,
+				CheckInDate = x.CheckInDate,
+				CheckOutDate = x.CheckOutDate,
+				TotalPrice = x.TotalPrice,
+				PropertyName = x.Property.Name,
+				UserName = $"{x.User.FirstName} {x.User.LastName}",
+				UserImage = x.User.Image,
+				UserPhone = x.User.PhoneNumber,
+			});
 			return result;
+			
 		}
 
 		public async Task<BookingGetDetailsUserDtos> GetUserBookingetails(int bookingid)

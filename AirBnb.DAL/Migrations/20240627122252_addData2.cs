@@ -8,7 +8,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 namespace AirBnb.DAL.Migrations
 {
     /// <inheritdoc />
-    public partial class addSeeding : Migration
+    public partial class addData2 : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
@@ -92,25 +92,25 @@ namespace AirBnb.DAL.Migrations
                 values: new object[,]
                 {
                     { 1, "Cairo", 8, 1, new TimeOnly(0, 0, 0).Add(TimeSpan.FromTicks(9)), new TimeOnly(0, 0, 0).Add(TimeSpan.FromTicks(15)), 1, "No Description", "https://example.com/image1.jpg", "Apartment", 1, 4, 10, true, 0, false, "53f9998c-e5c9-4bd5-8db6-eefc68f7fb4f" },
-                    { 2, "Alexandria", 5, 1, new TimeOnly(0, 0, 0).Add(TimeSpan.FromTicks(9)), new TimeOnly(0, 0, 0).Add(TimeSpan.FromTicks(15)), 2, "Sea view with modern amenities", "https://example.com/image1.jpg", "Beach House", 2, 3, 10, true, 1, false, "53f9998c-e5c9-4bd5-8db6-eefc68f7fb4f" },
+                    { 2, "Alexandria", 5, 1, new TimeOnly(0, 0, 0).Add(TimeSpan.FromTicks(9)), new TimeOnly(0, 0, 0).Add(TimeSpan.FromTicks(15)), 2, "Sea view with modern amenities", "https://example.com/image1.jpg", "Beach House", 2, 3, 10, true, 2, false, "53f9998c-e5c9-4bd5-8db6-eefc68f7fb4f" },
                     { 3, "Aswan", 3, 1, new TimeOnly(0, 0, 0).Add(TimeSpan.FromTicks(9)), new TimeOnly(0, 0, 0).Add(TimeSpan.FromTicks(15)), 3, "Cozy cabin in the mountains", "https://example.com/image1.jpg", "Mountain Cabin", 1, 2, 10, true, 0, false, "53f9998c-e5c9-4bd5-8db6-eefc68f7fb4f" },
-                    { 4, "Sharm El-Sheikh", 10, 1, new TimeOnly(0, 0, 0).Add(TimeSpan.FromTicks(9)), new TimeOnly(0, 0, 0).Add(TimeSpan.FromTicks(15)), 4, "Luxurious villa with a private pool", "https://example.com/image1.jpg", "Luxury Villa", 4, 5, 10, true, 2, false, "53f9998c-e5c9-4bd5-8db6-eefc68f7fb4f" },
+                    { 4, "Sharm El-Sheikh", 10, 1, new TimeOnly(0, 0, 0).Add(TimeSpan.FromTicks(9)), new TimeOnly(0, 0, 0).Add(TimeSpan.FromTicks(15)), 4, "Luxurious villa with a private pool", "https://example.com/image1.jpg", "Luxury Villa", 4, 5, 10, true, 3, false, "53f9998c-e5c9-4bd5-8db6-eefc68f7fb4f" },
                     { 5, "Giza", 4, 1, new TimeOnly(0, 0, 0).Add(TimeSpan.FromTicks(9)), new TimeOnly(0, 0, 0).Add(TimeSpan.FromTicks(15)), 5, "Modern condo in the city center", "https://example.com/image1.jpg", "Downtown Condo", 2, 2, 10, true, 0, false, "53f9998c-e5c9-4bd5-8db6-eefc68f7fb4f" },
-                    { 6, "Luxor", 7, 1, new TimeOnly(0, 0, 0).Add(TimeSpan.FromTicks(9)), new TimeOnly(0, 0, 0).Add(TimeSpan.FromTicks(15)), 6, "Spacious farmhouse with a garden", "https://example.com/image1.jpg", "Farmhouse", 3, 4, 10, true, 1, false, "53f9998c-e5c9-4bd5-8db6-eefc68f7fb4f" },
+                    { 6, "Luxor", 7, 1, new TimeOnly(0, 0, 0).Add(TimeSpan.FromTicks(9)), new TimeOnly(0, 0, 0).Add(TimeSpan.FromTicks(15)), 6, "Spacious farmhouse with a garden", "https://example.com/image1.jpg", "Farmhouse", 3, 4, 10, true, 2, false, "53f9998c-e5c9-4bd5-8db6-eefc68f7fb4f" },
                     { 7, "Cairo", 6, 1, new TimeOnly(0, 0, 0).Add(TimeSpan.FromTicks(9)), new TimeOnly(0, 0, 0).Add(TimeSpan.FromTicks(15)), 1, "Penthouse with panoramic views", "https://example.com/image1.jpg", "Penthouse", 3, 3, 10, true, 0, false, "53f9998c-e5c9-4bd5-8db6-eefc68f7fb4f" },
                     { 8, "Helwan", 5, 1, new TimeOnly(0, 0, 0).Add(TimeSpan.FromTicks(9)), new TimeOnly(0, 0, 0).Add(TimeSpan.FromTicks(15)), 8, "Family home in a quiet suburb", "https://example.com/image1.jpg", "Suburban Home", 2, 3, 10, true, 0, false, "53f9998c-e5c9-4bd5-8db6-eefc68f7fb4f" },
-                    { 9, "Alexandria", 1, 1, new TimeOnly(0, 0, 0).Add(TimeSpan.FromTicks(9)), new TimeOnly(0, 0, 0).Add(TimeSpan.FromTicks(15)), 2, "Compact studio in a bustling area", "https://example.com/image1.jpg", "Studio Apartment", 1, 1, 10, true, 2, false, "53f9998c-e5c9-4bd5-8db6-eefc68f7fb4f" },
+                    { 9, "Alexandria", 1, 1, new TimeOnly(0, 0, 0).Add(TimeSpan.FromTicks(9)), new TimeOnly(0, 0, 0).Add(TimeSpan.FromTicks(15)), 2, "Compact studio in a bustling area", "https://example.com/image1.jpg", "Studio Apartment", 1, 1, 10, true, 3, false, "53f9998c-e5c9-4bd5-8db6-eefc68f7fb4f" },
                     { 10, "Minya", 3, 1, new TimeOnly(0, 0, 0).Add(TimeSpan.FromTicks(9)), new TimeOnly(0, 0, 0).Add(TimeSpan.FromTicks(15)), 10, "Charming cottage in the countryside", "https://example.com/image1.jpg", "Country Cottage", 1, 2, 10, true, 0, false, "53f9998c-e5c9-4bd5-8db6-eefc68f7fb4f" },
                     { 11, "Fayoum", 5, 1, new TimeOnly(0, 0, 0).Add(TimeSpan.FromTicks(9)), new TimeOnly(0, 0, 0).Add(TimeSpan.FromTicks(15)), 11, "Peaceful house by the lake", "https://example.com/image1.jpg", "Lake House", 2, 3, 10, true, 0, false, "53f9998c-e5c9-4bd5-8db6-eefc68f7fb4f" },
                     { 12, "Cairo", 2, 1, new TimeOnly(0, 0, 0).Add(TimeSpan.FromTicks(9)), new TimeOnly(0, 0, 0).Add(TimeSpan.FromTicks(15)), 1, "Stylish loft in an urban setting", "https://example.com/image1.jpg", "Urban Loft", 1, 2, 10, true, 0, false, "53f9998c-e5c9-4bd5-8db6-eefc68f7fb4f" },
                     { 13, "Suez", 4, 1, new TimeOnly(0, 0, 0).Add(TimeSpan.FromTicks(9)), new TimeOnly(0, 0, 0).Add(TimeSpan.FromTicks(15)), 13, "Modern townhouse with a garage", "https://example.com/image1.jpg", "Townhouse", 2, 3, 10, true, 0, false, "53f9998c-e5c9-4bd5-8db6-eefc68f7fb4f" },
                     { 14, "Alexandria", 7, 1, new TimeOnly(0, 0, 0).Add(TimeSpan.FromTicks(9)), new TimeOnly(0, 0, 0).Add(TimeSpan.FromTicks(15)), 2, "Home with historical significance", "https://example.com/image1.jpg", "Historical Home", 3, 4, 10, true, 0, false, "53f9998c-e5c9-4bd5-8db6-eefc68f7fb4f" },
-                    { 15, "Siwa", 3, 1, new TimeOnly(0, 0, 0).Add(TimeSpan.FromTicks(9)), new TimeOnly(0, 0, 0).Add(TimeSpan.FromTicks(15)), 15, "Retreat in the quiet of the desert", "https://example.com/image1.jpg", "Desert Retreat", 1, 2, 10, true, 1, false, "53f9998c-e5c9-4bd5-8db6-eefc68f7fb4f" },
+                    { 15, "Siwa", 3, 1, new TimeOnly(0, 0, 0).Add(TimeSpan.FromTicks(9)), new TimeOnly(0, 0, 0).Add(TimeSpan.FromTicks(15)), 15, "Retreat in the quiet of the desert", "https://example.com/image1.jpg", "Desert Retreat", 1, 2, 10, true, 2, false, "53f9998c-e5c9-4bd5-8db6-eefc68f7fb4f" },
                     { 16, "Dahab", 4, 1, new TimeOnly(0, 0, 0).Add(TimeSpan.FromTicks(9)), new TimeOnly(0, 0, 0).Add(TimeSpan.FromTicks(15)), 16, "Single-story bungalow with a yard", "https://example.com/image1.jpg", "Bungalow", 1, 3, 10, true, 0, false, "53f9998c-e5c9-4bd5-8db6-eefc68f7fb4f" },
                     { 17, "Cairo", 1, 1, new TimeOnly(0, 0, 0).Add(TimeSpan.FromTicks(9)), new TimeOnly(0, 0, 0).Add(TimeSpan.FromTicks(15)), 1, "Modern flat in a residential complex", "https://example.com/image1.jpg", "Modern Flat", 1, 1, 10, true, 0, false, "53f9998c-e5c9-4bd5-8db6-eefc68f7fb4f" },
-                    { 18, "Port Said", 5, 1, new TimeOnly(0, 0, 0).Add(TimeSpan.FromTicks(9)), new TimeOnly(0, 0, 0).Add(TimeSpan.FromTicks(15)), 18, "Eco-friendly house with solar panels", "https://example.com/image1.jpg", "Eco-Friendly House", 2, 3, 10, true, 2, false, "53f9998c-e5c9-4bd5-8db6-eefc68f7fb4f" },
+                    { 18, "Port Said", 5, 1, new TimeOnly(0, 0, 0).Add(TimeSpan.FromTicks(9)), new TimeOnly(0, 0, 0).Add(TimeSpan.FromTicks(15)), 18, "Eco-friendly house with solar panels", "https://example.com/image1.jpg", "Eco-Friendly House", 2, 3, 10, true, 3, false, "53f9998c-e5c9-4bd5-8db6-eefc68f7fb4f" },
                     { 19, "Hurghada", 9, 1, new TimeOnly(0, 0, 0).Add(TimeSpan.FromTicks(9)), new TimeOnly(0, 0, 0).Add(TimeSpan.FromTicks(15)), 19, "Villa with a view of the sea", "https://example.com/image1.jpg", "Seaside Villa", 4, 5, 10, true, 0, false, "53f9998c-e5c9-4bd5-8db6-eefc68f7fb4f" },
-                    { 20, "Sinai", 3, 1, new TimeOnly(0, 0, 0).Add(TimeSpan.FromTicks(9)), new TimeOnly(0, 0, 0).Add(TimeSpan.FromTicks(15)), 20, "Cabin with a rustic charm", "https://example.com/image1.jpg", "Rustic Cabin", 1, 2, 10, true, 1, false, "53f9998c-e5c9-4bd5-8db6-eefc68f7fb4f" }
+                    { 20, "Sinai", 3, 1, new TimeOnly(0, 0, 0).Add(TimeSpan.FromTicks(9)), new TimeOnly(0, 0, 0).Add(TimeSpan.FromTicks(15)), 20, "Cabin with a rustic charm", "https://example.com/image1.jpg", "Rustic Cabin", 1, 2, 10, true, 2, false, "53f9998c-e5c9-4bd5-8db6-eefc68f7fb4f" }
                 });
 
             migrationBuilder.InsertData(
@@ -146,27 +146,27 @@ namespace AirBnb.DAL.Migrations
                 columns: new[] { "Id", "From", "IsAvailable", "PricePerNight", "PropertyId", "To" },
                 values: new object[,]
                 {
-                    { 1, new DateTime(2024, 6, 24, 7, 46, 47, 967, DateTimeKind.Local).AddTicks(4905), true, 20m, 1, new DateTime(2024, 6, 29, 7, 46, 47, 967, DateTimeKind.Local).AddTicks(4906) },
-                    { 2, new DateTime(2024, 6, 25, 7, 46, 47, 967, DateTimeKind.Local).AddTicks(4909), true, 25m, 2, new DateTime(2024, 6, 30, 7, 46, 47, 967, DateTimeKind.Local).AddTicks(4911) },
-                    { 3, new DateTime(2024, 6, 26, 7, 46, 47, 967, DateTimeKind.Local).AddTicks(4913), false, 30m, 3, new DateTime(2024, 7, 1, 7, 46, 47, 967, DateTimeKind.Local).AddTicks(4914) },
-                    { 4, new DateTime(2024, 6, 27, 7, 46, 47, 967, DateTimeKind.Local).AddTicks(4916), true, 35m, 4, new DateTime(2024, 7, 2, 7, 46, 47, 967, DateTimeKind.Local).AddTicks(4918) },
-                    { 5, new DateTime(2024, 6, 28, 7, 46, 47, 967, DateTimeKind.Local).AddTicks(4920), true, 40m, 5, new DateTime(2024, 7, 3, 7, 46, 47, 967, DateTimeKind.Local).AddTicks(4921) },
-                    { 6, new DateTime(2024, 6, 29, 7, 46, 47, 967, DateTimeKind.Local).AddTicks(4924), false, 45m, 6, new DateTime(2024, 7, 4, 7, 46, 47, 967, DateTimeKind.Local).AddTicks(4925) },
-                    { 7, new DateTime(2024, 6, 30, 7, 46, 47, 967, DateTimeKind.Local).AddTicks(4927), true, 50m, 7, new DateTime(2024, 7, 5, 7, 46, 47, 967, DateTimeKind.Local).AddTicks(4928) },
-                    { 8, new DateTime(2024, 7, 1, 7, 46, 47, 967, DateTimeKind.Local).AddTicks(4930), true, 55m, 8, new DateTime(2024, 7, 6, 7, 46, 47, 967, DateTimeKind.Local).AddTicks(4931) },
-                    { 9, new DateTime(2024, 7, 2, 7, 46, 47, 967, DateTimeKind.Local).AddTicks(4933), false, 60m, 9, new DateTime(2024, 7, 7, 7, 46, 47, 967, DateTimeKind.Local).AddTicks(4934) },
-                    { 10, new DateTime(2024, 7, 3, 7, 46, 47, 967, DateTimeKind.Local).AddTicks(4936), true, 65m, 10, new DateTime(2024, 7, 8, 7, 46, 47, 967, DateTimeKind.Local).AddTicks(4938) },
-                    { 11, new DateTime(2024, 7, 4, 7, 46, 47, 967, DateTimeKind.Local).AddTicks(4940), true, 70m, 11, new DateTime(2024, 7, 9, 7, 46, 47, 967, DateTimeKind.Local).AddTicks(4941) },
-                    { 12, new DateTime(2024, 7, 5, 7, 46, 47, 967, DateTimeKind.Local).AddTicks(4943), false, 75m, 12, new DateTime(2024, 7, 10, 7, 46, 47, 967, DateTimeKind.Local).AddTicks(4945) },
-                    { 13, new DateTime(2024, 7, 6, 7, 46, 47, 967, DateTimeKind.Local).AddTicks(4947), true, 80m, 13, new DateTime(2024, 7, 11, 7, 46, 47, 967, DateTimeKind.Local).AddTicks(4948) },
-                    { 14, new DateTime(2024, 7, 7, 7, 46, 47, 967, DateTimeKind.Local).AddTicks(4950), true, 85m, 14, new DateTime(2024, 7, 12, 7, 46, 47, 967, DateTimeKind.Local).AddTicks(4951) },
-                    { 15, new DateTime(2024, 7, 8, 7, 46, 47, 967, DateTimeKind.Local).AddTicks(4953), false, 90m, 15, new DateTime(2024, 7, 13, 7, 46, 47, 967, DateTimeKind.Local).AddTicks(4954) },
-                    { 16, new DateTime(2024, 7, 9, 7, 46, 47, 967, DateTimeKind.Local).AddTicks(4956), true, 95m, 16, new DateTime(2024, 7, 14, 7, 46, 47, 967, DateTimeKind.Local).AddTicks(4957) },
-                    { 17, new DateTime(2024, 7, 10, 7, 46, 47, 967, DateTimeKind.Local).AddTicks(4959), true, 100m, 17, new DateTime(2024, 7, 15, 7, 46, 47, 967, DateTimeKind.Local).AddTicks(4961) },
-                    { 18, new DateTime(2024, 7, 11, 7, 46, 47, 967, DateTimeKind.Local).AddTicks(4963), false, 105m, 18, new DateTime(2024, 7, 16, 7, 46, 47, 967, DateTimeKind.Local).AddTicks(4964) },
-                    { 19, new DateTime(2024, 7, 12, 7, 46, 47, 967, DateTimeKind.Local).AddTicks(4966), true, 110m, 19, new DateTime(2024, 7, 17, 7, 46, 47, 967, DateTimeKind.Local).AddTicks(4967) },
-                    { 20, new DateTime(2024, 7, 13, 7, 46, 47, 967, DateTimeKind.Local).AddTicks(4969), true, 115m, 20, new DateTime(2024, 7, 18, 7, 46, 47, 967, DateTimeKind.Local).AddTicks(4970) },
-                    { 21, new DateTime(2024, 6, 24, 7, 46, 47, 967, DateTimeKind.Local).AddTicks(4851), true, 20m, 1, new DateTime(2024, 6, 29, 7, 46, 47, 967, DateTimeKind.Local).AddTicks(4897) }
+                    { 1, new DateTime(2024, 6, 27, 15, 22, 52, 48, DateTimeKind.Local).AddTicks(2990), true, 20m, 1, new DateTime(2024, 7, 2, 15, 22, 52, 48, DateTimeKind.Local).AddTicks(2992) },
+                    { 2, new DateTime(2024, 6, 28, 15, 22, 52, 48, DateTimeKind.Local).AddTicks(2995), true, 25m, 2, new DateTime(2024, 7, 3, 15, 22, 52, 48, DateTimeKind.Local).AddTicks(2996) },
+                    { 3, new DateTime(2024, 6, 29, 15, 22, 52, 48, DateTimeKind.Local).AddTicks(2999), false, 30m, 3, new DateTime(2024, 7, 4, 15, 22, 52, 48, DateTimeKind.Local).AddTicks(3000) },
+                    { 4, new DateTime(2024, 6, 30, 15, 22, 52, 48, DateTimeKind.Local).AddTicks(3003), true, 35m, 4, new DateTime(2024, 7, 5, 15, 22, 52, 48, DateTimeKind.Local).AddTicks(3005) },
+                    { 5, new DateTime(2024, 7, 1, 15, 22, 52, 48, DateTimeKind.Local).AddTicks(3008), true, 40m, 5, new DateTime(2024, 7, 6, 15, 22, 52, 48, DateTimeKind.Local).AddTicks(3010) },
+                    { 6, new DateTime(2024, 7, 2, 15, 22, 52, 48, DateTimeKind.Local).AddTicks(3012), false, 45m, 6, new DateTime(2024, 7, 7, 15, 22, 52, 48, DateTimeKind.Local).AddTicks(3014) },
+                    { 7, new DateTime(2024, 7, 3, 15, 22, 52, 48, DateTimeKind.Local).AddTicks(3016), true, 50m, 7, new DateTime(2024, 7, 8, 15, 22, 52, 48, DateTimeKind.Local).AddTicks(3018) },
+                    { 8, new DateTime(2024, 7, 4, 15, 22, 52, 48, DateTimeKind.Local).AddTicks(3021), true, 55m, 8, new DateTime(2024, 7, 9, 15, 22, 52, 48, DateTimeKind.Local).AddTicks(3023) },
+                    { 9, new DateTime(2024, 7, 5, 15, 22, 52, 48, DateTimeKind.Local).AddTicks(3025), false, 60m, 9, new DateTime(2024, 7, 10, 15, 22, 52, 48, DateTimeKind.Local).AddTicks(3027) },
+                    { 10, new DateTime(2024, 7, 6, 15, 22, 52, 48, DateTimeKind.Local).AddTicks(3029), true, 65m, 10, new DateTime(2024, 7, 11, 15, 22, 52, 48, DateTimeKind.Local).AddTicks(3031) },
+                    { 11, new DateTime(2024, 7, 7, 15, 22, 52, 48, DateTimeKind.Local).AddTicks(3034), true, 70m, 11, new DateTime(2024, 7, 12, 15, 22, 52, 48, DateTimeKind.Local).AddTicks(3036) },
+                    { 12, new DateTime(2024, 7, 8, 15, 22, 52, 48, DateTimeKind.Local).AddTicks(3039), false, 75m, 12, new DateTime(2024, 7, 13, 15, 22, 52, 48, DateTimeKind.Local).AddTicks(3040) },
+                    { 13, new DateTime(2024, 7, 9, 15, 22, 52, 48, DateTimeKind.Local).AddTicks(3043), true, 80m, 13, new DateTime(2024, 7, 14, 15, 22, 52, 48, DateTimeKind.Local).AddTicks(3045) },
+                    { 14, new DateTime(2024, 7, 10, 15, 22, 52, 48, DateTimeKind.Local).AddTicks(3047), true, 85m, 14, new DateTime(2024, 7, 15, 15, 22, 52, 48, DateTimeKind.Local).AddTicks(3049) },
+                    { 15, new DateTime(2024, 7, 11, 15, 22, 52, 48, DateTimeKind.Local).AddTicks(3052), false, 90m, 15, new DateTime(2024, 7, 16, 15, 22, 52, 48, DateTimeKind.Local).AddTicks(3054) },
+                    { 16, new DateTime(2024, 7, 12, 15, 22, 52, 48, DateTimeKind.Local).AddTicks(3056), true, 95m, 16, new DateTime(2024, 7, 17, 15, 22, 52, 48, DateTimeKind.Local).AddTicks(3058) },
+                    { 17, new DateTime(2024, 7, 13, 15, 22, 52, 48, DateTimeKind.Local).AddTicks(3060), true, 100m, 17, new DateTime(2024, 7, 18, 15, 22, 52, 48, DateTimeKind.Local).AddTicks(3062) },
+                    { 18, new DateTime(2024, 7, 14, 15, 22, 52, 48, DateTimeKind.Local).AddTicks(3065), false, 105m, 18, new DateTime(2024, 7, 19, 15, 22, 52, 48, DateTimeKind.Local).AddTicks(3066) },
+                    { 19, new DateTime(2024, 7, 15, 15, 22, 52, 48, DateTimeKind.Local).AddTicks(3069), true, 110m, 19, new DateTime(2024, 7, 20, 15, 22, 52, 48, DateTimeKind.Local).AddTicks(3071) },
+                    { 20, new DateTime(2024, 7, 16, 15, 22, 52, 48, DateTimeKind.Local).AddTicks(3074), true, 115m, 20, new DateTime(2024, 7, 21, 15, 22, 52, 48, DateTimeKind.Local).AddTicks(3075) },
+                    { 21, new DateTime(2024, 6, 27, 15, 22, 52, 48, DateTimeKind.Local).AddTicks(2883), true, 20m, 1, new DateTime(2024, 7, 2, 15, 22, 52, 48, DateTimeKind.Local).AddTicks(2972) }
                 });
 
             migrationBuilder.InsertData(
@@ -174,27 +174,27 @@ namespace AirBnb.DAL.Migrations
                 columns: new[] { "Id", "BookingStatus", "CheckInDate", "CheckOutDate", "ClientSecret", "PaymentIntentId", "PropertyId", "TotalPrice", "UserId" },
                 values: new object[,]
                 {
-                    { 1, 0, new DateTime(2024, 6, 24, 7, 46, 47, 967, DateTimeKind.Local).AddTicks(5012), new DateTime(2024, 6, 29, 7, 46, 47, 967, DateTimeKind.Local).AddTicks(5013), null, null, 1, 100, "53f9998c-e5c9-4bd5-8db6-eefc68f7fb4f" },
-                    { 2, 1, new DateTime(2024, 6, 25, 7, 46, 47, 967, DateTimeKind.Local).AddTicks(5016), new DateTime(2024, 6, 30, 7, 46, 47, 967, DateTimeKind.Local).AddTicks(5017), null, null, 2, 150, "53f9998c-e5c9-4bd5-8db6-eefc68f7fb4f" },
-                    { 3, 1, new DateTime(2024, 6, 26, 7, 46, 47, 967, DateTimeKind.Local).AddTicks(5019), new DateTime(2024, 7, 1, 7, 46, 47, 967, DateTimeKind.Local).AddTicks(5020), null, null, 3, 200, "53f9998c-e5c9-4bd5-8db6-eefc68f7fb4f" },
-                    { 4, 0, new DateTime(2024, 6, 27, 7, 46, 47, 967, DateTimeKind.Local).AddTicks(5023), new DateTime(2024, 7, 2, 7, 46, 47, 967, DateTimeKind.Local).AddTicks(5024), null, null, 4, 250, "53f9998c-e5c9-4bd5-8db6-eefc68f7fb4f" },
-                    { 5, 1, new DateTime(2024, 6, 28, 7, 46, 47, 967, DateTimeKind.Local).AddTicks(5026), new DateTime(2024, 7, 3, 7, 46, 47, 967, DateTimeKind.Local).AddTicks(5027), null, null, 5, 300, "53f9998c-e5c9-4bd5-8db6-eefc68f7fb4f" },
-                    { 6, 1, new DateTime(2024, 6, 29, 7, 46, 47, 967, DateTimeKind.Local).AddTicks(5030), new DateTime(2024, 7, 4, 7, 46, 47, 967, DateTimeKind.Local).AddTicks(5031), null, null, 6, 350, "53f9998c-e5c9-4bd5-8db6-eefc68f7fb4f" },
-                    { 7, 0, new DateTime(2024, 6, 30, 7, 46, 47, 967, DateTimeKind.Local).AddTicks(5033), new DateTime(2024, 7, 5, 7, 46, 47, 967, DateTimeKind.Local).AddTicks(5034), null, null, 7, 400, "53f9998c-e5c9-4bd5-8db6-eefc68f7fb4f" },
-                    { 8, 1, new DateTime(2024, 7, 1, 7, 46, 47, 967, DateTimeKind.Local).AddTicks(5036), new DateTime(2024, 7, 6, 7, 46, 47, 967, DateTimeKind.Local).AddTicks(5038), null, null, 8, 450, "53f9998c-e5c9-4bd5-8db6-eefc68f7fb4f" },
-                    { 9, 1, new DateTime(2024, 7, 2, 7, 46, 47, 967, DateTimeKind.Local).AddTicks(5040), new DateTime(2024, 7, 7, 7, 46, 47, 967, DateTimeKind.Local).AddTicks(5041), null, null, 9, 500, "53f9998c-e5c9-4bd5-8db6-eefc68f7fb4f" },
-                    { 10, 0, new DateTime(2024, 7, 3, 7, 46, 47, 967, DateTimeKind.Local).AddTicks(5043), new DateTime(2024, 7, 8, 7, 46, 47, 967, DateTimeKind.Local).AddTicks(5044), null, null, 10, 550, "53f9998c-e5c9-4bd5-8db6-eefc68f7fb4f" },
-                    { 11, 1, new DateTime(2024, 7, 4, 7, 46, 47, 967, DateTimeKind.Local).AddTicks(5046), new DateTime(2024, 7, 9, 7, 46, 47, 967, DateTimeKind.Local).AddTicks(5047), null, null, 11, 600, "53f9998c-e5c9-4bd5-8db6-eefc68f7fb4f" },
-                    { 12, 1, new DateTime(2024, 7, 5, 7, 46, 47, 967, DateTimeKind.Local).AddTicks(5050), new DateTime(2024, 7, 10, 7, 46, 47, 967, DateTimeKind.Local).AddTicks(5051), null, null, 12, 650, "53f9998c-e5c9-4bd5-8db6-eefc68f7fb4f" },
-                    { 13, 0, new DateTime(2024, 7, 6, 7, 46, 47, 967, DateTimeKind.Local).AddTicks(5053), new DateTime(2024, 7, 11, 7, 46, 47, 967, DateTimeKind.Local).AddTicks(5054), null, null, 13, 700, "53f9998c-e5c9-4bd5-8db6-eefc68f7fb4f" },
-                    { 14, 1, new DateTime(2024, 7, 7, 7, 46, 47, 967, DateTimeKind.Local).AddTicks(5056), new DateTime(2024, 7, 12, 7, 46, 47, 967, DateTimeKind.Local).AddTicks(5058), null, null, 14, 750, "53f9998c-e5c9-4bd5-8db6-eefc68f7fb4f" },
-                    { 15, 1, new DateTime(2024, 7, 8, 7, 46, 47, 967, DateTimeKind.Local).AddTicks(5060), new DateTime(2024, 7, 13, 7, 46, 47, 967, DateTimeKind.Local).AddTicks(5061), null, null, 15, 800, "53f9998c-e5c9-4bd5-8db6-eefc68f7fb4f" },
-                    { 16, 0, new DateTime(2024, 7, 9, 7, 46, 47, 967, DateTimeKind.Local).AddTicks(5063), new DateTime(2024, 7, 14, 7, 46, 47, 967, DateTimeKind.Local).AddTicks(5064), null, null, 16, 850, "53f9998c-e5c9-4bd5-8db6-eefc68f7fb4f" },
-                    { 17, 1, new DateTime(2024, 7, 10, 7, 46, 47, 967, DateTimeKind.Local).AddTicks(5066), new DateTime(2024, 7, 15, 7, 46, 47, 967, DateTimeKind.Local).AddTicks(5067), null, null, 17, 900, "53f9998c-e5c9-4bd5-8db6-eefc68f7fb4f" },
-                    { 18, 1, new DateTime(2024, 7, 11, 7, 46, 47, 967, DateTimeKind.Local).AddTicks(5069), new DateTime(2024, 7, 16, 7, 46, 47, 967, DateTimeKind.Local).AddTicks(5071), null, null, 18, 950, "53f9998c-e5c9-4bd5-8db6-eefc68f7fb4f" },
-                    { 19, 0, new DateTime(2024, 7, 12, 7, 46, 47, 967, DateTimeKind.Local).AddTicks(5073), new DateTime(2024, 7, 17, 7, 46, 47, 967, DateTimeKind.Local).AddTicks(5074), null, null, 19, 1000, "53f9998c-e5c9-4bd5-8db6-eefc68f7fb4f" },
-                    { 20, 1, new DateTime(2024, 7, 13, 7, 46, 47, 967, DateTimeKind.Local).AddTicks(5076), new DateTime(2024, 7, 18, 7, 46, 47, 967, DateTimeKind.Local).AddTicks(5077), null, null, 20, 1050, "53f9998c-e5c9-4bd5-8db6-eefc68f7fb4f" },
-                    { 21, 0, new DateTime(2024, 6, 24, 7, 46, 47, 967, DateTimeKind.Local).AddTicks(5007), new DateTime(2024, 6, 29, 7, 46, 47, 967, DateTimeKind.Local).AddTicks(5009), null, null, 1, 100, "53f9998c-e5c9-4bd5-8db6-eefc68f7fb4f" }
+                    { 1, 0, new DateTime(2024, 6, 27, 15, 22, 52, 48, DateTimeKind.Local).AddTicks(3148), new DateTime(2024, 7, 2, 15, 22, 52, 48, DateTimeKind.Local).AddTicks(3150), null, null, 1, 100, "53f9998c-e5c9-4bd5-8db6-eefc68f7fb4f" },
+                    { 2, 2, new DateTime(2024, 6, 28, 15, 22, 52, 48, DateTimeKind.Local).AddTicks(3153), new DateTime(2024, 7, 3, 15, 22, 52, 48, DateTimeKind.Local).AddTicks(3155), null, null, 2, 150, "53f9998c-e5c9-4bd5-8db6-eefc68f7fb4f" },
+                    { 3, 2, new DateTime(2024, 6, 29, 15, 22, 52, 48, DateTimeKind.Local).AddTicks(3158), new DateTime(2024, 7, 4, 15, 22, 52, 48, DateTimeKind.Local).AddTicks(3159), null, null, 3, 200, "53f9998c-e5c9-4bd5-8db6-eefc68f7fb4f" },
+                    { 4, 0, new DateTime(2024, 6, 30, 15, 22, 52, 48, DateTimeKind.Local).AddTicks(3162), new DateTime(2024, 7, 5, 15, 22, 52, 48, DateTimeKind.Local).AddTicks(3164), null, null, 4, 250, "53f9998c-e5c9-4bd5-8db6-eefc68f7fb4f" },
+                    { 5, 2, new DateTime(2024, 7, 1, 15, 22, 52, 48, DateTimeKind.Local).AddTicks(3166), new DateTime(2024, 7, 6, 15, 22, 52, 48, DateTimeKind.Local).AddTicks(3168), null, null, 5, 300, "53f9998c-e5c9-4bd5-8db6-eefc68f7fb4f" },
+                    { 6, 2, new DateTime(2024, 7, 2, 15, 22, 52, 48, DateTimeKind.Local).AddTicks(3170), new DateTime(2024, 7, 7, 15, 22, 52, 48, DateTimeKind.Local).AddTicks(3172), null, null, 6, 350, "53f9998c-e5c9-4bd5-8db6-eefc68f7fb4f" },
+                    { 7, 0, new DateTime(2024, 7, 3, 15, 22, 52, 48, DateTimeKind.Local).AddTicks(3174), new DateTime(2024, 7, 8, 15, 22, 52, 48, DateTimeKind.Local).AddTicks(3176), null, null, 7, 400, "53f9998c-e5c9-4bd5-8db6-eefc68f7fb4f" },
+                    { 8, 2, new DateTime(2024, 7, 4, 15, 22, 52, 48, DateTimeKind.Local).AddTicks(3179), new DateTime(2024, 7, 9, 15, 22, 52, 48, DateTimeKind.Local).AddTicks(3180), null, null, 8, 450, "53f9998c-e5c9-4bd5-8db6-eefc68f7fb4f" },
+                    { 9, 2, new DateTime(2024, 7, 5, 15, 22, 52, 48, DateTimeKind.Local).AddTicks(3183), new DateTime(2024, 7, 10, 15, 22, 52, 48, DateTimeKind.Local).AddTicks(3185), null, null, 9, 500, "53f9998c-e5c9-4bd5-8db6-eefc68f7fb4f" },
+                    { 10, 0, new DateTime(2024, 7, 6, 15, 22, 52, 48, DateTimeKind.Local).AddTicks(3187), new DateTime(2024, 7, 11, 15, 22, 52, 48, DateTimeKind.Local).AddTicks(3189), null, null, 10, 550, "53f9998c-e5c9-4bd5-8db6-eefc68f7fb4f" },
+                    { 11, 2, new DateTime(2024, 7, 7, 15, 22, 52, 48, DateTimeKind.Local).AddTicks(3191), new DateTime(2024, 7, 12, 15, 22, 52, 48, DateTimeKind.Local).AddTicks(3193), null, null, 11, 600, "53f9998c-e5c9-4bd5-8db6-eefc68f7fb4f" },
+                    { 12, 2, new DateTime(2024, 7, 8, 15, 22, 52, 48, DateTimeKind.Local).AddTicks(3195), new DateTime(2024, 7, 13, 15, 22, 52, 48, DateTimeKind.Local).AddTicks(3197), null, null, 12, 650, "53f9998c-e5c9-4bd5-8db6-eefc68f7fb4f" },
+                    { 13, 0, new DateTime(2024, 7, 9, 15, 22, 52, 48, DateTimeKind.Local).AddTicks(3200), new DateTime(2024, 7, 14, 15, 22, 52, 48, DateTimeKind.Local).AddTicks(3201), null, null, 13, 700, "53f9998c-e5c9-4bd5-8db6-eefc68f7fb4f" },
+                    { 14, 2, new DateTime(2024, 7, 10, 15, 22, 52, 48, DateTimeKind.Local).AddTicks(3204), new DateTime(2024, 7, 15, 15, 22, 52, 48, DateTimeKind.Local).AddTicks(3206), null, null, 14, 750, "53f9998c-e5c9-4bd5-8db6-eefc68f7fb4f" },
+                    { 15, 2, new DateTime(2024, 7, 11, 15, 22, 52, 48, DateTimeKind.Local).AddTicks(3208), new DateTime(2024, 7, 16, 15, 22, 52, 48, DateTimeKind.Local).AddTicks(3210), null, null, 15, 800, "53f9998c-e5c9-4bd5-8db6-eefc68f7fb4f" },
+                    { 16, 0, new DateTime(2024, 7, 12, 15, 22, 52, 48, DateTimeKind.Local).AddTicks(3212), new DateTime(2024, 7, 17, 15, 22, 52, 48, DateTimeKind.Local).AddTicks(3214), null, null, 16, 850, "53f9998c-e5c9-4bd5-8db6-eefc68f7fb4f" },
+                    { 17, 2, new DateTime(2024, 7, 13, 15, 22, 52, 48, DateTimeKind.Local).AddTicks(3217), new DateTime(2024, 7, 18, 15, 22, 52, 48, DateTimeKind.Local).AddTicks(3218), null, null, 17, 900, "53f9998c-e5c9-4bd5-8db6-eefc68f7fb4f" },
+                    { 18, 2, new DateTime(2024, 7, 14, 15, 22, 52, 48, DateTimeKind.Local).AddTicks(3221), new DateTime(2024, 7, 19, 15, 22, 52, 48, DateTimeKind.Local).AddTicks(3222), null, null, 18, 950, "53f9998c-e5c9-4bd5-8db6-eefc68f7fb4f" },
+                    { 19, 0, new DateTime(2024, 7, 15, 15, 22, 52, 48, DateTimeKind.Local).AddTicks(3225), new DateTime(2024, 7, 20, 15, 22, 52, 48, DateTimeKind.Local).AddTicks(3227), null, null, 19, 1000, "53f9998c-e5c9-4bd5-8db6-eefc68f7fb4f" },
+                    { 20, 2, new DateTime(2024, 7, 16, 15, 22, 52, 48, DateTimeKind.Local).AddTicks(3230), new DateTime(2024, 7, 21, 15, 22, 52, 48, DateTimeKind.Local).AddTicks(3232), null, null, 20, 1050, "53f9998c-e5c9-4bd5-8db6-eefc68f7fb4f" },
+                    { 21, 0, new DateTime(2024, 6, 27, 15, 22, 52, 48, DateTimeKind.Local).AddTicks(3142), new DateTime(2024, 7, 2, 15, 22, 52, 48, DateTimeKind.Local).AddTicks(3145), null, null, 1, 100, "53f9998c-e5c9-4bd5-8db6-eefc68f7fb4f" }
                 });
 
             migrationBuilder.InsertData(
@@ -268,26 +268,26 @@ namespace AirBnb.DAL.Migrations
                 columns: new[] { "Id", "BookingId", "Comment", "PropertyId", "Rating", "UserId" },
                 values: new object[,]
                 {
-                    { 1, 1, "Good Comment", null, 5, "53f9998c-e5c9-4bd5-8db6-eefc68f7fb4f" },
-                    { 2, 2, "Nice place", null, 4, "53f9998c-e5c9-4bd5-8db6-eefc68f7fb4f" },
-                    { 3, 3, "Average experience", null, 3, "53f9998c-e5c9-4bd5-8db6-eefc68f7fb4f" },
-                    { 4, 4, "Not as expected", null, 2, "53f9998c-e5c9-4bd5-8db6-eefc68f7fb4f" },
-                    { 5, 5, "Excellent service", null, 5, "53f9998c-e5c9-4bd5-8db6-eefc68f7fb4f" },
-                    { 6, 6, "Good value for money", null, 4, "53f9998c-e5c9-4bd5-8db6-eefc68f7fb4f" },
-                    { 7, 7, "Decent stay", null, 3, "53f9998c-e5c9-4bd5-8db6-eefc68f7fb4f" },
-                    { 8, 8, "Terrible experience", null, 1, "53f9998c-e5c9-4bd5-8db6-eefc68f7fb4f" },
-                    { 9, 9, "Highly recommend", null, 5, "53f9998c-e5c9-4bd5-8db6-eefc68f7fb4f" },
-                    { 10, 10, "Very comfortable", null, 4, "53f9998c-e5c9-4bd5-8db6-eefc68f7fb4f" },
-                    { 11, 11, "Could be better", null, 2, "53f9998c-e5c9-4bd5-8db6-eefc68f7fb4f" },
-                    { 12, 12, "Loved the place", null, 5, "53f9998c-e5c9-4bd5-8db6-eefc68f7fb4f" },
-                    { 13, 13, "It was okay", null, 3, "53f9998c-e5c9-4bd5-8db6-eefc68f7fb4f" },
-                    { 14, 14, "Pretty good", null, 4, "53f9998c-e5c9-4bd5-8db6-eefc68f7fb4f" },
-                    { 15, 15, "Needs improvement", null, 2, "53f9998c-e5c9-4bd5-8db6-eefc68f7fb4f" },
-                    { 16, 16, "Fantastic stay", null, 5, "53f9998c-e5c9-4bd5-8db6-eefc68f7fb4f" },
-                    { 17, 17, "Very disappointing", null, 1, "53f9998c-e5c9-4bd5-8db6-eefc68f7fb4f" },
-                    { 18, 18, "Good location", null, 4, "53f9998c-e5c9-4bd5-8db6-eefc68f7fb4f" },
-                    { 19, 19, "Not bad", null, 3, "53f9998c-e5c9-4bd5-8db6-eefc68f7fb4f" },
-                    { 20, 20, "Amazing experience", null, 5, "53f9998c-e5c9-4bd5-8db6-eefc68f7fb4f" }
+                    { 1, 1, "Good Comment", 8, 5, "53f9998c-e5c9-4bd5-8db6-eefc68f7fb4f" },
+                    { 2, 2, "Nice place", 1, 4, "53f9998c-e5c9-4bd5-8db6-eefc68f7fb4f" },
+                    { 3, 3, "Average experience", 4, 3, "53f9998c-e5c9-4bd5-8db6-eefc68f7fb4f" },
+                    { 4, 4, "Not as expected", 8, 2, "53f9998c-e5c9-4bd5-8db6-eefc68f7fb4f" },
+                    { 5, 5, "Excellent service", 2, 5, "53f9998c-e5c9-4bd5-8db6-eefc68f7fb4f" },
+                    { 6, 6, "Good value for money", 7, 4, "53f9998c-e5c9-4bd5-8db6-eefc68f7fb4f" },
+                    { 7, 7, "Decent stay", 3, 3, "53f9998c-e5c9-4bd5-8db6-eefc68f7fb4f" },
+                    { 8, 8, "Terrible experience", 8, 1, "53f9998c-e5c9-4bd5-8db6-eefc68f7fb4f" },
+                    { 9, 9, "Highly recommend", 7, 5, "53f9998c-e5c9-4bd5-8db6-eefc68f7fb4f" },
+                    { 10, 10, "Very comfortable", 6, 4, "53f9998c-e5c9-4bd5-8db6-eefc68f7fb4f" },
+                    { 11, 11, "Could be better", 5, 2, "53f9998c-e5c9-4bd5-8db6-eefc68f7fb4f" },
+                    { 12, 12, "Loved the place", 2, 5, "53f9998c-e5c9-4bd5-8db6-eefc68f7fb4f" },
+                    { 13, 13, "It was okay", 4, 3, "53f9998c-e5c9-4bd5-8db6-eefc68f7fb4f" },
+                    { 14, 14, "Pretty good", 4, 4, "53f9998c-e5c9-4bd5-8db6-eefc68f7fb4f" },
+                    { 15, 15, "Needs improvement", 3, 2, "53f9998c-e5c9-4bd5-8db6-eefc68f7fb4f" },
+                    { 16, 16, "Fantastic stay", 2, 5, "53f9998c-e5c9-4bd5-8db6-eefc68f7fb4f" },
+                    { 17, 17, "Very disappointing", 4, 1, "53f9998c-e5c9-4bd5-8db6-eefc68f7fb4f" },
+                    { 18, 18, "Good location", 3, 4, "53f9998c-e5c9-4bd5-8db6-eefc68f7fb4f" },
+                    { 19, 19, "Not bad", 2, 3, "53f9998c-e5c9-4bd5-8db6-eefc68f7fb4f" },
+                    { 20, 20, "Amazing experience", 2, 5, "53f9998c-e5c9-4bd5-8db6-eefc68f7fb4f" }
                 });
         }
 

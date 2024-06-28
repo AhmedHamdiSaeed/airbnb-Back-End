@@ -31,9 +31,11 @@ namespace AirBnb.BL.Dtos.PropertyDtos
 	public class PropAppoinmentAvailable
 	{
 		public int Id { get; set; }
+		public int PropertyId { get; set; }
 		public DateTime From { get; set; }
 		public DateTime To { get; set; }
 		public decimal PricePerNight { get; set; }
+		public int TotalProice { get; set; }
 		public bool IsAvailable { get; set; }
 	}
 	public class PropAmentity
@@ -44,6 +46,7 @@ namespace AirBnb.BL.Dtos.PropertyDtos
 	}
 	public class PropertyDetailsGetDto
 	{
+
         public double RatingOverroll { get; set; }
         public int NumOfReview { get; set; }
         public string Name { get; set; } = string.Empty;
@@ -57,7 +60,8 @@ namespace AirBnb.BL.Dtos.PropertyDtos
         public string UserImage { get; set; } = string.Empty;
         public string CategoryName { get; set; }
 		public string CityName { get; set; }
-		
+		public TimeOnly CheckIn { get; set; }
+		public TimeOnly CheckOut { get; set; }
 		public int NumberOfGuest { get; set; }
 		public bool Pets { get; set; }
 		public bool TakePhotos { get; set; }
@@ -65,12 +69,18 @@ namespace AirBnb.BL.Dtos.PropertyDtos
 		public List<PropAmentity> Amentities { get; set;}
 
 		public List<PropAppoinmentAvailable> AppoinmentAvaiable { get; set; }
-        public IEnumerable<Reviewdto> Reviews { get; set; } = new HashSet<Reviewdto>();
-        public IEnumerable<PropertyBookingDates> BookingDates { get; set; } = new HashSet<PropertyBookingDates>();
+		public List<ReviewForProperty> Reviews { get; set; }
+		public IEnumerable<PropertyBookingDates> BookingDates { get; set; } = new HashSet<PropertyBookingDates>();
 
 		
     }
-
+	public class ReviewForProperty
+	{
+		public int ReviewId { get; set; }
+		public string ReviewUserName { get; set; }
+		public string ReviewUserImage { get; set; }
+		public string ReviewComment { get; set; } = string.Empty;
+	}
     public class PropertyBookingDates
     {
         public DateTime CheckInDate { get; set; } = DateTime.Now;

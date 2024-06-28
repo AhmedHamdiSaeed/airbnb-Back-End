@@ -2,6 +2,7 @@
 using AirBnb.BL.Dtos.PropertyDtos;
 using AirBnb.DAL.Data.Model;
 using AirBnb.DAL.Unit;
+
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -107,51 +108,67 @@ namespace AirBnb.BL.Managers.Properties
 
 		public async Task<PropertyDetailsGetDto> GetPropertyDetailsById(int propId)
 		{
-			Property singleProp =await _unitOfWork.PropertyRepository.GetPropertyDetailsById(propId);
-			PropertyDetailsGetDto result = new PropertyDetailsGetDto();
-			result.Name = singleProp.Name;
-			result.Description = singleProp.Description;
-			result.Adress = singleProp.Adress;
-			result.NumberOfBathrooms = singleProp.NumberOfBathrooms;
-			result.NumberOfBedrooms = singleProp.NumberOfBedrooms;
-			result.DisplayedImage = singleProp.DisplayedImage;
-			result.Beds= singleProp.Beds;
-			result.UserName = $"{singleProp.User?.FirstName ?? string.Empty} {singleProp.User?.LastName ?? string.Empty}";
-           
-			result.UserImage = singleProp.User?.Image ;
-			result.CategoryName = singleProp.Category.Name;
-			result.CityName = singleProp.City.Name;
-			result.RatingOverroll = singleProp.OverALLReview;
-			result.NumOfReview = singleProp.NumberOfReview;
-			result.NumberOfGuest=singleProp.NumberOfGuest;
-			result.Pets=singleProp.Pets;
-			result.TakePhotos=singleProp.TakePhotos;
-			result.ImageUrl = singleProp.PropertyImages.Select(img => new Dtos.PropertyImagesDtos.PropertyImagesGet
-			{
-				Id = img.Id,
-				ImageUrl = img.ImageUrl,
-				PropertyId = img.PropertyId,
-			}).ToList();
-			result.Amentities = singleProp.Amenity.Select(am => new PropAmentity
-			{
-				Id=am.Id,
-				Name = am.Name,
-				Description = am.Description
-			}).ToList();
-			result.AppoinmentAvaiable = singleProp.AppointmentsAvailable.Select(app=> new PropAppoinmentAvailable
-            {
-				Id=app.Id,
-				From = app.From,
-				To = app.To,
-				PricePerNight=app.PricePerNight,
-				IsAvailable = app.IsAvailable,
-			}).ToList();
-			//result.Reviews = singleProp.Reviews.Select(x => new Reviewdto { Rate = x.Rating, ReviewComment = x.Comment, UserName = x.User.FirstName + ' ' + x.User.LastName, Userimage = x.User.Image });
-			result.BookingDates = singleProp.PropertyBokking.Select(x => new PropertyBookingDates { CheckInDate = x.CheckInDate, CheckOutDate = x.CheckOutDate });
+			Property singleProp = await _unitOfWork.PropertyRepository.GetPropertyDetailsById(propId);
 
-          
+			if (singleProp == null)
+			{
+				// Handle the case where the property is not found
+				return null; // Or throw an exception, return a default DTO, etc.
+			}
 
-            return result;
+			// Initialize the result DTO
+			PropertyDetailsGetDto result = new PropertyDetailsGetDto
+			{
+				Name = singleProp.Name,
+				Description = singleProp.Description,
+				
+				Adress = singleProp.Adress,
+				NumberOfBathrooms = singleProp.NumberOfBathrooms,
+				NumberOfBedrooms = singleProp.NumberOfBedrooms,
+				DisplayedImage = singleProp.DisplayedImage,
+				Beds = singleProp.Beds,
+				UserName = $"{singleProp.User?.FirstName ?? string.Empty} {singleProp.User?.LastName ?? string.Empty}",
+				UserImage = singleProp.User?.Image,
+				CategoryName = singleProp.Category?.Name,
+				CityName = singleProp.City?.Name,
+				NumberOfGuest = singleProp.NumberOfGuest,
+				Pets = singleProp.Pets,
+				TakePhotos = singleProp.TakePhotos,
+				CheckIn = singleProp.CheckIn,
+				CheckOut = singleProp.CheckOut,
+				ImageUrl = singleProp.PropertyImages?.Select(img => new Dtos.PropertyImagesDtos.PropertyImagesGet
+				{
+					Id = img.Id,
+					ImageUrl = img.ImageUrl,
+					PropertyId = img.PropertyId,
+				}).ToList(),
+				Reviews = singleProp.PropertyBokking?.SelectMany(b => b.Reviews?.Select(rev => new ReviewForProperty
+				{
+					ReviewId = rev.Id,
+					ReviewUserName = rev.UserReview?.FirstName,
+					ReviewUserImage = rev.UserReview?.Image,
+					ReviewComment = rev.Comment
+				})).ToList(),
+				Amentities = singleProp.Amenity?.Select(am => new PropAmentity
+				{
+					Id = am.Id,
+					Name = am.Name,
+					Description = am.Description
+				}).ToList(),
+				AppoinmentAvaiable = singleProp.AppointmentsAvailable?.Select(app => new PropAppoinmentAvailable
+				{
+					Id= app.Id,
+					PropertyId= app.PropertyId,
+					From = app.From,
+					To = app.To,
+					TotalProice= (int)((int)((app.To - app.From).TotalDays) * app.PricePerNight),
+					PricePerNight = app.PricePerNight,
+					IsAvailable = app.IsAvailable,
+				}).ToList(),
+				BookingDates = null
+			};
+
+			return result;
 		}
 
 		public async Task<bool> RemoveProperty(int propertyId)
