@@ -78,6 +78,7 @@ namespace AirBnb.API.Controllers.Property
 		#endregion
 		#region addNew Property
 		[HttpPost("AddNewProperty")]
+		[Authorize(Policy = "ForHost")]
 		public async Task<ActionResult> AddProperty(PropertyAddDto addProperty)
 		{
 			// Check if _propertyManager is null
@@ -105,6 +106,8 @@ namespace AirBnb.API.Controllers.Property
 
 		#region Delete Property
 		[HttpDelete("DeletePropertyById/{id}")]
+		[Authorize]
+
 		public async Task<IActionResult> DeleteProperty(int id)
 		{
 			try
@@ -142,8 +145,8 @@ namespace AirBnb.API.Controllers.Property
 
 		#region Update Property
 		[HttpPut("UpdatePropertyByAmin/{id}")]
-		//[Authorize(Policy = "ForAdmin")]
-		//[AuthorizeCurrentUser]
+		[Authorize(Policy = "ForAdmin")]
+		[AuthorizeCurrentUser]
 		public async Task<IActionResult> UpdatePropertyAdmin(int id, PropertyUpdateByAdminDto updateProp)
 		{
 			var result = await _propertyManager.UpdatePropertyByAdmin(id, updateProp);

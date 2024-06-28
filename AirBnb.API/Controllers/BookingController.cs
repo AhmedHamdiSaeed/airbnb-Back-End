@@ -124,7 +124,7 @@ namespace AirBnb.API.Controllers
 			
 		#region AddBooking
 		[HttpPost("AddBooking")]
-		//[Authorize(Policy = "ForUser")]
+		[Authorize(Policy = "ForUser")]
 		//[AuthorizeCurrentUser]
 		public async Task<IActionResult> AddBooking(appAvailbletGetDto bookingAdd)
 		{
@@ -146,7 +146,7 @@ namespace AirBnb.API.Controllers
 		#region AdddBooking
 		[HttpPost("AdddBooking")]
 		[Authorize(Policy = "ForUser")]
-		[AuthorizeCurrentUser]
+
 		public async Task<IActionResult> AdddBooking(BookingAddDto bookingAdd)
 		{
 

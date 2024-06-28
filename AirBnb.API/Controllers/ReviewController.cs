@@ -24,17 +24,17 @@ namespace AirBnb.API.Controllers
 		}
 
 
-		#region Gett All Booking Review
+		#region Add Revire
 		[HttpPost("AddReview")]
 		[Authorize(Policy = "ForUser")]
 		[AuthorizeCurrentUser]
-		public async Task<IActionResult> AddReview(ReviewsAddDto review)
+		public async Task<IActionResult> AddReview(int id,ReviewsAddDto review)
 		{
 
 			AppUser CurrentUser = await _userManager.GetUserAsync(User);
 			if(ModelState.IsValid)
 			{
-				var result = await _ReviewsManager.AddReview(CurrentUser.Id, review);
+				var result = await _ReviewsManager.AddReview(id,CurrentUser.Id, review);
 				if(result is false)
 					return BadRequest("Add Fail");
 

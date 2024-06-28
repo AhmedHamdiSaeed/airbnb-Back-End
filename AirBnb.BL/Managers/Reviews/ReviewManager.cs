@@ -21,20 +21,20 @@ namespace AirBnb.BL.Managers.Reviews
 			_logger = logger;
 		}
 
-		public async Task<bool> AddReview(string userId, ReviewsAddDto review)
+		public async Task<bool> AddReview(int BookingId,string userId, ReviewsAddDto review)
 		{
-			var checkForReview = await CheckForReview(review.PropertyId, userId);
-			if (!checkForReview.HasReview)
-			{
-				return false;
-			}
+			//var checkForReview = await CheckForReview(review.PropertyId, userId);
+			//if (!checkForReview.HasReview)
+			//{
+			//	return false;
+			//}
 
 			// Create a new Review object
 			var newReview = new Review
 			{
 				UserId = userId,
 				//PropertyId = review.PropertyId,
-				BookingId = review.BookingId,
+				BookingId = BookingId,
 				Rating = review.Rating,
 				Comment = review.Comment,
 			};

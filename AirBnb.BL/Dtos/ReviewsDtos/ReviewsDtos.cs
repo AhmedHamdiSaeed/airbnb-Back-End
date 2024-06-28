@@ -19,7 +19,7 @@ namespace AirBnb.BL.Dtos.ReviewsDtos
 
 	public class ReviewsAddDto
 	{
-		public int BookingId { get; set; }
+		
 		public int Rating { get; set; }
 		public int PropertyId { get; set; }
 		public string Comment { get; set; } = string.Empty;
